@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — FirstRep</title>
+  <meta name="description" content="FirstRep Terms of Service. Read the terms and conditions governing your use of the FirstRep fitness coaching platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+      --container: 1200px;
+      --nav-h: 72px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Public Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== NAV ===== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s, box-shadow 0.35s; }
+    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; transition: color 0.35s; }
+    .nav__logo span { color: var(--brand); transition: color 0.35s; }
+    .nav.scrolled .nav__logo { color: var(--text); }
+    .nav.scrolled .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 28px; }
+    .nav__link { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.3s; }
+    .nav__link:hover { color: #fff; }
+    .nav.scrolled .nav__link { color: var(--text-2); }
+    .nav.scrolled .nav__link:hover { color: var(--brand); }
+    .nav__actions { display: flex; align-items: center; gap: 16px; }
+    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 13px; padding: 10px 24px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+    .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+    .nav.scrolled .nav__cta { background: var(--text); color: #fff; border-color: var(--text); }
+    .nav.scrolled .nav__cta:hover { background: #000; }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; display: block; }
+    .nav.scrolled .nav__hamburger span { background: var(--text); }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--bg-2); text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* ===== HERO (small) ===== */
+    .hero-sm { background: var(--dark); padding: 140px 0 60px; text-align: center; }
+    .hero-sm__title { font-size: 48px; font-weight: 900; color: #fff; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 12px; }
+    .hero-sm__sub { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 400; }
+
+    /* ===== LEGAL CONTENT ===== */
+    .legal { padding: 80px 0 120px; }
+    .legal__inner { max-width: 760px; margin: 0 auto; }
+    .legal__inner h2 { font-size: 24px; font-weight: 800; color: var(--text); margin-top: 48px; margin-bottom: 16px; letter-spacing: -0.02em; padding-top: 32px; border-top: 1px solid var(--border); }
+    .legal__inner h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .legal__inner p { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 16px; }
+    .legal__inner ul { list-style: disc; padding-left: 24px; margin-bottom: 16px; }
+    .legal__inner ul li { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 8px; }
+    .legal__inner a { color: var(--brand); text-decoration: underline; }
+    .legal__inner a:hover { color: var(--brand-hover); }
+    .legal__intro { font-size: 17px; color: var(--text-3); line-height: 1.7; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6); }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__brand-icon { width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--text); font-weight: 800; font-size: 16px; }
+    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; }
+    .footer__desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; color: rgba(255,255,255,0.45); }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; transition: all 0.3s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); padding: 6px 0; transition: color 0.3s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.3s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; }
+      .hero-sm { padding: 120px 0 48px; }
+      .hero-sm__title { font-size: 36px; }
+      .legal { padding: 60px 0 80px; }
+      .legal__inner h2 { font-size: 20px; margin-top: 36px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero-sm__title { font-size: 30px; }
+      .hero-sm { padding: 110px 0 40px; }
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">First<span>Rep</span></a>
+      <div class="nav__links">
+        <a href="features.html" class="nav__link">Features</a>
+        <a href="index.html#pricing" class="nav__link">Pricing</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="features.html">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="btn btn--primary" style="display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:none;cursor:pointer;background:var(--text);color:#fff;margin-top:16px;text-align:center;">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-sm">
+    <div class="container">
+      <h1 class="hero-sm__title">Terms of Service</h1>
+      <p class="hero-sm__sub">Last updated: February 2026</p>
+    </div>
+  </section>
+
+  <!-- ===== LEGAL CONTENT ===== -->
+  <section class="legal">
+    <div class="container">
+      <div class="legal__inner">
+        <p class="legal__intro">
+          Welcome to FirstRep. These Terms of Service ("Terms") govern your access to and use of the FirstRep platform, including our website, mobile applications, and all related services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the Service.
+        </p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By creating an account or using any part of the FirstRep platform, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our <a href="privacy.html">Privacy Policy</a>. These Terms constitute a legally binding agreement between you and FirstRep, Inc.</p>
+        <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by posting the updated Terms on the platform and updating the "Last updated" date. Your continued use of the Service after any modifications constitutes acceptance of the revised Terms.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>FirstRep is a fitness coaching platform that connects personal trainers with clients. The platform provides tools for:</p>
+        <ul>
+          <li>Workout programming, delivery, and tracking</li>
+          <li>Nutrition planning and food logging</li>
+          <li>Progress tracking (body stats, measurements, progress photos, personal records)</li>
+          <li>In-app messaging and communication between trainers and clients</li>
+          <li>A public marketplace where clients can discover and subscribe to trainers</li>
+          <li>Payment processing for coaching services and digital products</li>
+          <li>Scheduling and appointment management</li>
+          <li>Habit tracking, gamification, and accountability systems</li>
+        </ul>
+        <p>FirstRep acts as an intermediary platform and is not itself a fitness or health provider. Trainers on the platform operate as independent service providers.</p>
+
+        <h2>3. User Accounts</h2>
+        <p>To use the Service, you must create an account by providing accurate and complete information. There are two primary account types:</p>
+        <ul>
+          <li><strong>Trainer accounts:</strong> For fitness professionals who wish to deliver coaching services, create workout programs, and manage clients through the platform.</li>
+          <li><strong>Client accounts:</strong> For individuals who wish to receive coaching services, follow workout programs, and track their fitness progress.</li>
+        </ul>
+        <p>You must be at least 18 years of age to create an account and use the Service. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify FirstRep immediately of any unauthorized use of your account.</p>
+
+        <h2>4. Trainer Obligations</h2>
+        <p>If you register as a trainer on the FirstRep platform, you agree to:</p>
+        <ul>
+          <li>Provide accurate biographical, qualification, and certification information in your profile</li>
+          <li>Hold and maintain any certifications, licenses, or credentials required by applicable law to provide fitness coaching services in your jurisdiction</li>
+          <li>Deliver services in a professional, timely, and competent manner</li>
+          <li>Not provide medical advice, diagnose conditions, or prescribe treatments outside the scope of your qualifications</li>
+          <li>Respond to client communications within a reasonable timeframe</li>
+          <li>Comply with all applicable laws, regulations, and industry standards</li>
+          <li>Maintain appropriate professional liability insurance where required by law</li>
+        </ul>
+        <p>FirstRep does not independently verify trainer certifications or qualifications. Trainers are solely responsible for the accuracy of their credentials and the quality of their services.</p>
+
+        <h2>5. Client Obligations</h2>
+        <p>If you register as a client on the FirstRep platform, you agree to:</p>
+        <ul>
+          <li>Consult with a qualified healthcare provider before beginning any new exercise or nutrition program, especially if you have pre-existing health conditions</li>
+          <li>Provide accurate information about your health history, injuries, and limitations during onboarding and throughout the coaching relationship</li>
+          <li>Follow safety guidelines provided by your trainer and use proper form during exercises</li>
+          <li>Stop any exercise immediately if you experience pain, dizziness, or other concerning symptoms and seek medical attention</li>
+          <li>Communicate openly with your trainer about your progress, concerns, and any changes in your health status</li>
+          <li>Use the platform and its content for personal, non-commercial purposes only</li>
+        </ul>
+
+        <h2>6. Payment Terms</h2>
+        <p>All payments on the FirstRep platform are processed securely through Stripe, our third-party payment processor. By making a purchase, you agree to Stripe's <a href="https://stripe.com/legal" target="_blank" rel="noopener">Terms of Service</a>.</p>
+        <ul>
+          <li><strong>Subscription billing:</strong> Coaching subscriptions are billed on a recurring basis (monthly or as specified by the trainer's package). You authorize recurring charges to your payment method until you cancel.</li>
+          <li><strong>One-time purchases:</strong> Session packs, digital products, and other one-time offerings are charged at the time of purchase.</li>
+          <li><strong>Cancellation:</strong> You may cancel a subscription at any time through the platform. Cancellation takes effect at the end of the current billing period. No partial refunds are issued for unused portions of a billing cycle.</li>
+          <li><strong>Refund policy:</strong> Refund eligibility is determined by the individual trainer's refund policy as stated on their profile or package listing. FirstRep facilitates refunds but does not independently guarantee them. Disputes should first be raised with the trainer directly.</li>
+          <li><strong>Trainer payouts:</strong> Trainers receive payouts for their earnings through Stripe Express accounts. FirstRep applies a marketplace commission on applicable transactions as described in our platform policies.</li>
+          <li><strong>Trainer SaaS fees:</strong> Trainers may be subject to a platform subscription fee (Free or Pro tier) based on their client count. Details are available on the pricing page.</li>
+        </ul>
+        <p>FirstRep never stores your credit card or bank account information directly. All sensitive payment data is handled exclusively by Stripe.</p>
+
+        <h2>7. Intellectual Property</h2>
+        <p><strong>Platform ownership:</strong> The FirstRep platform, including its design, code, logos, trademarks, and documentation, is owned by FirstRep, Inc. and protected by intellectual property laws. You may not copy, modify, distribute, or reverse-engineer any part of the platform without written permission.</p>
+        <p><strong>Trainer content:</strong> Trainers retain ownership of the original content they create on the platform, including workout programs, nutrition plans, exercise descriptions, and educational materials. By posting content on FirstRep, trainers grant the platform a non-exclusive, worldwide license to display and deliver that content to their subscribed clients.</p>
+        <p><strong>User-generated content:</strong> By submitting content (reviews, messages, progress photos, etc.), you grant FirstRep a non-exclusive license to use that content as necessary to provide the Service. Progress photos and personal health data are kept private and are only shared with your assigned trainer.</p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law:</p>
+        <ul>
+          <li>FirstRep provides the platform "as is" and "as available" without warranties of any kind, whether express or implied.</li>
+          <li>FirstRep is not liable for any injuries, health complications, or damages arising from your use of the platform or from following any workout, nutrition, or coaching advice received through the Service.</li>
+          <li>FirstRep is not responsible for the actions, omissions, or conduct of any trainer or client on the platform.</li>
+          <li>In no event shall FirstRep's total liability exceed the amount you paid to the platform in the 12 months preceding the claim.</li>
+          <li>FirstRep shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill.</li>
+        </ul>
+
+        <h2>9. Termination</h2>
+        <p>You may terminate your account at any time by contacting us or using the account deletion feature in the app. FirstRep reserves the right to suspend or terminate your account at our discretion if:</p>
+        <ul>
+          <li>You violate these Terms of Service</li>
+          <li>You engage in fraudulent, abusive, or harmful behavior</li>
+          <li>Your account has been inactive for an extended period</li>
+          <li>We are required to do so by law</li>
+        </ul>
+        <p>Upon termination, your right to use the Service ceases immediately. Any outstanding payment obligations survive termination. We may retain certain data as required by law or for legitimate business purposes, as described in our Privacy Policy.</p>
+
+        <h2>10. Dispute Resolution</h2>
+        <p>Any disputes arising from or relating to these Terms or the Service shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association. Arbitration shall take place in San Francisco, California. You agree to waive any right to a jury trial or to participate in a class action lawsuit.</p>
+        <p>For disputes involving amounts less than $10,000, arbitration shall be conducted online or by phone. Either party may seek injunctive relief in a court of competent jurisdiction to prevent irreparable harm.</p>
+
+        <h2>11. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions. Any legal proceedings not subject to arbitration shall be brought exclusively in the state or federal courts located in San Francisco County, California.</p>
+
+        <h2>12. Contact Information</h2>
+        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+        <p>
+          <strong>FirstRep, Inc.</strong><br>
+          Email: <a href="mailto:legal@firstrep.app">legal@firstrep.app</a><br>
+          San Francisco, CA, United States
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <div class="footer__brand-icon">F</div>
+            <span class="footer__brand-name">FirstRep</span>
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="features.html">Features</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Integrations</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">API Docs</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+
+    // Nav scroll effect
+    window.addEventListener('scroll', function() {
+      var nav = document.getElementById('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+    // Fire once on load
+    if (window.scrollY > 50) document.getElementById('nav').classList.add('scrolled');
+
+    // Mobile menu
+    var hb = document.getElementById('hamburger');
+    var mm = document.getElementById('mobileMenu');
+    if (hb) {
+      hb.onclick = function() { mm.classList.toggle('open'); };
+      mm.querySelectorAll('a').forEach(function(a) { a.onclick = function() { mm.classList.remove('open'); }; });
+    }
+  });
+  </script>
+</body>
+</html>

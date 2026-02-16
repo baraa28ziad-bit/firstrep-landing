@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — FirstRep | Everything You Need to Coach, Scale, and Win</title>
+  <meta name="description" content="Explore FirstRep's full feature set: AI workout builder, coaching dashboard, nutrition & habits, marketplace, smart accountability, and integrated payments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+      --container: 1200px;
+      --nav-h: 72px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Public Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== BUTTONS ===== */
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; border: none; cursor: pointer; transition: all 0.25s; white-space: nowrap; letter-spacing: 0.01em; }
+    .btn--primary { background: var(--text); color: #fff; }
+    .btn--primary:hover { background: #000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .btn--white { background: #fff; color: var(--text); font-weight: 700; }
+    .btn--white:hover { background: #f5f5f5; }
+    .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
+    .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn--lg { padding: 16px 40px; font-size: 16px; border-radius: 12px; }
+
+    /* ===== NAV ===== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s, box-shadow 0.35s; }
+    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; transition: color 0.35s; }
+    .nav__logo span { color: var(--brand); transition: color 0.35s; }
+    .nav.scrolled .nav__logo { color: var(--text); }
+    .nav.scrolled .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 28px; }
+    .nav__link { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.3s; }
+    .nav__link:hover { color: #fff; }
+    .nav__link--active { color: #fff; }
+    .nav.scrolled .nav__link { color: var(--text-2); }
+    .nav.scrolled .nav__link:hover { color: var(--brand); }
+    .nav.scrolled .nav__link--active { color: var(--brand); }
+    .nav__actions { display: flex; align-items: center; gap: 16px; }
+    .nav__signin { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); padding: 8px 16px; text-transform: uppercase; letter-spacing: 0.06em; transition: color 0.3s; }
+    .nav__signin:hover { color: #fff; }
+    .nav.scrolled .nav__signin { color: var(--text-2); }
+    .nav.scrolled .nav__signin:hover { color: var(--brand); }
+    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 13px; padding: 10px 24px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+    .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+    .nav.scrolled .nav__cta { background: var(--text); color: #fff; border-color: var(--text); }
+    .nav.scrolled .nav__cta:hover { background: #000; }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; display: block; }
+    .nav.scrolled .nav__hamburger span { background: var(--text); }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--bg-2); text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* ===== HERO ===== */
+    .hero { position: relative; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding: 160px 0 120px; }
+    .hero__glow { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .hero__content { position: relative; z-index: 2; text-align: center; max-width: 780px; margin: 0 auto; }
+    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 100px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+    .hero__title { font-size: 60px; font-weight: 900; line-height: 1.06; color: #fff; margin-bottom: 24px; letter-spacing: -0.035em; }
+    .hero__title em { font-style: normal; color: var(--brand); }
+    .hero__sub { font-size: 19px; color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto 40px; line-height: 1.65; font-weight: 400; }
+    .hero__actions { display: flex; gap: 16px; justify-content: center; }
+
+    /* ===== FEATURE GRID ===== */
+    .features { padding: 120px 0; }
+    .features__header { text-align: center; margin-bottom: 64px; }
+    .features__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .features__title { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 14px; line-height: 1.08; }
+    .features__sub { font-size: 18px; color: var(--text-3); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .fcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; transition: all 0.3s; }
+    .fcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .fcard__icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .fcard__icon--purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
+    .fcard__icon--blue { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #3B82F6; }
+    .fcard__icon--green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
+    .fcard__icon--amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
+    .fcard__icon--rose { background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; }
+    .fcard__icon--teal { background: linear-gradient(135deg, #CCFBF1, #99F6E4); color: #0D9488; }
+    .fcard__name { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em; }
+    .fcard__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
+
+    /* ===== AI SECTION ===== */
+    .ai { padding: 120px 0; background: var(--bg-2); position: relative; overflow: hidden; }
+    .ai__glow { position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.06) 0%, transparent 70%); pointer-events: none; }
+    .ai__header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+    .ai__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 800; padding: 8px 18px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .ai__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse-ai 2s ease-in-out infinite; }
+    @keyframes pulse-ai { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+    .ai__title { font-size: 48px; font-weight: 900; color: var(--text); line-height: 1.08; letter-spacing: -0.035em; margin-bottom: 16px; }
+    .ai__sub { font-size: 18px; color: var(--text-3); line-height: 1.7; max-width: 560px; margin: 0 auto; }
+    .ai__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .ai-card { background: #fff; border-radius: var(--radius); padding: 36px 28px; border: 1px solid var(--border); transition: all 0.3s; }
+    .ai-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: transparent; }
+    .ai-card__icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .ai-card__icon--generate { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
+    .ai-card__icon--predict { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
+    .ai-card__icon--automate { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
+    .ai-card__number { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ai-card__title { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em; }
+    .ai-card__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
+
+    /* ===== CTA ===== */
+    .cta { padding: 140px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
+    .cta__glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+    .cta__title { font-size: 56px; font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -0.035em; position: relative; z-index: 1; line-height: 1.08; }
+    .cta__sub { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta__actions { position: relative; z-index: 1; display: flex; gap: 16px; justify-content: center; }
+    .cta__note { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 20px; position: relative; z-index: 1; }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6); }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer__brand-icon { width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--text); font-weight: 800; font-size: 16px; }
+    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; }
+    .footer__desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; transition: all 0.3s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer__col ul { padding: 0; margin: 0; }
+    .footer__col li { margin-bottom: 12px; }
+    .footer__col a { color: rgba(255,255,255,0.5); font-size: 14px; transition: color 0.3s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.3s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.5); }
+
+    /* ===== ANIMATIONS ===== */
+    [data-animate] { opacity: 0; transform: translateY(24px); }
+    .animated { opacity: 1 !important; transform: translateY(0) !important; transition: opacity 0.6s ease, transform 0.6s ease; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1280px) {
+      .container { padding: 0 32px; }
+    }
+    @media (max-width: 1024px) {
+      .hero__title { font-size: 48px; }
+      .hero { padding: 140px 0 100px; }
+      .features { padding: 100px 0; }
+      .features__title { font-size: 40px; }
+      .features__grid { grid-template-columns: repeat(2, 1fr); }
+      .ai { padding: 100px 0; }
+      .ai__title { font-size: 40px; }
+      .ai__grid { grid-template-columns: 1fr 1fr; }
+      .cta { padding: 100px 0; }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .hero__title { font-size: 38px; }
+      .hero__sub { font-size: 17px; }
+      .hero { padding: 120px 0 80px; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .nav__links, .nav__signin { display: none; }
+      .nav__hamburger { display: flex; }
+      .features { padding: 80px 0; }
+      .features__title { font-size: 32px; }
+      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .ai { padding: 80px 0; }
+      .ai__title { font-size: 32px; }
+      .ai__sub { font-size: 16px; }
+      .ai__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .cta { padding: 80px 0; }
+      .cta__title { font-size: 32px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero__title { font-size: 32px; }
+      .hero__sub { font-size: 16px; }
+      .hero { padding: 110px 0 64px; }
+      .hero__badge { font-size: 11px; padding: 6px 14px; }
+      .features__title { font-size: 28px; }
+      .ai__title { font-size: 28px; }
+      .cta__title { font-size: 28px; }
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">First<span>Rep</span></a>
+      <div class="nav__links">
+        <a href="features.html" class="nav__link nav__link--active">Features</a>
+        <a href="index.html#pricing" class="nav__link">Pricing</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__signin">Sign In</a>
+        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="features.html">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="container">
+      <div class="hero__content" data-animate>
+        <div class="hero__badge">
+          <span class="hero__dot"></span>
+          Platform Features
+        </div>
+        <h1 class="hero__title">Everything You Need to <em>Coach, Scale, and Win</em></h1>
+        <p class="hero__sub">From AI-powered programming to integrated payments, FirstRep gives you every tool to deliver world-class coaching and grow your fitness business.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+          <a href="#feature-grid" class="btn btn--ghost btn--lg">Explore Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE GRID ===== -->
+  <section class="features" id="feature-grid">
+    <div class="container">
+      <div class="features__header" data-animate>
+        <div class="features__badge">Core Platform</div>
+        <h2 class="features__title">Six Pillars of a Better Coaching Business</h2>
+        <p class="features__sub">Each feature is designed to save you time, delight your clients, and grow your revenue.</p>
+      </div>
+      <div class="features__grid">
+        <!-- Card 1: AI Workout Builder -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--purple">
+            <i data-lucide="sparkles" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">AI Workout Builder</h3>
+          <p class="fcard__desc">Generate personalized programs in seconds from a client questionnaire. AI picks exercises, sets, reps, and progression rules from a library of 1,734 exercises. You review, tweak, and assign.</p>
+        </div>
+        <!-- Card 2: Coaching Dashboard -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--blue">
+            <i data-lucide="layout-dashboard" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Coaching Dashboard</h3>
+          <p class="fcard__desc">Health scores, risk signals, check-in queues, and compliance tracking all in one view. See every client's status at a glance and know exactly who needs attention today.</p>
+        </div>
+        <!-- Card 3: Nutrition & Habits -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--green">
+            <i data-lucide="apple" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Nutrition & Habits</h3>
+          <p class="fcard__desc">Auto-calculated macros, custom meal plans, food logging, and daily habit tracking. Your clients build consistency while you monitor compliance without the manual overhead.</p>
+        </div>
+        <!-- Card 4: Marketplace -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--amber">
+            <i data-lucide="globe" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Marketplace</h3>
+          <p class="fcard__desc">Get discovered by thousands of clients searching for their next coach. Your profile, packages, reviews, and specialties are all searchable in a public trainer marketplace.</p>
+        </div>
+        <!-- Card 5: Smart Accountability -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--rose">
+            <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Smart Accountability</h3>
+          <p class="fcard__desc">Automated missed-workout nudges, streak tracking, milestone celebrations, and churn prediction. The system catches at-risk clients before they disengage, so you can intervene early.</p>
+        </div>
+        <!-- Card 6: Integrated Payments -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--teal">
+            <i data-lucide="credit-card" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Integrated Payments</h3>
+          <p class="fcard__desc">Stripe-powered subscriptions, session packs, and one-time purchases built right in. Clients pay seamlessly, you get paid automatically, and the platform handles invoicing and payouts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI SECTION ===== -->
+  <section class="ai">
+    <div class="ai__glow"></div>
+    <div class="container">
+      <div class="ai__header" data-animate>
+        <div class="ai__badge"><span class="ai__badge-dot"></span> AI-Powered</div>
+        <h2 class="ai__title">AI That Coaches With You</h2>
+        <p class="ai__sub">FirstRep's AI understands fitness science. It generates, predicts, and automates the busywork so you can focus on what matters: coaching real humans.</p>
+      </div>
+      <div class="ai__grid">
+        <!-- AI Card 1 -->
+        <div class="ai-card" data-animate>
+          <div class="ai-card__icon ai-card__icon--generate">
+            <i data-lucide="wand-2" style="width: 26px; height: 26px;"></i>
+          </div>
+          <div class="ai-card__number">01</div>
+          <h3 class="ai-card__title">Generate Programs</h3>
+          <p class="ai-card__desc">Turn a client questionnaire into a complete workout program in seconds. Equipment-aware exercise selection, auto-progression rules, and periodization built in. Review, tweak, and assign with one tap.</p>
+        </div>
+        <!-- AI Card 2 -->
+        <div class="ai-card" data-animate>
+          <div class="ai-card__icon ai-card__icon--predict">
+            <i data-lucide="activity" style="width: 26px; height: 26px;"></i>
+          </div>
+          <div class="ai-card__number">02</div>
+          <h3 class="ai-card__title">Predict and Prevent Churn</h3>
+          <p class="ai-card__desc">Health scores flag at-risk clients before they leave. Plateau detection, declining adherence, and low energy are caught automatically so you can intervene at the right moment.</p>
+        </div>
+        <!-- AI Card 3 -->
+        <div class="ai-card" data-animate>
+          <div class="ai-card__icon ai-card__icon--automate">
+            <i data-lucide="zap" style="width: 26px; height: 26px;"></i>
+          </div>
+          <div class="ai-card__number">03</div>
+          <h3 class="ai-card__title">Automate the Busywork</h3>
+          <p class="ai-card__desc">AI-drafted check-in responses, auto-generated weekly summaries, smart nudges for missed workouts, and milestone celebrations. Hours of admin work handled on autopilot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <div class="container">
+      <h2 class="cta__title" data-animate>Start Your Free Trial</h2>
+      <p class="cta__sub" data-animate>Join hundreds of fitness coaches already using FirstRep to scale their business. Free forever for up to 3 clients.</p>
+      <div class="cta__actions" data-animate>
+        <a href="#" class="btn btn--white btn--lg">Get Started Free</a>
+        <a href="index.html#pricing" class="btn btn--ghost btn--lg">View Pricing</a>
+      </div>
+      <p class="cta__note" data-animate>No credit card required. Set up in under 2 minutes.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">F</div>
+            <span class="footer__brand-name">FirstRep</span>
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <!-- Features -->
+        <div class="footer__col">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="features.html#feature-grid">AI Workout Builder</a></li>
+            <li><a href="features.html#feature-grid">Coaching Dashboard</a></li>
+            <li><a href="features.html#feature-grid">Marketplace</a></li>
+            <li><a href="features.html#feature-grid">Payments</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Resources -->
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Nav scroll effect
+    window.addEventListener('scroll', function() {
+      var nav = document.getElementById('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll-triggered animations
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+  });
+  </script>
+
+</body>
+</html>
