@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirstRep</title>
+  <script>
+    // GitHub Pages serves 404.html for all unknown paths.
+    // If the path is /invite/CODE, redirect to /invite/?code=CODE
+    // so that invite/index.html handles it.
+    var path = window.location.pathname;
+    var match = path.match(/^\/invite\/([A-Za-z0-9_-]+)\/?$/);
+    if (match) {
+      // Rewrite to the invite page with code as a query param
+      window.location.replace('/invite/?code=' + match[1]);
+    } else {
+      // Not an invite link — redirect to homepage
+      window.location.replace('/');
+    }
+  </script>
+</head>
+<body></body>
+</html>

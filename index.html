@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstRep — The All-In-One Platform for Fitness Coaches</title>
-  <meta name="description" content="Unlock your full potential with the #1 platform to coach, scale, and win. Workout programming, nutrition, habits, and coaching dashboard all in one place.">
+  <title>FirstRep — The AI-Powered Platform for Fitness Coaches</title>
+  <meta name="description" content="Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --brand: #5E59FE;
@@ -23,220 +23,350 @@
       --border: #E5E7EB;
       --success: #10B981;
       --radius: 16px;
-      --radius-lg: 24px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
-      --container: 1200px;
-      --nav-h: 72px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { font-family: 'Public Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; font-feature-settings: 'cv11', 'ss01'; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
     .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
     /* ===== BUTTONS ===== */
-    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; border: none; cursor: pointer; transition: all 0.25s; white-space: nowrap; letter-spacing: 0.01em; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 15px; padding: 13px 30px; border-radius: 11px; border: none; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap; letter-spacing: -0.01em; }
     .btn--primary { background: var(--text); color: #fff; }
-    .btn--primary:hover { background: #000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .btn--primary:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
     .btn--outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
     .btn--outline:hover { border-color: var(--brand); color: var(--brand); }
-    .btn--white { background: #fff; color: var(--text); font-weight: 700; }
+    .btn--white { background: #fff; color: var(--text); font-weight: 600; }
     .btn--white:hover { background: #f5f5f5; }
     .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
     .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-    .btn--lg { padding: 16px 40px; font-size: 16px; border-radius: 12px; }
+    .btn--lg { padding: 15px 36px; font-size: 16px; border-radius: 12px; }
 
     /* ===== NAV ===== */
-    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s, box-shadow 0.35s; }
-    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.3s, border-color 0.3s, box-shadow 0.3s; }
+    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03); }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
-    .nav__logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; transition: color 0.35s; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.03em; transition: color 0.35s; }
     .nav__logo span { color: var(--brand); transition: color 0.35s; }
     .nav.scrolled .nav__logo { color: var(--text); }
     .nav.scrolled .nav__logo span { color: var(--brand); }
-    .nav__links { display: flex; gap: 28px; }
-    .nav__link { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.3s; }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: -0.01em; transition: color 0.3s; }
     .nav__link:hover { color: #fff; }
     .nav.scrolled .nav__link { color: var(--text-2); }
-    .nav.scrolled .nav__link:hover { color: var(--brand); }
-    .nav__actions { display: flex; align-items: center; gap: 16px; }
-    .nav__signin { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); padding: 8px 16px; text-transform: uppercase; letter-spacing: 0.06em; transition: color 0.3s; }
+    .nav.scrolled .nav__link:hover { color: var(--text); }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__signin { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85); padding: 8px 16px; letter-spacing: -0.01em; transition: color 0.3s; }
     .nav__signin:hover { color: #fff; }
     .nav.scrolled .nav__signin { color: var(--text-2); }
-    .nav.scrolled .nav__signin:hover { color: var(--brand); }
-    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 13px; padding: 10px 24px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+    .nav.scrolled .nav__signin:hover { color: var(--text); }
+    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s; letter-spacing: -0.01em; white-space: nowrap; }
     .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
-    .nav.scrolled .nav__cta { background: var(--text); color: #fff; border-color: var(--text); }
-    .nav.scrolled .nav__cta:hover { background: #000; }
+    .nav.scrolled .nav__cta { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .nav.scrolled .nav__cta:hover { background: var(--brand-hover); }
     .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
     .nav__hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; display: block; }
     .nav.scrolled .nav__hamburger span { background: var(--text); }
     .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
     .nav__mobile.open { display: flex; }
-    .nav__mobile a { font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--bg-2); text-transform: uppercase; letter-spacing: 0.04em; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); letter-spacing: -0.01em; }
+
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    /* Overlay behind mega menu */
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    /* Mobile mega menu accordion */
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
 
     /* ===== HERO ===== */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding-top: var(--nav-h); }
     .hero__bg { position: absolute; inset: 0; }
     .hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
     .hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,17,23,0.92) 0%, rgba(15,17,23,0.6) 100%); }
-    .hero__content { position: relative; z-index: 2; max-width: 720px; padding: 100px 0; }
-    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 100px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .hero__inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 60px; padding: 80px 0; }
+    .hero__content { flex: 1; min-width: 0; }
+    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); margin-bottom: 28px; letter-spacing: 0.02em; }
     .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
-    .hero__title { font-size: 64px; font-weight: 900; line-height: 1.04; color: #fff; margin-bottom: 28px; letter-spacing: -0.035em; }
+    .hero__title { font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.08; color: #fff; margin-bottom: 24px; letter-spacing: -0.04em; }
     .hero__rotating { display: inline-block; position: relative; color: var(--brand); }
     .hero__word { position: absolute; left: 0; top: 0; opacity: 0; transform: translateY(10px); transition: all 0.5s; white-space: nowrap; }
     .hero__word.active { opacity: 1; transform: translateY(0); position: relative; }
-    .hero__sub { font-size: 19px; color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.65; margin-bottom: 40px; font-weight: 400; }
-    .hero__actions { display: flex; gap: 16px; margin-bottom: 20px; }
-    .hero__note { font-size: 13px; color: rgba(255,255,255,0.35); font-weight: 400; }
+    .hero__sub { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.7; margin-bottom: 36px; font-weight: 400; letter-spacing: -0.01em; }
+    .hero__actions { display: flex; gap: 16px; margin-bottom: 24px; }
+    .hero__note { font-size: 14px; color: rgba(255,255,255,0.35); font-weight: 400; }
+    /* Hero phone composition — floats over the lifestyle bg */
+    .hero__phones { position: relative; flex: 0 0 420px; height: 580px; }
+    .hero__phone { position: absolute; border-radius: 0; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.4)); }
+    .hero__phone--primary { z-index: 2; max-height: 560px; width: auto; left: 20px; top: 10px; }
+    .hero__phone--secondary { z-index: 1; max-height: 480px; width: auto; left: 140px; top: 60px; transform: rotate(3deg) scale(0.88); }
 
     /* ===== TRUST ===== */
-    .trust { padding: 48px 0; border-bottom: 1px solid var(--border); overflow: hidden; }
-    .trust__label { text-align: center; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 24px; }
-    .trust__track { display: flex; gap: 48px; animation: scroll 25s linear infinite; width: max-content; }
-    .trust__item { font-size: 13px; font-weight: 700; color: var(--text-3); white-space: nowrap; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.06em; }
+    .trust { padding: 44px 0; border-bottom: 1px solid var(--border); overflow: hidden; }
+    .trust__label { text-align: center; font-size: 12px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 28px; }
+    .trust__track { display: flex; gap: 56px; animation: scroll 25s linear infinite; width: max-content; }
+    .trust__item { font-size: 14px; font-weight: 600; color: var(--text-3); white-space: nowrap; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.06em; }
+    .trust__stats { text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-3); letter-spacing: 0.02em; }
     @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-    /* ===== FEATURE TABS (horizontal tabs below large image) ===== */
-    .ftabs { padding: 80px 0; }
-    .ftabs__image { width: 100%; height: 520px; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-2); position: relative; }
-    .ftabs__image img { width: 100%; height: 100%; object-fit: cover; }
-    .ftabs__screen { display: none; width: 100%; height: 100%; }
-    .ftabs__screen.active { display: block; }
-    .ftabs__screen img { width: 100%; height: 100%; object-fit: cover; }
-    .ftabs__tabs { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px; gap: 0; }
-    .ftab { padding: 28px 24px 24px; border-top: 3px solid var(--border); cursor: pointer; transition: all 0.3s; }
-    .ftab.active { border-top-color: #000; }
-    .ftab__icon { font-size: 20px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-    .ftab__icon svg { width: 20px; height: 20px; color: var(--text); }
-    .ftab__ai { display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; background: var(--brand); color: #fff; padding: 2px 8px; border-radius: 6px; font-size: 10px; }
-    .ftab__title { font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+    /* ===== FEATURE TABS ===== */
+    .ftabs { padding: 100px 0; }
+    .ftabs__image { width: 100%; min-height: 520px; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(135deg, #F0F1F5 0%, #E8EAFF 100%); position: relative; display: flex; align-items: center; justify-content: center; }
+    .ftabs__screen { display: none; width: 100%; height: 100%; align-items: center; justify-content: center; padding: 32px; }
+    .ftabs__screen.active { display: flex; }
+    .ftabs__screen img { max-height: 460px; width: auto; border-radius: 0; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.15)); }
+    .ftabs__tabs { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 40px; gap: 0; }
+    .ftab { padding: 24px 20px 20px; border-top: 2px solid var(--border); cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .ftab.active { border-top-color: var(--text); }
+    .ftab__icon { font-size: 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .ftab__icon svg { width: 20px; height: 20px; color: var(--text-3); }
+    .ftab.active .ftab__icon svg { color: var(--text); }
+    .ftab__ai { display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; background: var(--brand); color: #fff; padding: 3px 9px; border-radius: 6px; }
+    .ftab__title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
     .ftab.active .ftab__title { color: var(--text); }
     .ftab:not(.active) .ftab__title { color: var(--text-3); }
     .ftab__desc { font-size: 14px; color: var(--text-3); line-height: 1.6; }
     .ftab:not(.active) .ftab__desc { color: var(--text-muted); }
 
-    /* ===== SERVICES (2 image cards + features below) ===== */
-    .services { padding: 80px 0 120px; }
-    .services__title { font-size: 52px; font-weight: 900; line-height: 1.06; margin-bottom: 64px; letter-spacing: -0.035em; max-width: 680px; }
+    /* ===== SERVICES (Two Ways to Grow) ===== */
+    .services { padding: 100px 0; }
+    .services__title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 44px; letter-spacing: -0.04em; max-width: 720px; }
     .services__title em { font-style: italic; }
     .services__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .svc-card__img { border-radius: var(--radius-lg); overflow: hidden; height: 360px; position: relative; margin-bottom: 28px; }
-    .svc-card__img img { width: 100%; height: 100%; object-fit: cover; }
-    .svc-card__img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,20,100,0.4) 0%, rgba(80,20,150,0.3) 100%); }
-    .svc-card__avatars { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; }
-    .svc-card__avatar { width: 56px; height: 56px; border-radius: 16px; border: 3px solid rgba(255,255,255,0.8); object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-left: -8px; }
-    .svc-card__avatar:first-child { margin-left: 0; }
-    .svc-card__label-tag { position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.6); color: #fff; font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
-    .svc-card__badge-count { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: var(--text); color: #fff; font-size: 14px; font-weight: 700; border: 3px solid rgba(255,255,255,0.8); margin-left: -8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-    .svc-card__title { font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 6px; letter-spacing: -0.02em; }
-    .svc-card__subtitle { font-size: 14px; color: var(--text-3); font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .svc-card__img { border-radius: var(--radius-lg); overflow: hidden; height: 340px; position: relative; margin-bottom: 24px; }
+    .svc-card__img > img:first-child { width: 100%; height: 100%; object-fit: cover; }
+    .svc-card__img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,20,100,0.35) 0%, rgba(0,0,0,0.2) 100%); }
+    .svc-card__phone { position: absolute; bottom: -24px; right: 20px; max-height: 310px; width: auto; border-radius: 0; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.35)); z-index: 2; }
+    .svc-card__title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 6px; letter-spacing: -0.03em; }
+    .svc-card__subtitle { font-size: 13px; color: var(--text-3); font-weight: 500; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.04em; }
     .svc-card__features { display: flex; flex-direction: column; gap: 10px; }
     .svc-card__feature { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--text-2); }
-    .svc-card__check { color: var(--text); font-size: 18px; flex-shrink: 0; }
+    .svc-card__check { color: var(--text); flex-shrink: 0; display: flex; align-items: center; }
+
+    /* ===== FEATURE MODULES (accordion + lifestyle scene with mockup overlay) ===== */
+    .fmod { padding: 18px 0; background: var(--dark); }
+    .fmod:first-of-type { padding-top: 100px; }
+    .fmod:last-of-type { padding-bottom: 100px; }
+    .fmod__card { background: #fff; border-radius: var(--radius-lg); padding: 48px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; overflow: visible; }
+    .fmod__card--reverse { direction: rtl; }
+    .fmod__card--reverse > * { direction: ltr; }
+    .fmod__label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+    .fmod__label-icon { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .fmod__label-icon svg { width: 16px; height: 16px; }
+    .fmod__label-icon--purple { background: rgba(94,89,254,0.1); color: var(--brand); }
+    .fmod__title { font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; color: var(--text); margin-bottom: 28px; letter-spacing: -0.04em; }
+    .fmod__accordion { display: flex; flex-direction: column; gap: 4px; }
+    .acc-item { padding: 14px 16px; background: #fff; border: 1px solid transparent; border-radius: 10px; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .acc-item.active { background: #F8F9FB; border-color: #E8E9ED; }
+    .acc-item__header { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: var(--text-2); }
+    .acc-item.active .acc-item__header { color: var(--text); }
+    .acc-item__header-icon { width: 18px; height: 18px; color: var(--text-3); flex-shrink: 0; }
+    .acc-item.active .acc-item__header-icon { color: var(--text); }
+    .acc-item__icon { font-size: 14px; margin-left: auto; color: var(--text-muted); transition: transform 0.3s; }
+    .acc-item.active .acc-item__icon { transform: rotate(45deg); }
+    .acc-item__body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s cubic-bezier(0.4, 0, 0.2, 1); font-size: 14px; color: var(--text-3); line-height: 1.65; padding-left: 30px; }
+    .acc-item.active .acc-item__body { max-height: 100px; padding-top: 8px; }
+
+    /* Visual: lifestyle photo scene with floating phone mockup */
+    .fmod__visual { position: relative; min-height: 380px; }
+    .fmod__scene { position: relative; border-radius: var(--radius); overflow: hidden; min-height: 380px; width: 100%; }
+    .fmod__scene-bg { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; filter: blur(8px); transform: scale(1.15); }
+    .fmod__scene-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%); }
+    .fmod__scene-phone { position: absolute; max-height: 440px; width: auto; border-radius: 0; filter: drop-shadow(0 25px 60px rgba(0,0,0,0.35)); z-index: 2; }
+    .fmod__scene-card { position: absolute; max-height: 200px; width: auto; border-radius: 0; filter: drop-shadow(0 16px 40px rgba(0,0,0,0.25)); z-index: 3; }
 
     /* ===== AI SECTION ===== */
     .ai-section { padding: 100px 0; background: #F8F9FB; position: relative; overflow: hidden; }
     .ai-section__glow { position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.06) 0%, transparent 70%); pointer-events: none; }
-    .ai-section__header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
-    .ai-section__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 800; padding: 8px 18px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .ai-section__header { text-align: center; max-width: 680px; margin: 0 auto 44px; }
+    .ai-section__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
     .ai-section__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse-ai 2s ease-in-out infinite; }
     @keyframes pulse-ai { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
-    .ai-section__title { font-size: 48px; font-weight: 900; color: var(--text); line-height: 1.08; letter-spacing: -0.035em; margin-bottom: 16px; }
-    .ai-section__sub { font-size: 18px; color: var(--text-3); line-height: 1.7; max-width: 560px; margin: 0 auto; }
-    .ai-section__visual { background: #fff; border-radius: var(--radius-lg); padding: 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.06); margin-bottom: 48px; position: relative; }
-    .ai-section__screen { background: #F8F9FB; border-radius: 16px; padding: 24px; min-height: 320px; }
+    .ai-section__title { font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; color: var(--text); line-height: 1.15; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .ai-section__sub { font-size: 17px; color: var(--text-3); line-height: 1.7; max-width: 600px; margin: 0 auto; letter-spacing: -0.01em; }
+    /* AI visual: lifestyle scene with large mockup overlaid */
+    .ai-section__visual { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 440px; margin-bottom: 48px; }
+    .ai-section__visual-bg { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; filter: blur(8px); transform: scale(1.15); }
+    .ai-section__visual-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(94,89,254,0.18) 0%, rgba(0,0,0,0.4) 100%); }
+    .ai-section__visual-phone { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-height: 500px; width: auto; border-radius: 0; filter: drop-shadow(0 30px 80px rgba(0,0,0,0.3)); z-index: 2; }
     .ai-section__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .ai-card { background: #fff; border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--border); transition: all 0.3s; }
-    .ai-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: transparent; }
-    .ai-card__icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-    .ai-card__icon svg { width: 24px; height: 24px; }
+    .ai-card { background: #fff; border-radius: var(--radius); padding: 28px; border: 1px solid var(--border); transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .ai-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 20px 48px rgba(0,0,0,0.04); border-color: transparent; }
+    .ai-card__icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .ai-card__icon svg { width: 22px; height: 22px; }
     .ai-card__icon--generate { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
     .ai-card__icon--predict { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
     .ai-card__icon--automate { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
-    .ai-card__title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .ai-card__title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
     .ai-card__desc { font-size: 14px; color: var(--text-3); line-height: 1.65; }
+    .ai-card__ref { margin-top: 16px; max-height: 160px; width: auto; border-radius: 0; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12)); }
 
-    /* ===== FEATURE MODULE (dark bg + white card + accordion + image) ===== */
-    .fmod { padding: 16px 0; background: var(--dark); }
-    .fmod:first-of-type { padding-top: 100px; }
-    .fmod:last-of-type { padding-bottom: 100px; }
-    .fmod__card { background: #fff; border-radius: var(--radius-lg); padding: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; overflow: hidden; }
-    .fmod__card--reverse { direction: rtl; }
-    .fmod__card--reverse > * { direction: ltr; }
-    .fmod__label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; color: var(--brand); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
-    .fmod__label-icon { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-    .fmod__label-icon svg { width: 18px; height: 18px; }
-    .fmod__label-icon--purple { background: rgba(94,89,254,0.1); color: var(--brand); }
-    .fmod__title { font-size: 40px; font-weight: 900; line-height: 1.08; color: var(--text); margin-bottom: 32px; letter-spacing: -0.03em; }
-    .fmod__accordion { display: flex; flex-direction: column; gap: 6px; }
-    .acc-item { padding: 22px 24px; background: #fff; border: 1px solid var(--border); border-radius: 14px; cursor: pointer; transition: all 0.3s; }
-    .acc-item.active { background: #F8F9FB; border-color: #E2E4E9; }
-    .acc-item__header { display: flex; align-items: center; gap: 14px; font-size: 16px; font-weight: 700; color: var(--text); }
-    .acc-item__header-icon { width: 20px; height: 20px; color: var(--text); flex-shrink: 0; }
-    .acc-item__icon { font-size: 16px; margin-left: auto; color: var(--text-muted); transition: transform 0.3s; }
-    .acc-item.active .acc-item__icon { transform: rotate(45deg); }
-    .acc-item__body { max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; font-size: 14px; color: var(--text-3); line-height: 1.65; padding-left: 34px; }
-    .acc-item.active .acc-item__body { max-height: 120px; padding-top: 10px; }
-    .fmod__visual { position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center; }
-    .fmod__phone { width: 260px; border-radius: 32px; border: 6px solid #1A1A2E; overflow: hidden; background: #fff; box-shadow: 0 25px 60px rgba(0,0,0,0.15); position: relative; z-index: 2; }
-    .fmod__phone-notch { width: 100px; height: 24px; background: #1A1A2E; border-radius: 0 0 16px 16px; margin: 0 auto; position: relative; z-index: 3; }
-    .fmod__phone-content { padding: 8px; background: #F8F9FA; }
-    .fmod__text { }
-    .fmod__lifestyle { position: absolute; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); width: 200px; height: 280px; object-fit: cover; }
-    img.fmod__lifestyle { object-fit: cover; }
+    /* ===== UI CARD REPLICAS (HTML/CSS app UI snippets for visual sections) ===== */
+    .uic { background: #fff; border-radius: 18px; box-shadow: 0 25px 60px rgba(0,0,0,0.22), 0 8px 20px rgba(0,0,0,0.12); font-family: 'Inter', sans-serif; overflow: hidden; position: absolute; z-index: 3; }
+    .uic--main { width: 310px; }
+    .uic--float { width: 210px; }
+    .uic__hdr { background: #F8F9FB; padding: 11px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #EEF0F4; }
+    .uic__hdr-icon { width: 26px; height: 26px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; }
+    .uic__hdr-title { font-size: 13px; font-weight: 700; color: #0F172A; letter-spacing: -0.02em; flex: 1; }
+    .uic__hdr-badge { background: #3478F6; color: #fff; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 6px; letter-spacing: 0.05em; }
+    .uic__body { padding: 14px 16px; }
+    /* AI Builder */
+    .uic-ai__prompt { background: #F5F7FA; border: 1px solid #EEF0F4; border-radius: 10px; padding: 10px 12px; font-size: 12px; color: #64748B; line-height: 1.5; margin-bottom: 10px; font-style: italic; }
+    .uic-ai__chips { display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap; }
+    .uic-ai__chip { background: rgba(52,120,246,0.08); color: #3478F6; font-size: 10px; font-weight: 600; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+    .uic-ai__btn { background: #3478F6; color: #fff; font-size: 12px; font-weight: 600; padding: 9px 0; border-radius: 10px; text-align: center; margin-bottom: 12px; letter-spacing: 0.02em; }
+    .uic-ai__divider { font-size: 10px; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; font-weight: 600; }
+    .uic-ai__exercise { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid #F1F3F7; }
+    .uic-ai__exercise:last-child { border-bottom: none; }
+    .uic-ai__num { width: 22px; height: 22px; border-radius: 7px; background: #F5F7FA; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #64748B; flex-shrink: 0; }
+    .uic-ai__name { font-size: 12px; font-weight: 600; color: #0F172A; }
+    .uic-ai__meta { font-size: 10px; color: #94A3B8; margin-top: 1px; }
+    /* Client Metrics */
+    .uic-met__row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .uic-met__avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(52,120,246,0.12); }
+    .uic-met__name { font-size: 13px; font-weight: 700; color: #0F172A; }
+    .uic-met__tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 100px; }
+    .uic-met__tag--active { background: #DCFCE7; color: #16A34A; }
+    .uic-met__score { width: 42px; height: 42px; border-radius: 50%; border: 3px solid #3478F6; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #3478F6; margin-left: auto; flex-shrink: 0; }
+    .uic-met__label { font-size: 11px; font-weight: 600; color: #64748B; margin-bottom: 5px; }
+    .uic-met__bar { height: 5px; background: #EEF0F4; border-radius: 3px; overflow: hidden; margin-bottom: 3px; }
+    .uic-met__bar-fill { height: 100%; border-radius: 3px; }
+    .uic-met__bar-fill--green { background: #16A34A; }
+    .uic-met__bar-fill--blue { background: #3478F6; }
+    .uic-met__pct { font-size: 10px; color: #94A3B8; margin-bottom: 10px; }
+    .uic-met__stats { display: flex; gap: 6px; }
+    .uic-met__stat { flex: 1; text-align: center; background: #F8F9FB; border-radius: 8px; padding: 8px 4px; }
+    .uic-met__stat-num { font-size: 16px; font-weight: 800; color: #0F172A; line-height: 1; }
+    .uic-met__stat-lbl { font-size: 9px; color: #94A3B8; text-transform: uppercase; font-weight: 600; margin-top: 2px; }
+    /* Chat */
+    .uic-chat__msgs { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+    .uic-chat__bubble { max-width: 78%; padding: 8px 12px; border-radius: 14px; font-size: 12px; line-height: 1.45; }
+    .uic-chat__bubble--t { background: #3478F6; color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .uic-chat__bubble--c { background: #F1F3F7; color: #0F172A; align-self: flex-start; border-bottom-left-radius: 4px; }
+    .uic-chat__time { font-size: 9px; color: #94A3B8; margin-top: 1px; }
+    .uic-chat__time--r { text-align: right; }
+    .uic-chat__input { display: flex; align-items: center; gap: 6px; background: #F5F7FA; border: 1px solid #EEF0F4; border-radius: 20px; padding: 8px 12px; }
+    .uic-chat__input-text { font-size: 11px; color: #94A3B8; flex: 1; }
+    .uic-chat__input-send { width: 24px; height: 24px; border-radius: 50%; background: #3478F6; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; }
+    /* Marketplace */
+    .uic-mkt__photo { width: 100%; height: 120px; object-fit: cover; position: relative; }
+    .uic-mkt__badge { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.55); color: #fff; font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 100px; display: flex; align-items: center; gap: 4px; z-index: 2; }
+    .uic-mkt__dot { width: 5px; height: 5px; border-radius: 50%; background: #10B981; }
+    .uic-mkt__name { font-size: 15px; font-weight: 700; color: #0F172A; margin-bottom: 3px; }
+    .uic-mkt__rating { display: flex; align-items: center; gap: 4px; margin-bottom: 6px; font-size: 12px; }
+    .uic-mkt__stars { color: #F59E0B; }
+    .uic-mkt__rating-text { color: #64748B; }
+    .uic-mkt__tags { font-size: 11px; color: #94A3B8; margin-bottom: 10px; }
+    .uic-mkt__price { font-size: 13px; font-weight: 700; color: #0F172A; margin-bottom: 10px; }
+    .uic-mkt__cta { background: #3478F6; color: #fff; font-size: 12px; font-weight: 600; padding: 8px 0; border-radius: 10px; text-align: center; }
+    /* Notification floats */
+    .uic-notif { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; }
+    .uic-notif__icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+    .uic-notif__icon--green { background: #DCFCE7; }
+    .uic-notif__icon--yellow { background: #FEF3C7; }
+    .uic-notif__icon--blue { background: rgba(52,120,246,0.08); }
+    .uic-notif__title { font-size: 12px; font-weight: 600; color: #0F172A; }
+    .uic-notif__desc { font-size: 10px; color: #94A3B8; line-height: 1.4; }
+    /* Automation rule */
+    .uic-auto__rule { padding: 6px 0; border-bottom: 1px solid #F1F3F7; display: flex; align-items: center; gap: 8px; }
+    .uic-auto__rule:last-child { border-bottom: none; }
+    .uic-auto__trigger { font-size: 11px; font-weight: 600; color: #0F172A; flex: 1; }
+    .uic-auto__action { font-size: 10px; color: #64748B; }
+    .uic-auto__toggle { width: 32px; height: 18px; border-radius: 9px; background: #3478F6; position: relative; flex-shrink: 0; }
+    .uic-auto__toggle::after { content: ''; position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #fff; top: 2px; right: 2px; }
+    /* Feature tabs bg image */
+    .ftabs__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; filter: blur(6px); transform: scale(1.1); z-index: 0; }
+    .ftabs__screen { z-index: 1; position: relative; }
+    /* AI section large card */
+    .ai-section__uic { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 380px; }
 
-    /* ===== TESTIMONIALS ===== */
-    .testimonials { padding: 120px 0; }
-    .testimonials__header { text-align: center; margin-bottom: 64px; }
-    .testimonials__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
-    .testimonials__title { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; }
-    .testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .tcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; transition: all 0.3s; }
-    .tcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .tcard__stat { font-size: 48px; font-weight: 800; color: var(--brand); line-height: 1; margin-bottom: 6px; }
-    .tcard__stat-label { font-size: 14px; color: var(--text-3); margin-bottom: 20px; }
-    .tcard__quote { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 24px; }
-    .tcard__author { display: flex; align-items: center; gap: 12px; }
-    .tcard__avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-    .tcard__name { font-size: 14px; font-weight: 600; color: var(--text); }
-    .tcard__role { font-size: 13px; color: var(--text-3); }
+    /* ===== STATS ===== */
+    .stats { padding: 80px 0; background: var(--bg-2); }
+    .stats__header { text-align: center; margin-bottom: 48px; }
+    .stats__title { font-size: clamp(28px, 3vw, 38px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.15; }
+    .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: 900px; margin: 0 auto; }
+    .stat-card { text-align: center; }
+    .stat-card__number { font-size: clamp(36px, 4vw, 52px); font-weight: 900; color: var(--text); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+    .stat-card__label { font-size: 14px; color: var(--text-3); line-height: 1.5; }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps { padding: 100px 0; background: var(--bg-2); }
+    .steps__header { text-align: center; margin-bottom: 56px; }
+    .steps__title { font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.15; }
+    .steps__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .step-card { text-align: center; }
+    .step-card__number { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--text); color: #fff; font-size: 18px; font-weight: 800; margin-bottom: 20px; }
+    .step-card__img { height: 320px; background: #fff; border-radius: var(--radius-lg); overflow: hidden; position: relative; margin-bottom: 20px; box-shadow: var(--shadow); }
+    .step-card__img-bg { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .step-card__img-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.08); }
+    .step-card__img-phone { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -48%); max-height: 310px; width: auto; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.2)); z-index: 2; }
+    .step-card__title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .step-card__desc { font-size: 14px; color: var(--text-3); line-height: 1.65; max-width: 320px; margin: 0 auto; }
 
     /* ===== PRICING ===== */
-    .pricing { padding: 120px 0; background: var(--bg-2); }
-    .pricing__header { text-align: center; margin-bottom: 64px; }
-    .pricing__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
-    .pricing__title { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 14px; }
-    .pricing__sub { font-size: 18px; color: var(--text-3); }
-    .pricing__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto; }
-    .price-card { background: #fff; border-radius: var(--radius-lg); padding: 40px; border: 2px solid transparent; }
+    .pricing { padding: 100px 0; }
+    .pricing__header { text-align: center; margin-bottom: 48px; }
+    .pricing__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .pricing__title { font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 12px; line-height: 1.15; }
+    .pricing__sub { font-size: 17px; color: var(--text-3); }
+    .pricing__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 780px; margin: 0 auto; }
+    .price-card { background: #fff; border-radius: var(--radius-lg); padding: 36px; border: 2px solid transparent; display: flex; flex-direction: column; box-shadow: var(--shadow); }
     .price-card--pro { border-color: var(--text); position: relative; }
-    .price-card__popular { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--text); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 16px; border-radius: 100px; text-transform: uppercase; white-space: nowrap; }
-    .price-card__name { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .price-card__price { font-size: 48px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
-    .price-card__price span { font-size: 18px; font-weight: 400; color: var(--text-3); }
+    .price-card__popular { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--text); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 18px; border-radius: 100px; text-transform: uppercase; white-space: nowrap; }
+    .price-card__name { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .price-card__price { font-size: 44px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+    .price-card__price span { font-size: 16px; font-weight: 400; color: var(--text-3); }
     .price-card__period { font-size: 14px; color: var(--text-3); margin-bottom: 28px; }
-    .price-card__features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .price-card__features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; flex: 1; }
     .price-card__feature { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--text-2); }
-    .price-card__check { color: var(--text); font-size: 16px; }
+    .price-card__check { color: var(--text); display: flex; align-items: center; flex-shrink: 0; }
+    .pricing__note { text-align: center; margin-top: 32px; font-size: 15px; color: var(--text-3); line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .pricing__note strong { color: var(--text); font-weight: 600; }
 
     /* ===== CTA ===== */
-    .cta { padding: 140px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
+    .cta { padding: 110px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
     .cta__glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
-    .cta__title { font-size: 56px; font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -0.035em; position: relative; z-index: 1; line-height: 1.08; }
-    .cta__sub { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta__bg-phones { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 40px; opacity: 0.08; pointer-events: none; }
+    .cta__bg-phones img { max-height: 500px; width: auto; border-radius: 0; }
+    .cta__title { font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: -0.04em; position: relative; z-index: 1; line-height: 1.15; }
+    .cta__sub { font-size: 17px; color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; letter-spacing: -0.01em; }
     .cta__actions { position: relative; z-index: 1; display: flex; gap: 16px; justify-content: center; }
 
     /* ===== FOOTER ===== */
     .footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 80px 0 40px; }
     .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer__logo { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .footer__logo { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 16px; letter-spacing: -0.02em; }
     .footer__logo span { color: var(--brand); }
-    .footer__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; margin-bottom: 20px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
     .footer__social { display: flex; gap: 12px; }
     .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
     .footer__social a:hover { background: var(--brand); color: #fff; }
@@ -248,96 +378,118 @@
     .footer__legal a { color: rgba(255,255,255,0.25); transition: color 0.2s; }
     .footer__legal a:hover { color: rgba(255,255,255,0.5); }
 
+    /* ===== SCROLL ANCHORS ===== */
+    [id] { scroll-margin-top: 100px; }
+
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 1280px) {
-      .container { padding: 0 32px; }
-    }
+    @media (max-width: 1280px) { .container { padding: 0 32px; } }
     @media (max-width: 1024px) {
-      .ai-section { padding: 80px 0; }
-      .ai-section__title { font-size: 40px; }
+      .hero__inner { flex-direction: column; gap: 40px; }
+      .hero__phones { flex: none; width: 100%; max-width: 380px; height: 460px; margin: 0 auto; }
+      .hero__phone--primary { max-height: 440px; left: 10px; }
+      .hero__phone--secondary { max-height: 380px; left: 120px; top: 40px; }
+      .ai-section { padding: 72px 0; }
       .ai-section__grid { grid-template-columns: 1fr 1fr; }
-      .ai-section__visual { padding: 20px; }
-      .hero__title { font-size: 48px; }
-      .hero__content { padding: 80px 0; }
-      .services__title { font-size: 40px; }
-      .services { padding: 60px 0 100px; }
-      .fmod__card { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
+      .ai-section__visual { min-height: 360px; }
+      .services { padding: 72px 0; }
+      .services__grid { grid-template-columns: 1fr; max-width: 520px; }
+      .fmod__card { grid-template-columns: 1fr; padding: 40px 36px; gap: 36px; }
       .fmod__card--reverse { direction: ltr; }
-      .fmod__visual { min-height: 300px; }
-      .fmod__title { font-size: 34px; }
-      .fmod:first-of-type { padding-top: 80px; }
-      .fmod:last-of-type { padding-bottom: 80px; }
-      .services__grid { grid-template-columns: 1fr; max-width: 560px; }
-      .testimonials__grid { grid-template-columns: 1fr 1fr; }
-      .testimonials { padding: 100px 0; }
+      .fmod__visual { min-height: 320px; }
+      .fmod__scene { min-height: 320px; }
+      .fmod__scene-phone { max-height: 360px; }
+      .uic--main { width: 280px; }
+      .uic--float { width: 190px; }
+      .ai-section__uic { width: 340px; }
+      .fmod:first-of-type { padding-top: 72px; }
+      .fmod:last-of-type { padding-bottom: 72px; }
+      .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .steps__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
       .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
-      .ftabs { padding: 60px 0; }
+      .ftabs { padding: 72px 0; }
       .ftabs__tabs { grid-template-columns: repeat(2, 1fr); gap: 0; }
-      .ftabs__image { height: 400px; }
-      .pricing { padding: 100px 0; }
+      .ftabs__image { min-height: 420px; }
       .pricing__grid { grid-template-columns: 1fr; max-width: 440px; }
-      .cta { padding: 100px 0; }
+      .pricing { padding: 80px 0; }
+      .cta { padding: 80px 0; }
     }
     @media (max-width: 768px) {
-      .ai-section { padding: 60px 0; }
-      .ai-section__title { font-size: 32px; }
-      .ai-section__sub { font-size: 16px; }
+      .ai-section { padding: 56px 0; }
       .ai-section__grid { grid-template-columns: 1fr; }
-      .ai-section__visual { padding: 16px; }
-      .ai-section__screen { padding: 16px; }
-      .ai-section__screen > div:last-child { display: grid; grid-template-columns: 1fr !important; }
+      .ai-section__visual { min-height: 300px; }
+      .ai-section__visual-phone { max-height: 360px; }
       .container { padding: 0 20px; }
-      .hero__title { font-size: 38px; }
-      .hero__sub { font-size: 17px; }
-      .hero__content { padding: 64px 0; }
+      .hero__sub { font-size: 16px; }
+      .hero__inner { padding: 48px 0; }
       .hero__actions { flex-direction: column; align-items: flex-start; }
+      .hero__phones { height: 380px; max-width: 300px; }
+      .hero__phone--primary { max-height: 360px; }
+      .hero__phone--secondary { max-height: 310px; left: 80px; top: 30px; }
       .nav__links, .nav__signin { display: none; }
       .nav__hamburger { display: flex; }
-      .fmod__title { font-size: 30px; }
-      .fmod__card { padding: 28px; gap: 32px; }
+      .fmod__card { padding: 28px 24px; gap: 28px; }
       .fmod__label { font-size: 11px; }
-      .fmod { padding: 12px 0; }
-      .fmod:first-of-type { padding-top: 60px; }
-      .fmod:last-of-type { padding-bottom: 60px; }
-      .services { padding: 60px 0 80px; }
-      .services__title { font-size: 32px; margin-bottom: 40px; }
+      .fmod { padding: 10px 0; }
+      .fmod:first-of-type { padding-top: 56px; }
+      .fmod:last-of-type { padding-bottom: 56px; }
+      .fmod__scene-phone { max-height: 300px; }
+      .fmod__scene-card { max-height: 140px; }
+      .uic--main { width: 260px; }
+      .uic--float { width: 170px; }
+      .ai-section__uic { width: 300px; }
+      .services { padding: 56px 0; }
+      .services__title { margin-bottom: 32px; }
       .svc-card__img { height: 260px; }
-      .testimonials { padding: 80px 0; }
-      .testimonials__grid { grid-template-columns: 1fr; }
-      .testimonials__title { font-size: 32px; }
-      .pricing { padding: 80px 0; }
-      .pricing__title { font-size: 32px; }
-      .cta { padding: 80px 0; }
-      .cta__title { font-size: 32px; }
+      .svc-card__phone { max-height: 240px; }
+      .pricing { padding: 64px 0; }
+      .cta { padding: 64px 0; }
       .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .ftabs { padding: 48px 0; }
-      .ftabs__image { height: 280px; }
+      .ftabs { padding: 56px 0; }
       .ftabs__tabs { grid-template-columns: 1fr 1fr; gap: 0; }
-      .ftab { padding: 20px 16px 16px; }
-      .ftab__title { font-size: 14px; }
-      .ftab__desc { font-size: 13px; }
+      .ftabs__image { min-height: 360px; }
+      .ftabs__screen img { max-height: 340px; }
+      .stats { padding: 56px 0; }
+      .steps { padding: 64px 0; }
+      .step-card__img { height: 280px; }
+      .step-card__img-phone { max-height: 260px; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .hero__title { font-size: 32px; }
-      .hero__sub { font-size: 16px; }
-      .hero__content { padding: 48px 0; }
+      .hero__sub { font-size: 15px; }
+      .hero__inner { padding: 36px 0; }
       .hero__badge { font-size: 11px; padding: 6px 14px; }
-      .fmod__title { font-size: 26px; }
-      .fmod__card { padding: 24px; gap: 28px; border-radius: 16px; }
-      .acc-item { padding: 14px 16px; }
-      .acc-item__header { font-size: 14px; gap: 8px; }
-      .services__title { font-size: 28px; }
+      .hero__phones { height: 300px; max-width: 240px; }
+      .hero__phone--primary { max-height: 280px; left: 0; }
+      .hero__phone--secondary { max-height: 240px; left: 60px; top: 20px; }
       .svc-card__img { height: 220px; }
-      .testimonials__title { font-size: 28px; }
-      .pricing__title { font-size: 28px; }
-      .cta__title { font-size: 28px; }
+      .svc-card__phone { max-height: 200px; bottom: -16px; right: 10px; }
+      .fmod__card { padding: 20px 18px; gap: 24px; border-radius: 14px; }
+      .fmod__scene { min-height: 260px; }
+      .fmod__scene-phone { max-height: 240px; }
+      .fmod__scene-card { display: none; }
+      .uic--float { display: none; }
+      .uic--main { width: 220px; }
+      .ai-section__uic { width: 240px; }
+      .uic__hdr { padding: 8px 10px; }
+      .uic__hdr-title { font-size: 11px; }
+      .uic__body { padding: 10px 12px; }
+      .uic-ai__prompt { font-size: 10px; padding: 8px 10px; }
+      .uic-ai__exercise { padding: 5px 0; }
+      .uic-ai__name { font-size: 10px; }
+      .uic-ai__meta { font-size: 9px; }
+      .uic-met__avatar { width: 32px; height: 32px; }
+      .uic-met__score { width: 34px; height: 34px; font-size: 12px; }
+      .uic-met__stat-num { font-size: 13px; }
+      .uic-chat__bubble { font-size: 10px; padding: 6px 10px; }
+      .acc-item { padding: 10px 12px; }
+      .acc-item__header { font-size: 14px; gap: 8px; }
       .footer__grid { grid-template-columns: 1fr; }
       .ftabs__tabs { grid-template-columns: 1fr; }
-      .ftabs__image { height: 220px; }
-      .fmod__phone { width: 220px; border-radius: 28px; }
-      .fmod__visual { min-height: 260px; }
-      .fmod__lifestyle { width: 160px; height: 220px; }
+      .ftabs__image { min-height: 280px; }
+      .ftabs__screen img { max-height: 260px; }
+      .stats__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .step-card__img { height: 240px; }
+      .step-card__img-phone { max-height: 220px; }
     }
 
     /* ===== ANIMATIONS ===== */
@@ -351,71 +503,132 @@
 </head>
 <body>
 
-  <!-- ===== SECTION 1: NAV ===== -->
+  <!-- ===== NAV ===== -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">First<span>Rep</span></a>
       <div class="nav__links">
-        <a href="#features" class="nav__link">Features</a>
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
         <a href="#how-it-works" class="nav__link">How It Works</a>
         <a href="#pricing" class="nav__link">Pricing</a>
-        <a href="#testimonials" class="nav__link">Testimonials</a>
       </div>
       <div class="nav__actions">
         <a href="#" class="nav__signin">Sign In</a>
         <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
       </div>
-      <div class="nav__hamburger" id="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
       </div>
     </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+
     <div class="nav__mobile" id="mobileMenu">
-      <a href="#features" onclick="document.getElementById('mobileMenu').classList.remove('open')">Features</a>
-      <a href="#how-it-works" onclick="document.getElementById('mobileMenu').classList.remove('open')">How It Works</a>
-      <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
-      <a href="#testimonials" onclick="document.getElementById('mobileMenu').classList.remove('open')">Testimonials</a>
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="features/programming.html">AI Workout Builder</a>
+        <a href="features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="features/habits.html">Habit Tracking</a>
+        <a href="features/coaching.html">Coaching Dashboard</a>
+        <a href="features/communication.html">Messaging</a>
+        <a href="features/scheduling.html">Scheduling</a>
+        <a href="features/marketplace.html">Marketplace</a>
+        <a href="features/payments.html">Payments</a>
+        <a href="features.html">All Features</a>
+      </div>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
       <a href="#">Sign In</a>
       <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
     </div>
   </nav>
 
-  <!-- ===== SECTION 2: HERO ===== -->
+  <!-- ===== SECTION 1: HERO ===== -->
   <section class="hero">
     <div class="hero__bg">
       <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&h=900&fit=crop&q=80" alt="Gym interior with modern equipment">
     </div>
     <div class="hero__overlay"></div>
     <div class="container">
-      <div class="hero__content" data-animate>
-        <div class="hero__badge">
-          <span class="hero__dot"></span>
-          Now in open beta
+      <div class="hero__inner">
+        <div class="hero__content" data-animate>
+          <div class="hero__badge">
+            <span class="hero__dot"></span>
+            Now in open beta
+          </div>
+          <h1 class="hero__title">
+            The AI-Powered Platform for
+            <span class="hero__rotating" id="rotatingText">
+              <span class="hero__word active">Personal Trainers</span>
+              <span class="hero__word">Online Coaches</span>
+              <span class="hero__word">Fitness Entrepreneurs</span>
+            </span>
+            <br>To Build a Thriving Business
+          </h1>
+          <p class="hero__sub">Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale — without the burnout.</p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--white btn--lg">Start Free — No Card Required</a>
+            <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+          </div>
+          <p class="hero__note">Free forever for up to 3 clients.</p>
         </div>
-        <h1 class="hero__title">
-          The All-In-One Platform for
-          <span class="hero__rotating" id="rotatingText">
-            <span class="hero__word active">Fitness Coaches</span>
-            <span class="hero__word">Gym Owners</span>
-            <span class="hero__word">Nutrition Coaches</span>
-            <span class="hero__word">Online Trainers</span>
-          </span>
-          <br>To Level Up Your Business
-        </h1>
-        <p class="hero__sub">Find clients, deliver world-class coaching, and build a thriving fitness business — with AI doing the heavy lifting.</p>
-        <div class="hero__actions">
-          <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
-          <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+        <div class="hero__phones" data-animate>
+          <img class="hero__phone hero__phone--primary" src="../screenshots/mockups/trainer_home-portrait.png" alt="FirstRep trainer dashboard">
+          <img class="hero__phone hero__phone--secondary" src="../screenshots/mockups/client_marketplace-portrait.png" alt="FirstRep client marketplace">
         </div>
-        <p class="hero__note">Free forever for up to 3 clients.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 3: TRUST ===== -->
+  <!-- ===== TRUST BAR ===== -->
   <section class="trust">
-    <p class="trust__label">Trusted by 500+ Coaches Worldwide</p>
+    <p class="trust__label">Built for every certification</p>
     <div class="trust__track">
       <span class="trust__item">NASM Certified</span>
       <span class="trust__item">ACE Fitness</span>
@@ -434,121 +647,482 @@
       <span class="trust__item">CrossFit Level 2</span>
       <span class="trust__item">ACSM</span>
     </div>
+    <p class="trust__stats">1,734 exercises &middot; 50+ equipment brands &middot; AI-powered programs</p>
   </section>
 
-  <!-- ===== SECTION 4: FEATURE TABS ===== -->
+  <!-- ===== SECTION 2: FEATURE TABS ===== -->
   <section class="ftabs" id="features">
     <div class="container">
       <div class="ftabs__image">
+        <img class="ftabs__bg" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop&q=80" alt="">
         <div class="ftabs__screen active" id="ftab-screen-0">
-          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=600&fit=crop&q=80" alt="AI workout builder generating personalized program">
+          <img src="../screenshots/mockups/trainer_aibuilder-portrait.png" alt="AI Program Builder">
         </div>
         <div class="ftabs__screen" id="ftab-screen-1">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&h=600&fit=crop&q=80" alt="Coaching dashboard with client health scores">
+          <img src="../screenshots/mockups/trainer_clients-portrait.png" alt="Client management dashboard">
         </div>
         <div class="ftabs__screen" id="ftab-screen-2">
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&h=600&fit=crop&q=80" alt="Nutrition and habit tracking interface">
+          <img src="../screenshots/mockups/trainer_home-portrait.png" alt="Coaching command center">
         </div>
         <div class="ftabs__screen" id="ftab-screen-3">
-          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop&q=80" alt="Trainer marketplace with profiles and reviews">
+          <img src="../screenshots/mockups/client_marketplace-portrait.png" alt="Client marketplace">
         </div>
       </div>
       <div class="ftabs__tabs">
         <div class="ftab active" data-tab="0" onclick="switchTab(0)">
           <div class="ftab__icon"><i data-lucide="sparkles"></i> <span class="ftab__ai">AI</span></div>
           <div class="ftab__title">AI Workout Builder</div>
-          <p class="ftab__desc">Generate personalized programs in seconds. AI suggests exercises, sets, and progressions from a questionnaire.</p>
+          <p class="ftab__desc">Describe what you want — "chest and triceps hypertrophy with dumbbells" — and AI builds a complete workout from your 1,734-exercise library. Generate full programs in seconds, not hours.</p>
         </div>
         <div class="ftab" data-tab="1" onclick="switchTab(1)">
-          <div class="ftab__icon"><i data-lucide="layout-dashboard"></i></div>
-          <div class="ftab__title">Coaching Dashboard</div>
-          <p class="ftab__desc">Health scores, risk signals, and check-in queues. See every client's status at a glance.</p>
+          <div class="ftab__icon"><i data-lucide="users"></i></div>
+          <div class="ftab__title">Your Clients at a Glance</div>
+          <p class="ftab__desc">See every client's status in one view. Compliance rates, workout progress, and quick actions — message, assign habits, or send forms — right from the client card.</p>
         </div>
         <div class="ftab" data-tab="2" onclick="switchTab(2)">
-          <div class="ftab__icon"><i data-lucide="apple"></i></div>
-          <div class="ftab__title">Nutrition &amp; Habits</div>
-          <p class="ftab__desc">Auto-calculated macros, meal plans, habit tracking, and daily compliance — all in one place.</p>
+          <div class="ftab__icon"><i data-lucide="layout-dashboard"></i></div>
+          <div class="ftab__title">Coaching Command Center</div>
+          <p class="ftab__desc">Total clients, average compliance, unread messages, revenue — everything that matters on one screen. Quick actions let you create packages, invite clients, and build programs.</p>
         </div>
         <div class="ftab" data-tab="3" onclick="switchTab(3)">
           <div class="ftab__icon"><i data-lucide="globe"></i></div>
-          <div class="ftab__title">Marketplace</div>
-          <p class="ftab__desc">Get discovered by thousands of clients. Your profile, packages, and reviews — all searchable.</p>
+          <div class="ftab__title">Clients Find You</div>
+          <p class="ftab__desc">Your profile goes live on the FirstRep marketplace where clients search by specialty, location, and rating. Featured trainers, verified badges, and real reviews do the selling.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 5: AI ===== -->
+  <!-- ===== SECTION 3: TWO WAYS TO GROW ===== -->
+  <section class="services">
+    <div class="container">
+      <h2 class="services__title" data-animate>Whether You Coach One-on-One or Reach Hundreds, <em>FirstRep Scales With You</em></h2>
+      <div class="services__grid">
+        <!-- Card 1: High-Ticket — lifestyle bg + phone overlay -->
+        <div class="svc-card" data-animate>
+          <div class="svc-card__img">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop&q=80" alt="Personal trainer working one-on-one with a client">
+            <div class="svc-card__img-overlay"></div>
+            <img class="svc-card__phone" src="../screenshots/mockups/client_upcomingSessions-portrait.png" alt="Upcoming coaching sessions">
+          </div>
+          <h3 class="svc-card__title">High-Ticket Coaching</h3>
+          <p class="svc-card__subtitle">One-to-One. Premium. Personal.</p>
+          <div class="svc-card__features">
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom training programs tailored to each client</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Direct messaging with real coaching conversations</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduled video and in-person sessions</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Weekly check-ins with detailed progress tracking</div>
+          </div>
+        </div>
+        <!-- Card 2: Scalable — lifestyle bg + phone overlay -->
+        <div class="svc-card" data-animate>
+          <div class="svc-card__img">
+            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&h=500&fit=crop&q=80" alt="Group fitness class">
+            <div class="svc-card__img-overlay"></div>
+            <img class="svc-card__phone" src="../screenshots/mockups/trainer_invite-portrait.png" alt="Send invite link to clients">
+          </div>
+          <h3 class="svc-card__title">Scalable Business</h3>
+          <p class="svc-card__subtitle">One-to-Many. Packaged. Automated.</p>
+          <div class="svc-card__features">
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Monthly coaching, session packs, and digital programs</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Invite links clients can subscribe to in 60 seconds</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automation rules that handle reminders and follow-ups</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Marketplace listing that attracts clients while you sleep</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== FEATURE DEEP DIVES (dark bg, white cards, lifestyle + mockup compositions) ===== -->
+
+<!-- PLAN & COACH -->
+<section class="fmod" id="plan">
+  <div class="container">
+    <div class="fmod__card" data-animate>
+      <div class="fmod__text">
+        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="clipboard-list"></i></span> PLAN &amp; COACH</span>
+        <h2 class="fmod__title">Build Programs in Seconds, Not Hours</h2>
+        <div class="fmod__accordion">
+          <div class="acc-item active">
+            <div class="acc-item__header">
+              <i data-lucide="sparkles" class="acc-item__header-icon"></i><span>AI Program Builder</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Describe what you need. AI generates a full program from 1,734 exercises with video demos. Push Pull Legs, Upper/Lower, Full Body — or anything custom.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="trending-up" class="acc-item__header-icon"></i><span>Auto-Progression</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">When a client hits their rep target with good RPE, the system suggests a weight increase. Progressive overload on autopilot.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="utensils" class="acc-item__header-icon"></i><span>Smart Nutrition</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Auto-calculated macros, meal plans with grocery lists, and daily compliance tracking across every client.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="dumbbell" class="acc-item__header-icon"></i><span>1,734 Exercises</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Full video library with equipment-specific guidance. Shows clients the exact machine at their gym.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fmod__visual">
+        <div class="fmod__scene">
+          <img class="fmod__scene-bg" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&h=600&fit=crop&q=80" alt="Athlete training in gym">
+          <div class="fmod__scene-overlay"></div>
+          <!-- Main: AI Workout Builder card -->
+          <div class="uic uic--main" style="right: 16px; top: 50%; transform: translateY(-50%);">
+            <div class="uic__hdr">
+              <span class="uic__hdr-icon" style="background: rgba(52,120,246,0.1); color: #3478F6;">&#10022;</span>
+              <span class="uic__hdr-title">AI Workout Builder</span>
+              <span class="uic__hdr-badge">AI</span>
+            </div>
+            <div class="uic__body">
+              <div class="uic-ai__prompt">Push pull legs, intermediate, 4 days per week, dumbbells only...</div>
+              <div class="uic-ai__chips">
+                <span class="uic-ai__chip">Hypertrophy</span>
+                <span class="uic-ai__chip">Strength</span>
+                <span class="uic-ai__chip">HIIT</span>
+              </div>
+              <div class="uic-ai__btn">&#10022; Generate Workout</div>
+              <div class="uic-ai__divider">Generated &mdash; 6 exercises</div>
+              <div class="uic-ai__exercise">
+                <span class="uic-ai__num">1</span>
+                <div><div class="uic-ai__name">Barbell Bench Press</div><div class="uic-ai__meta">4 &times; 8 &middot; 90s rest</div></div>
+              </div>
+              <div class="uic-ai__exercise">
+                <span class="uic-ai__num">2</span>
+                <div><div class="uic-ai__name">Incline Dumbbell Press</div><div class="uic-ai__meta">3 &times; 10 &middot; 60s rest</div></div>
+              </div>
+              <div class="uic-ai__exercise">
+                <span class="uic-ai__num">3</span>
+                <div><div class="uic-ai__name">Cable Flyes</div><div class="uic-ai__meta">3 &times; 12 &middot; 45s rest</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Float: Exercise Library notification -->
+          <div class="uic uic--float" style="left: 12px; bottom: 18px; transform: rotate(-3deg);">
+            <div class="uic-notif">
+              <span class="uic-notif__icon uic-notif__icon--blue">&#128218;</span>
+              <div>
+                <div class="uic-notif__title">Exercise Library</div>
+                <div class="uic-notif__desc">1,734 exercises with video demos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTIVATE & MEASURE -->
+<section class="fmod" id="motivate">
+  <div class="container">
+    <div class="fmod__card fmod__card--reverse" data-animate>
+      <div class="fmod__text">
+        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="bar-chart-3"></i></span> MOTIVATE &amp; MEASURE</span>
+        <h2 class="fmod__title">Coach Smarter, Not Harder</h2>
+        <div class="fmod__accordion">
+          <div class="acc-item active">
+            <div class="acc-item__header">
+              <i data-lucide="shield-alert" class="acc-item__header-icon"></i><span>Smart Risk Detection</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Health scores flag plateaus, declining adherence, and low energy before clients churn. You intervene at the right moment.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="file-text" class="acc-item__header-icon"></i><span>Auto Weekly Summaries</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Every Monday, both you and your client receive an auto-generated report: PRs, volume, compliance, trends. Saves 30 min per client per week.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="trophy" class="acc-item__header-icon"></i><span>Auto-Detected Milestones</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Personal records, streak achievements, and goal completions — celebrated automatically with push notifications and animations.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="bar-chart-2" class="acc-item__header-icon"></i><span>Monthly Progress Reports</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Auto-generated monthly reports with training stats, nutrition compliance, habit scores, and photo comparisons. Zero manual work.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fmod__visual">
+        <div class="fmod__scene">
+          <img class="fmod__scene-bg" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&h=600&fit=crop&q=80" alt="Athlete checking progress">
+          <div class="fmod__scene-overlay"></div>
+          <!-- Main: Client Metrics card -->
+          <div class="uic uic--main" style="left: 16px; top: 50%; transform: translateY(-50%);">
+            <div class="uic__hdr">
+              <span class="uic__hdr-icon" style="background: rgba(22,163,74,0.1); color: #16A34A;">&#9733;</span>
+              <span class="uic__hdr-title">Client Overview</span>
+            </div>
+            <div class="uic__body">
+              <div class="uic-met__row">
+                <img class="uic-met__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&q=80" alt="James K.">
+                <div>
+                  <div class="uic-met__name">James K.</div>
+                  <span class="uic-met__tag uic-met__tag--active">Active</span>
+                </div>
+                <div class="uic-met__score">87</div>
+              </div>
+              <div class="uic-met__label">Workout Compliance</div>
+              <div class="uic-met__bar"><div class="uic-met__bar-fill uic-met__bar-fill--green" style="width: 78%;"></div></div>
+              <div class="uic-met__pct">78% &mdash; 5/6 workouts completed</div>
+              <div class="uic-met__stats">
+                <div class="uic-met__stat"><div class="uic-met__stat-num">12</div><div class="uic-met__stat-lbl">Workouts</div></div>
+                <div class="uic-met__stat"><div class="uic-met__stat-num">7</div><div class="uic-met__stat-lbl">Streak</div></div>
+                <div class="uic-met__stat"><div class="uic-met__stat-num">5/6</div><div class="uic-met__stat-lbl">Habits</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Float: New PR notification -->
+          <div class="uic uic--float" style="right: 12px; top: 18px; transform: rotate(2deg);">
+            <div class="uic-notif">
+              <span class="uic-notif__icon uic-notif__icon--yellow">&#127942;</span>
+              <div>
+                <div class="uic-notif__title">New PR!</div>
+                <div class="uic-notif__desc">Bench Press &mdash; 100kg<br>Personal Best</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGE -->
+<section class="fmod" id="engage">
+  <div class="container">
+    <div class="fmod__card" data-animate>
+      <div class="fmod__text">
+        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="message-circle"></i></span> ENGAGE</span>
+        <h2 class="fmod__title">Stay Connected Without the Burnout</h2>
+        <div class="fmod__accordion">
+          <div class="acc-item active">
+            <div class="acc-item__header">
+              <i data-lucide="bot" class="acc-item__header-icon"></i><span>AI Check-In Responses</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Batch review 20+ check-ins in 15 minutes. AI drafts personalized responses based on each client's data. You approve or edit.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="zap" class="acc-item__header-icon"></i><span>Smart Accountability</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Missed workout? Day 1: reminder. Day 3: auto-message. Day 5: trainer alert. An escalation ladder that runs itself.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="messages-square" class="acc-item__header-icon"></i><span>1-1 &amp; Group Messaging</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Direct messages, voice notes, community forums, and scheduled messages that send at the right time.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="settings-2" class="acc-item__header-icon"></i><span>Automation Rules</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Configure triggers: missed workout, weight change, low compliance. Set actions: send message, flag for review, adjust program.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fmod__visual">
+        <div class="fmod__scene">
+          <img class="fmod__scene-bg" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="fmod__scene-overlay"></div>
+          <!-- Main: Chat conversation card -->
+          <div class="uic uic--main" style="right: 16px; top: 50%; transform: translateY(-50%);">
+            <div class="uic__hdr">
+              <span class="uic__hdr-icon" style="background: rgba(52,120,246,0.1); color: #3478F6;">&#128172;</span>
+              <span class="uic__hdr-title">Sarah M.</span>
+            </div>
+            <div class="uic__body">
+              <div class="uic-chat__msgs">
+                <div class="uic-chat__bubble uic-chat__bubble--t">Hey! How was the upper body session today?</div>
+                <div class="uic-chat__time uic-chat__time--r">2:14 PM</div>
+                <div class="uic-chat__bubble uic-chat__bubble--c">It was great! Hit a PR on bench press &#127881;</div>
+                <div class="uic-chat__time">2:16 PM</div>
+                <div class="uic-chat__bubble uic-chat__bubble--t">Amazing! Let's push the weight up next week &#128170;</div>
+                <div class="uic-chat__time uic-chat__time--r">2:17 PM</div>
+              </div>
+              <div class="uic-chat__input">
+                <span class="uic-chat__input-text">Type a message...</span>
+                <span class="uic-chat__input-send">&#9654;</span>
+              </div>
+            </div>
+          </div>
+          <!-- Float: Automation rule card -->
+          <div class="uic uic--float" style="left: 12px; top: 18px; transform: rotate(-2deg);">
+            <div class="uic__hdr" style="padding: 8px 12px;">
+              <span class="uic__hdr-icon" style="background: rgba(245,158,11,0.1); color: #F59E0B; font-size: 11px;">&#9889;</span>
+              <span class="uic__hdr-title" style="font-size: 11px;">Automation</span>
+            </div>
+            <div style="padding: 8px 12px;">
+              <div class="uic-auto__rule">
+                <div>
+                  <div class="uic-auto__trigger">Missed 2 workouts</div>
+                  <div class="uic-auto__action">&rarr; Send reminder</div>
+                </div>
+                <div class="uic-auto__toggle"></div>
+              </div>
+              <div class="uic-auto__rule">
+                <div>
+                  <div class="uic-auto__trigger">7-day streak</div>
+                  <div class="uic-auto__action">&rarr; Celebrate</div>
+                </div>
+                <div class="uic-auto__toggle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE -->
+<section class="fmod" id="scale">
+  <div class="container">
+    <div class="fmod__card fmod__card--reverse" data-animate>
+      <div class="fmod__text">
+        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="maximize-2"></i></span> SCALE</span>
+        <h2 class="fmod__title">Grow Your Business on Autopilot</h2>
+        <div class="fmod__accordion">
+          <div class="acc-item active">
+            <div class="acc-item__header">
+              <i data-lucide="store" class="acc-item__header-icon"></i><span>Marketplace &amp; Discovery</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Your profile lives on the FirstRep marketplace. Clients search by specialty, location, and ratings. Featured trainers get priority placement.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="mail" class="acc-item__header-icon"></i><span>Client Invitations</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Invite via email, link, or QR code. Clients subscribe in one tap with your package pre-selected. No more "I'll think about it."</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="credit-card" class="acc-item__header-icon"></i><span>Integrated Payments</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Stripe-powered subscriptions, one-time purchases, and session packs. Automatic billing, zero missed invoices.</div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
+              <i data-lucide="calendar" class="acc-item__header-icon"></i><span>Scheduling &amp; Calendar</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Set availability, accept bookings, sync with Google Calendar. Cancellation policies enforced automatically.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fmod__visual">
+        <div class="fmod__scene">
+          <img class="fmod__scene-bg" src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&h=600&fit=crop&q=80" alt="Modern gym environment">
+          <div class="fmod__scene-overlay"></div>
+          <!-- Main: Marketplace trainer profile card -->
+          <div class="uic uic--main" style="left: 16px; top: 50%; transform: translateY(-50%);">
+            <div style="position: relative;">
+              <img class="uic-mkt__photo" src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=200&fit=crop&crop=face&q=80" alt="Personal trainer">
+              <span class="uic-mkt__badge"><span class="uic-mkt__dot"></span> Verified</span>
+            </div>
+            <div class="uic__body">
+              <div class="uic-mkt__name">Sarah Martinez</div>
+              <div class="uic-mkt__rating">
+                <span class="uic-mkt__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="uic-mkt__rating-text">4.9 (47 reviews)</span>
+              </div>
+              <div class="uic-mkt__tags">HIIT &middot; Strength &middot; Weight Loss</div>
+              <div class="uic-mkt__price">From $149/month</div>
+              <div class="uic-mkt__cta">Book Now &rarr;</div>
+            </div>
+          </div>
+          <!-- Float: Payment received notification -->
+          <div class="uic uic--float" style="right: 12px; bottom: 18px; transform: rotate(3deg);">
+            <div class="uic-notif">
+              <span class="uic-notif__icon uic-notif__icon--green">&#9989;</span>
+              <div>
+                <div class="uic-notif__title">Payment Received</div>
+                <div class="uic-notif__desc">$149.00 &mdash; Monthly Coaching<br>from James K.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== AI SECTION ===== -->
   <section class="ai-section" id="ai">
     <div class="ai-section__glow"></div>
     <div class="container">
       <div class="ai-section__header" data-animate>
         <div class="ai-section__badge"><span class="ai-section__badge-dot"></span> AI-Powered</div>
         <h2 class="ai-section__title">AI That Coaches With You, Not Instead of You</h2>
-        <p class="ai-section__sub">FirstRep's AI understands fitness science. It generates programs, predicts churn, and drafts responses — for your review. You stay in control. It just saves you hours.</p>
+        <p class="ai-section__sub">Other platforms bolt on AI as a gimmick. FirstRep's AI is built into the coaching workflow — it generates programs, predicts risk, and saves you hours. You review everything. Clients never know it's AI. They just see a coach who's always on top of things.</p>
       </div>
 
-      <!-- AI Visual: Program Builder Mockup -->
+      <!-- AI Visual: lifestyle scene with large AI Builder card -->
       <div class="ai-section__visual" data-animate>
-        <div class="ai-section__screen">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="display: flex; align-items: center; gap: 8px; background: var(--brand); color: #fff; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;">&#x2728; AI Generating</div>
-            <div style="font-size: 14px; font-weight: 700; color: var(--text);">Upper/Lower Split — 4 Weeks — Intermediate</div>
+        <img class="ai-section__visual-bg" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1200&h=600&fit=crop&q=80" alt="Modern gym">
+        <div class="ai-section__visual-overlay"></div>
+        <div class="uic ai-section__uic">
+          <div class="uic__hdr">
+            <span class="uic__hdr-icon" style="background: rgba(52,120,246,0.1); color: #3478F6;">&#10022;</span>
+            <span class="uic__hdr-title">AI Program Builder</span>
+            <span class="uic__hdr-badge">AI</span>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-            <!-- Day 1 -->
-            <div style="background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 13px; font-weight: 700; color: var(--text);">Day 1 — Upper Push</span>
-                <span style="font-size: 10px; background: #D1FAE5; color: #059669; padding: 3px 8px; border-radius: 6px; font-weight: 600;">AI Suggested</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Barbell Bench Press — 4 x 8</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Incline DB Press — 3 x 10</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Cable Flyes — 3 x 12</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Overhead Tricep Ext. — 3 x 12</div>
-              </div>
+          <div class="uic__body">
+            <div class="uic-ai__prompt">"Build a 4-week push pull legs program for intermediate lifters, focusing on hypertrophy with progressive overload..."</div>
+            <div class="uic-ai__chips">
+              <span class="uic-ai__chip">Push Pull Legs</span>
+              <span class="uic-ai__chip">Hypertrophy</span>
+              <span class="uic-ai__chip">4 Weeks</span>
+              <span class="uic-ai__chip">Intermediate</span>
             </div>
-            <!-- Day 2 -->
-            <div style="background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 13px; font-weight: 700; color: var(--text);">Day 2 — Lower</span>
-                <span style="font-size: 10px; background: #D1FAE5; color: #059669; padding: 3px 8px; border-radius: 6px; font-weight: 600;">AI Suggested</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Barbell Back Squat — 4 x 6</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Romanian Deadlift — 3 x 10</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Bulgarian Split Squat — 3 x 10</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Calf Raises — 4 x 15</div>
-              </div>
+            <div class="uic-ai__btn">&#10022; Generate Full Program</div>
+            <div class="uic-ai__divider">Week 1 &mdash; Push Day A</div>
+            <div class="uic-ai__exercise">
+              <span class="uic-ai__num">1</span>
+              <div><div class="uic-ai__name">Barbell Bench Press</div><div class="uic-ai__meta">4 &times; 8-10 &middot; 90s rest &middot; RPE 8</div></div>
             </div>
-            <!-- Day 3 -->
-            <div style="background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 13px; font-weight: 700; color: var(--text);">Day 3 — Upper Pull</span>
-                <span style="font-size: 10px; background: #EDE9FE; color: var(--brand); padding: 3px 8px; border-radius: 6px; font-weight: 600;">Editable</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Weighted Pull-Ups — 4 x 6</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Seated Cable Row — 3 x 10</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Face Pulls — 3 x 15</div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-2);"><span style="width: 6px; height: 6px; border-radius: 50%; background: var(--brand); flex-shrink: 0;"></span> Barbell Curls — 3 x 12</div>
-              </div>
+            <div class="uic-ai__exercise">
+              <span class="uic-ai__num">2</span>
+              <div><div class="uic-ai__name">Overhead Press</div><div class="uic-ai__meta">3 &times; 8-10 &middot; 75s rest &middot; RPE 7</div></div>
             </div>
-            <!-- Confidence panel -->
-            <div style="background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 12px;">AI Confidence</div>
-                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                  <div style="flex: 1; background: #E5E7EB; border-radius: 6px; height: 8px; overflow: hidden;"><div style="width: 92%; height: 100%; background: var(--brand); border-radius: 6px;"></div></div>
-                  <span style="font-size: 13px; font-weight: 700; color: var(--brand);">92%</span>
-                </div>
-                <div style="font-size: 11px; color: var(--text-3); line-height: 1.5;">Based on: intermediate experience, 4-day schedule, full gym access, hypertrophy goal</div>
-              </div>
-              <div style="display: flex; gap: 8px; margin-top: 16px;">
-                <div style="flex: 1; text-align: center; padding: 10px; background: var(--brand); color: #fff; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer;">Approve &amp; Assign</div>
-                <div style="flex: 1; text-align: center; padding: 10px; background: var(--bg-2); color: var(--text-2); border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Edit First</div>
-              </div>
+            <div class="uic-ai__exercise">
+              <span class="uic-ai__num">3</span>
+              <div><div class="uic-ai__name">Incline Dumbbell Flyes</div><div class="uic-ai__meta">3 &times; 12-15 &middot; 60s rest &middot; RPE 7</div></div>
+            </div>
+            <div class="uic-ai__exercise">
+              <span class="uic-ai__num">4</span>
+              <div><div class="uic-ai__name">Lateral Raises</div><div class="uic-ai__meta">4 &times; 15 &middot; 45s rest &middot; RPE 8</div></div>
+            </div>
+            <div class="uic-ai__exercise">
+              <span class="uic-ai__num">5</span>
+              <div><div class="uic-ai__name">Tricep Pushdowns</div><div class="uic-ai__meta">3 &times; 12-15 &middot; 45s rest &middot; RPE 7</div></div>
             </div>
           </div>
         </div>
@@ -559,101 +1133,275 @@
         <div class="ai-card">
           <div class="ai-card__icon ai-card__icon--generate"><i data-lucide="sparkles"></i></div>
           <h3 class="ai-card__title">Generate Programs</h3>
-          <p class="ai-card__desc">Turn a client questionnaire into a full workout program in seconds. 1,734 exercises, auto-progression rules, and equipment-aware suggestions. Review, tweak, assign.</p>
+          <p class="ai-card__desc">Describe a workout in plain language. AI builds it from 1,734 exercises with sets, reps, and rest periods. Full programs in under a minute.</p>
         </div>
         <div class="ai-card">
-          <div class="ai-card__icon ai-card__icon--predict"><i data-lucide="shield-alert"></i></div>
-          <h3 class="ai-card__title">Predict &amp; Prevent Churn</h3>
-          <p class="ai-card__desc">Health scores flag at-risk clients before they leave. Plateau detection, declining adherence, and low energy — caught automatically so you can intervene.</p>
+          <div class="ai-card__icon ai-card__icon--predict"><i data-lucide="zap"></i></div>
+          <h3 class="ai-card__title">Smart Automation</h3>
+          <p class="ai-card__desc">Rules that trigger when clients miss workouts, skip check-ins, or hit milestones. The system acts. You stay focused on high-value coaching.</p>
+          <img class="ai-card__ref" src="../screenshots/mockups/trainer_automation-portrait.png" alt="Automation rules">
         </div>
         <div class="ai-card">
-          <div class="ai-card__icon ai-card__icon--automate"><i data-lucide="zap"></i></div>
-          <h3 class="ai-card__title">Automate the Busywork</h3>
-          <p class="ai-card__desc">AI-drafted check-in responses, auto-generated weekly summaries, smart nudges for missed workouts, and milestone celebrations — all on autopilot.</p>
+          <div class="ai-card__icon ai-card__icon--automate"><i data-lucide="utensils"></i></div>
+          <h3 class="ai-card__title">Complete Nutrition</h3>
+          <p class="ai-card__desc">Build recipes with macro breakdowns. Assign meal plans and dietary tags. Track client nutrition compliance alongside their training data.</p>
+          <img class="ai-card__ref" src="../screenshots/mockups/trainer_recipe-portrait.png" alt="Recipe builder with macros">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SECTION 6: SERVICES ===== -->
-  <section class="services" id="how-it-works">
+  <!-- ===== STATS ===== -->
+  <section class="stats">
     <div class="container">
-      <h2 class="services__title" data-animate>Offer All Your Training Services <em>Seamlessly</em> In One Place</h2>
-      <div class="services__grid">
-        <!-- Card 1: High Ticket -->
-        <div class="svc-card" data-animate>
-          <div class="svc-card__img">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop&q=80" alt="Personal trainer working one-on-one with a client">
-            <div class="svc-card__img-overlay"></div>
-            <span class="svc-card__label-tag">Coach</span>
-            <div class="svc-card__avatars">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80" alt="Trainer avatar">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&q=80" alt="Client avatar">
-            </div>
-          </div>
-          <h3 class="svc-card__title">High Ticket Clients</h3>
-          <p class="svc-card__subtitle">One-To-One. Personalized.</p>
-          <div class="svc-card__features">
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Custom workout programs tailored to individual goals
-            </div>
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Weekly check-ins with detailed progress reviews
-            </div>
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Direct messaging and priority support access
-            </div>
-          </div>
+      <div class="stats__header" data-animate>
+        <h2 class="stats__title">Built for Trainers Who Mean Business</h2>
+      </div>
+      <div class="stats__grid" data-animate>
+        <div class="stat-card">
+          <div class="stat-card__number">1,734</div>
+          <div class="stat-card__label">exercises with<br>video demos</div>
         </div>
-
-        <!-- Card 2: Low Ticket -->
-        <div class="svc-card" data-animate>
-          <div class="svc-card__img">
-            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&h=500&fit=crop&q=80" alt="Group fitness class in a gym">
-            <div class="svc-card__img-overlay"></div>
-            <span class="svc-card__label-tag">Coach</span>
-            <div class="svc-card__avatars">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80" alt="Trainer avatar">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&q=80" alt="Client avatar">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&h=120&fit=crop&q=80" alt="Client avatar">
-              <img class="svc-card__avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&h=120&fit=crop&q=80" alt="Client avatar">
-              <div class="svc-card__badge-count">+99</div>
-            </div>
-          </div>
-          <h3 class="svc-card__title">Low Ticket Clients</h3>
-          <p class="svc-card__subtitle">One-To-Many. Community Focused.</p>
-          <div class="svc-card__features">
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Template-based programs for scalable delivery
-            </div>
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Group challenges and community accountability
-            </div>
-            <div class="svc-card__feature">
-              <span class="svc-card__check">&#x2713;</span>
-              Automated check-ins and habit tracking at scale
-            </div>
-          </div>
+        <div class="stat-card">
+          <div class="stat-card__number">50+</div>
+          <div class="stat-card__label">equipment brands<br>mapped</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">&lt;5 min</div>
+          <div class="stat-card__label">to create a full<br>program with AI</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">$0</div>
+          <div class="stat-card__label">lost to<br>missed invoices</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SCRIPTS ===== -->
+  <!-- ===== TESTIMONIALS ===== -->
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="steps" id="how-it-works">
+    <div class="container">
+      <div class="steps__header" data-animate>
+        <h2 class="steps__title">Go Live in 15 Minutes</h2>
+      </div>
+      <div class="steps__grid" data-animate>
+        <div class="step-card">
+          <div class="step-card__number">1</div>
+          <div class="step-card__img">
+            <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=400&fit=crop&q=80" alt="Gym setup">
+            <div class="step-card__img-overlay"></div>
+            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_home-portrait.png" alt="Trainer dashboard">
+          </div>
+          <h3 class="step-card__title">Create Your Profile</h3>
+          <p class="step-card__desc">Sign up, add your photo, bio, and specialties. Connect Stripe so you can get paid. Your profile goes live on the marketplace.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">2</div>
+          <div class="step-card__img">
+            <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=400&fit=crop&q=80" alt="Trainer with client">
+            <div class="step-card__img-overlay"></div>
+            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_createPackage-portrait.png" alt="Package builder">
+          </div>
+          <h3 class="step-card__title">Build Your Packages</h3>
+          <p class="step-card__desc">Monthly coaching, session packs, or custom — set your price, describe what's included, and publish. Clients can subscribe instantly.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">3</div>
+          <div class="step-card__img">
+            <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=500&h=400&fit=crop&q=80" alt="Community fitness">
+            <div class="step-card__img-overlay"></div>
+            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_invite-portrait.png" alt="Send invite">
+          </div>
+          <h3 class="step-card__title">Share and Grow</h3>
+          <p class="step-card__desc">Send invite links via email, DM, or QR code. Or let clients find you on the marketplace. Your first client is a link away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing__header" data-animate>
+        <span class="pricing__badge">PRICING</span>
+        <h2 class="pricing__title">Start Free. Upgrade When You Outgrow It.</h2>
+      </div>
+      <div class="pricing__grid" data-animate>
+        <div class="price-card">
+          <div class="price-card__name">Free</div>
+          <div class="price-card__price">$0</div>
+          <div class="price-card__period">Free forever</div>
+          <div class="price-card__features">
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Up to 3 clients</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI program builder</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 1,734 exercise library</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Marketplace listing</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Stripe payments</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Coaching agreements</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduling &amp; messaging</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automation rules</div>
+          </div>
+          <a href="#" class="btn btn--outline btn--lg" style="width: 100%; justify-content: center;">Start Free</a>
+        </div>
+        <div class="price-card price-card--pro">
+          <div class="price-card__popular">MOST POPULAR</div>
+          <div class="price-card__name">Pro</div>
+          <div class="price-card__price">$19<span>/mo</span></div>
+          <div class="price-card__period">+ $1.50 per client beyond 8</div>
+          <div class="price-card__features">
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Everything in Free, plus:</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 5 additional clients (4-8)</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> $1.50/mo per client beyond 8</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Priority marketplace ranking</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Revenue forecasting</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Advanced analytics</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Wellbeing dashboard</div>
+          </div>
+          <a href="#" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">Start Free Trial</a>
+        </div>
+      </div>
+      <p class="pricing__note" data-animate><strong>Commission: 0% on clients you invite. 20% on marketplace clients.</strong><br>You brought them? You keep everything.</p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <div class="cta__bg-phones">
+      <img src="../screenshots/mockups/trainer_home-portrait.png" alt="">
+      <img src="../screenshots/mockups/client_marketplace-portrait.png" alt="">
+    </div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div data-animate>
+        <h2 class="cta__title">Your First Rep Starts Now.</h2>
+        <p class="cta__sub">1,734 exercises. AI program builder. Built-in marketplace. Automation that saves you hours. And it's free to start.<br><br>Join the trainers who stopped hustling and started building.</p>
+        <div class="cta__actions">
+          <a href="#" class="btn btn--white btn--lg">Create Your Free Account</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">First<span>Rep</span></div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">&#x1D54F;</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Features</h4>
+          <a href="features/programming.html">Programming</a>
+          <a href="features/coaching.html">Coaching</a>
+          <a href="features/nutrition.html">Nutrition</a>
+          <a href="features/marketplace.html">Marketplace</a>
+          <a href="features/payments.html">Payments</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">More Features</h4>
+          <a href="features/communication.html">Communication</a>
+          <a href="features/scheduling.html">Scheduling</a>
+          <a href="features/progress.html">Progress</a>
+          <a href="features/habits.html">Habits</a>
+          <a href="features/business.html">Business Tools</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">GDPR</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== GSAP + SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
-    // Nav scroll effect — transparent on hero, white when scrolled
+  document.addEventListener('DOMContentLoaded', () => {
+    if(window.lucide) lucide.createIcons();
+
+    // Mobile menu
+    const hb = document.getElementById('hamburger');
+    const mm = document.getElementById('mobileMenu');
+    if(hb){hb.onclick=()=>mm.classList.toggle('open');mm.querySelectorAll('a').forEach(a=>{if(a.id!=='mobileFeatureToggle')a.onclick=()=>mm.classList.remove('open');});}
+
+    // Mobile features toggle
+    const mft = document.getElementById('mobileFeatureToggle');
+    const mf = document.getElementById('mobileFeatures');
+    if(mft && mf){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mf.classList.toggle('open');
+        mft.textContent = mf.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+
+    // Mega menu hover (desktop only)
+    const featuresToggle = document.getElementById('featuresToggle');
+    const megaMenu = document.getElementById('megaMenu');
+    const megaOverlay = document.getElementById('megaOverlay');
+    let megaTimeout = null;
+
+    function showMega() {
+      clearTimeout(megaTimeout);
+      megaMenu.classList.add('visible');
+      megaOverlay.classList.add('visible');
+      featuresToggle.classList.add('open');
+      // Force scrolled style when mega menu is open for readability
+      document.getElementById('nav').classList.add('scrolled');
+    }
+    function hideMega() {
+      megaTimeout = setTimeout(function() {
+        megaMenu.classList.remove('visible');
+        megaOverlay.classList.remove('visible');
+        featuresToggle.classList.remove('open');
+        // Restore scroll state
+        if (window.scrollY <= 50) {
+          document.getElementById('nav').classList.remove('scrolled');
+        }
+      }, 150);
+    }
+
+    if(featuresToggle && megaMenu) {
+      featuresToggle.addEventListener('mouseenter', showMega);
+      featuresToggle.addEventListener('mouseleave', hideMega);
+      megaMenu.addEventListener('mouseenter', showMega);
+      megaMenu.addEventListener('mouseleave', hideMega);
+      megaOverlay.addEventListener('click', function() { clearTimeout(megaTimeout); hideMega(); megaTimeout = null; megaMenu.classList.remove('visible'); megaOverlay.classList.remove('visible'); featuresToggle.classList.remove('open'); if(window.scrollY<=50)document.getElementById('nav').classList.remove('scrolled'); });
+    }
+
+    // Nav scroll effect
     window.addEventListener('scroll', function() {
       var nav = document.getElementById('nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+      if (window.scrollY > 50 || megaMenu.classList.contains('visible')) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
     });
 
     // Hero rotating text
@@ -668,773 +1416,45 @@
     })();
 
     // Feature tabs
-    function switchTab(index) {
+    window.switchTab = function(index) {
       var tabs = document.querySelectorAll('.ftab');
       var screens = document.querySelectorAll('.ftabs__screen');
       tabs.forEach(function(tab) { tab.classList.remove('active'); });
       screens.forEach(function(screen) { screen.classList.remove('active'); });
       tabs[index].classList.add('active');
       screens[index].classList.add('active');
+    };
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
+
+    // Accordion toggle
+    document.querySelectorAll('.acc-item').forEach(item=>{
+      item.addEventListener('click',()=>{
+        const parent = item.closest('.fmod__accordion');
+        const wasActive = item.classList.contains('active');
+        parent.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('active'));
+        if(!wasActive) item.classList.add('active');
+      });
+    });
+
+    // GSAP animations
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.utils.toArray('[data-animate]').forEach(el=>{
+        ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:()=>el.classList.add('animated')});
+      });
+
+      gsap.timeline({defaults:{ease:'power3.out'}})
+        .from('.hero__badge',{y:20,opacity:0,duration:0.6})
+        .from('.hero__title',{y:30,opacity:0,duration:0.8},'-=0.3')
+        .from('.hero__sub',{y:20,opacity:0,duration:0.6},'-=0.4')
+        .from('.hero__actions',{y:20,opacity:0,duration:0.6},'-=0.3')
+        .from('.hero__note',{y:10,opacity:0,duration:0.5},'-=0.3')
+        .from('.hero__phones',{x:40,opacity:0,duration:0.8},'-=0.6');
     }
-
-  </script>
-<!-- ===================== SECTION 6: PLAN & COACH ===================== -->
-<section class="fmod" id="plan">
-  <div class="container">
-    <div class="fmod__card" data-animate>
-      <div class="fmod__text">
-        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="clipboard-list"></i></span> PLAN &amp; COACH</span>
-        <h2 class="fmod__title">Design Programs That Get Results</h2>
-        <div class="fmod__accordion">
-          <div class="acc-item active">
-            <div class="acc-item__header">
-              <i data-lucide="sparkles" class="acc-item__header-icon"></i><span>AI Program Builder</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Generate full programs from a questionnaire. AI picks exercises, sets, reps, and progression — you review and assign.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="trending-up" class="acc-item__header-icon"></i><span>Auto-Progression</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              When a client hits their rep target with good RPE, the system suggests a weight increase. Progressive overload on autopilot.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="utensils" class="acc-item__header-icon"></i><span>Smart Nutrition</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Auto-calculated macros, meal plans with grocery lists, and daily compliance tracking across every client.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="dumbbell" class="acc-item__header-icon"></i><span>1,734 Exercises</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Full video library with equipment-specific guidance. Shows clients the exact machine at their gym.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fmod__visual">
-        <div class="fmod__phone">
-          <div class="fmod__phone-notch"></div>
-          <div class="fmod__phone-content">
-            <!-- Workout list UI -->
-            <div style="padding: 16px 14px; background: #f8f9fb; min-height: 100%;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-                <div style="font-size: 11px; font-weight: 700; color: #1a1a2e;">My Program</div>
-                <div style="font-size: 9px; color: #6366f1; font-weight: 600;">Week 3</div>
-              </div>
-              <div style="font-size: 10px; color: #64748b; margin-bottom: 12px; font-weight: 500;">Today — Upper Body Push</div>
-              <!-- Exercise card 1 -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #6366f1, #818cf8); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px;">🏋️</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 10px; font-weight: 600; color: #1a1a2e;">Barbell Bench Press</div>
-                    <div style="font-size: 8px; color: #94a3b8; margin-top: 2px;">4 × 8 reps · 185 lbs</div>
-                  </div>
-                  <div style="width: 20px; height: 20px; border-radius: 50%; background: #10b981; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 10px;">✓</div>
-                </div>
-              </div>
-              <!-- Exercise card 2 -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #6366f1, #818cf8); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px;">💪</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 10px; font-weight: 600; color: #1a1a2e;">Incline DB Press</div>
-                    <div style="font-size: 8px; color: #94a3b8; margin-top: 2px;">3 × 10 reps · 60 lbs</div>
-                  </div>
-                  <div style="width: 20px; height: 20px; border-radius: 50%; background: #10b981; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 10px;">✓</div>
-                </div>
-              </div>
-              <!-- Exercise card 3 -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #f59e0b, #fbbf24); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px;">🔥</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 10px; font-weight: 600; color: #1a1a2e;">Cable Flyes</div>
-                    <div style="font-size: 8px; color: #94a3b8; margin-top: 2px;">3 × 12 reps · 30 lbs</div>
-                  </div>
-                  <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid #e2e8f0;"></div>
-                </div>
-              </div>
-              <!-- Exercise card 4 -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #f59e0b, #fbbf24); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px;">⚡</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 10px; font-weight: 600; color: #1a1a2e;">Overhead Tricep Ext.</div>
-                    <div style="font-size: 8px; color: #94a3b8; margin-top: 2px;">3 × 12 reps · 45 lbs</div>
-                  </div>
-                  <div style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid #e2e8f0;"></div>
-                </div>
-              </div>
-              <!-- Progress bar -->
-              <div style="margin-top: 14px; background: #e2e8f0; border-radius: 8px; height: 6px; overflow: hidden;">
-                <div style="width: 50%; height: 100%; background: linear-gradient(90deg, #6366f1, #818cf8); border-radius: 8px;"></div>
-              </div>
-              <div style="font-size: 8px; color: #94a3b8; text-align: center; margin-top: 6px;">2 of 4 completed</div>
-            </div>
-          </div>
-        </div>
-        <img class="fmod__lifestyle" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop&q=80" alt="Woman training" style="right: -30px; top: 40px;" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 7: MOTIVATE & MEASURE ===================== -->
-<section class="fmod" id="motivate">
-  <div class="container">
-    <div class="fmod__card fmod__card--reverse" data-animate>
-      <div class="fmod__text">
-        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="bar-chart-3"></i></span> MOTIVATE &amp; MEASURE</span>
-        <h2 class="fmod__title">See Every Win, Catch Every Risk</h2>
-        <div class="fmod__accordion">
-          <div class="acc-item active">
-            <div class="acc-item__header">
-              <i data-lucide="shield-alert" class="acc-item__header-icon"></i><span>Smart Risk Detection</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Health scores flag plateaus, declining adherence, and low energy before clients churn. You intervene at the right moment.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="file-text" class="acc-item__header-icon"></i><span>Auto Weekly Summaries</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Every Monday, both you and your client receive an auto-generated report: PRs, volume, compliance, trends. Saves 30 min per client per week.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="trophy" class="acc-item__header-icon"></i><span>Auto-Detected Milestones</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Personal records, streak achievements, and goal completions — celebrated automatically with push notifications and animations.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="bar-chart-2" class="acc-item__header-icon"></i><span>Monthly Progress Reports</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Auto-generated monthly reports with training stats, nutrition compliance, habit scores, and photo comparisons. Zero manual work.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fmod__visual">
-        <div class="fmod__phone">
-          <div class="fmod__phone-notch"></div>
-          <div class="fmod__phone-content">
-            <!-- Analytics / Stats UI -->
-            <div style="padding: 16px 14px; background: #f8f9fb; min-height: 100%;">
-              <div style="font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px;">Dashboard</div>
-              <!-- Revenue stat -->
-              <div style="background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 14px; padding: 14px; margin-bottom: 10px; color: #fff;">
-                <div style="font-size: 8px; opacity: 0.85; font-weight: 500;">Monthly Revenue</div>
-                <div style="font-size: 22px; font-weight: 800; margin-top: 2px;">$4,280</div>
-                <div style="display: flex; align-items: center; gap: 4px; margin-top: 4px;">
-                  <span style="font-size: 8px; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 6px;">↑ 23%</span>
-                  <span style="font-size: 7px; opacity: 0.8;">vs last month</span>
-                </div>
-              </div>
-              <!-- Mini stat cards -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
-                <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                  <div style="font-size: 7px; color: #94a3b8; font-weight: 500;">Active Clients</div>
-                  <div style="font-size: 16px; font-weight: 700; color: #1a1a2e;">22</div>
-                  <div style="font-size: 7px; color: #10b981;">↑ 4 this month</div>
-                </div>
-                <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                  <div style="font-size: 7px; color: #94a3b8; font-weight: 500;">Retention</div>
-                  <div style="font-size: 16px; font-weight: 700; color: #1a1a2e;">94%</div>
-                  <div style="font-size: 7px; color: #10b981;">↑ 3% vs avg</div>
-                </div>
-              </div>
-              <!-- Compliance chart placeholder -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="font-size: 9px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px;">Client Compliance</div>
-                <div style="display: flex; align-items: flex-end; gap: 6px; height: 60px;">
-                  <div style="flex: 1; background: #e0e7ff; border-radius: 4px 4px 0 0; height: 45%;"></div>
-                  <div style="flex: 1; background: #c7d2fe; border-radius: 4px 4px 0 0; height: 65%;"></div>
-                  <div style="flex: 1; background: #a5b4fc; border-radius: 4px 4px 0 0; height: 55%;"></div>
-                  <div style="flex: 1; background: #818cf8; border-radius: 4px 4px 0 0; height: 80%;"></div>
-                  <div style="flex: 1; background: #6366f1; border-radius: 4px 4px 0 0; height: 92%;"></div>
-                  <div style="flex: 1; background: #818cf8; border-radius: 4px 4px 0 0; height: 75%;"></div>
-                  <div style="flex: 1; background: #6366f1; border-radius: 4px 4px 0 0; height: 88%;"></div>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-top: 6px;">
-                  <span style="font-size: 6px; color: #94a3b8;">Mon</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Tue</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Wed</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Thu</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Fri</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Sat</span>
-                  <span style="font-size: 6px; color: #94a3b8;">Sun</span>
-                </div>
-              </div>
-              <!-- Needs attention -->
-              <div style="background: #fff; border-radius: 12px; padding: 10px; margin-top: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="font-size: 9px; font-weight: 600; color: #1a1a2e; margin-bottom: 6px;">⚠️ Needs Attention</div>
-                <div style="display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9;">
-                  <div style="width: 24px; height: 24px; border-radius: 50%; background: #fef3c7; display: flex; align-items: center; justify-content: center; font-size: 9px;">M</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">Mike T.</div>
-                    <div style="font-size: 7px; color: #f59e0b;">Missed 3 workouts</div>
-                  </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; padding: 6px 0;">
-                  <div style="width: 24px; height: 24px; border-radius: 50%; background: #fee2e2; display: flex; align-items: center; justify-content: center; font-size: 9px;">A</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">Anna P.</div>
-                    <div style="font-size: 7px; color: #ef4444;">Check-in overdue</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img class="fmod__lifestyle" src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=300&h=400&fit=crop&q=80" alt="Woman exercising" style="left: -30px; top: 50px;" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 8: ENGAGE ===================== -->
-<section class="fmod" id="engage">
-  <div class="container">
-    <div class="fmod__card" data-animate>
-      <div class="fmod__text">
-        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="message-circle"></i></span> ENGAGE</span>
-        <h2 class="fmod__title">Stay Connected Without the Burnout</h2>
-        <div class="fmod__accordion">
-          <div class="acc-item active">
-            <div class="acc-item__header">
-              <i data-lucide="bot" class="acc-item__header-icon"></i><span>AI Check-In Responses</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Batch review 20+ check-ins in 15 minutes. AI drafts personalized responses based on each client's data. You approve or edit.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="zap" class="acc-item__header-icon"></i><span>Smart Accountability</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Missed workout? Day 1: reminder. Day 3: auto-message. Day 5: trainer alert. An escalation ladder that runs itself.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="messages-square" class="acc-item__header-icon"></i><span>1-1 &amp; Group Messaging</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Direct messages, voice notes, community forums, and scheduled messages that send at the right time. Focus mode auto-replies when you're off.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="settings-2" class="acc-item__header-icon"></i><span>Automation Rules</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Configure triggers: missed workout, weight change, low compliance. Set actions: send message, flag for review, adjust program. Your coaching runs 24/7.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fmod__visual">
-        <div class="fmod__phone">
-          <div class="fmod__phone-notch"></div>
-          <div class="fmod__phone-content">
-            <!-- Chat interface UI -->
-            <div style="padding: 14px; background: #f8f9fb; min-height: 100%; display: flex; flex-direction: column;">
-              <!-- Chat header -->
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
-                <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #6366f1, #818cf8); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 10px; font-weight: 700;">C</div>
-                <div>
-                  <div style="font-size: 10px; font-weight: 700; color: #1a1a2e;">Coach Sarah</div>
-                  <div style="font-size: 7px; color: #10b981;">Online</div>
-                </div>
-              </div>
-              <!-- Messages -->
-              <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-                <!-- Coach message -->
-                <div style="align-self: flex-start; max-width: 82%;">
-                  <div style="background: #fff; border-radius: 12px 12px 12px 4px; padding: 8px 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <div style="font-size: 8px; color: #334155; line-height: 1.4;">Great session yesterday! Your bench press is really progressing. 💪</div>
-                  </div>
-                  <div style="font-size: 6px; color: #94a3b8; margin-top: 3px; margin-left: 4px;">9:15 AM</div>
-                </div>
-                <!-- Client message -->
-                <div style="align-self: flex-end; max-width: 82%;">
-                  <div style="background: #6366f1; border-radius: 12px 12px 4px 12px; padding: 8px 10px;">
-                    <div style="font-size: 8px; color: #fff; line-height: 1.4;">Thanks! I felt strong. Should I go heavier next week?</div>
-                  </div>
-                  <div style="font-size: 6px; color: #94a3b8; margin-top: 3px; text-align: right; margin-right: 4px;">9:18 AM</div>
-                </div>
-                <!-- Coach message -->
-                <div style="align-self: flex-start; max-width: 82%;">
-                  <div style="background: #fff; border-radius: 12px 12px 12px 4px; padding: 8px 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <div style="font-size: 8px; color: #334155; line-height: 1.4;">Absolutely! I've updated your program — added 10lbs to your working sets. Check it out! 🎯</div>
-                  </div>
-                  <div style="font-size: 6px; color: #94a3b8; margin-top: 3px; margin-left: 4px;">9:20 AM</div>
-                </div>
-                <!-- Coach voice note -->
-                <div style="align-self: flex-start; max-width: 82%;">
-                  <div style="background: #fff; border-radius: 12px 12px 12px 4px; padding: 8px 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 6px;">
-                    <div style="width: 22px; height: 22px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 8px;">▶</div>
-                    <div style="flex: 1;">
-                      <div style="display: flex; align-items: center; gap: 2px;">
-                        <div style="height: 8px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 12px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 6px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 14px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 8px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 10px; width: 2px; background: #6366f1; border-radius: 1px;"></div>
-                        <div style="height: 4px; width: 2px; background: #c7d2fe; border-radius: 1px;"></div>
-                        <div style="height: 8px; width: 2px; background: #c7d2fe; border-radius: 1px;"></div>
-                        <div style="height: 6px; width: 2px; background: #c7d2fe; border-radius: 1px;"></div>
-                        <div style="height: 10px; width: 2px; background: #c7d2fe; border-radius: 1px;"></div>
-                      </div>
-                      <div style="font-size: 6px; color: #94a3b8; margin-top: 2px;">0:24</div>
-                    </div>
-                  </div>
-                  <div style="font-size: 6px; color: #94a3b8; margin-top: 3px; margin-left: 4px;">9:21 AM · Voice Note</div>
-                </div>
-                <!-- Client message -->
-                <div style="align-self: flex-end; max-width: 82%;">
-                  <div style="background: #6366f1; border-radius: 12px 12px 4px 12px; padding: 8px 10px;">
-                    <div style="font-size: 8px; color: #fff; line-height: 1.4;">Let's go! 🔥</div>
-                  </div>
-                  <div style="font-size: 6px; color: #94a3b8; margin-top: 3px; text-align: right; margin-right: 4px;">9:22 AM</div>
-                </div>
-              </div>
-              <!-- Input bar -->
-              <div style="display: flex; align-items: center; gap: 6px; margin-top: 10px; background: #fff; border-radius: 20px; padding: 6px 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="font-size: 10px;">📎</div>
-                <div style="flex: 1; font-size: 8px; color: #94a3b8;">Type a message...</div>
-                <div style="width: 22px; height: 22px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 9px;">↑</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img class="fmod__lifestyle" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=400&fit=crop&q=80" alt="Professional woman" style="right: -30px; top: 30px;" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 9: SCALE ===================== -->
-<section class="fmod" id="scale" style="padding-bottom: 100px;">
-  <div class="container">
-    <div class="fmod__card fmod__card--reverse" data-animate>
-      <div class="fmod__text">
-        <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="maximize-2"></i></span> SCALE</span>
-        <h2 class="fmod__title">Grow Your Business on Autopilot</h2>
-        <div class="fmod__accordion">
-          <div class="acc-item active">
-            <div class="acc-item__header">
-              <i data-lucide="workflow" class="acc-item__header-icon"></i><span>Automated Workflows</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Onboarding, reminders, and re-engagement — all automated.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="credit-card" class="acc-item__header-icon"></i><span>Integrated Payments</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Stripe-powered subscriptions and one-time purchases.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="store" class="acc-item__header-icon"></i><span>Marketplace</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Get discovered by thousands of potential clients.
-            </div>
-          </div>
-          <div class="acc-item">
-            <div class="acc-item__header">
-              <i data-lucide="mail" class="acc-item__header-icon"></i><span>Client Invitations</span>
-              <span class="acc-item__icon">+</span>
-            </div>
-            <div class="acc-item__body">
-              Invite via email, link, or QR code.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fmod__visual">
-        <div class="fmod__phone">
-          <div class="fmod__phone-notch"></div>
-          <div class="fmod__phone-content">
-            <!-- Revenue / Payments UI -->
-            <div style="padding: 16px 14px; background: #f8f9fb; min-height: 100%;">
-              <div style="font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px;">Revenue</div>
-              <!-- Total earnings -->
-              <div style="background: linear-gradient(135deg, #10b981, #34d399); border-radius: 14px; padding: 14px; margin-bottom: 10px; color: #fff;">
-                <div style="font-size: 8px; opacity: 0.85; font-weight: 500;">Total Earnings</div>
-                <div style="font-size: 22px; font-weight: 800; margin-top: 2px;">$12,450</div>
-                <div style="display: flex; align-items: center; gap: 4px; margin-top: 4px;">
-                  <span style="font-size: 8px; background: rgba(255,255,255,0.25); padding: 2px 6px; border-radius: 6px;">↑ 31%</span>
-                  <span style="font-size: 7px; opacity: 0.8;">this quarter</span>
-                </div>
-              </div>
-              <!-- Revenue breakdown -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
-                <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                  <div style="font-size: 7px; color: #94a3b8; font-weight: 500;">Subscriptions</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #1a1a2e;">$3,180</div>
-                  <div style="font-size: 7px; color: #6366f1;">18 active</div>
-                </div>
-                <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                  <div style="font-size: 7px; color: #94a3b8; font-weight: 500;">One-Time</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #1a1a2e;">$1,100</div>
-                  <div style="font-size: 7px; color: #6366f1;">4 this month</div>
-                </div>
-              </div>
-              <!-- Recent transactions -->
-              <div style="background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
-                <div style="font-size: 9px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px;">Recent Transactions</div>
-                <div style="display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid #f1f5f9;">
-                  <div style="width: 26px; height: 26px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 10px;">💰</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">Lisa K. — Pro Coaching</div>
-                    <div style="font-size: 7px; color: #94a3b8;">Subscription · Today</div>
-                  </div>
-                  <div style="font-size: 9px; font-weight: 700; color: #10b981;">+$199</div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid #f1f5f9;">
-                  <div style="width: 26px; height: 26px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 10px;">💰</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">David M. — 10 Sessions</div>
-                    <div style="font-size: 7px; color: #94a3b8;">One-time · Yesterday</div>
-                  </div>
-                  <div style="font-size: 9px; font-weight: 700; color: #10b981;">+$450</div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; padding: 7px 0;">
-                  <div style="width: 26px; height: 26px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 10px;">💰</div>
-                  <div style="flex: 1;">
-                    <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">Rachel S. — Starter Plan</div>
-                    <div style="font-size: 7px; color: #94a3b8;">Subscription · 2 days ago</div>
-                  </div>
-                  <div style="font-size: 9px; font-weight: 700; color: #10b981;">+$99</div>
-                </div>
-              </div>
-              <!-- Payout card -->
-              <div style="background: #fff; border-radius: 12px; padding: 10px; margin-top: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 8px;">
-                <div style="width: 30px; height: 30px; border-radius: 8px; background: #f0fdf4; display: flex; align-items: center; justify-content: center; font-size: 12px;">🏦</div>
-                <div style="flex: 1;">
-                  <div style="font-size: 8px; font-weight: 600; color: #1a1a2e;">Next Payout</div>
-                  <div style="font-size: 7px; color: #94a3b8;">Feb 20 · Chase ****4521</div>
-                </div>
-                <div style="font-size: 11px; font-weight: 700; color: #10b981;">$2,847</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img class="fmod__lifestyle" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=300&h=400&fit=crop&q=80" alt="Weight training" style="left: -30px; top: 40px;" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 10: TESTIMONIALS ===================== -->
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 60px;" data-animate>
-      <span class="badge" style="display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.1em;">RESULTS</span>
-      <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: #111827; line-height: 1.08; letter-spacing: -0.03em;">Trainers Love FirstRep</h2>
-    </div>
-    <div class="testimonials__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;" data-animate>
-      <!-- Testimonial 1 -->
-      <div class="tcard" style="background: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <div style="margin-bottom: 20px;">
-          <div style="font-size: 48px; font-weight: 900; color: #111827; line-height: 1;">+340%</div>
-          <div style="font-size: 14px; color: #64748b; margin-top: 4px; font-weight: 500;">client growth in 4 months</div>
-        </div>
-        <p style="font-size: 16px; color: #334155; line-height: 1.6; margin-bottom: 24px; font-style: italic;">"FirstRep changed how I run my business. I went from 5 clients to 22 without burning out."</p>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face&q=80" alt="Sarah M." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;" />
-          <div>
-            <div style="font-size: 14px; font-weight: 700; color: #1a1a2e;">Sarah M.</div>
-            <div style="font-size: 13px; color: #94a3b8;">Fat Loss Coach · Barcelona</div>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="tcard" style="background: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <div style="margin-bottom: 20px;">
-          <div style="font-size: 48px; font-weight: 900; color: #111827; line-height: 1;">+8</div>
-          <div style="font-size: 14px; color: #64748b; margin-top: 4px; font-weight: 500;">new clients in first month</div>
-        </div>
-        <p style="font-size: 16px; color: #334155; line-height: 1.6; margin-bottom: 24px; font-style: italic;">"The marketplace brought me 8 new clients without spending on ads."</p>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face&q=80" alt="James R." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;" />
-          <div>
-            <div style="font-size: 14px; font-weight: 700; color: #1a1a2e;">James R.</div>
-            <div style="font-size: 13px; color: #94a3b8;">Strength Coach · Austin</div>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="tcard" style="background: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <div style="margin-bottom: 20px;">
-          <div style="font-size: 48px; font-weight: 900; color: #111827; line-height: 1;">3+hrs</div>
-          <div style="font-size: 14px; color: #64748b; margin-top: 4px; font-weight: 500;">saved per week</div>
-        </div>
-        <p style="font-size: 16px; color: #334155; line-height: 1.6; margin-bottom: 24px; font-style: italic;">"Check-ins are structured, payments are automatic, and I actually have time to coach."</p>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face&q=80" alt="Kim L." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;" />
-          <div>
-            <div style="font-size: 14px; font-weight: 700; color: #1a1a2e;">Kim L.</div>
-            <div style="font-size: 13px; color: #94a3b8;">Online Coach · London</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 11: PRICING ===================== -->
-<section class="pricing" id="pricing" style="background: #f8f9fb; padding: 100px 0;">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 60px;" data-animate>
-      <span class="badge" style="display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.1em;">PRICING</span>
-      <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: #111827; line-height: 1.08; margin-bottom: 16px; letter-spacing: -0.03em;">Simple, Transparent Pricing</h2>
-      <p style="font-size: 18px; color: #64748b; max-width: 500px; margin: 0 auto;">Start free. Upgrade when you're ready.</p>
-    </div>
-    <div class="pricing__grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 760px; margin: 0 auto;" data-animate>
-      <!-- Starter -->
-      <div class="price-card" style="background: #fff; border-radius: 24px; padding: 40px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
-        <div style="margin-bottom: 28px;">
-          <h3 style="font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em;">Starter</h3>
-          <div style="display: flex; align-items: baseline; gap: 4px;">
-            <span style="font-size: 48px; font-weight: 900; color: #1a1a2e;">$0</span>
-          </div>
-          <div style="font-size: 14px; color: #94a3b8; margin-top: 4px;">Free forever</div>
-        </div>
-        <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; flex: 1;">
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #10b981; flex-shrink: 0;">✓</span>
-            Up to 3 clients
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #10b981; flex-shrink: 0;">✓</span>
-            AI workout builder
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #10b981; flex-shrink: 0;">✓</span>
-            Basic analytics
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #10b981; flex-shrink: 0;">✓</span>
-            Direct messaging
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #ecfdf5; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #10b981; flex-shrink: 0;">✓</span>
-            Marketplace listing
-          </li>
-        </ul>
-        <a href="#" class="btn" style="display: block; text-align: center; padding: 16px 32px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; border: 2px solid #e2e8f0; color: #1a1a2e; background: transparent; transition: all 0.3s ease;">Start Free</a>
-      </div>
-      <!-- Pro -->
-      <div class="price-card price-card--pro" style="background: #fff; border-radius: 24px; padding: 40px 32px; box-shadow: 0 8px 40px rgba(0,0,0,0.1); border: 2px solid #111827; display: flex; flex-direction: column; position: relative;">
-        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #111827; color: #fff; padding: 6px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px;">MOST POPULAR</div>
-        <div style="margin-bottom: 28px;">
-          <h3 style="font-size: 20px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em;">Pro</h3>
-          <div style="display: flex; align-items: baseline; gap: 4px;">
-            <span style="font-size: 48px; font-weight: 900; color: #1a1a2e;">$19</span>
-            <span style="font-size: 16px; color: #94a3b8; font-weight: 500;">/mo</span>
-          </div>
-          <div style="font-size: 14px; color: #94a3b8; margin-top: 4px;">+ $1.50 per client above 8</div>
-        </div>
-        <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; flex: 1;">
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Unlimited clients
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Advanced analytics
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Custom branding
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Priority support
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Automated workflows
-          </li>
-          <li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 15px; color: #334155;">
-            <span style="width: 20px; height: 20px; border-radius: 50%; background: #F3F4F6; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #111827; flex-shrink: 0;">✓</span>
-            Integrated payments
-          </li>
-        </ul>
-        <a href="#" class="btn" style="display: block; text-align: center; padding: 16px 32px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; background: #111827; color: #fff; border: none; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">Start Free Trial</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SECTION 12: CTA ===================== -->
-<section class="cta" style="background: #0F1117; padding: 120px 0; text-align: center; position: relative; overflow: hidden;">
-  <div class="cta__glow" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%); pointer-events: none;"></div>
-  <div class="container" style="position: relative; z-index: 1;">
-    <div data-animate>
-      <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; color: #fff; line-height: 1.08; margin-bottom: 20px; letter-spacing: -0.035em;">Join the Coaching Revolution</h2>
-      <p style="font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 44px; line-height: 1.7;">Start your free trial today. No credit card required.</p>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="#" class="btn" style="display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; background: #fff; color: #111827; border: none; transition: all 0.3s ease; box-shadow: 0 4px 16px rgba(255,255,255,0.1);">Start Free Trial</a>
-        <a href="#" class="btn" style="display: inline-flex; align-items: center; justify-content: center; padding: 16px 36px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.25); transition: all 0.3s ease;">Book a Demo</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer" style="background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6);">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px;">
-      <!-- Brand -->
-      <div>
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-          <div style="width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; color: #111827; font-weight: 800; font-size: 16px;">F</div>
-          <span style="font-size: 20px; font-weight: 800; color: #fff;">FirstRep</span>
-        </div>
-        <p style="font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px;">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
-        <div style="display: flex; gap: 12px;">
-          <a href="#" style="width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: all 0.3s ease;" aria-label="Twitter">𝕏</a>
-          <a href="#" style="width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: all 0.3s ease;" aria-label="Instagram">IG</a>
-          <a href="#" style="width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: all 0.3s ease;" aria-label="LinkedIn">in</a>
-          <a href="#" style="width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: all 0.3s ease;" aria-label="YouTube">YT</a>
-        </div>
-      </div>
-      <!-- Features -->
-      <div>
-        <h4 style="font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Features</h4>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="margin-bottom: 12px;"><a href="#plan" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Programming</a></li>
-          <li style="margin-bottom: 12px;"><a href="#motivate" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Analytics</a></li>
-          <li style="margin-bottom: 12px;"><a href="#engage" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Messaging</a></li>
-          <li style="margin-bottom: 12px;"><a href="#scale" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Payments</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Marketplace</a></li>
-        </ul>
-      </div>
-      <!-- Learn -->
-      <div>
-        <h4 style="font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Learn</h4>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Blog</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Help Center</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">API Docs</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Webinars</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Case Studies</a></li>
-        </ul>
-      </div>
-      <!-- Company -->
-      <div>
-        <h4 style="font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Company</h4>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">About</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Careers</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Press</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Contact</a></li>
-        </ul>
-      </div>
-      <!-- Legal -->
-      <div>
-        <h4 style="font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Legal</h4>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Privacy Policy</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Terms of Service</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">Cookie Policy</a></li>
-          <li style="margin-bottom: 12px;"><a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; transition: color 0.3s ease;">GDPR</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- Bottom bar -->
-    <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-      <div style="font-size: 13px; color: rgba(255,255,255,0.35);">&copy; 2026 FirstRep. All rights reserved.</div>
-      <div style="display: flex; gap: 24px;">
-        <a href="#" style="font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s ease;">Privacy</a>
-        <a href="#" style="font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s ease;">Terms</a>
-        <a href="#" style="font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s ease;">Cookies</a>
-        <a href="#" style="font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.3s ease;">Sitemap</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- ===================== GSAP + EXTRAS ===================== -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  if(window.lucide) lucide.createIcons();
-  // Mobile menu
-  const hb = document.getElementById('hamburger');
-  const mm = document.getElementById('mobileMenu');
-  if(hb){hb.onclick=()=>mm.classList.toggle('open');mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));}
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
-
-  // Accordion items — toggle open/close
-  document.querySelectorAll('.acc-item').forEach(item=>{
-    item.addEventListener('click',()=>{
-      const parent = item.closest('.fmod__accordion');
-      const wasActive = item.classList.contains('active');
-      parent.querySelectorAll('.acc-item').forEach(i=>i.classList.remove('active'));
-      if(!wasActive) item.classList.add('active');
-    });
   });
-
-  // GSAP scroll animations (replaces IntersectionObserver from inline script)
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('[data-animate]').forEach(el=>{
-      ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:()=>el.classList.add('animated')});
-    });
-    gsap.timeline({defaults:{ease:'power3.out'}})
-      .from('.hero__badge',{y:20,opacity:0,duration:0.6})
-      .from('.hero__title',{y:30,opacity:0,duration:0.8},'-=0.3')
-      .from('.hero__sub',{y:20,opacity:0,duration:0.6},'-=0.4')
-      .from('.hero__actions',{y:20,opacity:0,duration:0.6},'-=0.3')
-      .from('.hero__note',{y:10,opacity:0,duration:0.5},'-=0.3');
-  }
-});
-</script>
+  </script>
 </body>
 </html>

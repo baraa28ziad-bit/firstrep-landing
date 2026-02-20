@@ -62,6 +62,35 @@
     .nav__mobile.open { display: flex; }
     .nav__mobile a { font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--bg-2); text-transform: uppercase; letter-spacing: 0.04em; }
 
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
+
+
     /* ===== HERO (small) ===== */
     .hero-sm { background: var(--dark); padding: 140px 0 60px; text-align: center; }
     .hero-sm__title { font-size: 48px; font-weight: 900; color: #fff; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 12px; }
@@ -173,15 +202,16 @@
 <body>
 
   <!-- ===== NAV ===== -->
-  <nav class="nav" id="nav">
+  <nav class="nav scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">First<span>Rep</span></a>
       <div class="nav__links">
-        <a href="features.html" class="nav__link">Features</a>
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
         <a href="index.html#pricing" class="nav__link">Pricing</a>
         <a href="contact.html" class="nav__link">Contact</a>
       </div>
       <div class="nav__actions">
+        <a href="#" class="nav__signin">Sign In</a>
         <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
       </div>
       <div class="nav__hamburger" id="hamburger">
@@ -190,11 +220,71 @@
         <span></span>
       </div>
     </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="features.html">Features</a>
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="features/programming.html">AI Workout Builder</a>
+        <a href="features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="features/habits.html">Habit Tracking</a>
+        <a href="features/coaching.html">Coaching Dashboard</a>
+        <a href="features/communication.html">Messaging</a>
+        <a href="features/scheduling.html">Scheduling</a>
+        <a href="features/marketplace.html">Marketplace</a>
+        <a href="features/payments.html">Payments</a>
+        <a href="features.html">All Features</a>
+      </div>
       <a href="index.html#pricing">Pricing</a>
       <a href="contact.html">Contact</a>
-      <a href="#" style="display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;padding:14px 32px;border-radius:10px;border:none;cursor:pointer;background:var(--text);color:#fff;margin-top:16px;text-align:center;">Start Free Trial</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
     </div>
   </nav>
 

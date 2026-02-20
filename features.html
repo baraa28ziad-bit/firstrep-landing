@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Features — FirstRep | Everything You Need to Coach, Scale, and Win</title>
-  <meta name="description" content="Explore FirstRep's full feature set: AI workout builder, coaching dashboard, nutrition & habits, marketplace, smart accountability, and integrated payments.">
+  <meta name="description" content="Explore FirstRep's full feature set: AI workout builder, coaching dashboard, nutrition, habits, marketplace, communication, scheduling, progress tracking, and business tools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
   <style>
     :root {
@@ -24,138 +24,140 @@
       --border: #E5E7EB;
       --success: #10B981;
       --radius: 16px;
-      --radius-lg: 24px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
-      --container: 1200px;
-      --nav-h: 72px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { font-family: 'Public Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; font-feature-settings: 'cv11', 'ss01'; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
     .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
     /* ===== BUTTONS ===== */
-    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; border: none; cursor: pointer; transition: all 0.25s; white-space: nowrap; letter-spacing: 0.01em; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 15px; padding: 13px 30px; border-radius: 11px; border: none; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap; letter-spacing: -0.01em; }
     .btn--primary { background: var(--text); color: #fff; }
-    .btn--primary:hover { background: #000; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-    .btn--white { background: #fff; color: var(--text); font-weight: 700; }
+    .btn--primary:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+    .btn--white { background: #fff; color: var(--text); font-weight: 600; }
     .btn--white:hover { background: #f5f5f5; }
     .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
     .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-    .btn--lg { padding: 16px 40px; font-size: 16px; border-radius: 12px; }
+    .btn--outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn--outline:hover { border-color: var(--brand); color: var(--brand); }
+    .btn--lg { padding: 15px 36px; font-size: 16px; border-radius: 12px; }
 
     /* ===== NAV ===== */
-    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s, box-shadow 0.35s; }
-    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03); }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
-    .nav__logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; transition: color 0.35s; }
-    .nav__logo span { color: var(--brand); transition: color 0.35s; }
-    .nav.scrolled .nav__logo { color: var(--text); }
-    .nav.scrolled .nav__logo span { color: var(--brand); }
-    .nav__links { display: flex; gap: 28px; }
-    .nav__link { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.3s; }
-    .nav__link:hover { color: #fff; }
-    .nav__link--active { color: #fff; }
-    .nav.scrolled .nav__link { color: var(--text-2); }
-    .nav.scrolled .nav__link:hover { color: var(--brand); }
-    .nav.scrolled .nav__link--active { color: var(--brand); }
-    .nav__actions { display: flex; align-items: center; gap: 16px; }
-    .nav__signin { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); padding: 8px 16px; text-transform: uppercase; letter-spacing: 0.06em; transition: color 0.3s; }
-    .nav__signin:hover { color: #fff; }
-    .nav.scrolled .nav__signin { color: var(--text-2); }
-    .nav.scrolled .nav__signin:hover { color: var(--brand); }
-    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 700; font-size: 13px; padding: 10px 24px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
-    .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
-    .nav.scrolled .nav__cta { background: var(--text); color: #fff; border-color: var(--text); }
-    .nav.scrolled .nav__cta:hover { background: #000; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__signin { font-size: 14px; font-weight: 500; color: var(--text-2); padding: 8px 16px; transition: color 0.2s; }
+    .nav__signin:hover { color: var(--text); }
+    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
     .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
-    .nav__hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; display: block; }
-    .nav.scrolled .nav__hamburger span { background: var(--text); }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; display: block; }
     .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
     .nav__mobile.open { display: flex; }
-    .nav__mobile a { font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--bg-2); text-transform: uppercase; letter-spacing: 0.04em; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
+
 
     /* ===== HERO ===== */
-    .hero { position: relative; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding: 160px 0 120px; }
+    .hero { position: relative; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding: 160px 0 100px; }
     .hero__glow { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
-    .hero__content { position: relative; z-index: 2; text-align: center; max-width: 780px; margin: 0 auto; }
-    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 100px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .hero__content { position: relative; z-index: 2; text-align: center; max-width: 720px; margin: 0 auto; }
+    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 28px; text-transform: uppercase; letter-spacing: 0.08em; }
     .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
-    .hero__title { font-size: 60px; font-weight: 900; line-height: 1.06; color: #fff; margin-bottom: 24px; letter-spacing: -0.035em; }
+    .hero__title { font-size: clamp(38px, 5vw, 56px); font-weight: 800; line-height: 1.08; color: #fff; margin-bottom: 24px; letter-spacing: -0.04em; }
     .hero__title em { font-style: normal; color: var(--brand); }
-    .hero__sub { font-size: 19px; color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto 40px; line-height: 1.65; font-weight: 400; }
+    .hero__sub { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto 36px; line-height: 1.7; font-weight: 400; }
     .hero__actions { display: flex; gap: 16px; justify-content: center; }
 
     /* ===== FEATURE GRID ===== */
-    .features { padding: 120px 0; }
-    .features__header { text-align: center; margin-bottom: 64px; }
-    .features__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
-    .features__title { font-size: 48px; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 14px; line-height: 1.08; }
-    .features__sub { font-size: 18px; color: var(--text-3); max-width: 560px; margin: 0 auto; line-height: 1.7; }
-    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .fcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; transition: all 0.3s; }
-    .fcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
-    .fcard__icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .features { padding: 100px 0; }
+    .features__header { text-align: center; margin-bottom: 56px; }
+    .features__badge { display: inline-block; background: rgba(17,24,39,0.06); color: var(--text); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .features__title { font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 14px; line-height: 1.15; }
+    .features__sub { font-size: 17px; color: var(--text-3); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .fcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); display: block; }
+    .fcard:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .fcard__icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .fcard__icon svg { width: 24px; height: 24px; }
     .fcard__icon--purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
     .fcard__icon--blue { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #3B82F6; }
     .fcard__icon--green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
     .fcard__icon--amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
     .fcard__icon--rose { background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; }
     .fcard__icon--teal { background: linear-gradient(135deg, #CCFBF1, #99F6E4); color: #0D9488; }
-    .fcard__name { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em; }
-    .fcard__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
-
-    /* ===== AI SECTION ===== */
-    .ai { padding: 120px 0; background: var(--bg-2); position: relative; overflow: hidden; }
-    .ai__glow { position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.06) 0%, transparent 70%); pointer-events: none; }
-    .ai__header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
-    .ai__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 800; padding: 8px 18px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.12em; }
-    .ai__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse-ai 2s ease-in-out infinite; }
-    @keyframes pulse-ai { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
-    .ai__title { font-size: 48px; font-weight: 900; color: var(--text); line-height: 1.08; letter-spacing: -0.035em; margin-bottom: 16px; }
-    .ai__sub { font-size: 18px; color: var(--text-3); line-height: 1.7; max-width: 560px; margin: 0 auto; }
-    .ai__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .ai-card { background: #fff; border-radius: var(--radius); padding: 36px 28px; border: 1px solid var(--border); transition: all 0.3s; }
-    .ai-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); border-color: transparent; }
-    .ai-card__icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-    .ai-card__icon--generate { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
-    .ai-card__icon--predict { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
-    .ai-card__icon--automate { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
-    .ai-card__number { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
-    .ai-card__title { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em; }
-    .ai-card__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
+    .fcard__icon--indigo { background: linear-gradient(135deg, #E0E7FF, #C7D2FE); color: #4F46E5; }
+    .fcard__icon--cyan { background: linear-gradient(135deg, #CFFAFE, #A5F3FC); color: #0891B2; }
+    .fcard__icon--orange { background: linear-gradient(135deg, #FFEDD5, #FED7AA); color: #EA580C; }
+    .fcard__name { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .fcard__desc { font-size: 14px; color: var(--text-3); line-height: 1.7; margin-bottom: 16px; }
+    .fcard__link { font-size: 14px; font-weight: 600; color: var(--brand); display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .fcard:hover .fcard__link { gap: 10px; }
+    .fcard__link svg { width: 16px; height: 16px; }
 
     /* ===== CTA ===== */
-    .cta { padding: 140px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
+    .cta { padding: 110px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
     .cta__glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
-    .cta__title { font-size: 56px; font-weight: 900; color: #fff; margin-bottom: 20px; letter-spacing: -0.035em; position: relative; z-index: 1; line-height: 1.08; }
-    .cta__sub { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta__title { font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: -0.04em; position: relative; z-index: 1; line-height: 1.15; }
+    .cta__sub { font-size: 17px; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; }
     .cta__actions { position: relative; z-index: 1; display: flex; gap: 16px; justify-content: center; }
-    .cta__note { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 20px; position: relative; z-index: 1; }
 
     /* ===== FOOTER ===== */
-    .footer { background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6); }
+    .footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 80px 0 40px; }
     .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer__brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-    .footer__brand-icon { width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--text); font-weight: 800; font-size: 16px; }
-    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; }
-    .footer__desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
+    .footer__logo { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .footer__logo span { color: var(--brand); }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
     .footer__social { display: flex; gap: 12px; }
-    .footer__social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; transition: all 0.3s; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
     .footer__social a:hover { background: var(--brand); color: #fff; }
-    .footer__col h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer__col ul { padding: 0; margin: 0; }
-    .footer__col li { margin-bottom: 12px; }
-    .footer__col a { color: rgba(255,255,255,0.5); font-size: 14px; transition: color 0.3s; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
     .footer__col a:hover { color: #fff; }
-    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.25); }
     .footer__legal { display: flex; gap: 24px; }
-    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.3s; }
+    .footer__legal a { color: rgba(255,255,255,0.25); transition: color 0.2s; }
     .footer__legal a:hover { color: rgba(255,255,255,0.5); }
 
     /* ===== ANIMATIONS ===== */
@@ -163,49 +165,27 @@
     .animated { opacity: 1 !important; transform: translateY(0) !important; transition: opacity 0.6s ease, transform 0.6s ease; }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 1280px) {
-      .container { padding: 0 32px; }
-    }
     @media (max-width: 1024px) {
-      .hero__title { font-size: 48px; }
-      .hero { padding: 140px 0 100px; }
-      .features { padding: 100px 0; }
-      .features__title { font-size: 40px; }
+      .hero { padding: 140px 0 80px; }
+      .features { padding: 72px 0; }
       .features__grid { grid-template-columns: repeat(2, 1fr); }
-      .ai { padding: 100px 0; }
-      .ai__title { font-size: 40px; }
-      .ai__grid { grid-template-columns: 1fr 1fr; }
-      .cta { padding: 100px 0; }
+      .cta { padding: 80px 0; }
       .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .container { padding: 0 20px; }
-      .hero__title { font-size: 38px; }
-      .hero__sub { font-size: 17px; }
-      .hero { padding: 120px 0 80px; }
+      .hero { padding: 120px 0 64px; }
       .hero__actions { flex-direction: column; align-items: center; }
       .nav__links, .nav__signin { display: none; }
       .nav__hamburger { display: flex; }
-      .features { padding: 80px 0; }
-      .features__title { font-size: 32px; }
-      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-      .ai { padding: 80px 0; }
-      .ai__title { font-size: 32px; }
-      .ai__sub { font-size: 16px; }
-      .ai__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-      .cta { padding: 80px 0; }
-      .cta__title { font-size: 32px; }
+      .features { padding: 56px 0; }
+      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .cta { padding: 64px 0; }
       .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
-      .hero__title { font-size: 32px; }
-      .hero__sub { font-size: 16px; }
-      .hero { padding: 110px 0 64px; }
-      .hero__badge { font-size: 11px; padding: 6px 14px; }
-      .features__title { font-size: 28px; }
-      .ai__title { font-size: 28px; }
-      .cta__title { font-size: 28px; }
+      .hero { padding: 110px 0 56px; }
       .footer__grid { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -216,11 +196,11 @@
 <body>
 
   <!-- ===== NAV ===== -->
-  <nav class="nav" id="nav">
+  <nav class="nav scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">First<span>Rep</span></a>
       <div class="nav__links">
-        <a href="features.html" class="nav__link nav__link--active">Features</a>
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
         <a href="index.html#pricing" class="nav__link">Pricing</a>
         <a href="contact.html" class="nav__link">Contact</a>
       </div>
@@ -234,8 +214,67 @@
         <span></span>
       </div>
     </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="features.html">Features</a>
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="features/programming.html">AI Workout Builder</a>
+        <a href="features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="features/habits.html">Habit Tracking</a>
+        <a href="features/coaching.html">Coaching Dashboard</a>
+        <a href="features/communication.html">Messaging</a>
+        <a href="features/scheduling.html">Scheduling</a>
+        <a href="features/marketplace.html">Marketplace</a>
+        <a href="features/payments.html">Payments</a>
+        <a href="features.html">All Features</a>
+      </div>
       <a href="index.html#pricing">Pricing</a>
       <a href="contact.html">Contact</a>
       <a href="#">Sign In</a>
@@ -267,99 +306,91 @@
     <div class="container">
       <div class="features__header" data-animate>
         <div class="features__badge">Core Platform</div>
-        <h2 class="features__title">Six Pillars of a Better Coaching Business</h2>
+        <h2 class="features__title">Nine Pillars of a Better Coaching Business</h2>
         <p class="features__sub">Each feature is designed to save you time, delight your clients, and grow your revenue.</p>
       </div>
       <div class="features__grid">
-        <!-- Card 1: AI Workout Builder -->
-        <div class="fcard" data-animate>
+        <!-- 1: AI Workout Programming -->
+        <a href="features/programming.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--purple">
-            <i data-lucide="sparkles" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="sparkles"></i>
           </div>
-          <h3 class="fcard__name">AI Workout Builder</h3>
-          <p class="fcard__desc">Generate personalized programs in seconds from a client questionnaire. AI picks exercises, sets, reps, and progression rules from a library of 1,734 exercises. You review, tweak, and assign.</p>
-        </div>
-        <!-- Card 2: Coaching Dashboard -->
-        <div class="fcard" data-animate>
+          <h3 class="fcard__name">AI Workout Programming</h3>
+          <p class="fcard__desc">Generate personalized programs from a questionnaire. 1,734 exercises, auto-progression, and periodization — all AI-powered.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 2: Coaching Dashboard -->
+        <a href="features/coaching.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--blue">
-            <i data-lucide="layout-dashboard" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="layout-dashboard"></i>
           </div>
           <h3 class="fcard__name">Coaching Dashboard</h3>
-          <p class="fcard__desc">Health scores, risk signals, check-in queues, and compliance tracking all in one view. See every client's status at a glance and know exactly who needs attention today.</p>
-        </div>
-        <!-- Card 3: Nutrition & Habits -->
-        <div class="fcard" data-animate>
+          <p class="fcard__desc">Health scores, risk detection, check-in queues, and accountability. See every client's status at a glance.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 3: Nutrition Coaching -->
+        <a href="features/nutrition.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--green">
-            <i data-lucide="apple" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="apple"></i>
           </div>
-          <h3 class="fcard__name">Nutrition & Habits</h3>
-          <p class="fcard__desc">Auto-calculated macros, custom meal plans, food logging, and daily habit tracking. Your clients build consistency while you monitor compliance without the manual overhead.</p>
-        </div>
-        <!-- Card 4: Marketplace -->
-        <div class="fcard" data-animate>
+          <h3 class="fcard__name">Nutrition Coaching</h3>
+          <p class="fcard__desc">Auto-calculated macros, custom meal plans, food logging, and recipes. Complete nutrition management built in.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 4: Habits & Gamification -->
+        <a href="features/habits.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--amber">
-            <i data-lucide="globe" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="flame"></i>
           </div>
-          <h3 class="fcard__name">Marketplace</h3>
-          <p class="fcard__desc">Get discovered by thousands of clients searching for their next coach. Your profile, packages, reviews, and specialties are all searchable in a public trainer marketplace.</p>
-        </div>
-        <!-- Card 5: Smart Accountability -->
-        <div class="fcard" data-animate>
+          <h3 class="fcard__name">Habits & Gamification</h3>
+          <p class="fcard__desc">Daily habits, streak tracking, badges, challenges, and leaderboards. Keep clients engaged with built-in gamification.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 5: Trainer Marketplace -->
+        <a href="features/marketplace.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--rose">
-            <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="globe"></i>
           </div>
-          <h3 class="fcard__name">Smart Accountability</h3>
-          <p class="fcard__desc">Automated missed-workout nudges, streak tracking, milestone celebrations, and churn prediction. The system catches at-risk clients before they disengage, so you can intervene early.</p>
-        </div>
-        <!-- Card 6: Integrated Payments -->
-        <div class="fcard" data-animate>
+          <h3 class="fcard__name">Trainer Marketplace</h3>
+          <p class="fcard__desc">Get discovered by thousands of clients. Your profile, packages, reviews, and specialties — all searchable.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 6: Payments & Revenue -->
+        <a href="features/payments.html" class="fcard" data-animate>
           <div class="fcard__icon fcard__icon--teal">
-            <i data-lucide="credit-card" style="width: 28px; height: 28px;"></i>
+            <i data-lucide="credit-card"></i>
           </div>
-          <h3 class="fcard__name">Integrated Payments</h3>
-          <p class="fcard__desc">Stripe-powered subscriptions, session packs, and one-time purchases built right in. Clients pay seamlessly, you get paid automatically, and the platform handles invoicing and payouts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AI SECTION ===== -->
-  <section class="ai">
-    <div class="ai__glow"></div>
-    <div class="container">
-      <div class="ai__header" data-animate>
-        <div class="ai__badge"><span class="ai__badge-dot"></span> AI-Powered</div>
-        <h2 class="ai__title">AI That Coaches With You</h2>
-        <p class="ai__sub">FirstRep's AI understands fitness science. It generates, predicts, and automates the busywork so you can focus on what matters: coaching real humans.</p>
-      </div>
-      <div class="ai__grid">
-        <!-- AI Card 1 -->
-        <div class="ai-card" data-animate>
-          <div class="ai-card__icon ai-card__icon--generate">
-            <i data-lucide="wand-2" style="width: 26px; height: 26px;"></i>
+          <h3 class="fcard__name">Payments & Revenue</h3>
+          <p class="fcard__desc">Stripe-powered subscriptions, session packs, revenue dashboard, and auto-payouts. Get paid seamlessly.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 7: Communication -->
+        <a href="features/communication.html" class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--indigo">
+            <i data-lucide="message-circle"></i>
           </div>
-          <div class="ai-card__number">01</div>
-          <h3 class="ai-card__title">Generate Programs</h3>
-          <p class="ai-card__desc">Turn a client questionnaire into a complete workout program in seconds. Equipment-aware exercise selection, auto-progression rules, and periodization built in. Review, tweak, and assign with one tap.</p>
-        </div>
-        <!-- AI Card 2 -->
-        <div class="ai-card" data-animate>
-          <div class="ai-card__icon ai-card__icon--predict">
-            <i data-lucide="activity" style="width: 26px; height: 26px;"></i>
+          <h3 class="fcard__name">Communication</h3>
+          <p class="fcard__desc">Direct messaging, voice notes, group conversations, auto-messages, and smart scheduling. Stay connected without burnout.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 8: Scheduling -->
+        <a href="features/scheduling.html" class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--cyan">
+            <i data-lucide="calendar"></i>
           </div>
-          <div class="ai-card__number">02</div>
-          <h3 class="ai-card__title">Predict and Prevent Churn</h3>
-          <p class="ai-card__desc">Health scores flag at-risk clients before they leave. Plateau detection, declining adherence, and low energy are caught automatically so you can intervene at the right moment.</p>
-        </div>
-        <!-- AI Card 3 -->
-        <div class="ai-card" data-animate>
-          <div class="ai-card__icon ai-card__icon--automate">
-            <i data-lucide="zap" style="width: 26px; height: 26px;"></i>
+          <h3 class="fcard__name">Scheduling & Appointments</h3>
+          <p class="fcard__desc">Availability slots, client booking, calendar sync, and auto-reminders. No more back-and-forth scheduling.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <!-- 9: Progress & Analytics -->
+        <a href="features/progress.html" class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--orange">
+            <i data-lucide="bar-chart-3"></i>
           </div>
-          <div class="ai-card__number">03</div>
-          <h3 class="ai-card__title">Automate the Busywork</h3>
-          <p class="ai-card__desc">AI-drafted check-in responses, auto-generated weekly summaries, smart nudges for missed workouts, and milestone celebrations. Hours of admin work handled on autopilot.</p>
-        </div>
+          <h3 class="fcard__name">Progress & Analytics</h3>
+          <p class="fcard__desc">Body measurements, progress photos, personal records, volume tracking, and auto-generated monthly reports.</p>
+          <span class="fcard__link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
       </div>
     </div>
   </section>
@@ -367,14 +398,15 @@
   <!-- ===== CTA ===== -->
   <section class="cta">
     <div class="cta__glow"></div>
-    <div class="container">
-      <h2 class="cta__title" data-animate>Start Your Free Trial</h2>
-      <p class="cta__sub" data-animate>Join hundreds of fitness coaches already using FirstRep to scale their business. Free forever for up to 3 clients.</p>
-      <div class="cta__actions" data-animate>
-        <a href="#" class="btn btn--white btn--lg">Get Started Free</a>
-        <a href="index.html#pricing" class="btn btn--ghost btn--lg">View Pricing</a>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div data-animate>
+        <h2 class="cta__title">Start Your Free Trial</h2>
+        <p class="cta__sub">Join hundreds of fitness coaches already using FirstRep to scale their business. Free forever for up to 3 clients.</p>
+        <div class="cta__actions">
+          <a href="#" class="btn btn--white btn--lg">Get Started Free</a>
+          <a href="index.html#pricing" class="btn btn--ghost btn--lg">View Pricing</a>
+        </div>
       </div>
-      <p class="cta__note" data-animate>No credit card required. Set up in under 2 minutes.</p>
     </div>
   </section>
 
@@ -382,65 +414,49 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <!-- Brand -->
         <div>
-          <div class="footer__brand-logo">
-            <div class="footer__brand-icon">F</div>
-            <span class="footer__brand-name">FirstRep</span>
-          </div>
+          <div class="footer__logo">First<span>Rep</span></div>
           <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
           <div class="footer__social">
-            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
             <a href="#" aria-label="Instagram">IG</a>
             <a href="#" aria-label="LinkedIn">in</a>
             <a href="#" aria-label="YouTube">YT</a>
           </div>
         </div>
-        <!-- Features -->
         <div class="footer__col">
-          <h4>Features</h4>
-          <ul>
-            <li><a href="features.html">All Features</a></li>
-            <li><a href="features.html#feature-grid">AI Workout Builder</a></li>
-            <li><a href="features.html#feature-grid">Coaching Dashboard</a></li>
-            <li><a href="features.html#feature-grid">Marketplace</a></li>
-            <li><a href="features.html#feature-grid">Payments</a></li>
-          </ul>
+          <h4 class="footer__col-title">Features</h4>
+          <a href="features/programming.html">Programming</a>
+          <a href="features/coaching.html">Coaching</a>
+          <a href="features/nutrition.html">Nutrition</a>
+          <a href="features/marketplace.html">Marketplace</a>
+          <a href="features/payments.html">Payments</a>
         </div>
-        <!-- Company -->
         <div class="footer__col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+          <h4 class="footer__col-title">More Features</h4>
+          <a href="features/communication.html">Communication</a>
+          <a href="features/scheduling.html">Scheduling</a>
+          <a href="features/progress.html">Progress</a>
+          <a href="features/habits.html">Habits</a>
+          <a href="features/business.html">Business Tools</a>
         </div>
-        <!-- Resources -->
         <div class="footer__col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">API Docs</a></li>
-            <li><a href="#">Webinars</a></li>
-          </ul>
+          <h4 class="footer__col-title">Company</h4>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="contact.html">Contact</a>
         </div>
-        <!-- Legal -->
         <div class="footer__col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">GDPR</a></li>
-          </ul>
+          <h4 class="footer__col-title">Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">GDPR</a>
         </div>
       </div>
-      <!-- Bottom bar -->
       <div class="footer__bottom">
-        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
         <div class="footer__legal">
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
@@ -451,48 +467,29 @@
     </div>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Lucide icons
-    lucide.createIcons();
+    if (window.lucide) lucide.createIcons();
 
-    // Nav scroll effect
-    window.addEventListener('scroll', function() {
-      var nav = document.getElementById('nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
-    // Mobile menu toggle
+    // Mobile menu
     var hamburger = document.getElementById('hamburger');
     var mobileMenu = document.getElementById('mobileMenu');
     if (hamburger) {
-      hamburger.addEventListener('click', function() {
-        mobileMenu.classList.toggle('open');
-      });
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
       mobileMenu.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() {
-          mobileMenu.classList.remove('open');
-        });
+        a.addEventListener('click', function() { mobileMenu.classList.remove('open'); });
       });
     }
 
-    // Smooth scroll for anchor links
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
       a.addEventListener('click', function(e) {
         var target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
 
-    // Scroll-triggered animations
+    // Scroll animations
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -502,13 +499,9 @@
           }
         });
       }, { threshold: 0.1 });
-
-      document.querySelectorAll('[data-animate]').forEach(function(el) {
-        observer.observe(el);
-      });
+      document.querySelectorAll('[data-animate]').forEach(function(el) { observer.observe(el); });
     }
   });
   </script>
-
 </body>
 </html>

@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress & Analytics — FirstRep | Track Every Win, Prove Every Result</title>
+  <meta name="description" content="Body measurements, progress photos, personal records, training volume, and monthly reports. Give clients undeniable proof that your coaching works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 13px 30px;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+    }
+    .btn--primary { background: var(--brand); color: #fff; }
+    .btn--primary:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,89,254,0.3); }
+    .btn--white { background: #fff; color: var(--text); font-weight: 700; }
+    .btn--white:hover { background: #f5f5f5; transform: translateY(-1px); }
+    .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
+    .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn--outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn--outline:hover { border-color: var(--brand); color: var(--brand); }
+    .btn--lg { padding: 15px 36px; font-size: 16px; border-radius: 12px; }
+
+    /* ===== NAV (always scrolled on inner pages) ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav__logo { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 28px; }
+    .nav__link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color 0.2s;
+    }
+    .nav__link:hover { color: var(--brand); }
+    .nav__link--active { color: var(--brand); }
+    .nav__actions { display: flex; align-items: center; gap: 16px; }
+    .nav__signin {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      padding: 8px 16px;
+      transition: color 0.2s;
+    }
+    .nav__signin:hover { color: var(--brand); }
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      border: none;
+      background: var(--brand);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+    }
+    .nav__cta:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(94,89,254,0.3); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; display: block; }
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--bg-2);
+    }
+
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
+
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+      padding: 160px 0 120px;
+    }
+    .hero__glow {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(94,89,254,0.15) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+    .hero__title {
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 900;
+      line-height: 1.06;
+      color: #fff;
+      margin-bottom: 24px;
+      letter-spacing: -0.035em;
+    }
+    .hero__title em { font-style: normal; color: var(--brand); }
+    .hero__sub {
+      font-size: 19px;
+      color: rgba(255,255,255,0.55);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+    .hero__actions { display: flex; gap: 16px; justify-content: center; }
+
+    /* ===== FEATURE GRID ===== */
+    .features { padding: 120px 0; }
+    .features__header { text-align: center; margin-bottom: 64px; }
+    .features__title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .features__sub {
+      font-size: 18px;
+      color: var(--text-3);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .features__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .fcard {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fcard:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .fcard__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .fcard__icon--purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
+    .fcard__icon--blue { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #3B82F6; }
+    .fcard__icon--green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
+    .fcard__icon--amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
+    .fcard__icon--rose { background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; }
+    .fcard__icon--teal { background: linear-gradient(135deg, #CCFBF1, #99F6E4); color: #0D9488; }
+    .fcard__name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .fcard__desc {
+      font-size: 15px;
+      color: var(--text-3);
+      line-height: 1.7;
+    }
+
+    /* ===== DEEP DIVE SECTIONS ===== */
+    .deep {
+      padding: 100px 0;
+    }
+    .deep--alt {
+      background: var(--bg-2);
+    }
+    .deep__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .deep__grid--reverse {
+      direction: rtl;
+    }
+    .deep__grid--reverse > * {
+      direction: ltr;
+    }
+    .deep__label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+    .deep__title {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .deep__desc {
+      font-size: 16px;
+      color: var(--text-3);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .deep__checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .deep__check {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-2);
+    }
+    .deep__check-icon {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+      color: #059669;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== BEFORE/AFTER PHOTO MOCKUP ===== */
+    .mockup-photos {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    .mockup-photos__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mockup-photos__header-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+      color: #3B82F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mockup-photos__header-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .mockup-photos__header-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .mockup-photos__compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .mockup-photos__card {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .mockup-photos__image {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+    }
+    .mockup-photos__image--before {
+      background: linear-gradient(145deg, #e2e0f0, #d4d1e8);
+    }
+    .mockup-photos__image--after {
+      background: linear-gradient(145deg, #c7e8d5, #a8dbb8);
+    }
+    .mockup-photos__image-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: #fff;
+    }
+    .mockup-photos__image-label--before {
+      background: rgba(0,0,0,0.35);
+    }
+    .mockup-photos__image-label--after {
+      background: rgba(16,185,129,0.8);
+    }
+    .mockup-photos__image-silhouette {
+      width: 60%;
+      height: 70%;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.15);
+    }
+    .mockup-photos__card-footer {
+      padding: 12px 14px;
+      background: var(--bg-2);
+    }
+    .mockup-photos__card-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .mockup-photos__card-detail {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .mockup-photos__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .mockup-photos__stat {
+      background: var(--bg-2);
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .mockup-photos__stat-value {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--success);
+      letter-spacing: -0.02em;
+    }
+    .mockup-photos__stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===== PR CELEBRATION MOCKUP ===== */
+    .mockup-pr {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    .mockup-pr__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mockup-pr__header-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      color: #D97706;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mockup-pr__header-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .mockup-pr__header-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .mockup-pr__celebration {
+      background: linear-gradient(135deg, #FFF7ED, #FEF3C7);
+      border: 1.5px solid #FDE68A;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mockup-pr__celebration::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(217,119,6,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .mockup-pr__celebration::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(217,119,6,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .mockup-pr__trophy {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FDE68A, #FBBF24);
+      color: #92400E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 4px 16px rgba(251,191,36,0.3);
+    }
+    .mockup-pr__badge-text {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #D97706;
+      margin-bottom: 8px;
+    }
+    .mockup-pr__exercise {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .mockup-pr__weight {
+      font-size: 36px;
+      font-weight: 900;
+      color: #D97706;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .mockup-pr__weight-unit {
+      font-size: 18px;
+      font-weight: 600;
+      color: #B45309;
+    }
+    .mockup-pr__prev {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .mockup-pr__prev strong {
+      color: var(--success);
+      font-weight: 700;
+    }
+    .mockup-pr__history {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mockup-pr__history-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .mockup-pr__record {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: var(--bg-2);
+      border-radius: 10px;
+    }
+    .mockup-pr__record-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .mockup-pr__record-icon {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    .mockup-pr__record-icon--gold {
+      background: linear-gradient(135deg, #FDE68A, #FBBF24);
+      color: #92400E;
+    }
+    .mockup-pr__record-icon--silver {
+      background: linear-gradient(135deg, #E5E7EB, #D1D5DB);
+      color: #4B5563;
+    }
+    .mockup-pr__record-icon--bronze {
+      background: linear-gradient(135deg, #FED7AA, #FDBA74);
+      color: #9A3412;
+    }
+    .mockup-pr__record-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .mockup-pr__record-date {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .mockup-pr__record-value {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta {
+      padding: 140px 0;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .cta__glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .cta__title {
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -0.035em;
+      position: relative;
+      z-index: 1;
+      line-height: 1.1;
+    }
+    .cta__sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.5);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    .cta__actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0a0b0f;
+      padding: 80px 0 40px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 60px;
+    }
+    .footer__brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer__brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; }
+    .footer__desc {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 280px;
+    }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer__col ul { padding: 0; margin: 0; }
+    .footer__col li { margin-bottom: 12px; }
+    .footer__col a {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.3s;
+    }
+    .footer__legal a:hover { color: rgba(255,255,255,0.5); }
+
+    /* ===== ANIMATIONS ===== */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    .animated {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero { padding: 140px 0 100px; }
+      .features { padding: 100px 0; }
+      .features__grid { grid-template-columns: repeat(2, 1fr); }
+      .deep { padding: 80px 0; }
+      .deep__grid { gap: 40px; }
+      .cta { padding: 100px 0; }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .hero__sub { font-size: 17px; }
+      .hero { padding: 120px 0 80px; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .nav__links, .nav__signin { display: none; }
+      .nav__hamburger { display: flex; }
+      .features { padding: 80px 0; }
+      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .deep { padding: 64px 0; }
+      .deep__grid { grid-template-columns: 1fr; gap: 40px; }
+      .deep__grid--reverse { direction: ltr; }
+      .cta { padding: 80px 0; }
+      .cta__actions { flex-direction: column; align-items: center; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .mockup-photos__stats { gap: 6px; }
+      .mockup-photos__stat { padding: 10px 6px; }
+      .mockup-photos__stat-value { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero__sub { font-size: 16px; }
+      .hero { padding: 110px 0 64px; }
+      .hero__badge { font-size: 11px; padding: 6px 14px; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .mockup-photos { padding: 24px; }
+      .mockup-pr { padding: 24px; }
+      .mockup-pr__weight { font-size: 28px; }
+      .mockup-pr__exercise { font-size: 18px; }
+      .mockup-photos__compare { gap: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">First<span>Rep</span></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__signin">Sign In</a>
+        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="container">
+      <div class="hero__content" data-animate>
+        <div class="hero__badge">
+          <span class="hero__dot"></span>
+          Progress &amp; Analytics
+        </div>
+        <h1 class="hero__title">Track Every Win, <em>Prove Every Result</em></h1>
+        <p class="hero__sub">Body measurements, progress photos, personal records, training volume, and monthly reports. Give clients undeniable proof that your coaching works.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+          <a href="../features.html" class="btn btn--ghost btn--lg">View All Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE GRID ===== -->
+  <section class="features" id="feature-grid">
+    <div class="container">
+      <div class="features__header" data-animate>
+        <h2 class="features__title">The Complete Progress Picture</h2>
+        <p class="features__sub">Every metric that matters, tracked automatically.</p>
+      </div>
+      <div class="features__grid">
+        <!-- Card 1: Body Measurements -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--purple">
+            <i data-lucide="ruler" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Body Measurements</h3>
+          <p class="fcard__desc">Track weight, body fat, chest, waist, hips, arms, and custom measurements. Trend charts show progress over weeks and months.</p>
+        </div>
+        <!-- Card 2: Progress Photos -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--blue">
+            <i data-lucide="camera" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Progress Photos</h3>
+          <p class="fcard__desc">Secure, private photo storage with side-by-side comparisons. Front, side, and back views. Date-stamped for visual proof of transformation.</p>
+        </div>
+        <!-- Card 3: Personal Records -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--amber">
+            <i data-lucide="trophy" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Personal Records</h3>
+          <p class="fcard__desc">Auto-detected PRs after every workout. 1RM estimates, volume records, and exercise-specific bests. Celebrated with push notifications.</p>
+        </div>
+        <!-- Card 4: Training Volume -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--green">
+            <i data-lucide="bar-chart-3" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Training Volume</h3>
+          <p class="fcard__desc">Weekly and monthly volume tracking by muscle group. See if clients are progressing, maintaining, or declining. Compare across time periods.</p>
+        </div>
+        <!-- Card 5: Monthly Reports -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--rose">
+            <i data-lucide="file-text" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Monthly Reports</h3>
+          <p class="fcard__desc">Auto-generated comprehensive reports: training stats, nutrition compliance, habit scores, measurement changes, and photo comparisons. Zero manual work.</p>
+        </div>
+        <!-- Card 6: Wearable Sync -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--teal">
+            <i data-lucide="watch" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Wearable Sync</h3>
+          <p class="fcard__desc">Connect Apple Health and Google Fit for step counts, heart rate, sleep data, and active calories. A complete picture of client wellness beyond the gym.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 1: PHOTOS ===== -->
+  <section class="deep deep--alt">
+    <div class="container">
+      <div class="deep__grid">
+        <div data-animate>
+          <span class="deep__label">Photos</span>
+          <h2 class="deep__title">Visual Proof That Speaks Louder Than Numbers</h2>
+          <p class="deep__desc">Progress photos are the most powerful tool in a coach's arsenal. FirstRep provides secure, private storage with side-by-side comparison views. Clients take front, side, and back photos that are date-stamped and organized chronologically. Compare week 1 to week 12 with a swipe. It's the proof that keeps clients motivated and makes your results undeniable.</p>
+          <div class="deep__checklist">
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Private, encrypted storage
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Side-by-side comparisons
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Front, side &amp; back views
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Chronological timeline
+            </div>
+          </div>
+        </div>
+        <div data-animate>
+          <!-- Before/After Photo Comparison Mockup -->
+          <div class="mockup-photos">
+            <div class="mockup-photos__header">
+              <div class="mockup-photos__header-icon">
+                <i data-lucide="image" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="mockup-photos__header-text">
+                <h4>Progress Photos</h4>
+                <p>Front View &mdash; 12 Week Comparison</p>
+              </div>
+            </div>
+            <div class="mockup-photos__compare">
+              <div class="mockup-photos__card">
+                <div class="mockup-photos__image mockup-photos__image--before">
+                  <span class="mockup-photos__image-label mockup-photos__image-label--before">Before</span>
+                  <div class="mockup-photos__image-silhouette"></div>
+                </div>
+                <div class="mockup-photos__card-footer">
+                  <div class="mockup-photos__card-date">Jan 8, 2026</div>
+                  <div class="mockup-photos__card-detail">Week 1 &middot; 195 lbs</div>
+                </div>
+              </div>
+              <div class="mockup-photos__card">
+                <div class="mockup-photos__image mockup-photos__image--after">
+                  <span class="mockup-photos__image-label mockup-photos__image-label--after">After</span>
+                  <div class="mockup-photos__image-silhouette"></div>
+                </div>
+                <div class="mockup-photos__card-footer">
+                  <div class="mockup-photos__card-date">Mar 26, 2026</div>
+                  <div class="mockup-photos__card-detail">Week 12 &middot; 178 lbs</div>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-photos__stats">
+              <div class="mockup-photos__stat">
+                <div class="mockup-photos__stat-value">-17 lbs</div>
+                <div class="mockup-photos__stat-label">Weight</div>
+              </div>
+              <div class="mockup-photos__stat">
+                <div class="mockup-photos__stat-value">-3.2"</div>
+                <div class="mockup-photos__stat-label">Waist</div>
+              </div>
+              <div class="mockup-photos__stat">
+                <div class="mockup-photos__stat-value">-4.1%</div>
+                <div class="mockup-photos__stat-label">Body Fat</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 2: RECORDS ===== -->
+  <section class="deep">
+    <div class="container">
+      <div class="deep__grid deep__grid--reverse">
+        <div data-animate>
+          <span class="deep__label">Records</span>
+          <h2 class="deep__title">Every PR Celebrated Automatically</h2>
+          <p class="deep__desc">After every workout log, the system scans for personal records. New 1RM? New volume record? Longest streak? It's detected instantly and celebrated with a push notification and an in-app animation. Clients feel the win, you see it in their dashboard, and the milestone is recorded forever. No manual tracking needed.</p>
+          <div class="deep__checklist">
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Auto-detected after every session
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              1RM estimates &amp; volume records
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Push notification celebrations
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Permanent milestone history
+            </div>
+          </div>
+        </div>
+        <div data-animate>
+          <!-- PR Celebration Mockup -->
+          <div class="mockup-pr">
+            <div class="mockup-pr__header">
+              <div class="mockup-pr__header-icon">
+                <i data-lucide="trophy" style="width: 20px; height: 20px;"></i>
+              </div>
+              <div class="mockup-pr__header-text">
+                <h4>Personal Records</h4>
+                <p>Today's Session</p>
+              </div>
+            </div>
+            <div class="mockup-pr__celebration">
+              <div class="mockup-pr__trophy">
+                <i data-lucide="trophy" style="width: 26px; height: 26px;"></i>
+              </div>
+              <div class="mockup-pr__badge-text">New Personal Record!</div>
+              <div class="mockup-pr__exercise">Bench Press</div>
+              <div class="mockup-pr__weight">225 <span class="mockup-pr__weight-unit">lbs</span></div>
+              <div class="mockup-pr__prev">Previous best: 215 lbs &middot; <strong>+10 lbs</strong></div>
+            </div>
+            <div class="mockup-pr__history">
+              <div class="mockup-pr__history-title">Recent Records</div>
+              <div class="mockup-pr__record">
+                <div class="mockup-pr__record-left">
+                  <div class="mockup-pr__record-icon mockup-pr__record-icon--gold">
+                    <i data-lucide="trophy" style="width: 14px; height: 14px;"></i>
+                  </div>
+                  <div>
+                    <div class="mockup-pr__record-name">Bench Press 1RM</div>
+                    <div class="mockup-pr__record-date">Today</div>
+                  </div>
+                </div>
+                <div class="mockup-pr__record-value">225 lbs</div>
+              </div>
+              <div class="mockup-pr__record">
+                <div class="mockup-pr__record-left">
+                  <div class="mockup-pr__record-icon mockup-pr__record-icon--silver">
+                    <i data-lucide="dumbbell" style="width: 14px; height: 14px;"></i>
+                  </div>
+                  <div>
+                    <div class="mockup-pr__record-name">Squat Volume</div>
+                    <div class="mockup-pr__record-date">2 days ago</div>
+                  </div>
+                </div>
+                <div class="mockup-pr__record-value">12,480 lbs</div>
+              </div>
+              <div class="mockup-pr__record">
+                <div class="mockup-pr__record-left">
+                  <div class="mockup-pr__record-icon mockup-pr__record-icon--bronze">
+                    <i data-lucide="flame" style="width: 14px; height: 14px;"></i>
+                  </div>
+                  <div>
+                    <div class="mockup-pr__record-name">Workout Streak</div>
+                    <div class="mockup-pr__record-date">5 days ago</div>
+                  </div>
+                </div>
+                <div class="mockup-pr__record-value">28 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <div class="container">
+      <h2 class="cta__title" data-animate>Show Clients Their Progress Like Never Before</h2>
+      <p class="cta__sub" data-animate>Join hundreds of fitness coaches already using FirstRep. Free forever for up to 3 clients.</p>
+      <div class="cta__actions" data-animate>
+        <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">F</div>
+            <span class="footer__brand-name">FirstRep</span>
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <!-- Features -->
+        <div class="footer__col">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="../features.html">All Features</a></li>
+            <li><a href="coaching.html">Coaching Dashboard</a></li>
+            <li><a href="programming.html">Programming</a></li>
+            <li><a href="progress.html">Progress & Analytics</a></li>
+            <li><a href="../features.html#feature-grid">Marketplace</a></li>
+          </ul>
+        </div>
+        <!-- Learn -->
+        <div class="footer__col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+
+    // Mega menu hover (desktop only)
+    var featuresToggle = document.getElementById('featuresToggle');
+    var megaMenu = document.getElementById('megaMenu');
+    var megaOverlay = document.getElementById('megaOverlay');
+    var megaTimeout = null;
+
+    function showMega() {
+      clearTimeout(megaTimeout);
+      megaMenu.classList.add('visible');
+      megaOverlay.classList.add('visible');
+      featuresToggle.classList.add('open');
+    }
+    function hideMega() {
+      megaTimeout = setTimeout(function() {
+        megaMenu.classList.remove('visible');
+        megaOverlay.classList.remove('visible');
+        featuresToggle.classList.remove('open');
+      }, 150);
+    }
+
+    if(featuresToggle && megaMenu) {
+      featuresToggle.addEventListener('mouseenter', showMega);
+      featuresToggle.addEventListener('mouseleave', hideMega);
+      megaMenu.addEventListener('mouseenter', showMega);
+      megaMenu.addEventListener('mouseleave', hideMega);
+      megaOverlay.addEventListener('click', function() { clearTimeout(megaTimeout); megaMenu.classList.remove('visible'); megaOverlay.classList.remove('visible'); featuresToggle.classList.remove('open'); });
+    }
+
+    // Mobile features toggle
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+
+
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var href = a.getAttribute('href');
+        if (href === '#') return;
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll-triggered animations via IntersectionObserver
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Coaching — FirstRep | Macros, Meal Plans & Food Logging</title>
+  <meta name="description" content="Auto-calculated macros, custom meal plans, food logging, and daily compliance tracking. Give every client a complete nutrition strategy with FirstRep.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; letter-spacing: -0.01em; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: inherit; font-weight: 600; font-size: 15px;
+      padding: 14px 32px; border-radius: 11px; border: none; cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap; letter-spacing: -0.01em;
+    }
+    .btn--primary { background: var(--brand); color: #fff; }
+    .btn--primary:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(94,89,254,0.3); }
+    .btn--white { background: #fff; color: var(--text); font-weight: 600; }
+    .btn--white:hover { background: #f5f5f5; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
+    .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn--outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn--outline:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-light); }
+    .btn--lg { padding: 16px 40px; font-size: 16px; border-radius: 12px; }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
+      background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      z-index: 1000; border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+      transition: background 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s, box-shadow 0.35s;
+    }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px;
+    }
+    .nav__logo { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link {
+      font-size: 14px; font-weight: 500; color: var(--text-3);
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav__link:hover { color: var(--brand); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__signin {
+      font-size: 14px; font-weight: 500; color: var(--text-3); padding: 8px 16px;
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav__signin:hover { color: var(--brand); }
+    .nav__cta {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: inherit; font-weight: 600; font-size: 14px;
+      padding: 10px 24px; border-radius: 11px; border: none;
+      background: var(--brand); color: #fff; cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap;
+    }
+    .nav__cta:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(94,89,254,0.3); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; display: block; }
+    .nav__mobile {
+      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0;
+      background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999;
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      font-size: 16px; font-weight: 600; color: var(--text); padding: 14px 0;
+      border-bottom: 1px solid var(--bg-2);
+    }
+
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
+
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; display: flex; align-items: center;
+      background: var(--dark); overflow: hidden; padding: 180px 0 120px;
+    }
+    .hero__glow {
+      position: absolute; width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(94,89,254,0.15) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
+    }
+    .hero__glow-2 {
+      position: absolute; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+      top: 20%; right: 10%; pointer-events: none;
+    }
+    .hero__content {
+      position: relative; z-index: 2; text-align: center; max-width: 780px; margin: 0 auto;
+    }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 20px; border-radius: 100px;
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7);
+      margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
+    .hero__title {
+      font-size: 60px; font-weight: 700; line-height: 1.06; color: #fff;
+      margin-bottom: 24px; letter-spacing: -0.04em;
+    }
+    .hero__title em { font-style: normal; color: var(--brand); }
+    .hero__sub {
+      font-size: 19px; color: rgba(255,255,255,0.5); max-width: 600px;
+      margin: 0 auto 44px; line-height: 1.7; font-weight: 400;
+    }
+    .hero__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ===== FEATURE GRID ===== */
+    .features { padding: 120px 0; }
+    .features__header { text-align: center; margin-bottom: 64px; }
+    .features__title {
+      font-size: 44px; font-weight: 700; letter-spacing: -0.04em;
+      margin-bottom: 16px; line-height: 1.1;
+    }
+    .features__sub {
+      font-size: 18px; color: var(--text-3); max-width: 560px;
+      margin: 0 auto; line-height: 1.7; font-weight: 400;
+    }
+    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .fcard {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 36px 32px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fcard:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .fcard__icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+    }
+    .fcard__icon--purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
+    .fcard__icon--blue { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #3B82F6; }
+    .fcard__icon--green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
+    .fcard__icon--amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
+    .fcard__icon--rose { background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; }
+    .fcard__icon--teal { background: linear-gradient(135deg, #CCFBF1, #99F6E4); color: #0D9488; }
+    .fcard__name {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin-bottom: 10px; letter-spacing: -0.02em;
+    }
+    .fcard__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
+
+    /* ===== DEEP DIVE SECTIONS ===== */
+    .deep { padding: 100px 0; }
+    .deep--alt { background: var(--bg-2); }
+    .deep__inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+    }
+    .deep__inner--reverse { direction: rtl; }
+    .deep__inner--reverse > * { direction: ltr; }
+    .deep__label {
+      display: inline-block; font-size: 12px; font-weight: 700; color: var(--brand);
+      text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px;
+    }
+    .deep__title {
+      font-size: 38px; font-weight: 700; color: var(--text);
+      letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .deep__desc {
+      font-size: 16px; color: var(--text-3); line-height: 1.75; margin-bottom: 32px;
+    }
+    .deep__checklist { display: flex; flex-direction: column; gap: 14px; }
+    .deep__check {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 15px; font-weight: 500; color: var(--text-2);
+    }
+    .deep__check-icon {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .deep__visual {
+      background: var(--bg-2); border-radius: var(--radius-lg); padding: 40px;
+      position: relative; overflow: hidden;
+    }
+    .deep--alt .deep__visual { background: #fff; }
+
+    /* Meal Plan Mockup */
+    .mockup-meal {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .mockup-meal__header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+    }
+    .mockup-meal__title {
+      font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.02em;
+    }
+    .mockup-meal__cals {
+      font-size: 13px; font-weight: 600; color: var(--brand);
+      background: var(--brand-light); padding: 4px 12px; border-radius: 100px;
+    }
+    .mockup-meal__days {
+      display: flex; gap: 6px; margin-bottom: 16px;
+    }
+    .mockup-meal__day {
+      flex: 1; text-align: center; padding: 8px 4px;
+      font-size: 12px; font-weight: 600; color: var(--text-3);
+      border-radius: 8px; background: rgba(0,0,0,0.03);
+    }
+    .mockup-meal__day--active {
+      background: var(--brand); color: #fff;
+    }
+    .mockup-meal__item {
+      background: #fff; border-radius: 12px; padding: 16px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .deep--alt .mockup-meal__item { background: var(--bg-2); }
+    .mockup-meal__emoji {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .mockup-meal__emoji--breakfast { background: #FEF3C7; }
+    .mockup-meal__emoji--lunch { background: #D1FAE5; }
+    .mockup-meal__emoji--dinner { background: #DBEAFE; }
+    .mockup-meal__emoji--snack { background: #FFE4E6; }
+    .mockup-meal__info { flex: 1; }
+    .mockup-meal__name {
+      font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; letter-spacing: -0.01em;
+    }
+    .mockup-meal__detail {
+      font-size: 12px; color: var(--text-muted); font-weight: 400;
+    }
+    .mockup-meal__macros {
+      display: flex; gap: 8px; flex-shrink: 0;
+    }
+    .mockup-meal__macro {
+      font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px;
+    }
+    .mockup-meal__macro--p { background: #EDE9FE; color: #7C3AED; }
+    .mockup-meal__macro--c { background: #FEF3C7; color: #D97706; }
+    .mockup-meal__macro--f { background: #DBEAFE; color: #3B82F6; }
+
+    /* Macro Rings Mockup */
+    .mockup-rings {
+      display: flex; flex-direction: column; align-items: center; gap: 32px;
+    }
+    .mockup-rings__header {
+      text-align: center;
+    }
+    .mockup-rings__date {
+      font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .mockup-rings__title {
+      font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.02em;
+    }
+    .mockup-rings__circles {
+      display: flex; gap: 32px; justify-content: center; align-items: center;
+    }
+    .mockup-ring {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+    }
+    .mockup-ring__svg {
+      width: 100px; height: 100px; transform: rotate(-90deg);
+    }
+    .mockup-ring__track {
+      fill: none; stroke-width: 8; stroke-linecap: round;
+    }
+    .mockup-ring__fill {
+      fill: none; stroke-width: 8; stroke-linecap: round;
+      transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mockup-ring__label {
+      font-size: 13px; font-weight: 600; letter-spacing: -0.01em;
+    }
+    .mockup-ring__value {
+      font-size: 12px; color: var(--text-muted); font-weight: 400;
+    }
+    .mockup-rings__summary {
+      display: flex; gap: 24px; justify-content: center;
+    }
+    .mockup-rings__stat {
+      text-align: center;
+    }
+    .mockup-rings__stat-value {
+      font-size: 24px; font-weight: 700; color: var(--text); letter-spacing: -0.03em;
+    }
+    .mockup-rings__stat-label {
+      font-size: 12px; color: var(--text-muted); font-weight: 500;
+    }
+    .mockup-rings__bar {
+      width: 100%; background: rgba(0,0,0,0.04); border-radius: 8px;
+      padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .mockup-rings__bar-left {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .mockup-rings__bar-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mockup-rings__bar-text {
+      font-size: 14px; font-weight: 600; color: var(--text);
+    }
+    .mockup-rings__bar-badge {
+      font-size: 12px; font-weight: 600; color: var(--success);
+      background: #D1FAE5; padding: 4px 10px; border-radius: 100px;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      padding: 140px 0; background: var(--dark); position: relative;
+      overflow: hidden; text-align: center;
+    }
+    .cta__glow {
+      position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(94,89,254,0.15) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .cta__title {
+      font-size: 52px; font-weight: 700; color: #fff; margin-bottom: 20px;
+      letter-spacing: -0.04em; position: relative; z-index: 1; line-height: 1.1;
+    }
+    .cta__sub {
+      font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px;
+      margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1;
+    }
+    .cta__actions {
+      position: relative; z-index: 1; display: flex; gap: 16px;
+      justify-content: center; flex-wrap: wrap;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6); }
+    .footer__grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 60px;
+    }
+    .footer__brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer__brand-icon {
+      width: 36px; height: 36px; border-radius: 10px; background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text); font-weight: 800; font-size: 16px;
+    }
+    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; }
+    .footer__desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col h4 {
+      font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 20px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .footer__col ul { padding: 0; margin: 0; }
+    .footer__col li { margin-bottom: 12px; }
+    .footer__col a {
+      color: rgba(255,255,255,0.5); font-size: 14px;
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a {
+      font-size: 13px; color: rgba(255,255,255,0.35);
+      transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ===== ANIMATIONS ===== */
+    [data-animate] { opacity: 0; transform: translateY(24px); }
+    .animated {
+      opacity: 1 !important; transform: translateY(0) !important;
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero__title { font-size: 48px; }
+      .hero { padding: 160px 0 100px; }
+      .features { padding: 100px 0; }
+      .features__title { font-size: 36px; }
+      .features__grid { grid-template-columns: repeat(2, 1fr); }
+      .deep { padding: 80px 0; }
+      .deep__inner { gap: 48px; }
+      .deep__title { font-size: 32px; }
+      .cta { padding: 100px 0; }
+      .cta__title { font-size: 40px; }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .hero__title { font-size: 38px; }
+      .hero__sub { font-size: 17px; }
+      .hero { padding: 140px 0 80px; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .nav__links, .nav__signin { display: none; }
+      .nav__hamburger { display: flex; }
+      .features { padding: 80px 0; }
+      .features__title { font-size: 30px; }
+      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .deep { padding: 64px 0; }
+      .deep__inner { grid-template-columns: 1fr; gap: 40px; }
+      .deep__inner--reverse { direction: ltr; }
+      .deep__title { font-size: 28px; }
+      .cta { padding: 80px 0; }
+      .cta__title { font-size: 32px; }
+      .cta__actions { flex-direction: column; align-items: center; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .mockup-rings__circles { gap: 20px; }
+      .mockup-ring__svg { width: 80px; height: 80px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero__title { font-size: 32px; }
+      .hero__sub { font-size: 16px; }
+      .hero { padding: 120px 0 64px; }
+      .hero__badge { font-size: 11px; padding: 6px 14px; }
+      .features__title { font-size: 26px; }
+      .deep__title { font-size: 26px; }
+      .deep__visual { padding: 24px; }
+      .cta__title { font-size: 28px; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .mockup-rings__circles { flex-direction: column; gap: 16px; }
+      .mockup-ring__svg { width: 100px; height: 100px; }
+      .mockup-meal__macros { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; }
+      .mockup-ring__fill { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">First<span>Rep</span></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__signin">Sign In</a>
+        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="hero__glow-2"></div>
+    <div class="container">
+      <div class="hero__content" data-animate>
+        <div class="hero__badge">
+          <span class="hero__dot"></span>
+          Nutrition Coaching
+        </div>
+        <h1 class="hero__title">Fuel Results With <em>Smarter Nutrition</em></h1>
+        <p class="hero__sub">Auto-calculated macros, custom meal plans, food logging, and daily compliance tracking. Give every client a complete nutrition strategy without the manual overhead.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+          <a href="../features.html" class="btn btn--ghost btn--lg">View All Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE GRID ===== -->
+  <section class="features">
+    <div class="container">
+      <div class="features__header" data-animate>
+        <h2 class="features__title">Complete Nutrition Management</h2>
+        <p class="features__sub">Everything from macro calculations to grocery lists, built right into your coaching platform.</p>
+      </div>
+      <div class="features__grid">
+        <!-- Card 1: Auto-Calculated Macros -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--purple">
+            <i data-lucide="calculator" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Auto-Calculated Macros</h3>
+          <p class="fcard__desc">Set client goals -- fat loss, muscle gain, maintenance -- and the system calculates daily macros automatically. Adjust with one slider as needs change.</p>
+        </div>
+        <!-- Card 2: Custom Meal Plans -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--green">
+            <i data-lucide="utensils" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Custom Meal Plans</h3>
+          <p class="fcard__desc">Build meal plans with drag-and-drop simplicity. Assign breakfast, lunch, dinner, and snacks. Auto-generate grocery lists for the week.</p>
+        </div>
+        <!-- Card 3: Food Logging -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--blue">
+            <i data-lucide="search" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Food Logging</h3>
+          <p class="fcard__desc">Clients log meals from a database of thousands of foods. Barcode scanning, recent foods, and custom entries. Daily macro rings show progress at a glance.</p>
+        </div>
+        <!-- Card 4: Recipe Library -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--amber">
+            <i data-lucide="book-open" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Recipe Library</h3>
+          <p class="fcard__desc">Create and share recipes with full nutritional breakdowns. Clients browse your recipe collection and add meals to their daily log with one tap.</p>
+        </div>
+        <!-- Card 5: Daily Compliance -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--rose">
+            <i data-lucide="check-circle" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Daily Compliance</h3>
+          <p class="fcard__desc">See which clients hit their macros and which ones missed. Daily compliance scores roll up into weekly and monthly trends for easy tracking.</p>
+        </div>
+        <!-- Card 6: Macro Adjustments -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--teal">
+            <i data-lucide="sliders" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Macro Adjustments</h3>
+          <p class="fcard__desc">Adjust calories and macros on the fly. The system recalculates meal plans and sends clients updated targets automatically. No spreadsheets needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 1: MEAL PLANNING ===== -->
+  <section class="deep deep--alt">
+    <div class="container">
+      <div class="deep__inner">
+        <div data-animate>
+          <span class="deep__label">Meal Planning</span>
+          <h2 class="deep__title">Build Meal Plans in Minutes, Not Hours</h2>
+          <p class="deep__desc">Drag and drop meals into a weekly plan. Each meal shows calories, protein, carbs, and fats. Auto-generate a grocery list your clients can take to the store. Swap individual meals without recalculating -- the system handles the math.</p>
+          <div class="deep__checklist">
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Drag-and-drop meal builder
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Auto-generated grocery lists
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Per-meal macro breakdown
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              One-tap meal swaps
+            </div>
+          </div>
+        </div>
+        <div class="deep__visual" data-animate>
+          <div class="mockup-meal">
+            <div class="mockup-meal__header">
+              <div class="mockup-meal__title">Weekly Meal Plan</div>
+              <div class="mockup-meal__cals">2,180 cal / day</div>
+            </div>
+            <div class="mockup-meal__days">
+              <div class="mockup-meal__day mockup-meal__day--active">Mon</div>
+              <div class="mockup-meal__day">Tue</div>
+              <div class="mockup-meal__day">Wed</div>
+              <div class="mockup-meal__day">Thu</div>
+              <div class="mockup-meal__day">Fri</div>
+              <div class="mockup-meal__day">Sat</div>
+              <div class="mockup-meal__day">Sun</div>
+            </div>
+            <div class="mockup-meal__item">
+              <div class="mockup-meal__emoji mockup-meal__emoji--breakfast">&#127859;</div>
+              <div class="mockup-meal__info">
+                <div class="mockup-meal__name">Breakfast</div>
+                <div class="mockup-meal__detail">Oats, banana, whey protein, almond butter</div>
+              </div>
+              <div class="mockup-meal__macros">
+                <span class="mockup-meal__macro mockup-meal__macro--p">38g P</span>
+                <span class="mockup-meal__macro mockup-meal__macro--c">62g C</span>
+                <span class="mockup-meal__macro mockup-meal__macro--f">18g F</span>
+              </div>
+            </div>
+            <div class="mockup-meal__item">
+              <div class="mockup-meal__emoji mockup-meal__emoji--lunch">&#129367;</div>
+              <div class="mockup-meal__info">
+                <div class="mockup-meal__name">Lunch</div>
+                <div class="mockup-meal__detail">Grilled chicken, rice, roasted vegetables</div>
+              </div>
+              <div class="mockup-meal__macros">
+                <span class="mockup-meal__macro mockup-meal__macro--p">45g P</span>
+                <span class="mockup-meal__macro mockup-meal__macro--c">55g C</span>
+                <span class="mockup-meal__macro mockup-meal__macro--f">14g F</span>
+              </div>
+            </div>
+            <div class="mockup-meal__item">
+              <div class="mockup-meal__emoji mockup-meal__emoji--snack">&#127822;</div>
+              <div class="mockup-meal__info">
+                <div class="mockup-meal__name">Snack</div>
+                <div class="mockup-meal__detail">Greek yogurt, mixed berries, granola</div>
+              </div>
+              <div class="mockup-meal__macros">
+                <span class="mockup-meal__macro mockup-meal__macro--p">22g P</span>
+                <span class="mockup-meal__macro mockup-meal__macro--c">30g C</span>
+                <span class="mockup-meal__macro mockup-meal__macro--f">8g F</span>
+              </div>
+            </div>
+            <div class="mockup-meal__item">
+              <div class="mockup-meal__emoji mockup-meal__emoji--dinner">&#127858;</div>
+              <div class="mockup-meal__info">
+                <div class="mockup-meal__name">Dinner</div>
+                <div class="mockup-meal__detail">Salmon, sweet potato, asparagus, olive oil</div>
+              </div>
+              <div class="mockup-meal__macros">
+                <span class="mockup-meal__macro mockup-meal__macro--p">42g P</span>
+                <span class="mockup-meal__macro mockup-meal__macro--c">48g C</span>
+                <span class="mockup-meal__macro mockup-meal__macro--f">22g F</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 2: TRACKING ===== -->
+  <section class="deep">
+    <div class="container">
+      <div class="deep__inner deep__inner--reverse">
+        <div data-animate>
+          <span class="deep__label">Tracking</span>
+          <h2 class="deep__title">Daily Macro Rings Your Clients Actually Use</h2>
+          <p class="deep__desc">A clean, visual daily tracker shows protein, carbs, and fat progress as colored rings. Clients see exactly where they stand after every meal. The food database includes thousands of entries with barcode scanning for packaged foods.</p>
+          <div class="deep__checklist">
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Visual macro ring progress
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Barcode scanning support
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Thousands of food entries
+            </div>
+            <div class="deep__check">
+              <div class="deep__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Recent foods for quick logging
+            </div>
+          </div>
+        </div>
+        <div class="deep__visual" data-animate>
+          <div class="mockup-rings">
+            <div class="mockup-rings__header">
+              <div class="mockup-rings__date">Monday, Feb 17</div>
+              <div class="mockup-rings__title">Daily Macro Tracker</div>
+            </div>
+            <div class="mockup-rings__circles">
+              <!-- Protein Ring -->
+              <div class="mockup-ring">
+                <svg class="mockup-ring__svg" viewBox="0 0 100 100">
+                  <circle class="mockup-ring__track" cx="50" cy="50" r="42" stroke="#EDE9FE" />
+                  <circle class="mockup-ring__fill" cx="50" cy="50" r="42" stroke="#7C3AED"
+                    stroke-dasharray="264" stroke-dashoffset="66" />
+                </svg>
+                <div class="mockup-ring__label" style="color: #7C3AED;">Protein</div>
+                <div class="mockup-ring__value">112 / 150g</div>
+              </div>
+              <!-- Carbs Ring -->
+              <div class="mockup-ring">
+                <svg class="mockup-ring__svg" viewBox="0 0 100 100">
+                  <circle class="mockup-ring__track" cx="50" cy="50" r="42" stroke="#FEF3C7" />
+                  <circle class="mockup-ring__fill" cx="50" cy="50" r="42" stroke="#D97706"
+                    stroke-dasharray="264" stroke-dashoffset="92" />
+                </svg>
+                <div class="mockup-ring__label" style="color: #D97706;">Carbs</div>
+                <div class="mockup-ring__value">145 / 210g</div>
+              </div>
+              <!-- Fat Ring -->
+              <div class="mockup-ring">
+                <svg class="mockup-ring__svg" viewBox="0 0 100 100">
+                  <circle class="mockup-ring__track" cx="50" cy="50" r="42" stroke="#DBEAFE" />
+                  <circle class="mockup-ring__fill" cx="50" cy="50" r="42" stroke="#3B82F6"
+                    stroke-dasharray="264" stroke-dashoffset="106" />
+                </svg>
+                <div class="mockup-ring__label" style="color: #3B82F6;">Fat</div>
+                <div class="mockup-ring__value">42 / 70g</div>
+              </div>
+            </div>
+            <div class="mockup-rings__summary">
+              <div class="mockup-rings__stat">
+                <div class="mockup-rings__stat-value">1,430</div>
+                <div class="mockup-rings__stat-label">Calories eaten</div>
+              </div>
+              <div class="mockup-rings__stat">
+                <div class="mockup-rings__stat-value">750</div>
+                <div class="mockup-rings__stat-label">Remaining</div>
+              </div>
+              <div class="mockup-rings__stat">
+                <div class="mockup-rings__stat-value">66%</div>
+                <div class="mockup-rings__stat-label">Daily goal</div>
+              </div>
+            </div>
+            <div class="mockup-rings__bar">
+              <div class="mockup-rings__bar-left">
+                <div class="mockup-rings__bar-icon">
+                  <i data-lucide="trending-up" style="width: 16px; height: 16px;"></i>
+                </div>
+                <span class="mockup-rings__bar-text">7-day streak</span>
+              </div>
+              <span class="mockup-rings__bar-badge">On Track</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <div class="container">
+      <h2 class="cta__title" data-animate>Give Every Client a Nutrition Edge</h2>
+      <p class="cta__sub" data-animate>Join hundreds of fitness coaches already using FirstRep. Free forever for up to 3 clients.</p>
+      <div class="cta__actions" data-animate>
+        <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">F</div>
+            <span class="footer__brand-name">FirstRep</span>
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <!-- Features -->
+        <div class="footer__col">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="../features.html">All Features</a></li>
+            <li><a href="../features.html#feature-grid">AI Workout Builder</a></li>
+            <li><a href="../features.html#feature-grid">Coaching Dashboard</a></li>
+            <li><a href="../features.html#feature-grid">Marketplace</a></li>
+            <li><a href="../features.html#feature-grid">Payments</a></li>
+          </ul>
+        </div>
+        <!-- Learn -->
+        <div class="footer__col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+      });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+
+    // Mega menu hover (desktop only)
+    var featuresToggle = document.getElementById('featuresToggle');
+    var megaMenu = document.getElementById('megaMenu');
+    var megaOverlay = document.getElementById('megaOverlay');
+    var megaTimeout = null;
+
+    function showMega() {
+      clearTimeout(megaTimeout);
+      megaMenu.classList.add('visible');
+      megaOverlay.classList.add('visible');
+      featuresToggle.classList.add('open');
+    }
+    function hideMega() {
+      megaTimeout = setTimeout(function() {
+        megaMenu.classList.remove('visible');
+        megaOverlay.classList.remove('visible');
+        featuresToggle.classList.remove('open');
+      }, 150);
+    }
+
+    if(featuresToggle && megaMenu) {
+      featuresToggle.addEventListener('mouseenter', showMega);
+      featuresToggle.addEventListener('mouseleave', hideMega);
+      megaMenu.addEventListener('mouseenter', showMega);
+      megaMenu.addEventListener('mouseleave', hideMega);
+      megaOverlay.addEventListener('click', function() { clearTimeout(megaTimeout); megaMenu.classList.remove('visible'); megaOverlay.classList.remove('visible'); featuresToggle.classList.remove('open'); });
+    }
+
+    // Mobile features toggle
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+
+
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var href = a.getAttribute('href');
+        if (href === '#') return;
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll-triggered animations
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+  });
+  </script>
+
+</body>
+</html>

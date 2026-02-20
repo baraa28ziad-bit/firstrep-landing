@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments & Revenue — FirstRep | Get Paid Seamlessly, Automatically</title>
+  <meta name="description" content="Stripe-powered subscriptions, session packs, and one-time purchases built right in. Clients pay, you earn, the platform handles everything else.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+
+    /* ===== BASE RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; font-feature-settings: 'cv11', 'ss01'; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== BUTTONS ===== */
+    .btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 15px; padding: 13px 30px; border-radius: 11px; border: none; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); white-space: nowrap; letter-spacing: -0.01em; }
+    .btn--primary { background: var(--brand); color: #fff; }
+    .btn--primary:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(94,89,254,0.3); }
+    .btn--white { background: #fff; color: var(--text); font-weight: 600; }
+    .btn--white:hover { background: #f5f5f5; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+    .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.25); }
+    .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .btn--outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn--outline:hover { border-color: var(--brand); color: var(--brand); }
+    .btn--dark { background: var(--text); color: #fff; }
+    .btn--dark:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+    .btn--lg { padding: 15px 36px; font-size: 16px; border-radius: 12px; }
+
+    /* ===== NAV ===== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: transparent; z-index: 1000; border-bottom: 1px solid transparent; transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav.scrolled { background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom-color: var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.03em; transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav__logo span { color: var(--brand); transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav.scrolled .nav__logo { color: var(--text); }
+    .nav.scrolled .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: -0.01em; transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav__link:hover { color: #fff; }
+    .nav.scrolled .nav__link { color: var(--text-2); }
+    .nav.scrolled .nav__link:hover { color: var(--text); }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__signin { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85); padding: 8px 16px; letter-spacing: -0.01em; transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav__signin:hover { color: #fff; }
+    .nav.scrolled .nav__signin { color: var(--text-2); }
+    .nav.scrolled .nav__signin:hover { color: var(--text); }
+    .nav__cta { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); letter-spacing: -0.01em; white-space: nowrap; }
+    .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+    .nav.scrolled .nav__cta { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .nav.scrolled .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav__hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: block; }
+    .nav.scrolled .nav__hamburger span { background: var(--text); }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); letter-spacing: -0.01em; }
+
+    /* ===== MEGA MENU ===== */
+    .nav__link--features { position: relative; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s cubic-bezier(0.4,0,0.2,1), transform 0.25s cubic-bezier(0.4,0,0.2,1); z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; gap: 0; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); border-bottom: 1px solid transparent; transition: color 0.2s; text-decoration: none; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; flex-direction: column; padding-left: 16px; gap: 0; }
+    .nav__mobile-features.open { display: flex; }
+    .nav__mobile-features a { font-size: 15px !important; padding: 10px 0 !important; color: var(--text-3) !important; border-bottom: none !important; }
+    .nav__mobile-features a:hover { color: var(--text) !important; }
+    @media (max-width: 768px) {
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+    }
+
+
+    /* ===== HERO ===== */
+    .hero { position: relative; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding: 180px 0 120px; }
+    .hero__glow { position: absolute; width: 900px; height: 900px; background: radial-gradient(circle, rgba(94,89,254,0.15) 0%, rgba(94,89,254,0.05) 40%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .hero__content { position: relative; z-index: 2; text-align: center; max-width: 760px; margin: 0 auto; }
+    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 7px 18px; border-radius: 100px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 32px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+    .hero__title { font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.08; color: #fff; margin-bottom: 24px; letter-spacing: -0.04em; }
+    .hero__title em { font-style: normal; color: var(--brand); }
+    .hero__sub { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto 40px; line-height: 1.7; font-weight: 400; letter-spacing: -0.01em; }
+    .hero__actions { display: flex; gap: 16px; justify-content: center; }
+
+    /* ===== FEATURE GRID ===== */
+    .features { padding: 120px 0; }
+    .features__header { text-align: center; margin-bottom: 64px; }
+    .features__label { display: inline-flex; align-items: center; gap: 8px; background: var(--brand-light); color: var(--brand); font-size: 12px; font-weight: 600; padding: 7px 16px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .features__title { font-size: clamp(32px, 3.5vw, 48px); font-weight: 800; color: var(--text); line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .features__sub { font-size: 18px; color: var(--text-3); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+    .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    /* Feature Cards */
+    .fcard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .fcard:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .fcard__icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .fcard__icon--purple { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); }
+    .fcard__icon--blue { background: linear-gradient(135deg, #DBEAFE, #BFDBFE); color: #3B82F6; }
+    .fcard__icon--green { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); color: #059669; }
+    .fcard__icon--amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); color: #D97706; }
+    .fcard__icon--rose { background: linear-gradient(135deg, #FFE4E6, #FECDD3); color: #E11D48; }
+    .fcard__icon--teal { background: linear-gradient(135deg, #CCFBF1, #99F6E4); color: #0D9488; }
+    .fcard__name { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 10px; letter-spacing: -0.02em; }
+    .fcard__desc { font-size: 15px; color: var(--text-3); line-height: 1.7; }
+
+    /* ===== DEEP DIVE SECTIONS ===== */
+    .deep-dive { padding: 100px 0; }
+    .deep-dive--alt { background: var(--bg-2); }
+    .deep-dive__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .deep-dive__grid--reverse { direction: rtl; }
+    .deep-dive__grid--reverse > * { direction: ltr; }
+    .deep-dive__label { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+    .deep-dive__label::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+    .deep-dive__title { font-size: clamp(28px, 3vw, 40px); font-weight: 800; color: var(--text); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 20px; }
+    .deep-dive__desc { font-size: 16px; color: var(--text-3); line-height: 1.75; margin-bottom: 32px; }
+    .deep-dive__checks { display: flex; flex-direction: column; gap: 14px; }
+    .deep-dive__check { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 500; color: var(--text-2); }
+    .deep-dive__check-icon { width: 24px; height: 24px; border-radius: 8px; background: #D1FAE5; color: #059669; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    /* Deep Dive Visual Mockups */
+    .mockup { background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border); }
+
+    /* Revenue Dashboard Mockup */
+    .mockup-revenue { padding: 32px; }
+    .mockup-revenue__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+    .mockup-revenue__title { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+    .mockup-revenue__period { font-size: 12px; font-weight: 500; color: var(--text-muted); background: var(--bg-2); padding: 5px 12px; border-radius: 8px; }
+    .mockup-revenue__amount { font-size: 40px; font-weight: 800; color: var(--text); letter-spacing: -0.04em; margin-bottom: 4px; }
+    .mockup-revenue__change { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--success); background: #D1FAE5; padding: 4px 10px; border-radius: 6px; margin-bottom: 28px; }
+    .mockup-revenue__bars { display: flex; align-items: flex-end; gap: 8px; height: 120px; padding-top: 8px; }
+    .mockup-revenue__bar { flex: 1; border-radius: 6px 6px 0 0; transition: all 0.3s; position: relative; }
+    .mockup-revenue__bar--1 { height: 45%; background: linear-gradient(180deg, rgba(94,89,254,0.3), rgba(94,89,254,0.1)); }
+    .mockup-revenue__bar--2 { height: 55%; background: linear-gradient(180deg, rgba(94,89,254,0.35), rgba(94,89,254,0.12)); }
+    .mockup-revenue__bar--3 { height: 40%; background: linear-gradient(180deg, rgba(94,89,254,0.3), rgba(94,89,254,0.1)); }
+    .mockup-revenue__bar--4 { height: 65%; background: linear-gradient(180deg, rgba(94,89,254,0.4), rgba(94,89,254,0.15)); }
+    .mockup-revenue__bar--5 { height: 70%; background: linear-gradient(180deg, rgba(94,89,254,0.45), rgba(94,89,254,0.18)); }
+    .mockup-revenue__bar--6 { height: 60%; background: linear-gradient(180deg, rgba(94,89,254,0.4), rgba(94,89,254,0.15)); }
+    .mockup-revenue__bar--7 { height: 85%; background: linear-gradient(180deg, rgba(94,89,254,0.5), rgba(94,89,254,0.2)); }
+    .mockup-revenue__bar--8 { height: 78%; background: linear-gradient(180deg, rgba(94,89,254,0.48), rgba(94,89,254,0.18)); }
+    .mockup-revenue__bar--9 { height: 90%; background: linear-gradient(180deg, rgba(94,89,254,0.55), rgba(94,89,254,0.22)); }
+    .mockup-revenue__bar--10 { height: 82%; background: linear-gradient(180deg, rgba(94,89,254,0.5), rgba(94,89,254,0.2)); }
+    .mockup-revenue__bar--11 { height: 95%; background: linear-gradient(180deg, rgba(94,89,254,0.6), rgba(94,89,254,0.25)); }
+    .mockup-revenue__bar--12 { height: 100%; background: linear-gradient(180deg, var(--brand), rgba(94,89,254,0.4)); }
+    .mockup-revenue__labels { display: flex; justify-content: space-between; margin-top: 12px; }
+    .mockup-revenue__label { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+    .mockup-revenue__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .mockup-revenue__stat { display: flex; flex-direction: column; gap: 2px; }
+    .mockup-revenue__stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .mockup-revenue__stat-value { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+
+    /* Checkout Mockup */
+    .mockup-checkout { padding: 32px; max-width: 380px; margin: 0 auto; }
+    .mockup-checkout__header { text-align: center; margin-bottom: 28px; }
+    .mockup-checkout__icon { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #EDE9FE, #DDD6FE); color: var(--brand); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .mockup-checkout__pkg-name { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; margin-bottom: 4px; }
+    .mockup-checkout__trainer { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .mockup-checkout__divider { height: 1px; background: var(--border); margin: 20px 0; }
+    .mockup-checkout__row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .mockup-checkout__row-label { font-size: 14px; color: var(--text-3); }
+    .mockup-checkout__row-value { font-size: 14px; font-weight: 600; color: var(--text); }
+    .mockup-checkout__row--total .mockup-checkout__row-label { font-size: 15px; font-weight: 600; color: var(--text); }
+    .mockup-checkout__row--total .mockup-checkout__row-value { font-size: 20px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .mockup-checkout__pay-methods { display: flex; gap: 8px; margin: 20px 0 16px; }
+    .mockup-checkout__pay-method { flex: 1; height: 44px; border: 1.5px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: var(--text-2); cursor: pointer; transition: all 0.2s; }
+    .mockup-checkout__pay-method--active { border-color: var(--brand); background: var(--brand-light); color: var(--brand); }
+    .mockup-checkout__btn { width: 100%; padding: 15px; background: var(--brand); color: #fff; border: none; border-radius: 12px; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .mockup-checkout__btn:hover { background: var(--brand-hover); }
+    .mockup-checkout__secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 14px; font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+    /* ===== CTA SECTION ===== */
+    .cta { padding: 140px 0; background: var(--dark); position: relative; overflow: hidden; text-align: center; }
+    .cta__glow { position: absolute; width: 700px; height: 700px; background: radial-gradient(circle, rgba(94,89,254,0.12) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    .cta__title { font-size: clamp(32px, 4vw, 52px); font-weight: 800; color: #fff; margin-bottom: 20px; letter-spacing: -0.04em; position: relative; z-index: 1; line-height: 1.1; }
+    .cta__sub { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto 40px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta__actions { position: relative; z-index: 1; display: flex; gap: 16px; justify-content: center; }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #0a0b0f; padding: 80px 0 40px; color: rgba(255,255,255,0.6); }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer__brand-icon { width: 36px; height: 36px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--text); font-weight: 800; font-size: 16px; }
+    .footer__brand-name { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+    .footer__desc { font-size: 14px; line-height: 1.7; margin-bottom: 20px; max-width: 280px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .footer__col ul { padding: 0; margin: 0; }
+    .footer__col li { margin-bottom: 12px; }
+    .footer__col a { color: rgba(255,255,255,0.5); font-size: 14px; transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .footer__legal a:hover { color: rgba(255,255,255,0.5); }
+
+    /* ===== ANIMATIONS ===== */
+    [data-animate] { opacity: 0; transform: translateY(24px); }
+    .animated { opacity: 1 !important; transform: translateY(0) !important; transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    .animated-delay-1 { transition-delay: 0.1s !important; }
+    .animated-delay-2 { transition-delay: 0.2s !important; }
+    .animated-delay-3 { transition-delay: 0.3s !important; }
+    .animated-delay-4 { transition-delay: 0.4s !important; }
+    .animated-delay-5 { transition-delay: 0.5s !important; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero__title { font-size: clamp(36px, 5vw, 52px); }
+      .hero { padding: 160px 0 100px; }
+      .features { padding: 100px 0; }
+      .features__grid { grid-template-columns: repeat(2, 1fr); }
+      .deep-dive { padding: 80px 0; }
+      .deep-dive__grid { gap: 48px; }
+      .cta { padding: 100px 0; }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .hero__title { font-size: clamp(32px, 5vw, 44px); }
+      .hero__sub { font-size: 16px; }
+      .hero { padding: 140px 0 80px; }
+      .hero__actions { flex-direction: column; align-items: center; }
+      .hero__actions .btn { width: 100%; max-width: 320px; }
+      .nav__links, .nav__signin { display: none; }
+      .nav__hamburger { display: flex; }
+      .features { padding: 80px 0; }
+      .features__title { font-size: 32px; }
+      .features__grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .deep-dive { padding: 64px 0; }
+      .deep-dive__grid { grid-template-columns: 1fr; gap: 40px; }
+      .deep-dive__grid--reverse { direction: ltr; }
+      .deep-dive__title { font-size: 28px; }
+      .cta { padding: 80px 0; }
+      .cta__title { font-size: 32px; }
+      .cta__actions { flex-direction: column; align-items: center; }
+      .cta__actions .btn { width: 100%; max-width: 320px; }
+      .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero__title { font-size: 30px; }
+      .hero__sub { font-size: 15px; }
+      .hero { padding: 120px 0 64px; }
+      .hero__badge { font-size: 11px; padding: 6px 14px; }
+      .features__title { font-size: 26px; }
+      .fcard { padding: 28px 24px; }
+      .deep-dive__title { font-size: 24px; }
+      .deep-dive__desc { font-size: 15px; }
+      .mockup-revenue { padding: 24px; }
+      .mockup-revenue__amount { font-size: 32px; }
+      .mockup-checkout { padding: 24px; }
+      .cta__title { font-size: 26px; }
+      .footer__grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; }
+      .animated { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">First<span>Rep</span></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__signin">Sign In</a>
+        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu Dropdown -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#">Sign In</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="container">
+      <div class="hero__content" data-animate>
+        <div class="hero__badge">
+          <span class="hero__dot"></span>
+          Payments &amp; Revenue
+        </div>
+        <h1 class="hero__title">Get Paid <em>Seamlessly, Automatically</em></h1>
+        <p class="hero__sub">Stripe-powered subscriptions, session packs, and one-time purchases built right in. Clients pay, you earn, the platform handles everything else.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+          <a href="../features.html" class="btn btn--ghost btn--lg">View All Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE GRID ===== -->
+  <section class="features" id="feature-grid">
+    <div class="container">
+      <div class="features__header" data-animate>
+        <div class="features__label">Built-In Payments</div>
+        <h2 class="features__title">Payments That Just Work</h2>
+        <p class="features__sub">From checkout to payout, every dollar is tracked and managed automatically.</p>
+      </div>
+      <div class="features__grid">
+        <!-- Card 1: Stripe Connect -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--purple">
+            <i data-lucide="credit-card" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Stripe Connect</h3>
+          <p class="fcard__desc">Powered by Stripe Express accounts. Clients pay via Apple Pay, Google Pay, or card. You get paid directly to your bank account on a rolling schedule.</p>
+        </div>
+        <!-- Card 2: Subscriptions -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--blue">
+            <i data-lucide="refresh-cw" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Subscriptions</h3>
+          <p class="fcard__desc">Recurring billing for coaching packages. Auto-renewals, failed payment retries, and cancellation handling -- all managed by the platform.</p>
+        </div>
+        <!-- Card 3: Session Packs -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--green">
+            <i data-lucide="layers" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Session Packs</h3>
+          <p class="fcard__desc">Sell packs of 5, 10, or 20 sessions. Track usage, set expiry dates, and auto-notify clients when they're running low.</p>
+        </div>
+        <!-- Card 4: Revenue Dashboard -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--amber">
+            <i data-lucide="bar-chart-3" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Revenue Dashboard</h3>
+          <p class="fcard__desc">Real-time revenue tracking: total earnings, monthly recurring revenue, revenue by product, and payout history. Know your numbers at a glance.</p>
+        </div>
+        <!-- Card 5: Discount Codes -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--rose">
+            <i data-lucide="tag" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Discount Codes</h3>
+          <p class="fcard__desc">Create percentage or fixed-amount discount codes. Set usage limits, expiry dates, and track redemptions. Run promotions without third-party tools.</p>
+        </div>
+        <!-- Card 6: Auto Payouts -->
+        <div class="fcard" data-animate>
+          <div class="fcard__icon fcard__icon--teal">
+            <i data-lucide="banknote" style="width: 28px; height: 28px;"></i>
+          </div>
+          <h3 class="fcard__name">Auto Payouts</h3>
+          <p class="fcard__desc">Stripe handles payouts directly to your bank. View payout schedule, amounts, and status. No invoicing, no chasing payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 1: REVENUE DASHBOARD ===== -->
+  <section class="deep-dive deep-dive--alt">
+    <div class="container">
+      <div class="deep-dive__grid">
+        <!-- Text -->
+        <div data-animate>
+          <div class="deep-dive__label">Revenue</div>
+          <h2 class="deep-dive__title">Your Business Numbers at a Glance</h2>
+          <p class="deep-dive__desc">The revenue dashboard shows total earnings, monthly revenue, MRR from subscriptions, revenue by product type, and recent transactions with status badges. Filter by date range, product, or client. Export reports for your accountant with one click.</p>
+          <div class="deep-dive__checks">
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Real-time revenue tracking
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Revenue by product breakdown
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Monthly recurring revenue (MRR)
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Transaction history with status
+            </div>
+          </div>
+        </div>
+        <!-- Visual Mockup -->
+        <div data-animate>
+          <div class="mockup mockup-revenue">
+            <div class="mockup-revenue__header">
+              <div class="mockup-revenue__title">Monthly Revenue</div>
+              <div class="mockup-revenue__period">Last 12 months</div>
+            </div>
+            <div class="mockup-revenue__amount">$4,280</div>
+            <div class="mockup-revenue__change">
+              <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i>
+              +23%
+            </div>
+            <div class="mockup-revenue__bars">
+              <div class="mockup-revenue__bar mockup-revenue__bar--1"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--2"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--3"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--4"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--5"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--6"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--7"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--8"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--9"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--10"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--11"></div>
+              <div class="mockup-revenue__bar mockup-revenue__bar--12"></div>
+            </div>
+            <div class="mockup-revenue__labels">
+              <span class="mockup-revenue__label">Jan</span>
+              <span class="mockup-revenue__label">Mar</span>
+              <span class="mockup-revenue__label">Jun</span>
+              <span class="mockup-revenue__label">Sep</span>
+              <span class="mockup-revenue__label">Dec</span>
+            </div>
+            <div class="mockup-revenue__stats">
+              <div class="mockup-revenue__stat">
+                <span class="mockup-revenue__stat-label">MRR</span>
+                <span class="mockup-revenue__stat-value">$3,640</span>
+              </div>
+              <div class="mockup-revenue__stat">
+                <span class="mockup-revenue__stat-label">Active Subscriptions</span>
+                <span class="mockup-revenue__stat-value">24</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE 2: CHECKOUT FLOW ===== -->
+  <section class="deep-dive">
+    <div class="container">
+      <div class="deep-dive__grid deep-dive__grid--reverse">
+        <!-- Text -->
+        <div data-animate>
+          <div class="deep-dive__label">Checkout</div>
+          <h2 class="deep-dive__title">Clients Subscribe in Under 30 Seconds</h2>
+          <p class="deep-dive__desc">When a client finds your profile and chooses a package, they checkout without leaving the app. Stripe PaymentSheet handles card entry, Apple Pay, and Google Pay. The subscription activates instantly, the client gets access to their program, and you see the transaction in your dashboard -- all automatic.</p>
+          <div class="deep-dive__checks">
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              In-app Stripe PaymentSheet
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Apple Pay &amp; Google Pay support
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Instant subscription activation
+            </div>
+            <div class="deep-dive__check">
+              <div class="deep-dive__check-icon">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+              </div>
+              Zero manual invoicing
+            </div>
+          </div>
+        </div>
+        <!-- Visual Mockup -->
+        <div data-animate>
+          <div class="mockup mockup-checkout">
+            <div class="mockup-checkout__header">
+              <div class="mockup-checkout__icon">
+                <i data-lucide="zap" style="width: 28px; height: 28px;"></i>
+              </div>
+              <div class="mockup-checkout__pkg-name">Premium Coaching</div>
+              <div class="mockup-checkout__trainer">by Coach Sarah M.</div>
+            </div>
+            <div class="mockup-checkout__divider"></div>
+            <div class="mockup-checkout__row">
+              <span class="mockup-checkout__row-label">Monthly coaching</span>
+              <span class="mockup-checkout__row-value">$199.00</span>
+            </div>
+            <div class="mockup-checkout__row">
+              <span class="mockup-checkout__row-label">Custom meal plan</span>
+              <span class="mockup-checkout__row-value">Included</span>
+            </div>
+            <div class="mockup-checkout__row">
+              <span class="mockup-checkout__row-label">Weekly check-ins</span>
+              <span class="mockup-checkout__row-value">Included</span>
+            </div>
+            <div class="mockup-checkout__divider"></div>
+            <div class="mockup-checkout__row mockup-checkout__row--total">
+              <span class="mockup-checkout__row-label">Total</span>
+              <span class="mockup-checkout__row-value">$199/mo</span>
+            </div>
+            <div class="mockup-checkout__pay-methods">
+              <div class="mockup-checkout__pay-method mockup-checkout__pay-method--active">Card</div>
+              <div class="mockup-checkout__pay-method">Apple Pay</div>
+              <div class="mockup-checkout__pay-method">G Pay</div>
+            </div>
+            <button class="mockup-checkout__btn">
+              <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
+              Pay Now
+            </button>
+            <div class="mockup-checkout__secure">
+              <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i>
+              Secured by Stripe
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <div class="container">
+      <h2 class="cta__title" data-animate>Start Earning on Autopilot</h2>
+      <p class="cta__sub" data-animate>Join hundreds of fitness coaches already using FirstRep. Free forever for up to 3 clients.</p>
+      <div class="cta__actions" data-animate>
+        <a href="#" class="btn btn--white btn--lg">Start Free Trial</a>
+        <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">F</div>
+            <span class="footer__brand-name">FirstRep</span>
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <!-- Features -->
+        <div class="footer__col">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="../features.html">All Features</a></li>
+            <li><a href="../features.html#feature-grid">AI Workout Builder</a></li>
+            <li><a href="../features.html#feature-grid">Coaching Dashboard</a></li>
+            <li><a href="../features.html#feature-grid">Marketplace</a></li>
+            <li><a href="../features.html#feature-grid">Payments</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Resources -->
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Nav scroll effect
+    var nav = document.getElementById('nav');
+    function handleScroll() {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Mobile menu toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+      });
+      // Close mobile menu when a link is clicked
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+
+    // Mega menu hover (desktop only)
+    var featuresToggle = document.getElementById('featuresToggle');
+    var megaMenu = document.getElementById('megaMenu');
+    var megaOverlay = document.getElementById('megaOverlay');
+    var megaTimeout = null;
+
+    function showMega() {
+      clearTimeout(megaTimeout);
+      megaMenu.classList.add('visible');
+      megaOverlay.classList.add('visible');
+      featuresToggle.classList.add('open');
+    }
+    function hideMega() {
+      megaTimeout = setTimeout(function() {
+        megaMenu.classList.remove('visible');
+        megaOverlay.classList.remove('visible');
+        featuresToggle.classList.remove('open');
+      }, 150);
+    }
+
+    if(featuresToggle && megaMenu) {
+      featuresToggle.addEventListener('mouseenter', showMega);
+      featuresToggle.addEventListener('mouseleave', hideMega);
+      megaMenu.addEventListener('mouseenter', showMega);
+      megaMenu.addEventListener('mouseleave', hideMega);
+      megaOverlay.addEventListener('click', function() { clearTimeout(megaTimeout); megaMenu.classList.remove('visible'); megaOverlay.classList.remove('visible'); featuresToggle.classList.remove('open'); });
+    }
+
+    // Mobile features toggle
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+
+
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var href = a.getAttribute('href');
+        if (href === '#') return;
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Scroll-triggered animations with IntersectionObserver
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var animateElements = document.querySelectorAll('[data-animate]');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      animateElements.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      // If reduced motion is preferred, show everything immediately
+      document.querySelectorAll('[data-animate]').forEach(function(el) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  });
+  </script>
+
+</body>
+</html>
