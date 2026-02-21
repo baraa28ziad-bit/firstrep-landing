@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Spreadsheets to App: How to Digitize Your Personal Training Business — FirstRep Blog</title>
+  <meta name="description" content="Still running your coaching business on Google Sheets and WhatsApp? Here's a step-by-step migration plan that won't disrupt your existing clients.">
+  <link rel="canonical" href="https://firstrep.fit/blog/digitize-personal-training-business.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="From Spreadsheets to App: How to Digitize Your Personal Training Business">
+  <meta property="og:description" content="Still running your coaching business on Google Sheets and WhatsApp? Here's a step-by-step migration plan that won't disrupt your existing clients.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://firstrep.fit/blog/digitize-personal-training-business.html">
+  <meta property="og:site_name" content="FirstRep">
+  <meta property="article:published_time" content="2026-01-22">
+  <meta property="article:author" content="FirstRep Team">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "From Spreadsheets to App: How to Digitize Your Personal Training Business",
+    "description": "Still running your coaching business on Google Sheets and WhatsApp? Here's a step-by-step migration plan that won't disrupt your existing clients.",
+    "datePublished": "2026-01-22",
+    "dateModified": "2026-01-22",
+    "author": {
+      "@type": "Person",
+      "name": "FirstRep Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FirstRep"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://firstrep.fit/blog/digitize-personal-training-business.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; cursor: pointer; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__cta { display: inline-flex; align-items: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* MEGA MENU */
+    .nav__link--features { position: relative; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; padding-left: 16px; }
+    .nav__mobile-features.open { display: flex; flex-direction: column; }
+    .nav__mobile-features a { font-size: 15px; padding: 12px 0; color: var(--text-3); }
+
+    /* ARTICLE */
+    .article-hero { padding: 140px 0 48px; text-align: center; }
+    .article-hero__tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brand); background: var(--brand-light); padding: 4px 12px; border-radius: 6px; margin-bottom: 16px; }
+    .article-hero__title { font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.15; max-width: 780px; margin: 0 auto 20px; }
+    .article-hero__meta { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 14px; color: var(--text-muted); }
+    .article-hero__meta span { display: flex; align-items: center; gap: 5px; }
+
+    .article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .article p { font-size: 17px; color: var(--text-2); line-height: 1.8; margin-bottom: 24px; letter-spacing: -0.01em; }
+    .article h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.03em; margin: 48px 0 16px; line-height: 1.3; color: var(--text); }
+    .article h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin: 32px 0 12px; line-height: 1.35; color: var(--text); }
+    .article ul, .article ol { margin-bottom: 24px; padding-left: 24px; }
+    .article ul { list-style: disc; }
+    .article ol { list-style: decimal; }
+    .article li { font-size: 17px; color: var(--text-2); line-height: 1.8; margin-bottom: 8px; }
+    .article strong { color: var(--text); font-weight: 600; }
+    .article a { color: var(--brand); font-weight: 500; transition: color 0.2s; }
+    .article a:hover { color: var(--brand-hover); }
+    .article blockquote { background: var(--bg-2); border-left: 4px solid var(--brand); padding: 24px 28px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+    .article blockquote p { margin-bottom: 0; font-size: 16px; color: var(--text-2); }
+    .article blockquote p + p { margin-top: 12px; }
+
+    /* WEEK TIMELINE */
+    .week-timeline { margin: 32px 0; }
+    .week-step { display: flex; gap: 20px; margin-bottom: 32px; }
+    .week-step:last-child { margin-bottom: 0; }
+    .week-step__marker { flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: var(--brand-light); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; }
+    .week-step__content { flex: 1; }
+    .week-step__title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
+    .week-step__body { font-size: 16px; color: var(--text-2); line-height: 1.7; }
+    .week-step__body ul { margin-top: 8px; margin-bottom: 0; padding-left: 20px; list-style: disc; }
+    .week-step__body li { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 4px; }
+
+    /* EMAIL TEMPLATE */
+    .email-template { background: var(--bg-2); border-radius: var(--radius); padding: 32px; margin: 32px 0; }
+    .email-template__header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .email-template__icon { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-light); display: flex; align-items: center; justify-content: center; color: var(--brand); flex-shrink: 0; }
+    .email-template__title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+    .email-template__subtitle { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .email-template__body { font-size: 15px; color: var(--text-2); line-height: 1.8; font-style: italic; }
+    .email-template__body p { margin-bottom: 12px; font-size: 15px; }
+    .email-template__body p:last-child { margin-bottom: 0; }
+
+    /* CHECKLIST */
+    .checklist { margin: 32px 0; background: var(--bg-2); border-radius: var(--radius); padding: 32px; }
+    .checklist__title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .checklist__title-icon { color: var(--brand); }
+    .checklist__items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .checklist__item { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--text-2); }
+    .checklist__check { width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--brand); }
+
+    /* TIP BOX */
+    .tip-box { display: flex; gap: 16px; background: var(--brand-light); border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+    .tip-box__icon { flex-shrink: 0; width: 24px; height: 24px; color: var(--brand); margin-top: 2px; }
+    .tip-box p { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 0; }
+
+    /* CTA SECTION */
+    .cta-section { background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, var(--brand) 100%); padding: 80px 0; text-align: center; }
+    .cta-section__title { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .cta-section__desc { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 36px; line-height: 1.6; }
+    .cta-section__badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .cta-section__badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 12px; color: #fff; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+    .cta-section__badge:hover { background: rgba(255,255,255,0.15); }
+    .cta-section__badge-icon { width: 28px; height: 28px; }
+
+    /* RELATED ARTICLES */
+    .related { padding: 80px 0; background: var(--bg-2); }
+    .related__title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; text-align: center; margin-bottom: 40px; }
+    .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .related-card { background: var(--bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .related-card__body { padding: 24px; }
+    .related-card__title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; color: var(--text); }
+    .related-card__excerpt { font-size: 14px; color: var(--text-3); line-height: 1.6; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .related-card__meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .related-card__meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding: 80px 0 40px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .related__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+      .checklist__items { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+      .article-hero { padding: 120px 0 32px; }
+      .article-hero__title { font-size: 28px; }
+      .article p, .article li { font-size: 16px; }
+      .article h2 { font-size: 22px; }
+      .article h3 { font-size: 18px; }
+      .week-step { flex-direction: column; gap: 12px; }
+      .related__grid { grid-template-columns: 1fr; gap: 20px; }
+      .cta-section__badges { flex-direction: column; align-items: center; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+      .checklist__items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../images/brand/firstrep-black.png" alt="FirstRep" style="height: 28px; width: auto;"></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="index.html" class="nav__link nav__link--active">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#" style="margin-top: 16px; text-align: center; background: var(--brand); color: #fff; border-radius: 12px; padding: 14px;">Download the App</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <span class="article-hero__tag">Digital</span>
+      <h1 class="article-hero__title">From Spreadsheets to App: How to Digitize Your Personal Training Business</h1>
+      <div class="article-hero__meta">
+        <span><i data-lucide="user" style="width:14px;height:14px"></i> FirstRep Team</span>
+        <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 22, 2026</span>
+        <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
+  <article class="article">
+
+    <p>You know the stack. A Google Sheet for programming. WhatsApp for client communication. Venmo for payments. The Notes app for tracking progress. Maybe a shared Google Drive folder for workout PDFs.</p>
+
+    <p>It works... until it doesn't.</p>
+
+    <p>One day you're scrolling through three group chats trying to find Sarah's deadlift video from last week. The next day you realize you forgot to charge two clients because your payment reminder got buried in your inbox. Then a new client asks for a login to "your app" and you have to explain that your app is, well, a spreadsheet.</p>
+
+    <p>If this sounds familiar, it's time to centralize. Here's a realistic, step-by-step plan to digitize your training business in four weeks -- without losing clients in the transition.</p>
+
+    <h2>The Hidden Cost of Your Current Setup</h2>
+
+    <p>The patchwork approach feels free, but it's costing you in ways you might not be tracking:</p>
+
+    <ul>
+      <li><strong>Time lost switching between tools.</strong> Every time you jump from Sheets to WhatsApp to Venmo and back, you lose focus. Studies on context switching suggest these micro-interruptions add up to 2-3 hours per day for knowledge workers.</li>
+      <li><strong>No single source of truth.</strong> Is the latest version of Sarah's program in Google Sheets, in the PDF you sent her, or in the updated one you texted last Tuesday? Nobody knows.</li>
+      <li><strong>Data lives in your head.</strong> What was this client's squat PR? How many sessions did they complete last month? When did they last check in? If you can't answer instantly, you're coaching from memory, not data.</li>
+      <li><strong>Impossible to scale.</strong> The spreadsheet approach works at 5-8 clients. At 15, it's stressful. At 25, it breaks.</li>
+      <li><strong>It looks unprofessional.</strong> Your competitors have branded apps where clients log in, see their program, and track their progress. You're sending PDFs. First impressions matter.</li>
+    </ul>
+
+    <h2>What "Going Digital" Actually Means</h2>
+
+    <p>Going digital doesn't just mean "getting an app." It means consolidating every client-facing touchpoint into a single platform:</p>
+
+    <ul>
+      <li><strong>Programming:</strong> Build and assign workouts in one place.</li>
+      <li><strong>Communication:</strong> Chat with clients inside the platform, not across four apps.</li>
+      <li><strong>Payments:</strong> Automatic billing, no more chasing invoices.</li>
+      <li><strong>Progress tracking:</strong> Clients log workouts, you see the data.</li>
+      <li><strong>Scheduling:</strong> Clients book sessions through your availability, not via text.</li>
+      <li><strong>Onboarding:</strong> New clients go through a structured intake, not a "tell me about yourself" text message.</li>
+    </ul>
+
+    <p>When everything lives in one system, you stop being a personal trainer who also runs an admin business. You become a coach who happens to have a business that runs itself.</p>
+
+    <h2>The 4-Week Migration Plan</h2>
+
+    <p>The biggest mistake trainers make is trying to switch everything overnight. That overwhelms you and confuses your clients. Instead, migrate in layers over four weeks.</p>
+
+    <div class="week-timeline">
+      <div class="week-step">
+        <div class="week-step__marker">W1</div>
+        <div class="week-step__content">
+          <div class="week-step__title">Set Up Your Platform</div>
+          <div class="week-step__body">
+            This week is about you, not your clients. Nobody sees anything yet.
+            <ul>
+              <li>Create your trainer profile (photo, bio, specialties, certifications)</li>
+              <li>Set up your branding (logo, colors if the platform supports it)</li>
+              <li>Build your packages and pricing (monthly coaching, session packs, one-time programs)</li>
+              <li>Connect your payment method (Stripe or equivalent)</li>
+              <li>Set up your availability for bookable sessions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="week-step">
+        <div class="week-step__marker">W2</div>
+        <div class="week-step__content">
+          <div class="week-step__title">Move Your Programming</div>
+          <div class="week-step__body">
+            This is the most time-consuming week, but you only do it once.
+            <ul>
+              <li>Browse the platform's exercise library -- most have 1,000+ exercises with demo videos already built in</li>
+              <li>Create 3-5 program templates based on your most common client types (beginner full body, intermediate push/pull/legs, etc.)</li>
+              <li>Build the current program for each existing client</li>
+              <li>Add any custom exercises that aren't in the library</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="week-step">
+        <div class="week-step__marker">W3</div>
+        <div class="week-step__content">
+          <div class="week-step__title">Invite Your Clients</div>
+          <div class="week-step__body">
+            Now you go client-facing. But do it personally, not with a mass email.
+            <ul>
+              <li>Send each client a personal message explaining the switch (see template below)</li>
+              <li>Send them their invite link to create an account</li>
+              <li>Walk them through the app on their next session -- show them where workouts live, how to log, how to message you</li>
+              <li>Migrate any relevant history if possible (PRs, measurements, photos)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="week-step">
+        <div class="week-step__marker">W4</div>
+        <div class="week-step__content">
+          <div class="week-step__title">Go Fully Live</div>
+          <div class="week-step__body">
+            Cut the cord on the old tools.
+            <ul>
+              <li>Move all client communication to in-app messaging</li>
+              <li>Activate weekly check-ins</li>
+              <li>Set up automation rules (missed workout reminders, check-in nudges, birthday messages)</li>
+              <li>Archive your old spreadsheets (keep them as backup, but stop updating them)</li>
+              <li>Switch billing to in-app payments for any clients still paying via Venmo/e-transfer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>How to Message the Switch to Clients</h2>
+
+    <p>This is the part most trainers stress about. "What if my clients hate the change?" In practice, almost all clients are excited about getting an app. It makes you look more professional, and it makes their life easier.</p>
+
+    <p>Here's a message template you can copy and customize:</p>
+
+    <div class="email-template">
+      <div class="email-template__header">
+        <div class="email-template__icon"><i data-lucide="mail" style="width:20px;height:20px"></i></div>
+        <div>
+          <div class="email-template__title">Client Switch Notification</div>
+          <div class="email-template__subtitle">Copy and personalize for each client</div>
+        </div>
+      </div>
+      <div class="email-template__body">
+        <p>Hey [Name],</p>
+        <p>Quick heads up -- I'm upgrading my coaching platform to give you a better experience. Starting next week, you'll have your own app where you can see your workouts, log your sets, message me, track your progress, and more. All in one place.</p>
+        <p>I'll send you an invite link this week. It takes about 2 minutes to set up, and I'll walk you through everything at our next session.</p>
+        <p>Nothing changes about your program or our work together -- this just makes everything easier to access. No more PDFs or scrolling through our chat history to find your workout.</p>
+        <p>Let me know if you have any questions!</p>
+      </div>
+    </div>
+
+    <p>Key things to notice about this message: it leads with the benefit to the client, not the benefit to you. It sets expectations (invite coming, walkthrough at next session). And it reassures them that nothing about their coaching is changing.</p>
+
+    <h2>Common Migration Mistakes</h2>
+
+    <p>I've seen trainers make the same mistakes over and over when going digital. Here's what to avoid:</p>
+
+    <ul>
+      <li><strong>Trying to switch everything at once.</strong> Don't migrate 15 clients, set up automation, build all your programs, and go live in the same weekend. That's a recipe for burnout and errors. The 4-week plan exists for a reason.</li>
+      <li><strong>Not explaining the "why" to clients.</strong> If you just send a random invite link with no context, clients will ignore it. The personal message matters.</li>
+      <li><strong>Choosing a platform that's too complex.</strong> If you need a 45-minute tutorial to build a workout, the platform is wrong. You should be able to build a full program in under 10 minutes after the first week.</li>
+      <li><strong>Not setting up automation from day one.</strong> Automation is the whole point of going digital. If you're still manually texting check-in reminders, you've just moved your spreadsheet into an app.</li>
+      <li><strong>Keeping the old system "just in case."</strong> After week 4, commit. If you keep updating both the app and the spreadsheet, you'll end up with two sources of truth and twice the work.</li>
+    </ul>
+
+    <h2>What to Look for in a Coaching Platform</h2>
+
+    <p>Not all platforms are created equal. Before you commit, make sure your choice checks these boxes:</p>
+
+    <div class="checklist">
+      <div class="checklist__title">
+        <span class="checklist__title-icon"><i data-lucide="clipboard-check" style="width:22px;height:22px"></i></span>
+        Platform Selection Checklist
+      </div>
+      <div class="checklist__items">
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Workout builder with exercise library
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Demo videos for exercises
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          In-app messaging
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Integrated payments
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Progress tracking (photos, stats, PRs)
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Client-facing app (not just a dashboard)
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Scheduling and booking
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Affordable pricing with free tier
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Automation (reminders, check-ins)
+        </div>
+        <div class="checklist__item">
+          <div class="checklist__check"><i data-lucide="check" style="width:14px;height:14px"></i></div>
+          Nutrition tracking
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-box__icon"><i data-lucide="lightbulb" style="width:24px;height:24px"></i></div>
+      <p><strong>Worth mentioning:</strong> FirstRep checks every box on that list. The free tier supports up to 3 clients, the exercise library includes 1,700+ exercises with video demos, and you can invite existing clients via email, shareable link, or QR code. It's built specifically for this exact use case -- trainers migrating from the spreadsheet-and-WhatsApp stack.</p>
+    </div>
+
+    <h2>The Payoff</h2>
+
+    <p>Here's what changes once you're fully digital:</p>
+
+    <ul>
+      <li><strong>You stop losing time.</strong> Programming, communication, payments, and tracking all happen in one app. No more context switching across five tools.</li>
+      <li><strong>You look professional.</strong> Your clients open an app with their name on it, see their program, and log their workouts. That's a different experience than opening a Google Sheet.</li>
+      <li><strong>You can actually scale.</strong> Taking on client #20 shouldn't feel dramatically different from client #10. With automation and templates, it won't.</li>
+      <li><strong>You have data.</strong> Compliance rates, check-in trends, workout completion, PR history -- all of it is tracked automatically. You coach from data, not memory.</li>
+      <li><strong>You get paid on time.</strong> Automatic billing means no more awkward "hey, just a reminder about your payment" messages.</li>
+    </ul>
+
+    <p>The trainers who resist going digital aren't saving money. They're spending time -- the one resource you can't get back.</p>
+
+    <p>Pick a platform, block four hours this weekend for Week 1 setup, and start the migration. Your future self (and your clients) will thank you.</p>
+
+  </article>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Ready to Streamline Your Coaching?</h2>
+      <p class="cta-section__desc">Start free with up to 3 clients -- no credit card required.</p>
+      <div class="cta-section__badges">
+        <a href="#" class="cta-section__badge">
+          <svg class="cta-section__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+          App Store
+        </a>
+        <a href="#" class="cta-section__badge">
+          <svg class="cta-section__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 10.5c.53.4.53 1.2 0 1.6l-14 10.5c-.66.5-1.6.03-1.6-.8z" transform="translate(0,-3) scale(0.9)"/></svg>
+          Google Play
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related">
+    <h2 class="related__title">Keep Reading</h2>
+    <div class="related__grid">
+      <a href="automate-personal-training-business.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">How to Automate Your Personal Training Business (And Save 15+ Hours Per Week)</h3>
+          <p class="related-card__excerpt">You became a trainer to coach people, not to drown in admin. Here are the 6 tasks you should automate today.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Feb 18, 2026</span>
+          </div>
+        </div>
+      </a>
+      <a href="fix-personal-trainer-payment-collection.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">Stop Chasing Invoices: How to Fix Personal Trainer Payment Collection</h3>
+          <p class="related-card__excerpt">Late payments, awkward conversations, bounced e-transfers. Here's how to get paid on time, every time.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Feb 6, 2026</span>
+          </div>
+        </div>
+      </a>
+      <a href="create-workout-programs-faster.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">How to Create Client Workout Programs in Half the Time</h3>
+          <p class="related-card__excerpt">Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Jan 31, 2026</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="margin-bottom: 16px;">
+            <img src="../images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;">
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="../features.html">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../features/marketplace.html">Marketplace</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="index.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+
+    // Hamburger toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+
+    // Mega menu toggle
+    var ft = document.getElementById('featuresToggle');
+    var mm = document.getElementById('megaMenu');
+    var overlay = document.getElementById('megaOverlay');
+    if(ft && mm) {
+      ft.addEventListener('click', function() {
+        mm.classList.toggle('visible');
+        overlay.classList.toggle('visible');
+        ft.classList.toggle('open');
+      });
+      overlay.addEventListener('click', function() {
+        mm.classList.remove('visible');
+        overlay.classList.remove('visible');
+        ft.classList.remove('open');
+      });
+    }
+
+    // Mobile features toggle
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+  });
+  </script>
+</body>
+</html>

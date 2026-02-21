@@ -492,6 +492,55 @@
       .step-card__img-phone { max-height: 220px; }
     }
 
+    /* ===== APP STORE BADGES ===== */
+    .app-badges { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .app-badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 12px; font-family: inherit; text-decoration: none; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .app-badge:hover { transform: translateY(-2px); }
+    .app-badge--apple { background: #fff; color: #111; }
+    .app-badge--apple:hover { box-shadow: 0 8px 24px rgba(255,255,255,0.2); }
+    .app-badge--google { background: #fff; color: #111; }
+    .app-badge--google:hover { box-shadow: 0 8px 24px rgba(255,255,255,0.2); }
+    .app-badge__icon { font-size: 28px; line-height: 1; display: flex; align-items: center; }
+    .app-badge__icon svg { width: 28px; height: 28px; }
+    .app-badge__text { display: flex; flex-direction: column; }
+    .app-badge__label { font-size: 10px; font-weight: 500; color: #6B7280; line-height: 1; letter-spacing: 0.02em; }
+    .app-badge__store { font-size: 17px; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+    /* Dark variant for light sections */
+    .app-badge--dark { background: #111; color: #fff; }
+    .app-badge--dark:hover { background: #000; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .app-badge--dark .app-badge__label { color: rgba(255,255,255,0.6); }
+    /* Hero-specific badges */
+    .hero__badges { margin-bottom: 28px; }
+    /* CTA badges centered */
+    .cta .app-badges { justify-content: center; }
+    /* Inline download nudge */
+    .download-nudge { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 16px; }
+    .download-nudge svg { width: 16px; height: 16px; opacity: 0.5; }
+    /* Footer app store */
+    .footer__apps { margin-top: 24px; }
+    .footer__apps .app-badge { padding: 8px 16px; }
+    .footer__apps .app-badge__icon svg { width: 22px; height: 22px; }
+    .footer__apps .app-badge__store { font-size: 14px; }
+    .footer__apps .app-badge__label { font-size: 9px; }
+    .footer__apps .app-badge--dark { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
+    .footer__apps .app-badge--dark:hover { background: rgba(255,255,255,0.12); }
+    /* Nav logo image */
+    .nav__logo-img { height: 28px; width: auto; display: inline-block; }
+    .nav__logo-img--white { display: inline-block; }
+    .nav__logo-img--dark { display: none; }
+    .nav.scrolled .nav__logo-img--white { display: none; }
+    .nav.scrolled .nav__logo-img--dark { display: inline-block; }
+    /* Pricing download buttons */
+    .price-card .app-badges { justify-content: center; }
+    .price-card .app-badge { padding: 10px 18px; flex: 1; justify-content: center; }
+    .price-card .app-badge__store { font-size: 14px; }
+    .price-card .app-badge__icon svg { width: 22px; height: 22px; }
+    @media (max-width: 768px) {
+      .app-badges { flex-direction: column; align-items: stretch; }
+      .app-badge { justify-content: center; }
+      .hero__badges .app-badges { align-items: flex-start; }
+    }
+
     /* ===== ANIMATIONS ===== */
     [data-animate] { opacity: 0; transform: translateY(24px); }
     .animated { opacity: 1 !important; transform: translateY(0) !important; transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -506,15 +555,15 @@
   <!-- ===== NAV ===== -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">First<span>Rep</span></a>
+      <a href="#" class="nav__logo"><img src="images/brand/firstrep-white.png" alt="FirstRep" class="nav__logo-img nav__logo-img--white"><img src="images/brand/firstrep-black.png" alt="FirstRep" class="nav__logo-img nav__logo-img--dark"></a>
       <div class="nav__links">
         <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
         <a href="#how-it-works" class="nav__link">How It Works</a>
         <a href="#pricing" class="nav__link">Pricing</a>
+        <a href="blog/index.html" class="nav__link">Blog</a>
       </div>
       <div class="nav__actions">
-        <a href="#" class="nav__signin">Sign In</a>
-        <a href="#" class="nav__cta">Start Free Trial &rarr;</a>
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
       </div>
       <div class="nav__hamburger" id="hamburger">
         <span></span><span></span><span></span>
@@ -584,8 +633,8 @@
       </div>
       <a href="#how-it-works">How It Works</a>
       <a href="#pricing">Pricing</a>
-      <a href="#">Sign In</a>
-      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Start Free Trial</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Download the App</a>
     </div>
   </nav>
 
@@ -612,15 +661,29 @@
             <br>To Build a Thriving Business
           </h1>
           <p class="hero__sub">Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale — without the burnout.</p>
-          <div class="hero__actions">
-            <a href="#" class="btn btn--white btn--lg">Start Free — No Card Required</a>
-            <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+          <div class="hero__badges">
+            <div class="app-badges">
+              <a href="#" class="app-badge app-badge--apple">
+                <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span>
+                <span class="app-badge__text">
+                  <span class="app-badge__label">Download on the</span>
+                  <span class="app-badge__store">App Store</span>
+                </span>
+              </a>
+              <a href="#" class="app-badge app-badge--google">
+                <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z"/></svg></span>
+                <span class="app-badge__text">
+                  <span class="app-badge__label">Get it on</span>
+                  <span class="app-badge__store">Google Play</span>
+                </span>
+              </a>
+            </div>
           </div>
-          <p class="hero__note">Free forever for up to 3 clients.</p>
+          <p class="hero__note">Free for trainers with up to 3 clients. No credit card needed.</p>
         </div>
         <div class="hero__phones" data-animate>
-          <img class="hero__phone hero__phone--primary" src="../screenshots/mockups/trainer_home-portrait.png" alt="FirstRep trainer dashboard">
-          <img class="hero__phone hero__phone--secondary" src="../screenshots/mockups/client_marketplace-portrait.png" alt="FirstRep client marketplace">
+          <img class="hero__phone hero__phone--primary" src="images/mockups/trainer_home-portrait.png" alt="FirstRep trainer dashboard">
+          <img class="hero__phone hero__phone--secondary" src="images/mockups/client_marketplace-portrait.png" alt="FirstRep client marketplace">
         </div>
       </div>
     </div>
@@ -656,16 +719,16 @@
       <div class="ftabs__image">
         <img class="ftabs__bg" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop&q=80" alt="">
         <div class="ftabs__screen active" id="ftab-screen-0">
-          <img src="../screenshots/mockups/trainer_aibuilder-portrait.png" alt="AI Program Builder">
+          <img src="images/mockups/trainer_aibuilder-portrait.png" alt="AI Program Builder">
         </div>
         <div class="ftabs__screen" id="ftab-screen-1">
-          <img src="../screenshots/mockups/trainer_clients-portrait.png" alt="Client management dashboard">
+          <img src="images/mockups/trainer_clients-portrait.png" alt="Client management dashboard">
         </div>
         <div class="ftabs__screen" id="ftab-screen-2">
-          <img src="../screenshots/mockups/trainer_home-portrait.png" alt="Coaching command center">
+          <img src="images/mockups/trainer_home-portrait.png" alt="Coaching command center">
         </div>
         <div class="ftabs__screen" id="ftab-screen-3">
-          <img src="../screenshots/mockups/client_marketplace-portrait.png" alt="Client marketplace">
+          <img src="images/mockups/client_marketplace-portrait.png" alt="Client marketplace">
         </div>
       </div>
       <div class="ftabs__tabs">
@@ -703,7 +766,7 @@
           <div class="svc-card__img">
             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=500&fit=crop&q=80" alt="Personal trainer working one-on-one with a client">
             <div class="svc-card__img-overlay"></div>
-            <img class="svc-card__phone" src="../screenshots/mockups/client_upcomingSessions-portrait.png" alt="Upcoming coaching sessions">
+            <img class="svc-card__phone" src="images/mockups/client_upcomingSessions-portrait.png" alt="Upcoming coaching sessions">
           </div>
           <h3 class="svc-card__title">High-Ticket Coaching</h3>
           <p class="svc-card__subtitle">One-to-One. Premium. Personal.</p>
@@ -719,7 +782,7 @@
           <div class="svc-card__img">
             <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&h=500&fit=crop&q=80" alt="Group fitness class">
             <div class="svc-card__img-overlay"></div>
-            <img class="svc-card__phone" src="../screenshots/mockups/trainer_invite-portrait.png" alt="Send invite link to clients">
+            <img class="svc-card__phone" src="images/mockups/trainer_invite-portrait.png" alt="Send invite link to clients">
           </div>
           <h3 class="svc-card__title">Scalable Business</h3>
           <p class="svc-card__subtitle">One-to-Many. Packaged. Automated.</p>
@@ -1139,13 +1202,13 @@
           <div class="ai-card__icon ai-card__icon--predict"><i data-lucide="zap"></i></div>
           <h3 class="ai-card__title">Smart Automation</h3>
           <p class="ai-card__desc">Rules that trigger when clients miss workouts, skip check-ins, or hit milestones. The system acts. You stay focused on high-value coaching.</p>
-          <img class="ai-card__ref" src="../screenshots/mockups/trainer_automation-portrait.png" alt="Automation rules">
+          <img class="ai-card__ref" src="images/mockups/trainer_automation-portrait.png" alt="Automation rules">
         </div>
         <div class="ai-card">
           <div class="ai-card__icon ai-card__icon--automate"><i data-lucide="utensils"></i></div>
           <h3 class="ai-card__title">Complete Nutrition</h3>
           <p class="ai-card__desc">Build recipes with macro breakdowns. Assign meal plans and dietary tags. Track client nutrition compliance alongside their training data.</p>
-          <img class="ai-card__ref" src="../screenshots/mockups/trainer_recipe-portrait.png" alt="Recipe builder with macros">
+          <img class="ai-card__ref" src="images/mockups/trainer_recipe-portrait.png" alt="Recipe builder with macros">
         </div>
       </div>
     </div>
@@ -1184,7 +1247,7 @@
   <section class="steps" id="how-it-works">
     <div class="container">
       <div class="steps__header" data-animate>
-        <h2 class="steps__title">Go Live in 15 Minutes</h2>
+        <h2 class="steps__title">Start Coaching in 3 Steps</h2>
       </div>
       <div class="steps__grid" data-animate>
         <div class="step-card">
@@ -1192,30 +1255,30 @@
           <div class="step-card__img">
             <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=400&fit=crop&q=80" alt="Gym setup">
             <div class="step-card__img-overlay"></div>
-            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_home-portrait.png" alt="Trainer dashboard">
+            <img class="step-card__img-phone" src="images/mockups/trainer_home-portrait.png" alt="Trainer dashboard">
           </div>
-          <h3 class="step-card__title">Create Your Profile</h3>
-          <p class="step-card__desc">Sign up, add your photo, bio, and specialties. Connect Stripe so you can get paid. Your profile goes live on the marketplace.</p>
+          <h3 class="step-card__title">Download the App</h3>
+          <p class="step-card__desc">Get FirstRep free on iOS or Android. Create your profile, add your photo, bio, and specialties. Takes less than 2 minutes.</p>
         </div>
         <div class="step-card">
           <div class="step-card__number">2</div>
           <div class="step-card__img">
             <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=400&fit=crop&q=80" alt="Trainer with client">
             <div class="step-card__img-overlay"></div>
-            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_createPackage-portrait.png" alt="Package builder">
+            <img class="step-card__img-phone" src="images/mockups/trainer_createPackage-portrait.png" alt="Package builder">
           </div>
           <h3 class="step-card__title">Build Your Packages</h3>
-          <p class="step-card__desc">Monthly coaching, session packs, or custom — set your price, describe what's included, and publish. Clients can subscribe instantly.</p>
+          <p class="step-card__desc">Set your pricing, create coaching packages, and connect Stripe. Your profile goes live on the marketplace instantly.</p>
         </div>
         <div class="step-card">
           <div class="step-card__number">3</div>
           <div class="step-card__img">
             <img class="step-card__img-bg" src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=500&h=400&fit=crop&q=80" alt="Community fitness">
             <div class="step-card__img-overlay"></div>
-            <img class="step-card__img-phone" src="../screenshots/mockups/trainer_invite-portrait.png" alt="Send invite">
+            <img class="step-card__img-phone" src="images/mockups/trainer_invite-portrait.png" alt="Send invite">
           </div>
-          <h3 class="step-card__title">Share and Grow</h3>
-          <p class="step-card__desc">Send invite links via email, DM, or QR code. Or let clients find you on the marketplace. Your first client is a link away.</p>
+          <h3 class="step-card__title">Get Clients & Coach</h3>
+          <p class="step-card__desc">Invite existing clients via link or QR code. Let new clients find you on the marketplace. Start coaching from day one.</p>
         </div>
       </div>
     </div>
@@ -1243,7 +1306,7 @@
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduling &amp; messaging</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automation rules</div>
           </div>
-          <a href="#" class="btn btn--outline btn--lg" style="width: 100%; justify-content: center;">Start Free</a>
+          <a href="#" class="btn btn--outline btn--lg" style="width: 100%; justify-content: center;">Download Free</a>
         </div>
         <div class="price-card price-card--pro">
           <div class="price-card__popular">MOST POPULAR</div>
@@ -1259,7 +1322,7 @@
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Advanced analytics</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Wellbeing dashboard</div>
           </div>
-          <a href="#" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">Start Free Trial</a>
+          <a href="#" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">Download Free Trial</a>
         </div>
       </div>
       <p class="pricing__note" data-animate><strong>Commission: 0% on clients you invite. 20% on marketplace clients.</strong><br>You brought them? You keep everything.</p>
@@ -1270,16 +1333,32 @@
   <section class="cta">
     <div class="cta__glow"></div>
     <div class="cta__bg-phones">
-      <img src="../screenshots/mockups/trainer_home-portrait.png" alt="">
-      <img src="../screenshots/mockups/client_marketplace-portrait.png" alt="">
+      <img src="images/mockups/trainer_home-portrait.png" alt="">
+      <img src="images/mockups/client_marketplace-portrait.png" alt="">
     </div>
     <div class="container" style="position: relative; z-index: 1;">
       <div data-animate>
         <h2 class="cta__title">Your First Rep Starts Now.</h2>
-        <p class="cta__sub">1,734 exercises. AI program builder. Built-in marketplace. Automation that saves you hours. And it's free to start.<br><br>Join the trainers who stopped hustling and started building.</p>
+        <p class="cta__sub">1,734 exercises. AI program builder. Built-in marketplace. Automation that saves you hours. Download free and start coaching today.</p>
         <div class="cta__actions">
-          <a href="#" class="btn btn--white btn--lg">Create Your Free Account</a>
+          <div class="app-badges">
+            <a href="#" class="app-badge app-badge--apple">
+              <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span>
+              <span class="app-badge__text">
+                <span class="app-badge__label">Download on the</span>
+                <span class="app-badge__store">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="app-badge app-badge--google">
+              <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z"/></svg></span>
+              <span class="app-badge__text">
+                <span class="app-badge__label">Get it on</span>
+                <span class="app-badge__store">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
+        <p class="download-nudge" style="justify-content: center;">Free for up to 3 clients. No credit card required.</p>
       </div>
     </div>
   </section>
@@ -1289,13 +1368,25 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <div class="footer__logo">First<span>Rep</span></div>
+          <div class="footer__logo"><img src="images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;"></div>
           <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
-          <div class="footer__social">
-            <a href="#" aria-label="Twitter">&#x1D54F;</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="YouTube">YT</a>
+          <div class="footer__apps">
+            <div class="app-badges" style="flex-direction: column; gap: 8px;">
+              <a href="#" class="app-badge app-badge--dark">
+                <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span>
+                <span class="app-badge__text">
+                  <span class="app-badge__label">Download on the</span>
+                  <span class="app-badge__store">App Store</span>
+                </span>
+              </a>
+              <a href="#" class="app-badge app-badge--dark">
+                <span class="app-badge__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 13l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z"/></svg></span>
+                <span class="app-badge__text">
+                  <span class="app-badge__label">Get it on</span>
+                  <span class="app-badge__store">Google Play</span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
         <div class="footer__col">
@@ -1315,27 +1406,22 @@
           <a href="features/business.html">Business Tools</a>
         </div>
         <div class="footer__col">
-          <h4 class="footer__col-title">Company</h4>
-          <a href="#">About</a>
-          <a href="#">Careers</a>
-          <a href="#">Press</a>
-          <a href="#">Contact</a>
+          <h4 class="footer__col-title">Resources</h4>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a href="features.html">All Features</a>
         </div>
         <div class="footer__col">
           <h4 class="footer__col-title">Legal</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">GDPR</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
         </div>
       </div>
       <div class="footer__bottom">
         <div>&copy; 2026 FirstRep. All rights reserved.</div>
         <div class="footer__legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Cookies</a>
-          <a href="#">Sitemap</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
         </div>
       </div>
     </div>

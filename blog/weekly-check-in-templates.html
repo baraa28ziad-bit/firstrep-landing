@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Client Check-Ins That Actually Improve Results (Templates Included) — FirstRep Blog</title>
+  <meta name="description" content="A good weekly check-in does more than collect data — it drives accountability, surfaces problems early, and keeps clients engaged. Free templates inside.">
+  <link rel="canonical" href="https://firstrep.fit/blog/weekly-check-in-templates.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Weekly Client Check-Ins That Actually Improve Results (Templates Included)">
+  <meta property="og:description" content="A good weekly check-in does more than collect data — it drives accountability, surfaces problems early, and keeps clients engaged. Free templates inside.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://firstrep.fit/blog/weekly-check-in-templates.html">
+  <meta property="og:site_name" content="FirstRep">
+  <meta property="article:published_time" content="2026-01-25">
+  <meta property="article:author" content="FirstRep Team">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Weekly Client Check-Ins That Actually Improve Results (Templates Included)",
+    "description": "A good weekly check-in does more than collect data — it drives accountability, surfaces problems early, and keeps clients engaged. Free templates inside.",
+    "datePublished": "2026-01-25",
+    "dateModified": "2026-01-25",
+    "author": {
+      "@type": "Person",
+      "name": "FirstRep Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FirstRep"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://firstrep.fit/blog/weekly-check-in-templates.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; cursor: pointer; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__cta { display: inline-flex; align-items: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* MEGA MENU */
+    .nav__link--features { position: relative; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; padding-left: 16px; }
+    .nav__mobile-features.open { display: flex; flex-direction: column; }
+    .nav__mobile-features a { font-size: 15px; padding: 12px 0; color: var(--text-3); }
+
+    /* ARTICLE */
+    .article-hero { padding: 140px 0 48px; text-align: center; }
+    .article-hero__tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brand); background: var(--brand-light); padding: 4px 12px; border-radius: 6px; margin-bottom: 16px; }
+    .article-hero__title { font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.15; max-width: 780px; margin: 0 auto 20px; }
+    .article-hero__meta { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 14px; color: var(--text-muted); }
+    .article-hero__meta span { display: flex; align-items: center; gap: 5px; }
+
+    .article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .article p { font-size: 17px; color: var(--text-2); line-height: 1.8; margin-bottom: 24px; letter-spacing: -0.01em; }
+    .article h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.03em; margin: 48px 0 16px; line-height: 1.3; color: var(--text); }
+    .article h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin: 32px 0 12px; line-height: 1.35; color: var(--text); }
+    .article ul, .article ol { margin-bottom: 24px; padding-left: 24px; }
+    .article ul { list-style: disc; }
+    .article ol { list-style: decimal; }
+    .article li { font-size: 17px; color: var(--text-2); line-height: 1.8; margin-bottom: 8px; }
+    .article strong { color: var(--text); font-weight: 600; }
+    .article a { color: var(--brand); font-weight: 500; transition: color 0.2s; }
+    .article a:hover { color: var(--brand-hover); }
+    .article blockquote { background: var(--bg-2); border-left: 4px solid var(--brand); padding: 24px 28px; border-radius: 0 12px 12px 0; margin: 32px 0; }
+    .article blockquote p { margin-bottom: 0; font-size: 16px; color: var(--text-2); }
+    .article blockquote p + p { margin-top: 12px; }
+
+    /* TEMPLATE CARD */
+    .template-card { background: var(--bg-2); border-radius: var(--radius); padding: 32px; margin: 32px 0; }
+    .template-card__header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .template-card__icon { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-light); display: flex; align-items: center; justify-content: center; color: var(--brand); flex-shrink: 0; }
+    .template-card__title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+    .template-card__subtitle { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .template-card ol { padding-left: 20px; margin-bottom: 0; }
+    .template-card li { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; padding-left: 4px; }
+    .template-card li:last-child { margin-bottom: 0; }
+
+    /* TIP BOX */
+    .tip-box { display: flex; gap: 16px; background: var(--brand-light); border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+    .tip-box__icon { flex-shrink: 0; width: 24px; height: 24px; color: var(--brand); margin-top: 2px; }
+    .tip-box p { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 0; }
+
+    /* CTA SECTION */
+    .cta-section { background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, var(--brand) 100%); padding: 80px 0; text-align: center; }
+    .cta-section__title { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 16px; }
+    .cta-section__desc { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 500px; margin: 0 auto 36px; line-height: 1.6; }
+    .cta-section__badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .cta-section__badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 12px; color: #fff; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+    .cta-section__badge:hover { background: rgba(255,255,255,0.15); }
+    .cta-section__badge-icon { width: 28px; height: 28px; }
+
+    /* RELATED ARTICLES */
+    .related { padding: 80px 0; background: var(--bg-2); }
+    .related__title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; text-align: center; margin-bottom: 40px; }
+    .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .related-card { background: var(--bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .related-card__body { padding: 24px; }
+    .related-card__title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; color: var(--text); }
+    .related-card__excerpt { font-size: 14px; color: var(--text-3); line-height: 1.6; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .related-card__meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .related-card__meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding: 80px 0 40px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .related__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+      .mega-menu { display: none !important; }
+      .mega-overlay { display: none !important; }
+      .article-hero { padding: 120px 0 32px; }
+      .article-hero__title { font-size: 28px; }
+      .article p, .article li { font-size: 16px; }
+      .article h2 { font-size: 22px; }
+      .article h3 { font-size: 18px; }
+      .template-card { padding: 24px; }
+      .related__grid { grid-template-columns: 1fr; gap: 20px; }
+      .cta-section__badges { flex-direction: column; align-items: center; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../images/brand/firstrep-black.png" alt="FirstRep" style="height: 28px; width: auto;"></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="index.html" class="nav__link nav__link--active">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#" style="margin-top: 16px; text-align: center; background: var(--brand); color: #fff; border-radius: 12px; padding: 14px;">Download the App</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <span class="article-hero__tag">Coaching</span>
+      <h1 class="article-hero__title">Weekly Client Check-Ins That Actually Improve Results (Templates Included)</h1>
+      <div class="article-hero__meta">
+        <span><i data-lucide="user" style="width:14px;height:14px"></i> FirstRep Team</span>
+        <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 25, 2026</span>
+        <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
+  <article class="article">
+
+    <p>Most trainers either skip check-ins entirely or send a generic "how did this week go?" text. Both are missed opportunities.</p>
+
+    <p>The first approach means you're flying blind between sessions. The second gives you vague, useless answers. Neither one actually moves your clients forward.</p>
+
+    <p>A well-designed weekly check-in is one of the most underrated tools in your coaching arsenal. It takes your client two minutes to fill out, but it gives you enough signal to make smarter programming decisions, catch problems before they snowball, and -- here's the big one -- make your client feel genuinely coached.</p>
+
+    <p>Let's break down exactly what to ask, what not to ask, and walk through three ready-to-use templates you can steal today.</p>
+
+    <h2>Why Weekly Check-Ins Are Your Most Powerful Retention Tool</h2>
+
+    <p>Think about the clients who've left you. How many of them ghosted without warning? Probably most of them. That's what happens when there's no structured touchpoint between sessions.</p>
+
+    <p>Weekly check-ins solve multiple problems at once:</p>
+
+    <ul>
+      <li><strong>Accountability between sessions.</strong> When clients know they'll report back on Sunday night, they're more likely to follow through on Wednesday's workout.</li>
+      <li><strong>Early problem detection.</strong> A client who rates their energy a 3/10 for two weeks in a row is telling you something. Without a check-in, you wouldn't know until they cancel.</li>
+      <li><strong>Data for programming.</strong> Sleep quality, stress, soreness -- these inputs let you auto-regulate volume and intensity instead of guessing.</li>
+      <li><strong>Proof that you care.</strong> Responding to a check-in with a personalized note takes 30 seconds but builds loyalty that lasts months.</li>
+    </ul>
+
+    <p>The research backs this up. Clients with consistent coach contact have significantly higher adherence rates and longer retention. A simple weekly form is the highest-leverage version of that contact.</p>
+
+    <h2>What to Ask (And What Not to Ask)</h2>
+
+    <h3>Good questions</h3>
+
+    <p>The best check-in questions are specific, quick to answer, and actionable for you as a coach. Here's what works:</p>
+
+    <ul>
+      <li><strong>Energy level (1-10 scale).</strong> Tracks recovery trends over time.</li>
+      <li><strong>Workout completion %.</strong> Did they do 3 out of 4 planned sessions? Now you know.</li>
+      <li><strong>Sleep quality.</strong> A simple "poor / okay / good / great" dropdown is enough.</li>
+      <li><strong>Nutrition adherence.</strong> Percentage-based is less judgmental than yes/no.</li>
+      <li><strong>Any pain or discomfort?</strong> Free text, but specifically prompted. This one catches injuries early.</li>
+      <li><strong>Biggest win this week.</strong> Forces positive reflection. Clients who celebrate small wins stick around longer.</li>
+      <li><strong>Biggest struggle.</strong> Gives you a coaching entry point for your reply.</li>
+    </ul>
+
+    <h3>Bad questions</h3>
+
+    <ul>
+      <li><strong>Too many open-ended questions.</strong> "Tell me about your week" gets you a novel or nothing. Scales and dropdowns are faster and more useful.</li>
+      <li><strong>Overly clinical language.</strong> "Rate your perceived exertion across all training modalities" -- just say "How hard did your workouts feel?"</li>
+      <li><strong>Redundant questions.</strong> If your app already logs their workouts, don't ask them to list every exercise they did.</li>
+      <li><strong>More than 10 questions (weekly).</strong> Compliance drops sharply after 10. Save the deep dives for monthly reviews.</li>
+    </ul>
+
+    <h2>Template 1 -- The Quick Check-In</h2>
+
+    <div class="template-card">
+      <div class="template-card__header">
+        <div class="template-card__icon"><i data-lucide="zap" style="width:20px;height:20px"></i></div>
+        <div>
+          <div class="template-card__title">Quick Check-In</div>
+          <div class="template-card__subtitle">5 questions &middot; ~2 minutes &middot; Best for experienced, self-sufficient clients</div>
+        </div>
+      </div>
+      <ol>
+        <li><strong>Rate your overall week (1-10):</strong> 1 = terrible, 10 = best week ever</li>
+        <li><strong>Workouts completed:</strong> ___ out of ___ planned</li>
+        <li><strong>Any pain or discomfort?</strong> If yes, where and when does it happen?</li>
+        <li><strong>Biggest win this week?</strong></li>
+        <li><strong>Anything I should adjust for next week?</strong></li>
+      </ol>
+    </div>
+
+    <p>This is your default template. It works for clients who are consistent, know what they're doing, and just need you to keep an eye on things. Five questions, two minutes, done.</p>
+
+    <p>The "rate your week" question is deceptively powerful. When you see someone drop from 8s to 5s over three weeks, you can intervene before they hit 2 and disappear.</p>
+
+    <h2>Template 2 -- The Comprehensive Check-In</h2>
+
+    <div class="template-card">
+      <div class="template-card__header">
+        <div class="template-card__icon"><i data-lucide="clipboard-list" style="width:20px;height:20px"></i></div>
+        <div>
+          <div class="template-card__title">Comprehensive Check-In</div>
+          <div class="template-card__subtitle">10 questions &middot; ~5 minutes &middot; Best for new clients or at-risk clients</div>
+        </div>
+      </div>
+      <ol>
+        <li><strong>Rate your overall week (1-10):</strong> 1 = terrible, 10 = best week ever</li>
+        <li><strong>Workouts completed:</strong> ___ out of ___ planned</li>
+        <li><strong>Average sleep (hours per night):</strong></li>
+        <li><strong>Sleep quality:</strong> Poor / Okay / Good / Great</li>
+        <li><strong>Nutrition adherence:</strong> ___% (rough estimate is fine)</li>
+        <li><strong>Stress level (1-10):</strong></li>
+        <li><strong>Any pain or discomfort?</strong> If yes, describe location and severity</li>
+        <li><strong>Current weight / measurements:</strong> (if tracking)</li>
+        <li><strong>Biggest win this week?</strong></li>
+        <li><strong>Biggest struggle this week?</strong></li>
+      </ol>
+    </div>
+
+    <p>Use this for clients in their first 4-8 weeks, or for anyone showing signs of disengagement. The extra data points (sleep, stress, nutrition) give you a fuller picture of what's happening outside the gym.</p>
+
+    <p>You can also ask for progress photos with this one -- but make it optional. Mandatory photo check-ins can feel invasive and hurt compliance.</p>
+
+    <h2>Template 3 -- The Monthly Deep Dive</h2>
+
+    <div class="template-card">
+      <div class="template-card__header">
+        <div class="template-card__icon"><i data-lucide="calendar-check" style="width:20px;height:20px"></i></div>
+        <div>
+          <div class="template-card__title">Monthly Deep Dive</div>
+          <div class="template-card__subtitle">7 questions &middot; ~8 minutes &middot; Use alongside weekly check-ins, once per month</div>
+        </div>
+      </div>
+      <ol>
+        <li><strong>How do you feel about your progress toward your goals?</strong> Behind / On track / Ahead</li>
+        <li><strong>What's working well in your current program?</strong></li>
+        <li><strong>What's not working or feels stale?</strong></li>
+        <li><strong>How satisfied are you with your coaching experience? (1-10)</strong></li>
+        <li><strong>Any upcoming schedule changes?</strong> (travel, work shifts, holidays)</li>
+        <li><strong>Do your goals need updating?</strong> If yes, what's the new focus?</li>
+        <li><strong>Anything else you want me to know?</strong></li>
+      </ol>
+    </div>
+
+    <p>This isn't a replacement for weekly check-ins -- it's a supplement. Run it on the first of every month. The monthly deep dive catches the slow-moving things that weekly forms miss: shifting goals, schedule changes, program fatigue.</p>
+
+    <p>Question 4 ("How satisfied are you with coaching?") is your early warning system for churn. Anything below a 7 needs a direct conversation.</p>
+
+    <h2>How to Review Check-Ins Efficiently</h2>
+
+    <p>Templates are only half the equation. The other half is what you do with the responses.</p>
+
+    <p>If you're reviewing check-ins one at a time as they trickle in throughout the weekend, you're wasting time. Here's a better approach:</p>
+
+    <ul>
+      <li><strong>Batch process.</strong> Set a specific time (Sunday evening or Monday morning) to review all check-ins at once. Context-switching between coaching and other tasks is a productivity killer.</li>
+      <li><strong>Use a red flag system.</strong> Scan for the danger signals first: low energy scores, missed workouts, reported pain. Handle those before writing "great job!" replies to the clients who are cruising.</li>
+      <li><strong>Build quick reply templates.</strong> You don't need a unique essay for every client. A library of response starters ("Great week! I noticed your sleep is down -- let's...") saves time without sacrificing personalization.</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-box__icon"><i data-lucide="lightbulb" style="width:24px;height:24px"></i></div>
+      <p><strong>Pro tip:</strong> FirstRep's check-in queue lets you review all client submissions in one view, sorted by urgency. Red flags surface automatically so you handle at-risk clients first. You can reply, adjust programs, and flag concerns without switching between screens.</p>
+    </div>
+
+    <h2>Turning Check-In Data Into Better Programs</h2>
+
+    <p>A single check-in is a snapshot. Four weeks of check-ins is a trend. That's where the real value lives.</p>
+
+    <p>Here's how to use accumulated check-in data to make smarter coaching decisions:</p>
+
+    <ul>
+      <li><strong>Recovery patterns.</strong> If a client consistently reports low energy on Mondays, their weekend program might be too aggressive. Or they're not sleeping enough on weekends. Either way, you know what to ask.</li>
+      <li><strong>Compliance trends.</strong> A client completing 2 out of 4 sessions for three weeks straight doesn't need motivation -- they need a 3-day program.</li>
+      <li><strong>Nutrition correlation.</strong> Track nutrition adherence alongside workout performance. You'll often see that "bad training weeks" line up perfectly with "nutrition fell off" weeks. That's a coaching conversation, not a programming problem.</li>
+      <li><strong>Stress-based auto-regulation.</strong> When stress scores are high, pull back volume and keep intensity moderate. When they're low, push harder. This is simple but most trainers ignore it because they don't have the data.</li>
+    </ul>
+
+    <p>The best coaches aren't guessing. They're reading trends from consistent data points and adjusting accordingly. Weekly check-ins are the simplest way to generate that data.</p>
+
+    <p>Platforms like FirstRep track check-in responses over time and surface trends on your coaching dashboard, so you can spot patterns without manually comparing spreadsheets week after week.</p>
+
+    <h2>Start This Week</h2>
+
+    <p>You don't need to overthink this. Pick one template, send it to your clients this Sunday, and commit to reviewing responses every Monday morning for a month.</p>
+
+    <p>You'll be amazed at how much more you learn about your clients -- and how much better your programming gets -- when you have consistent, structured data flowing in every week.</p>
+
+    <p>The trainers who retain clients for years aren't doing anything magical. They're just paying attention. A weekly check-in is the easiest way to prove you're paying attention.</p>
+
+  </article>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Ready to Streamline Your Coaching?</h2>
+      <p class="cta-section__desc">Start free with up to 3 clients -- no credit card required.</p>
+      <div class="cta-section__badges">
+        <a href="#" class="cta-section__badge">
+          <svg class="cta-section__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/><path d="M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+          App Store
+        </a>
+        <a href="#" class="cta-section__badge">
+          <svg class="cta-section__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 10.5c.53.4.53 1.2 0 1.6l-14 10.5c-.66.5-1.6.03-1.6-.8z" transform="translate(0,-3) scale(0.9)"/></svg>
+          Google Play
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related">
+    <h2 class="related__title">Keep Reading</h2>
+    <div class="related__grid">
+      <a href="client-retention-after-goals.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">Why 60% of Clients Leave After Hitting Their Goals (And How to Fix It)</h3>
+          <p class="related-card__excerpt">The post-goal drop-off is the biggest silent revenue killer. Here's the playbook top trainers use to keep clients for years.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Feb 12, 2026</span>
+          </div>
+        </div>
+      </a>
+      <a href="client-onboarding-checklist.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">The Complete Client Onboarding Checklist for Personal Trainers</h3>
+          <p class="related-card__excerpt">First impressions set the tone for the entire relationship. Use this 12-step checklist to onboard like a pro.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Jan 28, 2026</span>
+          </div>
+        </div>
+      </a>
+      <a href="automate-personal-training-business.html" class="related-card">
+        <div class="related-card__body">
+          <h3 class="related-card__title">How to Automate Your Personal Training Business (And Save 15+ Hours Per Week)</h3>
+          <p class="related-card__excerpt">You became a trainer to coach people, not to drown in admin. Here are the 6 tasks you should automate today.</p>
+          <div class="related-card__meta">
+            <span><i data-lucide="clock" style="width:13px;height:13px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:13px;height:13px"></i> Feb 18, 2026</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="margin-bottom: 16px;">
+            <img src="../images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;">
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="../features.html">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../features/marketplace.html">Marketplace</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="index.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+
+    // Hamburger toggle
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+
+    // Mega menu toggle
+    var ft = document.getElementById('featuresToggle');
+    var mm = document.getElementById('megaMenu');
+    var overlay = document.getElementById('megaOverlay');
+    if(ft && mm) {
+      ft.addEventListener('click', function() {
+        mm.classList.toggle('visible');
+        overlay.classList.toggle('visible');
+        ft.classList.toggle('open');
+      });
+      overlay.addEventListener('click', function() {
+        mm.classList.remove('visible');
+        overlay.classList.remove('visible');
+        ft.classList.remove('open');
+      });
+    }
+
+    // Mobile features toggle
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+  });
+  </script>
+</body>
+</html>

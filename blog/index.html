@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — FirstRep | Tips & Insights for Personal Trainers</title>
+  <meta name="description" content="Actionable advice on pricing, client retention, automation, and scaling your personal training business. Written by trainers, for trainers.">
+  <link rel="canonical" href="https://firstrep.fit/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; cursor: pointer; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__cta { display: inline-flex; align-items: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* MEGA MENU */
+    .nav__link--features { position: relative; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; padding-left: 16px; }
+    .nav__mobile-features.open { display: flex; flex-direction: column; }
+    .nav__mobile-features a { font-size: 15px; padding: 12px 0; color: var(--text-3); }
+
+    /* HERO */
+    .hero { padding: 140px 0 60px; text-align: center; }
+    .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: var(--brand-light); color: var(--brand); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; }
+    .hero__title { font-size: 48px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
+    .hero__desc { font-size: 18px; color: var(--text-3); max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
+
+    /* BLOG GRID */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 100px; }
+    .blog-card { background: var(--bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .blog-card__img { width: 100%; height: 200px; object-fit: cover; }
+    .blog-card__body { padding: 24px; }
+    .blog-card__tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brand); background: var(--brand-light); padding: 4px 10px; border-radius: 6px; margin-bottom: 12px; }
+    .blog-card__title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; color: var(--text); }
+    .blog-card__excerpt { font-size: 14px; color: var(--text-3); line-height: 1.65; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .blog-card__meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .blog-card__meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding: 80px 0 40px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+      .hero__title { font-size: 32px; }
+      .hero__desc { font-size: 16px; }
+      .hero { padding: 120px 0 40px; }
+      .blog-grid { grid-template-columns: 1fr; gap: 24px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../images/brand/firstrep-black.png" alt="FirstRep" style="height: 28px; width: auto;"></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="index.html" class="nav__link nav__link--active">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#" class="btn btn--primary" style="margin-top: 16px; text-align: center;">Download the App</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__badge">FirstRep Blog</div>
+      <h1 class="hero__title">Grow Your Training Business</h1>
+      <p class="hero__desc">Actionable advice on pricing, client retention, automation, and scaling — written by trainers, for trainers.</p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="container">
+    <div class="blog-grid">
+
+      <a href="automate-personal-training-business.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80" alt="Automation dashboard on laptop">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Productivity</span>
+          <h2 class="blog-card__title">How to Automate Your Personal Training Business (And Save 15+ Hours Per Week)</h2>
+          <p class="blog-card__excerpt">You became a trainer to coach people, not to drown in admin. Here are the 6 tasks you should automate today.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 18, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="personal-trainer-pricing-guide.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&q=80" alt="Calculator and money">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Business</span>
+          <h2 class="blog-card__title">The Ultimate Guide to Pricing Your Personal Training Services in 2026</h2>
+          <p class="blog-card__excerpt">Session packs, monthly coaching, hybrid tiers — which model actually maximizes your income? We break down the math.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 9 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 15, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="client-retention-after-goals.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop&q=80" alt="Trainer and client fist bump">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Retention</span>
+          <h2 class="blog-card__title">Why 60% of Clients Leave After Hitting Their Goals (And How to Fix It)</h2>
+          <p class="blog-card__excerpt">The post-goal drop-off is the biggest silent revenue killer. Here's the playbook top trainers use to keep clients for years.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 12, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="scale-personal-training-beyond-20-clients.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&q=80" alt="Modern gym with equipment">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Growth</span>
+          <h2 class="blog-card__title">How to Scale Your Personal Training Business Beyond 20 Clients</h2>
+          <p class="blog-card__excerpt">Twenty clients is the ceiling — until you change your model. Here's how to break through without burning out.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 9, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="fix-personal-trainer-payment-collection.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&q=80" alt="Mobile payment on phone">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Payments</span>
+          <h2 class="blog-card__title">Stop Chasing Invoices: How to Fix Personal Trainer Payment Collection</h2>
+          <p class="blog-card__excerpt">Late payments, awkward conversations, bounced e-transfers. Here's how to get paid on time, every time.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 6, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="personal-trainer-burnout-signs-and-fixes.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop&q=80" alt="Person resting on gym floor">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Wellness</span>
+          <h2 class="blog-card__title">7 Signs You're Heading for Personal Trainer Burnout (And the Fix for Each)</h2>
+          <p class="blog-card__excerpt">Burnout doesn't arrive overnight. Learn to spot the warning signs early and protect your career.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 3, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="create-workout-programs-faster.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop&q=80" alt="Trainer writing workout program">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Programming</span>
+          <h2 class="blog-card__title">How to Create Client Workout Programs in Half the Time</h2>
+          <p class="blog-card__excerpt">Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 31, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="client-onboarding-checklist.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop&q=80" alt="Handshake between trainer and client">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Onboarding</span>
+          <h2 class="blog-card__title">The Complete Client Onboarding Checklist for Personal Trainers</h2>
+          <p class="blog-card__excerpt">First impressions set the tone for the entire relationship. Use this 12-step checklist to onboard like a pro.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 28, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="weekly-check-in-templates.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&h=400&fit=crop&q=80" alt="Phone showing check-in form">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Coaching</span>
+          <h2 class="blog-card__title">Weekly Client Check-Ins That Actually Improve Results (Templates Included)</h2>
+          <p class="blog-card__excerpt">A good check-in does more than collect data — it drives accountability, surfaces problems, and keeps clients engaged.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 25, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="digitize-personal-training-business.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80" alt="Digital dashboard on tablet">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Digital</span>
+          <h2 class="blog-card__title">From Spreadsheets to App: How to Digitize Your Personal Training Business</h2>
+          <p class="blog-card__excerpt">Still running your business on Google Sheets and WhatsApp? Here's a step-by-step migration plan that won't disrupt your clients.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 22, 2026</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="margin-bottom: 16px;">
+            <img src="../images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;">
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="../features.html">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../features/marketplace.html">Marketplace</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="index.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+    var ft = document.getElementById('featuresToggle');
+    var mm = document.getElementById('megaMenu');
+    var overlay = document.getElementById('megaOverlay');
+    if(ft && mm) {
+      ft.addEventListener('click', function() {
+        var open = mm.classList.contains('visible');
+        mm.classList.toggle('visible');
+        overlay.classList.toggle('visible');
+        ft.classList.toggle('open');
+      });
+      overlay.addEventListener('click', function() {
+        mm.classList.remove('visible');
+        overlay.classList.remove('visible');
+        ft.classList.remove('open');
+      });
+    }
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features −' : 'Features +';
+      });
+    }
+  });
+  </script>
+</body>
+</html>

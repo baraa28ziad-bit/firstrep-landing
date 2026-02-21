@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Complete Client Onboarding Checklist for Personal Trainers | FirstRep Blog</title>
+  <meta name="description" content="First impressions set the tone for the entire coaching relationship. Use this 12-step onboarding checklist to wow new clients and reduce early churn.">
+  <link rel="canonical" href="https://firstrep.fit/blog/client-onboarding-checklist.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Complete Client Onboarding Checklist for Personal Trainers">
+  <meta property="og:description" content="First impressions set the tone for the entire coaching relationship. Use this 12-step onboarding checklist to wow new clients and reduce early churn.">
+  <meta property="og:url" content="https://firstrep.fit/blog/client-onboarding-checklist.html">
+  <meta property="og:site_name" content="FirstRep">
+  <meta property="article:published_time" content="2026-01-28">
+  <meta property="article:author" content="FirstRep Team">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Complete Client Onboarding Checklist for Personal Trainers",
+    "description": "First impressions set the tone for the entire coaching relationship. Use this 12-step onboarding checklist to wow new clients and reduce early churn.",
+    "datePublished": "2026-01-28",
+    "author": {
+      "@type": "Organization",
+      "name": "FirstRep Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FirstRep"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; cursor: pointer; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__cta { display: inline-flex; align-items: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* MEGA MENU */
+    .nav__link--features { position: relative; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; padding-left: 16px; }
+    .nav__mobile-features.open { display: flex; flex-direction: column; }
+    .nav__mobile-features a { font-size: 15px; padding: 12px 0; color: var(--text-3); }
+
+    /* ARTICLE HERO */
+    .article-hero { padding: 140px 0 48px; text-align: center; }
+    .article-hero__meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
+    .article-hero__tag { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brand); background: var(--brand-light); padding: 5px 12px; border-radius: 6px; }
+    .article-hero__date { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .article-hero__read { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .article-hero__title { font-size: 44px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .article-hero__desc { font-size: 18px; color: var(--text-3); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    /* ARTICLE BODY */
+    .article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .article p { font-size: 17px; line-height: 1.8; color: var(--text-2); margin-bottom: 24px; }
+    .article h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: var(--text); margin-top: 48px; margin-bottom: 16px; line-height: 1.25; }
+    .article h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-top: 32px; margin-bottom: 12px; line-height: 1.3; }
+    .article ul, .article ol { margin-bottom: 24px; padding-left: 24px; }
+    .article ul { list-style: disc; }
+    .article ol { list-style: decimal; }
+    .article li { font-size: 17px; line-height: 1.8; color: var(--text-2); margin-bottom: 8px; }
+    .article strong { color: var(--text); font-weight: 600; }
+    .article em { font-style: italic; }
+    .article a { color: var(--brand); font-weight: 500; transition: color 0.2s; }
+    .article a:hover { color: var(--brand-hover); text-decoration: underline; }
+    .article blockquote { border-left: 3px solid var(--brand); padding: 16px 24px; margin: 32px 0; background: var(--brand-light); border-radius: 0 12px 12px 0; }
+    .article blockquote p { font-size: 16px; color: var(--text-2); margin-bottom: 0; font-style: italic; }
+    .article-img { width: 100%; border-radius: var(--radius); margin: 32px 0; }
+    .article .callout { background: var(--bg-2); border-radius: var(--radius); padding: 24px 28px; margin: 32px 0; }
+    .article .callout p { margin-bottom: 0; font-size: 15px; }
+    .article .callout strong { color: var(--brand); }
+    .article .step { background: var(--bg-2); border-radius: var(--radius); padding: 24px 28px; margin: 20px 0; }
+    .article .step-number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; background: var(--brand); color: #fff; font-size: 13px; font-weight: 700; margin-right: 10px; flex-shrink: 0; }
+    .article .step h3 { display: flex; align-items: center; margin-top: 0; }
+    .article .step p { font-size: 15px; margin-bottom: 0; margin-top: 10px; }
+    .article .step p + p { margin-top: 12px; }
+    .article .mistake-box { background: #FEF2F2; border-radius: var(--radius); padding: 24px 28px; margin: 24px 0; border-left: 3px solid #EF4444; }
+    .article .mistake-box p { font-size: 15px; margin-bottom: 0; }
+    .article .mistake-box strong { color: #DC2626; }
+
+    /* CTA SECTION */
+    .cta-section { background: linear-gradient(135deg, var(--dark) 0%, #1a1142 40%, var(--brand) 100%); padding: 80px 0; text-align: center; }
+    .cta-section__title { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .cta-section__desc { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 32px; line-height: 1.6; }
+    .cta-section__badges { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .cta-section__badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 12px 24px; color: #fff; font-size: 15px; font-weight: 600; transition: background 0.2s; cursor: pointer; }
+    .cta-section__badge:hover { background: rgba(255,255,255,0.2); }
+    .cta-section__badge svg { width: 24px; height: 24px; }
+
+    /* RELATED ARTICLES */
+    .related { padding: 80px 0; background: var(--bg-2); }
+    .related__title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; text-align: center; margin-bottom: 40px; }
+    .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .related__card { background: var(--bg); border-radius: var(--radius); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: var(--shadow); }
+    .related__card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .related__card-title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; color: var(--text); }
+    .related__card-excerpt { font-size: 14px; color: var(--text-3); line-height: 1.65; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .related__card-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .related__card-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding: 80px 0 40px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .related__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+      .article-hero__title { font-size: 30px; }
+      .article-hero__desc { font-size: 16px; }
+      .article-hero { padding: 120px 0 32px; }
+      .article h2 { font-size: 24px; }
+      .article h3 { font-size: 19px; }
+      .related__grid { grid-template-columns: 1fr; gap: 20px; }
+      .cta-section__title { font-size: 28px; }
+      .cta-section__desc { font-size: 16px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+      .article-hero__meta { flex-wrap: wrap; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../images/brand/firstrep-black.png" alt="FirstRep" style="height: 28px; width: auto;"></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="index.html" class="nav__link nav__link--active">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#" class="nav__cta" style="margin-top: 16px; text-align: center; justify-content: center;">Download the App</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__meta">
+        <span class="article-hero__tag">Onboarding</span>
+        <span class="article-hero__date"><i data-lucide="calendar" style="width:14px;height:14px"></i> January 28, 2026</span>
+        <span class="article-hero__read"><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min read</span>
+      </div>
+      <h1 class="article-hero__title">The Complete Client Onboarding Checklist for Personal Trainers</h1>
+      <p class="article-hero__desc">First impressions set the tone for the entire coaching relationship. Use this 12-step onboarding checklist to wow new clients and reduce early churn.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="article">
+
+    <p>The first 7 days with a new client determine whether they stay for 3 months or 3 years. Yet most trainers wing it.</p>
+
+    <p>A new client signs up. You're excited. They're excited. And then... nothing structured happens. Maybe you send a quick "welcome aboard" text. Maybe you jump straight into training. Maybe you mean to send an intake form but forget. By week two, the client feels uncertain about what they signed up for, and you're playing catch-up on information you should have collected on day one.</p>
+
+    <p>It doesn't have to be this way. A structured onboarding process takes the guesswork out of those critical first days, makes you look professional, and sets every client up for long-term success.</p>
+
+    <h2>Why Onboarding Matters More Than You Think</h2>
+
+    <p>Onboarding isn't just a nice-to-have. It's the foundation of client retention.</p>
+
+    <p>Research across subscription businesses (and coaching is a subscription business) shows that a strong onboarding experience reduces early churn by 40 to 60 percent. The reason is simple: onboarding is where you establish the three things that keep clients around.</p>
+
+    <ul>
+      <li><strong>Trust.</strong> They see that you're organized, thorough, and invested in their success.</li>
+      <li><strong>Clarity.</strong> They understand exactly what they're getting, how the coaching works, and what's expected of them.</li>
+      <li><strong>Momentum.</strong> They start doing something immediately. No awkward gap between signing up and actually training.</li>
+    </ul>
+
+    <p>A great onboarding experience also justifies your price. When a client's first week feels premium, they don't question the cost. When it feels disorganized, they start shopping around.</p>
+
+    <h2>The 12-Step Onboarding Checklist</h2>
+
+    <p>Here's the exact process. You can adapt the details to your coaching style, but the structure works across in-person, online, and hybrid models.</p>
+
+    <div class="step">
+      <h3><span class="step-number">1</span> Send a welcome message within 1 hour</h3>
+      <p>The moment someone purchases, they should hear from you. Not tomorrow. Not "when you get a chance." Within one hour.</p>
+      <p>This doesn't have to be long. A short, warm message that says: "Hey [name], I'm excited to start working with you. Here's what happens next..." goes a long way. It confirms their purchase was the right decision and sets the tone for a responsive coaching relationship.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">2</span> Share an intake questionnaire</h3>
+      <p>Before you can coach someone effectively, you need context. Send a structured intake form that covers:</p>
+      <p><strong>Health history</strong> -- injuries, surgeries, chronic conditions, medications. <strong>Goals</strong> -- what they want to achieve and by when. <strong>Schedule</strong> -- how many days per week they can train and preferred times. <strong>Equipment access</strong> -- home gym, commercial gym, specific machines available. <strong>Training history</strong> -- experience level, past programs, what worked and didn't. <strong>Nutrition habits</strong> -- current eating patterns, dietary restrictions, relationship with food.</p>
+      <p>This form should be digital, easy to fill out on a phone, and automatically saved to their client profile. No PDFs. No email attachments.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">3</span> Schedule the kickoff call or assessment</h3>
+      <p>Include a scheduling link in your welcome message so they can book their assessment session right away. The faster this happens, the better. Ideally within 48 hours of purchase.</p>
+      <p>For online clients, this is a video call. For in-person clients, this is your first face-to-face session. Either way, it's not a training session -- it's an information-gathering and goal-setting session.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">4</span> Review their questionnaire before the assessment</h3>
+      <p>This sounds obvious, but a surprising number of trainers skim the intake form five minutes before the session. Don't be that trainer.</p>
+      <p>Read through their answers carefully. Note any red flags (injuries, medical conditions). Prepare follow-up questions. When you walk into the assessment already knowing their background, they feel heard. That's trust in action.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">5</span> Conduct the assessment</h3>
+      <p>The assessment has three parts:</p>
+      <p><strong>Movement screen</strong> -- basic movement quality (squat, hinge, push, pull, single-leg). Not a diagnostic -- just enough to identify limitations that affect programming.</p>
+      <p><strong>Baseline measurements</strong> -- weight, body measurements, progress photos (optional but recommended), and baseline strength on a few key lifts.</p>
+      <p><strong>Goal-setting conversation</strong> -- refine their goals into something specific and measurable. "I want to lose weight" becomes "I want to lose 15 pounds in 16 weeks while maintaining my current strength levels."</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">6</span> Set up their profile in your coaching platform</h3>
+      <p>Enter their assessment data, goals, schedule, and any relevant notes into your system. This is the foundation for everything that follows -- their program, their progress tracking, their check-ins.</p>
+      <p>If you're using a proper coaching platform, this data feeds directly into program generation and progress reports. If you're using spreadsheets, this is where things start to get tedious. (More on that later.)</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">7</span> Deliver their first program within 24 hours</h3>
+      <p>This is critical. The gap between the assessment and the first program delivery is where excitement dies. Twenty-four hours is the maximum. Same day is ideal.</p>
+      <p>The program doesn't have to be a 12-week periodized masterpiece. It's their first block -- 3 to 4 weeks of structured training that matches their assessment results, goals, and available equipment. You'll adjust after the first check-in.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">8</span> Walk them through the platform</h3>
+      <p>Don't just hand them a program and wish them luck. Spend 5 to 10 minutes (in person or via a quick video message) showing them how to:</p>
+      <p><strong>Find their workout</strong> for today. <strong>Log their sets, reps, and weights.</strong> <strong>Watch exercise demo videos</strong> if they're unsure about form. <strong>Track their nutrition</strong> (if applicable). <strong>Message you</strong> with questions.</p>
+      <p>Every minute you invest here prevents a dozen confused messages later.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">9</span> Set the coaching cadence</h3>
+      <p>Tell them explicitly how the ongoing coaching works. When do check-ins happen? How quickly will you respond to messages? What should they track between sessions?</p>
+      <p>For example: "Every Sunday, you'll submit a weekly check-in with your weight, how training felt, and any questions. I'll review it and respond by Monday evening with adjustments for the week ahead. You can message me anytime -- I respond within 12 hours on weekdays."</p>
+      <p>Clear expectations prevent frustration on both sides.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">10</span> Schedule the first weekly check-in</h3>
+      <p>Don't wait for them to remember. Set the first check-in date explicitly and send a reminder. If your platform supports automated check-in reminders, turn them on now.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">11</span> Send a day-3 check-in message</h3>
+      <p>Three days in, send a brief personal message: "Hey [name], how's the first few days going? Any questions about the program or the app?"</p>
+      <p>This tiny touch point does three things: it catches problems early, it shows you care, and it gives them a low-pressure opportunity to ask the "dumb questions" they've been sitting on. Most clients have questions in the first week. If you don't create a space for them, those questions turn into confusion, which turns into disengagement.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="step-number">12</span> Review and adjust after week 1</h3>
+      <p>After their first full week, review everything: workout logs, check-in feedback, any messages they sent. Then make adjustments. Maybe the volume was too high. Maybe they breezed through and need more challenge. Maybe their schedule shifted.</p>
+      <p>The key message you're sending: "I'm paying attention. Your experience matters. This program is built for you, and I'm actively managing it."</p>
+    </div>
+
+    <h2>Automating Your Onboarding</h2>
+
+    <p>Here's the good news: about half of this checklist can be automated without losing the personal touch.</p>
+
+    <p><strong>Automate these:</strong></p>
+    <ul>
+      <li>Welcome message delivery (triggered immediately on purchase)</li>
+      <li>Intake questionnaire delivery (included in the welcome message)</li>
+      <li>Scheduling link for the assessment (embedded in the flow)</li>
+      <li>Check-in reminders (automated weekly notifications)</li>
+      <li>Day-3 check-in message (scheduled to send 3 days after activation)</li>
+    </ul>
+
+    <p><strong>Keep these personal:</strong></p>
+    <ul>
+      <li>Reviewing the intake questionnaire</li>
+      <li>Conducting the assessment</li>
+      <li>Goal-setting conversation</li>
+      <li>Program design (or at minimum, reviewing and customizing an AI-generated draft)</li>
+      <li>The week-1 review and adjustments</li>
+    </ul>
+
+    <p>FirstRep's coaching activation checklist was built around exactly this split. When a new client subscribes, it automatically triggers the welcome message, delivers the intake form, and builds a step-by-step activation checklist in your trainer dashboard so nothing falls through the cracks. You focus on the coaching. The system handles the logistics.</p>
+
+    <h2>Common Onboarding Mistakes</h2>
+
+    <p>Even trainers who have a process often make one of these four mistakes:</p>
+
+    <div class="mistake-box">
+      <p><strong>Mistake 1: Waiting too long to deliver the first program.</strong> Every day between purchase and first workout is a day of buyer's remorse. The client is second-guessing their decision. Get something in their hands within 24 hours, even if it's a "starter week" while you finalize the full program.</p>
+    </div>
+
+    <div class="mistake-box">
+      <p><strong>Mistake 2: Information overload.</strong> You send the intake form, a 20-page welcome PDF, three video links, a nutrition guide, and a supplement recommendation -- all on day one. The client freezes. Keep the first day simple: welcome message, intake form, schedule the assessment. Everything else can wait.</p>
+    </div>
+
+    <div class="mistake-box">
+      <p><strong>Mistake 3: Not setting expectations.</strong> If you don't tell clients when and how you'll communicate, they'll either message you constantly (and feel ignored when you don't reply at midnight) or never message you (and quietly disengage). Be explicit about cadence and response times from day one.</p>
+    </div>
+
+    <div class="mistake-box">
+      <p><strong>Mistake 4: Skipping the intake form.</strong> Some trainers think they can "get to know the client" through casual conversation during sessions. They can't -- not reliably. A structured intake form ensures you capture the critical information every time, for every client. It's also a legal safeguard if they have an undisclosed health condition.</p>
+    </div>
+
+    <h2>Your Onboarding Sets the Ceiling</h2>
+
+    <p>Here's the truth that experienced trainers know: the quality of your onboarding sets the ceiling for the entire coaching relationship. A client who's onboarded well understands the system, trusts the process, and has realistic expectations. A client who's onboarded poorly is always slightly confused, slightly disengaged, and one bad week away from cancelling.</p>
+
+    <p>The 12 steps above aren't complicated. Most of them take 5 to 10 minutes each. But strung together into a deliberate sequence, they transform a new sale into a long-term coaching relationship.</p>
+
+    <p>If you're managing this process manually across WhatsApp threads and Google Docs, you're going to drop steps. That's not a character flaw -- it's a systems problem. Tools like FirstRep's automated onboarding flow exist specifically to solve it: intake forms, activation checklists, automated reminders, and assessment tools all wired into one sequence that triggers the moment a client subscribes.</p>
+
+    <p>Build the system once. Use it for every client. Watch your retention climb.</p>
+
+  </article>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Ready to Streamline Your Coaching?</h2>
+      <p class="cta-section__desc">Start free with up to 3 clients -- no credit card required.</p>
+      <div class="cta-section__badges">
+        <a href="#" class="cta-section__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><polyline points="12 3 12 9"/><path d="m16 16 3.5 3.5"/><path d="M20 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#" class="cta-section__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Download for Android
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related">
+    <div class="container">
+      <h2 class="related__title">Related Articles</h2>
+      <div class="related__grid">
+        <a href="weekly-check-in-templates.html" class="related__card">
+          <h3 class="related__card-title">Weekly Client Check-Ins That Actually Improve Results (Templates Included)</h3>
+          <p class="related__card-excerpt">A good check-in does more than collect data -- it drives accountability, surfaces problems, and keeps clients engaged.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 25, 2026</span>
+          </div>
+        </a>
+        <a href="create-workout-programs-faster.html" class="related__card">
+          <h3 class="related__card-title">How to Create Client Workout Programs in Half the Time</h3>
+          <p class="related__card-excerpt">Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 31, 2026</span>
+          </div>
+        </a>
+        <a href="client-retention-after-goals.html" class="related__card">
+          <h3 class="related__card-title">Why 60% of Clients Leave After Hitting Their Goals (And How to Fix It)</h3>
+          <p class="related__card-excerpt">The post-goal drop-off is the biggest silent revenue killer. Here's the playbook top trainers use to keep clients for years.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 12, 2026</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="margin-bottom: 16px;">
+            <img src="../images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;">
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="../features.html">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../features/marketplace.html">Marketplace</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="index.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+    var ft = document.getElementById('featuresToggle');
+    var mm = document.getElementById('megaMenu');
+    var overlay = document.getElementById('megaOverlay');
+    if(ft && mm) {
+      ft.addEventListener('click', function() {
+        var open = mm.classList.contains('visible');
+        mm.classList.toggle('visible');
+        overlay.classList.toggle('visible');
+        ft.classList.toggle('open');
+      });
+      overlay.addEventListener('click', function() {
+        mm.classList.remove('visible');
+        overlay.classList.remove('visible');
+        ft.classList.remove('open');
+      });
+    }
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+  });
+  </script>
+</body>
+</html>

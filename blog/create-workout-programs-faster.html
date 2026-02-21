@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Create Client Workout Programs in Half the Time | FirstRep Blog</title>
+  <meta name="description" content="Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half without sacrificing quality.">
+  <link rel="canonical" href="https://firstrep.fit/blog/create-workout-programs-faster.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Create Client Workout Programs in Half the Time">
+  <meta property="og:description" content="Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half without sacrificing quality.">
+  <meta property="og:url" content="https://firstrep.fit/blog/create-workout-programs-faster.html">
+  <meta property="og:site_name" content="FirstRep">
+  <meta property="article:published_time" content="2026-01-31">
+  <meta property="article:author" content="FirstRep Team">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Create Client Workout Programs in Half the Time",
+    "description": "Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half without sacrificing quality.",
+    "datePublished": "2026-01-31",
+    "author": {
+      "@type": "Organization",
+      "name": "FirstRep Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FirstRep"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --brand: #5E59FE;
+      --brand-hover: #4B46E5;
+      --brand-light: #EEF0FF;
+      --dark: #0F1117;
+      --text: #111827;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-2: #F5F5F7;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --radius: 16px;
+      --radius-lg: 20px;
+      --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.04), 0 20px 48px rgba(0,0,0,0.06);
+      --container: 1240px;
+      --nav-h: 80px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .nav__logo { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .nav__logo span { color: var(--brand); }
+    .nav__links { display: flex; gap: 32px; }
+    .nav__link { font-size: 14px; font-weight: 500; color: var(--text-2); letter-spacing: -0.01em; transition: color 0.2s; cursor: pointer; }
+    .nav__link:hover { color: var(--text); }
+    .nav__link--active { color: var(--brand); font-weight: 600; }
+    .nav__actions { display: flex; align-items: center; gap: 12px; }
+    .nav__cta { display: inline-flex; align-items: center; font-family: inherit; font-weight: 600; font-size: 14px; padding: 11px 28px; border-radius: 12px; background: var(--brand); color: #fff; border: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav__cta:hover { background: var(--brand-hover); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .nav__hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; display: block; }
+    .nav__mobile { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: #fff; padding: 32px 24px; flex-direction: column; gap: 8px; z-index: 999; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 17px; font-weight: 500; color: var(--text); padding: 16px 0; border-bottom: 1px solid var(--bg-2); }
+
+    /* MEGA MENU */
+    .nav__link--features { position: relative; display: inline-flex; align-items: center; gap: 4px; padding-bottom: 20px; margin-bottom: -20px; }
+    .nav__link--features::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid currentColor; margin-left: 2px; transition: transform 0.25s; }
+    .nav__link--features:hover::after, .nav__link--features.open::after { transform: rotate(180deg); }
+    .mega-menu { position: fixed; top: var(--nav-h); left: 50%; transform: translateX(-50%); width: 100%; max-width: 1120px; background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; z-index: 998; padding: 36px 40px 40px; }
+    .mega-menu.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .mega-menu__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .mega-menu__col { padding: 0 28px; border-right: 1px solid var(--border); }
+    .mega-menu__col:first-child { padding-left: 0; }
+    .mega-menu__col:last-child { padding-right: 0; border-right: none; }
+    .mega-menu__col-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.03em; }
+    .mega-menu__col-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+    .mega-menu__links { display: flex; flex-direction: column; }
+    .mega-menu__link { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; font-size: 15px; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
+    .mega-menu__link:hover { color: var(--text); }
+    .mega-menu__link-arrow { font-size: 16px; color: var(--text-muted); transition: transform 0.2s, color 0.2s; }
+    .mega-menu__link:hover .mega-menu__link-arrow { transform: translateX(3px); color: var(--text); }
+    .mega-overlay { position: fixed; inset: 0; top: var(--nav-h); background: rgba(0,0,0,0.15); z-index: 997; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s; }
+    .mega-overlay.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+    .nav__mobile-features { display: none; padding-left: 16px; }
+    .nav__mobile-features.open { display: flex; flex-direction: column; }
+    .nav__mobile-features a { font-size: 15px; padding: 12px 0; color: var(--text-3); }
+
+    /* ARTICLE HERO */
+    .article-hero { padding: 140px 0 48px; text-align: center; }
+    .article-hero__meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
+    .article-hero__tag { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--brand); background: var(--brand-light); padding: 5px 12px; border-radius: 6px; }
+    .article-hero__date { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .article-hero__read { font-size: 14px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+    .article-hero__title { font-size: 44px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .article-hero__desc { font-size: 18px; color: var(--text-3); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+
+    /* ARTICLE BODY */
+    .article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .article p { font-size: 17px; line-height: 1.8; color: var(--text-2); margin-bottom: 24px; }
+    .article h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: var(--text); margin-top: 48px; margin-bottom: 16px; line-height: 1.25; }
+    .article h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; color: var(--text); margin-top: 32px; margin-bottom: 12px; line-height: 1.3; }
+    .article ul, .article ol { margin-bottom: 24px; padding-left: 24px; }
+    .article ul { list-style: disc; }
+    .article ol { list-style: decimal; }
+    .article li { font-size: 17px; line-height: 1.8; color: var(--text-2); margin-bottom: 8px; }
+    .article strong { color: var(--text); font-weight: 600; }
+    .article em { font-style: italic; }
+    .article a { color: var(--brand); font-weight: 500; transition: color 0.2s; }
+    .article a:hover { color: var(--brand-hover); text-decoration: underline; }
+    .article blockquote { border-left: 3px solid var(--brand); padding: 16px 24px; margin: 32px 0; background: var(--brand-light); border-radius: 0 12px 12px 0; }
+    .article blockquote p { font-size: 16px; color: var(--text-2); margin-bottom: 0; font-style: italic; }
+    .article-img { width: 100%; border-radius: var(--radius); margin: 32px 0; }
+    .article .callout { background: var(--bg-2); border-radius: var(--radius); padding: 24px 28px; margin: 32px 0; }
+    .article .callout p { margin-bottom: 0; font-size: 15px; }
+    .article .callout strong { color: var(--brand); }
+    .article .math-box { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 28px 32px; margin: 32px 0; }
+    .article .math-box p { color: rgba(255,255,255,0.8); margin-bottom: 12px; }
+    .article .math-box p:last-child { margin-bottom: 0; }
+    .article .math-box strong { color: #fff; }
+    .article .math-box .highlight { color: var(--brand); font-weight: 700; font-size: 20px; }
+
+    /* CTA SECTION */
+    .cta-section { background: linear-gradient(135deg, var(--dark) 0%, #1a1142 40%, var(--brand) 100%); padding: 80px 0; text-align: center; }
+    .cta-section__title { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .cta-section__desc { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 32px; line-height: 1.6; }
+    .cta-section__badges { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .cta-section__badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 12px 24px; color: #fff; font-size: 15px; font-weight: 600; transition: background 0.2s; cursor: pointer; }
+    .cta-section__badge:hover { background: rgba(255,255,255,0.2); }
+    .cta-section__badge svg { width: 24px; height: 24px; }
+
+    /* RELATED ARTICLES */
+    .related { padding: 80px 0; background: var(--bg-2); }
+    .related__title { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; text-align: center; margin-bottom: 40px; }
+    .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .related__card { background: var(--bg); border-radius: var(--radius); padding: 28px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: var(--shadow); }
+    .related__card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .related__card-title { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; color: var(--text); }
+    .related__card-excerpt { font-size: 14px; color: var(--text-3); line-height: 1.65; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .related__card-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .related__card-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* FOOTER */
+    .footer { background: var(--dark); padding: 80px 0 40px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer__desc { font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 300px; margin-bottom: 24px; }
+    .footer__social { display: flex; gap: 12px; }
+    .footer__social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 14px; transition: all 0.2s; }
+    .footer__social a:hover { background: var(--brand); color: #fff; }
+    .footer__col-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer__col a { display: block; font-size: 14px; color: rgba(255,255,255,0.55); padding: 5px 0; transition: color 0.2s; }
+    .footer__col a:hover { color: #fff; }
+    .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer__legal { display: flex; gap: 24px; }
+    .footer__legal a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer__legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .related__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav__links, .nav__actions { display: none; }
+      .nav__hamburger { display: flex; }
+      .article-hero__title { font-size: 30px; }
+      .article-hero__desc { font-size: 16px; }
+      .article-hero { padding: 120px 0 32px; }
+      .article h2 { font-size: 24px; }
+      .article h3 { font-size: 19px; }
+      .related__grid { grid-template-columns: 1fr; gap: 20px; }
+      .cta-section__title { font-size: 28px; }
+      .cta-section__desc { font-size: 16px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+      .article-hero__meta { flex-wrap: wrap; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo"><img src="../images/brand/firstrep-black.png" alt="FirstRep" style="height: 28px; width: auto;"></a>
+      <div class="nav__links">
+        <span class="nav__link nav__link--features" id="featuresToggle">Features</span>
+        <a href="../index.html#pricing" class="nav__link">Pricing</a>
+        <a href="index.html" class="nav__link nav__link--active">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+      </div>
+      <div class="nav__actions">
+        <a href="#" class="nav__cta">Download the App &rarr;</a>
+      </div>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mega Menu -->
+    <div class="mega-menu" id="megaMenu">
+      <div class="mega-menu__grid">
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Coach</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=220&fit=crop&q=80" alt="Trainer coaching client">
+          <div class="mega-menu__links">
+            <a href="../features/programming.html" class="mega-menu__link">AI Workout Builder <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/nutrition.html" class="mega-menu__link">Nutrition & Meal Plans <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Engage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=220&fit=crop&q=80" alt="People connecting">
+          <div class="mega-menu__links">
+            <a href="../features/communication.html" class="mega-menu__link">1-on-1 Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/communication.html" class="mega-menu__link">Group Messaging <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Forms & Questionnaires <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/coaching.html" class="mega-menu__link">Weekly Check-ins <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Manage</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=220&fit=crop&q=80" alt="Gym management">
+          <div class="mega-menu__links">
+            <a href="../features/coaching.html" class="mega-menu__link">Client Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/scheduling.html" class="mega-menu__link">Scheduling & Booking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/progress.html" class="mega-menu__link">Analytics & Reports <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Business Tools <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="mega-menu__col">
+          <div class="mega-menu__col-title">Scale</div>
+          <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
+          <div class="mega-menu__links">
+            <a href="../features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="../features.html" class="mega-menu__link">All Features <span class="mega-menu__link-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mega-overlay" id="megaOverlay"></div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" id="mobileFeatureToggle">Features +</a>
+      <div class="nav__mobile-features" id="mobileFeatures">
+        <a href="../features/programming.html">AI Workout Builder</a>
+        <a href="../features/nutrition.html">Nutrition & Meal Plans</a>
+        <a href="../features/habits.html">Habit Tracking</a>
+        <a href="../features/coaching.html">Coaching Dashboard</a>
+        <a href="../features/communication.html">Messaging</a>
+        <a href="../features/scheduling.html">Scheduling</a>
+        <a href="../features/marketplace.html">Marketplace</a>
+        <a href="../features/payments.html">Payments</a>
+        <a href="../features.html">All Features</a>
+      </div>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+      <a href="#" class="nav__cta" style="margin-top: 16px; text-align: center; justify-content: center;">Download the App</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__meta">
+        <span class="article-hero__tag">Programming</span>
+        <span class="article-hero__date"><i data-lucide="calendar" style="width:14px;height:14px"></i> January 31, 2026</span>
+        <span class="article-hero__read"><i data-lucide="clock" style="width:14px;height:14px"></i> 6 min read</span>
+      </div>
+      <h1 class="article-hero__title">How to Create Client Workout Programs in Half the Time</h1>
+      <p class="article-hero__desc">Stop spending Sunday evenings writing programs from scratch. These 5 strategies cut your programming time in half without sacrificing quality.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <article class="article">
+
+    <p>It's Sunday evening. You're staring at a blank spreadsheet, trying to write 8 different programs for 8 different clients. One needs a hypertrophy block. Another is training around a shoulder injury. A third just told you they can only train 3 days instead of 4.</p>
+
+    <p>Sound familiar?</p>
+
+    <p>Programming is one of the most important things you do as a coach. It's also one of the most time-consuming. A survey of online trainers found that most spend 30 to 45 minutes per client per week just on programming. Scale that to 20 clients and you're looking at 10 to 15 hours a week -- before you've coached a single session, answered a single message, or checked a single weekly review.</p>
+
+    <p>The good news: you don't have to choose between quality and speed. Here are five strategies that will cut your programming time in half.</p>
+
+    <h2>Why Programming Takes So Long</h2>
+
+    <p>Before we fix it, let's name the problem. Most trainers program slowly because of a combination of these habits:</p>
+
+    <ul>
+      <li><strong>Starting from scratch every time.</strong> Every new program is a blank page. You're reinventing the wheel for every client, every month.</li>
+      <li><strong>No organized exercise library.</strong> You're googling exercises, scrolling through Instagram saves, or trying to remember that one movement you saw at a seminar.</li>
+      <li><strong>Manual copy-paste.</strong> You write one program, then spend 20 minutes reformatting it for a different client with a similar goal.</li>
+      <li><strong>Scattered tools.</strong> Your programs live in Google Sheets, your exercise notes live in your phone, and your client info lives in a DM thread. Nothing talks to each other.</li>
+    </ul>
+
+    <p>Every one of these problems has a solution. Let's walk through them.</p>
+
+    <h2>Strategy 1: Build a Template Library</h2>
+
+    <p>This is the single biggest time-saver available to you, and you can start today.</p>
+
+    <p>Instead of starting every program from zero, create 4 to 6 base templates organized by goal:</p>
+
+    <ul>
+      <li><strong>Hypertrophy</strong> -- 4-day upper/lower split, moderate volume, progressive overload built in</li>
+      <li><strong>Fat loss</strong> -- 3-day full body with metabolic finishers, shorter rest periods</li>
+      <li><strong>Strength</strong> -- 4-day focus on compound lifts, linear periodization</li>
+      <li><strong>General fitness</strong> -- 3-day full body, balanced push/pull/legs, low complexity</li>
+      <li><strong>Beginner</strong> -- 2-3 day full body, machine-heavy, higher reps, simple progressions</li>
+      <li><strong>Home/minimal equipment</strong> -- Bodyweight and dumbbell-based, 3-day split</li>
+    </ul>
+
+    <p>Each template should have placeholder exercises for each movement pattern (horizontal push, vertical pull, hip hinge, etc.), recommended set and rep ranges, and rest period guidelines.</p>
+
+    <p>When a new client comes in, you don't start from scratch. You grab the template that fits their goal, swap in exercises that match their equipment and experience level, and adjust volume. What used to take 40 minutes now takes 15.</p>
+
+    <h2>Strategy 2: Use an Exercise Database with Search</h2>
+
+    <p>How much time do you spend just picking exercises? You know your client needs a horizontal pull, but you're mentally scrolling through every rowing variation you've ever learned, trying to remember which one works with a cable machine.</p>
+
+    <p>An organized, searchable exercise library changes everything. You should be able to filter by:</p>
+
+    <ul>
+      <li>Muscle group (primary and secondary)</li>
+      <li>Equipment required</li>
+      <li>Movement pattern</li>
+      <li>Difficulty level</li>
+    </ul>
+
+    <p>Even better if the library includes demo videos. Your clients get form references, and you don't have to record your own demos for every exercise.</p>
+
+    <p>FirstRep's exercise library includes over 1,700 exercises with demo videos, muscle group tags, and equipment filters. You type "chest, cable" and get every cable chest exercise with video demos, ready to drop into a program. It's the kind of thing that saves you 2 minutes per exercise -- and that adds up fast when you're programming 6 exercises per workout for 20 clients.</p>
+
+    <h2>Strategy 3: Clone and Customize</h2>
+
+    <p>Here's a mental shift that will save you hours: most clients don't need a completely new program every month. They need a <em>progressed</em> program.</p>
+
+    <p>Instead of writing from scratch, clone last month's program and make targeted adjustments:</p>
+
+    <ul>
+      <li>Increase volume by 1-2 sets on key movements</li>
+      <li>Swap 2-3 exercises to prevent staleness</li>
+      <li>Adjust intensity (heavier loads, shorter rest, more challenging variations)</li>
+      <li>Modify around new goals or feedback from check-ins</li>
+    </ul>
+
+    <p>This approach is actually <em>better</em> coaching, not lazy coaching. Progressive overload requires continuity. If you're writing completely different programs every month, you're making it harder to track progress and harder for your clients to learn the movements.</p>
+
+    <p>The clone-and-customize method works especially well with coaching software that supports program duplication. You hit "clone," make your tweaks, and assign. Five minutes per client instead of thirty.</p>
+
+    <h2>Strategy 4: Batch Your Programming</h2>
+
+    <p>Context switching is the silent killer of productivity. If you're writing one program on Monday, another on Wednesday, and scrambling to finish the rest on Sunday night, you're spending more time than necessary.</p>
+
+    <p>Try batching instead:</p>
+
+    <ul>
+      <li>Pick one block of time each week (Sunday morning, Wednesday evening -- whatever works)</li>
+      <li>Do all your programming in that one block</li>
+      <li>Group similar clients together (all your fat loss clients first, then all your strength clients)</li>
+      <li>Use your templates and cloning to move fast</li>
+    </ul>
+
+    <p>When you batch, you get into a flow state. Your brain is already thinking about exercise selection and periodization. Switching from "fat loss program mode" to "answering emails mode" and back again eats up 15-20 minutes of mental ramp-up time each switch.</p>
+
+    <p>Most trainers who batch their programming report cutting their total time by 30 to 40 percent -- on top of whatever they save from templates and cloning.</p>
+
+    <h2>Strategy 5: Let AI Handle the First Draft</h2>
+
+    <p>This is the newest strategy, and it's the most powerful.</p>
+
+    <p>AI workout builders can generate a complete program based on a client's profile: their goals, experience level, available equipment, training frequency, and injury history. The AI produces a structured program with exercises, sets, reps, and rest periods.</p>
+
+    <p>Is the AI output perfect? No. But it's a solid first draft -- and that's the point. Instead of staring at a blank page, you're reviewing and editing a program that's already 80 percent there. Swap a few exercises, adjust some rep ranges, add your coaching notes. Done.</p>
+
+    <p>FirstRep's AI workout builder does exactly this. You input the client's details, and it generates a periodized program using exercises from the 1,700+ library. You review, tweak, and assign. What used to take 40 minutes takes 10.</p>
+
+    <p>The key mindset: AI is a <em>drafting tool</em>, not a replacement for your expertise. You're the coach. The AI is your assistant.</p>
+
+    <h2>The Time Math</h2>
+
+    <div class="math-box">
+      <p><strong>Before (manual programming):</strong></p>
+      <p>30-45 min per client x 20 clients = <span class="highlight">10-15 hours/week</span></p>
+      <p style="margin-top: 20px;"><strong>After (templates + cloning + batching + AI drafts):</strong></p>
+      <p>10-15 min per client x 20 clients = <span class="highlight">3-5 hours/week</span></p>
+      <p style="margin-top: 20px;"><strong>Time saved: 7-10 hours per week.</strong></p>
+    </div>
+
+    <p>That's 7 to 10 hours you can spend coaching, growing your client base, creating content, or -- here's a novel idea -- not working.</p>
+
+    <p>And the quality of your programs actually goes up. Templates ensure consistency. Cloning ensures progressive overload. An exercise library ensures variety. AI ensures you're not missing obvious options. Batching ensures focus.</p>
+
+    <h2>Start With One Strategy</h2>
+
+    <p>You don't have to implement all five at once. Start with the one that addresses your biggest bottleneck:</p>
+
+    <ul>
+      <li><strong>Spending too long on exercise selection?</strong> Get a proper exercise database.</li>
+      <li><strong>Starting from scratch every time?</strong> Build 4 templates this weekend.</li>
+      <li><strong>Rewriting programs that barely change?</strong> Start cloning and customizing.</li>
+      <li><strong>Programming scattered across the week?</strong> Pick a batch day and stick to it.</li>
+      <li><strong>Staring at blank pages?</strong> Try an AI-assisted first draft.</li>
+    </ul>
+
+    <p>The trainers who scale past 20 clients without burning out all have one thing in common: they've built systems for the repetitive parts of their work so they can focus on the parts that actually require a human -- building relationships, adjusting programs based on nuanced feedback, and motivating people when the initial excitement fades.</p>
+
+    <p>Programming is important. Spending 15 hours a week on it isn't.</p>
+
+  </article>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title">Ready to Streamline Your Coaching?</h2>
+      <p class="cta-section__desc">Start free with up to 3 clients -- no credit card required.</p>
+      <div class="cta-section__badges">
+        <a href="#" class="cta-section__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"/><polyline points="12 3 12 9"/><path d="m16 16 3.5 3.5"/><path d="M20 14a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#" class="cta-section__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Download for Android
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED ARTICLES -->
+  <section class="related">
+    <div class="container">
+      <h2 class="related__title">Related Articles</h2>
+      <div class="related__grid">
+        <a href="automate-personal-training-business.html" class="related__card">
+          <h3 class="related__card-title">How to Automate Your Personal Training Business (And Save 15+ Hours Per Week)</h3>
+          <p class="related__card-excerpt">You became a trainer to coach people, not to drown in admin. Here are the 6 tasks you should automate today.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 18, 2026</span>
+          </div>
+        </a>
+        <a href="client-onboarding-checklist.html" class="related__card">
+          <h3 class="related__card-title">The Complete Client Onboarding Checklist for Personal Trainers</h3>
+          <p class="related__card-excerpt">First impressions set the tone for the entire coaching relationship. Use this 12-step checklist to onboard like a pro.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Jan 28, 2026</span>
+          </div>
+        </a>
+        <a href="scale-personal-training-beyond-20-clients.html" class="related__card">
+          <h3 class="related__card-title">How to Scale Your Personal Training Business Beyond 20 Clients</h3>
+          <p class="related__card-excerpt">Twenty clients is the ceiling -- until you change your model. Here's how to break through without burning out.</p>
+          <div class="related__card-meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 7 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 9, 2026</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div style="margin-bottom: 16px;">
+            <img src="../images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;">
+          </div>
+          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">X</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Product</h4>
+          <div class="footer__col">
+            <a href="../features.html">Features</a>
+            <a href="../index.html#pricing">Pricing</a>
+            <a href="../features/marketplace.html">Marketplace</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Resources</h4>
+          <div class="footer__col">
+            <a href="index.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Company</h4>
+          <div class="footer__col">
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal</h4>
+          <div class="footer__col">
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 FirstRep. All rights reserved.</div>
+        <div class="footer__legal">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+      mobileMenu.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if(a.id !== 'mobileFeatureToggle') mobileMenu.classList.remove('open'); });
+      });
+    }
+    var ft = document.getElementById('featuresToggle');
+    var mm = document.getElementById('megaMenu');
+    var overlay = document.getElementById('megaOverlay');
+    if(ft && mm) {
+      ft.addEventListener('click', function() {
+        var open = mm.classList.contains('visible');
+        mm.classList.toggle('visible');
+        overlay.classList.toggle('visible');
+        ft.classList.toggle('open');
+      });
+      overlay.addEventListener('click', function() {
+        mm.classList.remove('visible');
+        overlay.classList.remove('visible');
+        ft.classList.remove('open');
+      });
+    }
+    var mft = document.getElementById('mobileFeatureToggle');
+    var mfeat = document.getElementById('mobileFeatures');
+    if(mft && mfeat){
+      mft.addEventListener('click', function(e){
+        e.preventDefault();
+        mfeat.classList.toggle('open');
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
+      });
+    }
+  });
+  </script>
+</body>
+</html>
