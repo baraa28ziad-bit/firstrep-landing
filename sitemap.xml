@@ -97,9 +97,33 @@
   <!-- Blog -->
   <url>
     <loc>https://firstrep.fit/blog/index.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/best-personal-training-software.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/firstrep-vs-trainerize-vs-everfit.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/trainerize-alternative.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/everfit-alternative.html</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/blog/automate-personal-training-business.html</loc>

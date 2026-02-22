@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstRep — The AI-Powered Platform for Fitness Coaches</title>
-  <meta name="description" content="Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale.">
+  <title>FirstRep — Find Clients & Coach Smarter with AI</title>
+  <meta name="description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
@@ -13,16 +13,16 @@
     <meta name="msapplication-TileColor" content="#0F1117">
     <link rel="canonical" href="https://firstrep.fit/">
     <meta name="keywords" content="personal training software, fitness coaching platform, personal trainer app, online coaching tool, fitness business management, AI workout builder, trainer marketplace">
-    <meta property="og:title" content="FirstRep — The AI-Powered Platform for Fitness Coaches">
-    <meta property="og:description" content="Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale.">
+    <meta property="og:title" content="FirstRep — Find Clients & Coach Smarter with AI">
+    <meta property="og:description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://firstrep.fit/">
     <meta property="og:image" content="https://firstrep.fit/images/icons/og-image.png">
     <meta property="og:site_name" content="FirstRep">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="FirstRep — The AI-Powered Platform for Fitness Coaches">
-    <meta name="twitter:description" content="Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale.">
+    <meta name="twitter:title" content="FirstRep — Find Clients & Coach Smarter with AI">
+    <meta name="twitter:description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
     <meta name="twitter:image" content="https://firstrep.fit/images/icons/og-image.png">
     <script type="application/ld+json">
     {
@@ -31,7 +31,7 @@
     "name": "FirstRep",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "iOS, Android",
-    "description": "The AI-powered platform for personal trainers to find clients, build programs, and coach at scale.",
+    "description": "The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Free for 3 clients.",
     "url": "https://firstrep.fit",
     "author": {
       "@type": "Organization",
@@ -152,8 +152,8 @@
     /* ===== HERO ===== */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; padding-top: var(--nav-h); }
     .hero__bg { position: absolute; inset: 0; }
-    .hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
-    .hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,17,23,0.92) 0%, rgba(15,17,23,0.6) 100%); }
+    .hero__bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+    .hero__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,17,23,0.72) 0%, rgba(15,17,23,0.35) 50%, rgba(15,17,23,0.45) 100%); }
     .hero__inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 60px; padding: 80px 0; }
     .hero__content { flex: 1; min-width: 0; }
     .hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); margin-bottom: 28px; letter-spacing: 0.02em; }
@@ -162,7 +162,7 @@
     .hero__rotating { display: inline-block; position: relative; color: var(--brand); }
     .hero__word { position: absolute; left: 0; top: 0; opacity: 0; transform: translateY(10px); transition: all 0.5s; white-space: nowrap; }
     .hero__word.active { opacity: 1; transform: translateY(0); position: relative; }
-    .hero__sub { font-size: 18px; color: rgba(255,255,255,0.55); max-width: 520px; line-height: 1.7; margin-bottom: 36px; font-weight: 400; letter-spacing: -0.01em; }
+    .hero__sub { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.7; margin-bottom: 36px; font-weight: 400; letter-spacing: -0.01em; }
     .hero__actions { display: flex; gap: 16px; margin-bottom: 24px; }
     .hero__note { font-size: 14px; color: rgba(255,255,255,0.35); font-weight: 400; }
     /* Hero phone composition — floats over the lifestyle bg */
@@ -690,22 +690,23 @@
   <!-- ===== SECTION 1: HERO ===== -->
   <section class="hero">
     <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&h=900&fit=crop&q=80" alt="Gym interior with modern equipment">
+      <img src="images/hero-bg.jpg" alt="Personal trainer coaching a client in the gym">
     </div>
     <div class="hero__overlay"></div>
     <div class="container">
       <div class="hero__inner">
         <div class="hero__content" data-animate>
           <h1 class="hero__title">
-            The AI-Powered Platform for
+            Clients Find You.<br>
+            AI Builds Programs.<br>
+            You
             <span class="hero__rotating" id="rotatingText">
-              <span class="hero__word active">Personal Trainers</span>
-              <span class="hero__word">Online Coaches</span>
-              <span class="hero__word">Fitness Entrepreneurs</span>
+              <span class="hero__word active">Coach.</span>
+              <span class="hero__word">Scale.</span>
+              <span class="hero__word">Grow.</span>
             </span>
-            <br>To Build a Thriving Business
           </h1>
-          <p class="hero__sub">Stop juggling spreadsheets, WhatsApp groups, and unpaid invoices. FirstRep gives you a marketplace to find clients, AI to build programs in seconds, and tools to coach at scale — without the burnout.</p>
+          <p class="hero__sub">The only platform that finds you clients through a built-in marketplace AND gives you AI tools to coach them. Stop chasing leads. Stop writing programs manually. Start coaching.</p>
           <div class="hero__badges">
             <div class="app-badges">
               <a href="#" class="app-badge app-badge--apple">
@@ -724,7 +725,6 @@
               </a>
             </div>
           </div>
-          <p class="hero__note">Free for trainers with up to 3 clients. No credit card needed.</p>
         </div>
         <div class="hero__phones" data-animate>
           <img class="hero__phone hero__phone--primary" src="images/mockups/trainer_home-portrait.png" alt="FirstRep trainer dashboard">
@@ -755,7 +755,7 @@
       <span class="trust__item">CrossFit Level 2</span>
       <span class="trust__item">ACSM</span>
     </div>
-    <p class="trust__stats">1,734 exercises &middot; 50+ equipment brands &middot; AI-powered programs</p>
+    <p class="trust__stats">1,734 exercises &middot; AI program builder &middot; Built-in client marketplace &middot; 0% commission on your clients</p>
   </section>
 
   <!-- ===== SECTION 2: FEATURE TABS ===== -->
@@ -780,22 +780,22 @@
         <div class="ftab active" data-tab="0" onclick="switchTab(0)">
           <div class="ftab__icon"><i data-lucide="sparkles"></i> <span class="ftab__ai">AI</span></div>
           <div class="ftab__title">AI Workout Builder</div>
-          <p class="ftab__desc">Describe what you want — "chest and triceps hypertrophy with dumbbells" — and AI builds a complete workout from your 1,734-exercise library. Generate full programs in seconds, not hours.</p>
+          <p class="ftab__desc">Tell AI what you need — "4-day PPL for intermediate, dumbbells only" — and get a full program in 30 seconds. What used to take 2 hours now takes less than a minute.</p>
         </div>
         <div class="ftab" data-tab="1" onclick="switchTab(1)">
           <div class="ftab__icon"><i data-lucide="users"></i></div>
-          <div class="ftab__title">Your Clients at a Glance</div>
-          <p class="ftab__desc">See every client's status in one view. Compliance rates, workout progress, and quick actions — message, assign habits, or send forms — right from the client card.</p>
+          <div class="ftab__title">Every Client, One Screen</div>
+          <p class="ftab__desc">Compliance rates, workout streaks, who needs attention — all at a glance. Message, adjust programs, or flag concerns without opening a single spreadsheet.</p>
         </div>
         <div class="ftab" data-tab="2" onclick="switchTab(2)">
           <div class="ftab__icon"><i data-lucide="layout-dashboard"></i></div>
-          <div class="ftab__title">Coaching Command Center</div>
-          <p class="ftab__desc">Total clients, average compliance, unread messages, revenue — everything that matters on one screen. Quick actions let you create packages, invite clients, and build programs.</p>
+          <div class="ftab__title">Your Business Dashboard</div>
+          <p class="ftab__desc">Revenue, active clients, compliance, and pending tasks — your entire business on one screen. Create packages, invite clients, and build programs in seconds.</p>
         </div>
         <div class="ftab" data-tab="3" onclick="switchTab(3)">
           <div class="ftab__icon"><i data-lucide="globe"></i></div>
-          <div class="ftab__title">Clients Find You</div>
-          <p class="ftab__desc">Your profile goes live on the FirstRep marketplace where clients search by specialty, location, and rating. Featured trainers, verified badges, and real reviews do the selling.</p>
+          <div class="ftab__title">Clients Come to You</div>
+          <p class="ftab__desc">No more DM hustling or paid ads. Your profile goes live on the FirstRep marketplace. Clients search by specialty, location, and rating — and book you directly.</p>
         </div>
       </div>
     </div>
@@ -804,7 +804,7 @@
   <!-- ===== SECTION 3: TWO WAYS TO GROW ===== -->
   <section class="services">
     <div class="container">
-      <h2 class="services__title" data-animate>Whether You Coach One-on-One or Reach Hundreds, <em>FirstRep Scales With You</em></h2>
+      <h2 class="services__title" data-animate>One Platform. Whether You Coach 3 Clients or 50, <em>FirstRep Grows With You</em></h2>
       <div class="services__grid">
         <!-- Card 1: High-Ticket — lifestyle bg + phone overlay -->
         <div class="svc-card" data-animate>
@@ -813,13 +813,13 @@
             <div class="svc-card__img-overlay"></div>
             <img class="svc-card__phone" src="images/mockups/client_upcomingSessions-portrait.png" alt="Upcoming coaching sessions">
           </div>
-          <h3 class="svc-card__title">High-Ticket Coaching</h3>
-          <p class="svc-card__subtitle">One-to-One. Premium. Personal.</p>
+          <h3 class="svc-card__title">Premium 1-on-1 Coaching</h3>
+          <p class="svc-card__subtitle">High-touch. High-ticket. Personal.</p>
           <div class="svc-card__features">
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Custom training programs tailored to each client</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Direct messaging with real coaching conversations</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduled video and in-person sessions</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Weekly check-ins with detailed progress tracking</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI-generated programs customized per client</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> In-app messaging, check-ins, and progress tracking</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduling with Google Calendar sync</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automated accountability and milestone celebrations</div>
           </div>
         </div>
         <!-- Card 2: Scalable — lifestyle bg + phone overlay -->
@@ -829,13 +829,13 @@
             <div class="svc-card__img-overlay"></div>
             <img class="svc-card__phone" src="images/mockups/trainer_invite-portrait.png" alt="Send invite link to clients">
           </div>
-          <h3 class="svc-card__title">Scalable Business</h3>
+          <h3 class="svc-card__title">Scale Without Burnout</h3>
           <p class="svc-card__subtitle">One-to-Many. Packaged. Automated.</p>
           <div class="svc-card__features">
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Monthly coaching, session packs, and digital programs</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Invite links clients can subscribe to in 60 seconds</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automation rules that handle reminders and follow-ups</div>
-            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Marketplace listing that attracts clients while you sleep</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Coaching packages, session packs, and digital products</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Invite links — clients subscribe in 60 seconds</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Smart automation handles reminders and follow-ups</div>
+            <div class="svc-card__feature"><span class="svc-card__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Marketplace brings you new clients while you sleep</div>
           </div>
         </div>
       </div>
@@ -850,21 +850,21 @@
     <div class="fmod__card" data-animate>
       <div class="fmod__text">
         <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="clipboard-list"></i></span> PLAN &amp; COACH</span>
-        <h2 class="fmod__title">Build Programs in Seconds, Not Hours</h2>
+        <h2 class="fmod__title">2 Hours of Programming? Try 30 Seconds.</h2>
         <div class="fmod__accordion">
           <div class="acc-item active">
             <div class="acc-item__header">
               <i data-lucide="sparkles" class="acc-item__header-icon"></i><span>AI Program Builder</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Describe what you need. AI generates a full program from 1,734 exercises with video demos. Push Pull Legs, Upper/Lower, Full Body — or anything custom.</div>
+            <div class="acc-item__body">Tell AI what you need in plain English. It builds the full program from 1,734 exercises with video demos. PPL, Upper/Lower, Full Body — or anything custom.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
               <i data-lucide="trending-up" class="acc-item__header-icon"></i><span>Auto-Progression</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">When a client hits their rep target with good RPE, the system suggests a weight increase. Progressive overload on autopilot.</div>
+            <div class="acc-item__body">Client hits their rep target at the right RPE? The system suggests a weight increase automatically. Progressive overload on autopilot.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
@@ -938,21 +938,21 @@
     <div class="fmod__card fmod__card--reverse" data-animate>
       <div class="fmod__text">
         <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="bar-chart-3"></i></span> MOTIVATE &amp; MEASURE</span>
-        <h2 class="fmod__title">Coach Smarter, Not Harder</h2>
+        <h2 class="fmod__title">Know Exactly Which Clients Need You Right Now</h2>
         <div class="fmod__accordion">
           <div class="acc-item active">
             <div class="acc-item__header">
               <i data-lucide="shield-alert" class="acc-item__header-icon"></i><span>Smart Risk Detection</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Health scores flag plateaus, declining adherence, and low energy before clients churn. You intervene at the right moment.</div>
+            <div class="acc-item__body">AI scores each client's risk of churning based on adherence, energy, and engagement. You get flagged before problems become cancellations.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
               <i data-lucide="file-text" class="acc-item__header-icon"></i><span>Auto Weekly Summaries</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Every Monday, both you and your client receive an auto-generated report: PRs, volume, compliance, trends. Saves 30 min per client per week.</div>
+            <div class="acc-item__body">Every Monday, you and your client get an auto-generated report: PRs, volume, compliance, trends. Saves 30 minutes per client per week.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
@@ -1021,14 +1021,14 @@
     <div class="fmod__card" data-animate>
       <div class="fmod__text">
         <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="message-circle"></i></span> ENGAGE</span>
-        <h2 class="fmod__title">Stay Connected Without the Burnout</h2>
+        <h2 class="fmod__title">50 Clients. Zero WhatsApp Chaos.</h2>
         <div class="fmod__accordion">
           <div class="acc-item active">
             <div class="acc-item__header">
               <i data-lucide="bot" class="acc-item__header-icon"></i><span>AI Check-In Responses</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Batch review 20+ check-ins in 15 minutes. AI drafts personalized responses based on each client's data. You approve or edit.</div>
+            <div class="acc-item__body">Review 20+ weekly check-ins in 15 minutes. AI drafts personalized responses based on each client's data. You approve, edit, or send as-is.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
@@ -1113,21 +1113,21 @@
     <div class="fmod__card fmod__card--reverse" data-animate>
       <div class="fmod__text">
         <span class="fmod__label"><span class="fmod__label-icon fmod__label-icon--purple"><i data-lucide="maximize-2"></i></span> SCALE</span>
-        <h2 class="fmod__title">Grow Your Business on Autopilot</h2>
+        <h2 class="fmod__title">Stop Chasing Clients. Let Them Find You.</h2>
         <div class="fmod__accordion">
           <div class="acc-item active">
             <div class="acc-item__header">
               <i data-lucide="store" class="acc-item__header-icon"></i><span>Marketplace &amp; Discovery</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Your profile lives on the FirstRep marketplace. Clients search by specialty, location, and ratings. Featured trainers get priority placement.</div>
+            <div class="acc-item__body">No other coaching platform has this. Your profile lives on a marketplace where real clients search, compare, and book trainers. No ads needed.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
               <i data-lucide="mail" class="acc-item__header-icon"></i><span>Client Invitations</span>
               <span class="acc-item__icon">+</span>
             </div>
-            <div class="acc-item__body">Invite via email, link, or QR code. Clients subscribe in one tap with your package pre-selected. No more "I'll think about it."</div>
+            <div class="acc-item__body">Email, link, or QR code — your client subscribes in one tap with your package pre-selected. 0% commission on clients you bring yourself.</div>
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
@@ -1188,8 +1188,8 @@
     <div class="container">
       <div class="ai-section__header" data-animate>
         <div class="ai-section__badge"><span class="ai-section__badge-dot"></span> AI-Powered</div>
-        <h2 class="ai-section__title">AI That Coaches With You, Not Instead of You</h2>
-        <p class="ai-section__sub">Other platforms bolt on AI as a gimmick. FirstRep's AI is built into the coaching workflow — it generates programs, predicts risk, and saves you hours. You review everything. Clients never know it's AI. They just see a coach who's always on top of things.</p>
+        <h2 class="ai-section__title">AI That Makes You Look Like a Superhero</h2>
+        <p class="ai-section__sub">AI builds programs, flags at-risk clients, drafts check-in responses, and automates follow-ups. You stay in control — clients just see a coach who never misses a beat.</p>
       </div>
 
       <!-- AI Visual: lifestyle scene with large AI Builder card -->
@@ -1240,19 +1240,19 @@
       <div class="ai-section__grid" data-animate>
         <div class="ai-card">
           <div class="ai-card__icon ai-card__icon--generate"><i data-lucide="sparkles"></i></div>
-          <h3 class="ai-card__title">Generate Programs</h3>
-          <p class="ai-card__desc">Describe a workout in plain language. AI builds it from 1,734 exercises with sets, reps, and rest periods. Full programs in under a minute.</p>
+          <h3 class="ai-card__title">AI Program Builder</h3>
+          <p class="ai-card__desc">Describe any workout in plain English. AI builds it from 1,734 exercises with sets, reps, tempo, and rest. Full multi-week programs in under a minute.</p>
         </div>
         <div class="ai-card">
           <div class="ai-card__icon ai-card__icon--predict"><i data-lucide="zap"></i></div>
           <h3 class="ai-card__title">Smart Automation</h3>
-          <p class="ai-card__desc">Rules that trigger when clients miss workouts, skip check-ins, or hit milestones. The system acts. You stay focused on high-value coaching.</p>
+          <p class="ai-card__desc">Missed workout? Auto-reminder. Hit a streak? Auto-celebrate. Client going quiet? You get flagged. The system handles follow-ups so you can coach.</p>
           <img class="ai-card__ref" src="images/mockups/trainer_automation-portrait.png" alt="Automation rules">
         </div>
         <div class="ai-card">
           <div class="ai-card__icon ai-card__icon--automate"><i data-lucide="utensils"></i></div>
-          <h3 class="ai-card__title">Complete Nutrition</h3>
-          <p class="ai-card__desc">Build recipes with macro breakdowns. Assign meal plans and dietary tags. Track client nutrition compliance alongside their training data.</p>
+          <h3 class="ai-card__title">Nutrition Coaching Built In</h3>
+          <p class="ai-card__desc">Macro targets, meal plans, grocery lists, barcode scanner, and daily compliance tracking. No MyFitnessPal workaround needed.</p>
           <img class="ai-card__ref" src="images/mockups/trainer_recipe-portrait.png" alt="Recipe builder with macros">
         </div>
       </div>
@@ -1263,24 +1263,24 @@
   <section class="stats">
     <div class="container">
       <div class="stats__header" data-animate>
-        <h2 class="stats__title">Built for Trainers Who Mean Business</h2>
+        <h2 class="stats__title">Not a Workout Tracker. A Business-in-a-Box.</h2>
       </div>
       <div class="stats__grid" data-animate>
         <div class="stat-card">
-          <div class="stat-card__number">1,734</div>
-          <div class="stat-card__label">exercises with<br>video demos</div>
+          <div class="stat-card__number">30s</div>
+          <div class="stat-card__label">to build a full<br>program with AI</div>
         </div>
         <div class="stat-card">
-          <div class="stat-card__number">50+</div>
-          <div class="stat-card__label">equipment brands<br>mapped</div>
+          <div class="stat-card__number">15+</div>
+          <div class="stat-card__label">hours saved<br>per week</div>
         </div>
         <div class="stat-card">
-          <div class="stat-card__number">&lt;5 min</div>
-          <div class="stat-card__label">to create a full<br>program with AI</div>
+          <div class="stat-card__number">0%</div>
+          <div class="stat-card__label">commission on<br>your own clients</div>
         </div>
         <div class="stat-card">
           <div class="stat-card__number">$0</div>
-          <div class="stat-card__label">lost to<br>missed invoices</div>
+          <div class="stat-card__label">to start with<br>3 clients</div>
         </div>
       </div>
     </div>
@@ -1292,7 +1292,7 @@
   <section class="steps" id="how-it-works">
     <div class="container">
       <div class="steps__header" data-animate>
-        <h2 class="steps__title">Start Coaching in 3 Steps</h2>
+        <h2 class="steps__title">Live in 3 Steps. Seriously.</h2>
       </div>
       <div class="steps__grid" data-animate>
         <div class="step-card">
@@ -1302,8 +1302,8 @@
             <div class="step-card__img-overlay"></div>
             <img class="step-card__img-phone" src="images/mockups/trainer_home-portrait.png" alt="Trainer dashboard">
           </div>
-          <h3 class="step-card__title">Download the App</h3>
-          <p class="step-card__desc">Get FirstRep free on iOS or Android. Create your profile, add your photo, bio, and specialties. Takes less than 2 minutes.</p>
+          <h3 class="step-card__title">Create Your Profile</h3>
+          <p class="step-card__desc">Download free on iOS or Android. Add your photo, bio, specialties, and certifications. Takes under 2 minutes.</p>
         </div>
         <div class="step-card">
           <div class="step-card__number">2</div>
@@ -1312,8 +1312,8 @@
             <div class="step-card__img-overlay"></div>
             <img class="step-card__img-phone" src="images/mockups/trainer_createPackage-portrait.png" alt="Package builder">
           </div>
-          <h3 class="step-card__title">Build Your Packages</h3>
-          <p class="step-card__desc">Set your pricing, create coaching packages, and connect Stripe. Your profile goes live on the marketplace instantly.</p>
+          <h3 class="step-card__title">Set Your Pricing</h3>
+          <p class="step-card__desc">Create coaching packages, connect Stripe, and go live on the marketplace. Clients can find and book you immediately.</p>
         </div>
         <div class="step-card">
           <div class="step-card__number">3</div>
@@ -1322,8 +1322,8 @@
             <div class="step-card__img-overlay"></div>
             <img class="step-card__img-phone" src="images/mockups/trainer_invite-portrait.png" alt="Send invite">
           </div>
-          <h3 class="step-card__title">Get Clients & Coach</h3>
-          <p class="step-card__desc">Invite existing clients via link or QR code. Let new clients find you on the marketplace. Start coaching from day one.</p>
+          <h3 class="step-card__title">Start Coaching</h3>
+          <p class="step-card__desc">Invite existing clients via link or QR code. New clients find you on the marketplace. AI helps you build their first program in 30 seconds.</p>
         </div>
       </div>
     </div>
@@ -1334,7 +1334,7 @@
     <div class="container">
       <div class="pricing__header" data-animate>
         <span class="pricing__badge">PRICING</span>
-        <h2 class="pricing__title">Start Free. Upgrade When You Outgrow It.</h2>
+        <h2 class="pricing__title">Simple Pricing. No Surprises.</h2>
       </div>
       <div class="pricing__grid" data-animate>
         <div class="price-card">
@@ -1344,12 +1344,12 @@
           <div class="price-card__features">
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Up to 3 clients</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI program builder</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 1,734 exercise library</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 1,734 exercise video library</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Marketplace listing</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Stripe payments</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Coaching agreements</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Payments via Stripe</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Scheduling &amp; messaging</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Automation rules</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Nutrition &amp; habit tracking</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Every feature. No gating.</div>
           </div>
           <a href="#" class="btn btn--outline btn--lg" style="width: 100%; justify-content: center;">Download Free</a>
         </div>
@@ -1360,17 +1360,17 @@
           <div class="price-card__period">+ $1.50 per client beyond 8</div>
           <div class="price-card__features">
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Everything in Free, plus:</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 5 additional clients (4-8)</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> $1.50/mo per client beyond 8</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Unlimited clients</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 8 clients included, then $1.50/each</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Priority marketplace ranking</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Revenue forecasting</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Advanced analytics</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Wellbeing dashboard</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 50 clients = just $82/mo</div>
           </div>
           <a href="#" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">Download Free Trial</a>
         </div>
       </div>
-      <p class="pricing__note" data-animate><strong>Commission: 0% on clients you invite. 20% on marketplace clients.</strong><br>You brought them? You keep everything.</p>
+      <p class="pricing__note" data-animate><strong>0% commission on clients you bring. 20% only on marketplace clients.</strong><br>Your clients, your revenue. We only earn when we find you new ones.</p>
     </div>
   </section>
 
@@ -1384,7 +1384,7 @@
     <div class="container" style="position: relative; z-index: 1;">
       <div data-animate>
         <h2 class="cta__title">Your First Rep Starts Now.</h2>
-        <p class="cta__sub">1,734 exercises. AI program builder. Built-in marketplace. Automation that saves you hours. Download free and start coaching today.</p>
+        <p class="cta__sub">Clients find you. AI builds programs. You coach. Everything else runs on autopilot. Download free and start today.</p>
         <div class="cta__actions">
           <div class="app-badges">
             <a href="#" class="app-badge app-badge--apple">
@@ -1414,7 +1414,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__logo"><img src="images/brand/firstrep-white.png" alt="FirstRep" style="height: 28px; width: auto;"></div>
-          <p class="footer__desc">The all-in-one coaching platform that helps fitness professionals build, manage, and scale their business.</p>
+          <p class="footer__desc">The only platform that finds you clients AND gives you AI tools to coach them. A business-in-a-box for personal trainers.</p>
           <div class="footer__apps">
             <div class="app-badges" style="flex-direction: column; gap: 8px;">
               <a href="#" class="app-badge app-badge--dark">
