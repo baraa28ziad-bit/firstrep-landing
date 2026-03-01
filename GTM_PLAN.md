@@ -1,34 +1,159 @@
 # FirstRep Go-To-Market Plan: 0 → 100 Paying Trainers
 
-**Last Updated:** February 22, 2026
+**Last Updated:** February 24, 2026
 **Goal:** Acquire 100 paying personal trainers (Pro tier at $19+/month)
-**Timeline:** 12 weeks
+**Timeline:** 16 weeks
 **Starting Point:** 0 customers, landing page live at firstrep.fit
-**Budget:** Lean — $100 Reddit ads + free tools + time
+**Budget:** $500/month + time (see detailed budget in Section 16)
 
 ---
 
 ## Table of Contents
 
-1. [The Message](#1-the-message)
-2. [Ideal Customer Profile](#2-ideal-customer-profile)
-3. [Channel Overview](#3-channel-overview)
-4. [Cold Email: Apollo → 5-Email Sequence](#4-cold-email-apollo--5-email-sequence)
-5. [Instagram Strategy](#5-instagram-strategy)
-   - 5a: Content Plan (30 Posts)
-   - 5b: DM Outreach
-6. [Reddit Ads ($100 Budget)](#6-reddit-ads-100-budget)
-7. [Reddit Organic Campaign](#7-reddit-organic-campaign)
-8. [Community Seeding](#8-community-seeding)
-9. [Content & SEO (Already Live)](#9-content--seo-already-live)
-10. [Referral Program (Week 6+)](#10-referral-program-week-6)
-11. [Launch Offer](#11-launch-offer)
-12. [Weekly Execution Calendar](#12-weekly-execution-calendar)
-13. [Tools & Budget](#13-tools--budget)
+1. [Competitive Intelligence Summary](#1-competitive-intelligence-summary)
+2. [Strategic Positioning](#2-strategic-positioning)
+3. [Ideal Customer Profile (Niche-First)](#3-ideal-customer-profile-niche-first)
+4. [The Message](#4-the-message)
+5. [Channel Strategy Overview](#5-channel-strategy-overview)
+6. [Paid Acquisition: The Untapped Goldmine](#6-paid-acquisition-the-untapped-goldmine)
+7. [YouTube: The Unclaimed Channel](#7-youtube-the-unclaimed-channel)
+8. [SEO & Landing Pages](#8-seo--landing-pages)
+9. [Cold Email: Apollo → 5-Email Sequence](#9-cold-email-apollo--5-email-sequence)
+10. [Instagram Strategy](#10-instagram-strategy)
+11. [TikTok: Short-Form for Fitness Pros](#11-tiktok-short-form-for-fitness-pros)
+12. [Reddit: Organic + Paid](#12-reddit-organic--paid)
+13. [Community Seeding & Facebook Groups](#13-community-seeding--facebook-groups)
+14. [Partnership & Certification Distribution](#14-partnership--certification-distribution)
+15. [The Conversion Funnel](#15-the-conversion-funnel)
+16. [Referral & Affiliate Programs](#16-referral--affiliate-programs)
+17. [Launch Offer: Founding 100](#17-launch-offer-founding-100)
+18. [Weekly Execution Calendar](#18-weekly-execution-calendar)
+19. [Tools & Budget](#19-tools--budget)
+20. [KPIs & Decision Points](#20-kpis--decision-points)
 
 ---
 
-## 1. The Message
+## 1. Competitive Intelligence Summary
+
+### The Battlefield (February 2026)
+
+Five platforms dominate. None has locked up the market.
+
+| Platform | Users | Entry Price | Free Tier | Marketplace | App Store Rating |
+|----------|-------|-------------|-----------|-------------|-----------------|
+| **Trainerize** | 400K+ pros | $9/mo (2 clients) | Yes (1 client) | Trainerize.me (directory) | 3.0/5 Google Play |
+| **TrueCoach** | 20K+ coaches | $19.99/mo (5 clients) | No | Public Coach Profiles | 4.9/5 (both stores) |
+| **Everfit** | 200K+ coaches | $19/mo (5 clients) | Yes (5 clients) | Everfit Marketplace | Mixed |
+| **My PT Hub** | 130K+ trainers | $25/mo (3 clients) | Post-trial downgrade | None | 4.2/5 |
+| **Harbiz** | 10K+ coaches | €19/mo (5 clients) | No | None | Mixed |
+
+### The 5 Gaps We Exploit
+
+**Gap 1: Paid acquisition is virtually untouched.** None of the five runs significant Google Ads, Meta Ads, or TikTok Ads. They all rely on organic — SEO, content, referrals, affiliates. This is the single largest strategic opportunity. We can buy market share while incumbents fight over organic.
+
+**Gap 2: YouTube is completely unclaimed.** No competitor has cracked 10K subscribers or published consistently. Fitness professionals already spend hours on YouTube. This is a brand-building channel hiding in plain sight.
+
+**Gap 3: The client app experience is broken industry-wide.** Trainerize has a 3.0/5 on Google Play. Others are mixed. B2B reviews are strong (4.5-4.8) but consumer app ratings are poor. If our client experience is excellent, trainers switch because their clients are happier.
+
+**Gap 4: No competitor has a real community.** Facebook groups are low-investment afterthoughts. No one has built a Discord, Circle, or Slack community that creates switching costs. The community becomes the moat.
+
+**Gap 5: Every competitor says "all-in-one."** Feature parity is converging. What matters now is proof (case studies, quantified outcomes) and positioning (not "we do everything" but "we solve THIS specific problem better than anyone").
+
+### What Every Competitor Does (Table Stakes)
+
+- Free trial or freemium entry (14-30 days, no credit card)
+- SEO blog targeting "how to get personal training clients"
+- Affiliate/referral programs (10-25% commission)
+- Certification body name-dropping
+- "All-in-one" messaging
+
+**If we only do what they do, we lose.** We must win on distribution channels they've left empty.
+
+---
+
+## 2. Strategic Positioning
+
+### The Wrong Positioning (What Everyone Says)
+
+> "All-in-one coaching platform for personal trainers"
+
+This describes Trainerize, TrueCoach, Everfit, My PT Hub, and Harbiz. It's commodity messaging. If we say this, we're the 6th option — and the one with zero social proof.
+
+### The Right Positioning (What Only We Can Say)
+
+> **FirstRep is the only coaching platform that actually finds you clients.**
+
+Every other platform helps you *manage* clients you already have. FirstRep is the only one with a real marketplace where clients search by location, specialty, price, and reviews — then book and pay you directly. Other platforms have directories or profile pages. We have a discovery engine.
+
+### The Positioning Hierarchy
+
+1. **Lead with:** "Clients find you" (the marketplace — our unique wedge)
+2. **Support with:** "AI builds programs in 30 seconds" (competitive differentiator)
+3. **Close with:** "Everything else included, no add-on pricing" (anti-Everfit, anti-Trainerize positioning)
+
+### Competitive Wedges to Hit in Every Channel
+
+| vs. Trainerize | vs. TrueCoach | vs. Everfit | vs. My PT Hub |
+|----------------|---------------|-------------|---------------|
+| Their client app is 3.0/5 on Google Play | No scheduling. No nutrition. No marketplace. | $96+/month when you add features that should be included | Billing complaints on Trustpilot. No marketplace. |
+| Features locked behind add-ons ($19 for nutrition, $19 for payments) | $107/month for 50 clients. We're $82. | "All-in-one" until you realize Autoflow is $29/mo extra | No Zapier. No API. Limited integrations. |
+| Trainerize.me is a dead directory. We have a real marketplace. | Coach Profiles are landing pages, not a marketplace. | Marketplace exists but poorly positioned. | No discovery channel at all. |
+
+---
+
+## 3. Ideal Customer Profile (Niche-First)
+
+### Why Niche-First Wins
+
+The research shows every competitor targets "all personal trainers" — a massive, undifferentiated market. By starting with a specific niche, we:
+- Create more resonant messaging (they feel like it was built for *them*)
+- Generate proof faster (case studies from a specific segment are more credible)
+- Spend less on acquisition (niche targeting on ads is cheaper and higher-converting)
+- Build word-of-mouth faster (niches talk to each other)
+
+### Primary ICP: The Online-Hybrid Coach (5-25 Clients)
+
+**Who:** Certified personal trainers (NASM, ACE, ISSA, NSCA) who do a mix of in-person and online coaching. They have some clients but are stuck in the "feast or famine" cycle.
+
+**Demographics:**
+- Age 24-38
+- 1-5 years certified
+- $30K-$70K annual income from training
+- Based in US, UK, Canada, Australia (English-speaking markets)
+- Active on Instagram and Reddit
+
+**Psychographics:**
+- Frustrated by the Instagram hustle (spending 10-15 hrs/week on content/DMs for 1-2 new clients/month)
+- Spending 2+ hours per client per week on programming
+- Using 4-6 different tools (WhatsApp, Sheets, Calendly, Venmo, etc.)
+- Knows they need software but overwhelmed by options or burned by a bad experience with Trainerize/Everfit
+- Wants to hit 20-30 clients and $5K-$8K/month recurring
+
+**Where they hang out:**
+- Instagram (following fitness influencers and business coaches)
+- Reddit: r/personaltraining, r/personaltrainers, r/fitnessindustry
+- Facebook groups: PTDC, Online Trainers Unite, Fitness Business Freedom
+- YouTube (learning programming, business advice)
+- TikTok (consuming fitness and business content)
+
+### Secondary ICP: The Fresh Cert (0-5 Clients)
+
+Just got certified, needs their first clients. The marketplace is their #1 draw — they don't have a following yet.
+
+### Tertiary ICP: The Scaling Coach (25-50 Clients)
+
+Already successful, hitting the admin wall. Needs automation, AI programming, and batch operations. Less price-sensitive.
+
+### ICP We Do NOT Target (Yet)
+
+- Gym owners/studios (different product, different sales motion)
+- Enterprise/corporate wellness (needs sales team)
+- Non-English markets (wait until product-market fit in English)
+- Nutritionists/physios without training cert (dilutes positioning)
+
+---
+
+## 4. The Message
 
 ### The Core Idea
 
@@ -36,506 +161,580 @@
 
 ### The Three Pillars
 
-| Pillar | Their Pain | Our Fix | Proof Point |
+| Pillar | Their Pain | Our Fix | Why Only Us |
 |--------|-----------|---------|-------------|
-| **Clients find you** | Chasing leads on Instagram, begging for referrals, slow seasons | Built-in marketplace — clients search by location, specialty, price and book directly | Only coaching app with a real client discovery engine |
-| **AI builds programs** | 2+ hours per client per week on programming | Full programs from 1,734 exercises in ~30 seconds | Sets, reps, rest, progressions — edit anything |
-| **One app runs the business** | Juggling WhatsApp + spreadsheets + Venmo + Calendly | Scheduling, payments, check-ins, nutrition, messaging, cancellation policies — one place | Replaces 4–6 tools, free for 3 clients |
+| **Clients find you** | Spending 15+ hours/week on Instagram DMs and content for 1-2 new clients/month | Built-in marketplace where real people search by location, specialty, price, reviews — and book you directly | No other coaching platform has a real discovery engine. Trainerize.me is a dead directory. TrueCoach has profile pages, not a marketplace. |
+| **AI builds programs** | 2+ hours per client per week on programming, every Sunday night | Full programs from 1,734 exercises with video demos in ~30 seconds. You customize, not start from scratch. | Everfit has AI but charges $29/month extra for Autoflow. Our AI is included on every plan, including free. |
+| **One app, no add-ons** | Paying for 6 tools. Getting nickel-and-dimed by Trainerize's add-on pricing or Everfit's feature upsells. | Scheduling, payments, check-ins, nutrition, messaging, progress, habits — everything included on day one. No feature tiers. | Competitors gate core features behind paid tiers or add-ons. We include everything on the free plan. Only limit is client count. |
 
-### Emotional Hooks Library
+### One-Liners (By Channel)
 
-These are the building blocks. Every email, DM, post, and ad pulls from this library. Each hook paints a specific scene that a trainer has LIVED, then pivots to relief.
-
-**Hook 1: The 4:45am Cancellation**
-> You set your alarm for 4:45am. Your client texted at 4:40: "Hey can't make it today, something came up." That's $75 gone and a slot you can't fill. This happens twice a week. That's $600/month in revenue that evaporates — enough to cover your rent. FirstRep has cancellation policies with teeth. Late cancels get charged automatically. And the freed slot instantly goes to your waitlist. You stop losing money in your sleep.
-
-**Hook 2: The Sunday Night Program Grind**
-> It's Sunday night. You have 15 clients who need new programs by Monday. Each one takes 45 minutes to write — that's 11 hours of work, and you haven't even started. You're going to be up until 2am. FirstRep's AI builds full programs from 1,734 exercises in about 30 seconds. Customize whatever you want. You just got your Sunday back.
-
-**Hook 3: The Instagram Hamster Wheel**
-> You post a reel. You write a caption. You respond to comments. You DM 20 people. You get 1 lead. They ghost. You do it again tomorrow. This is not coaching — this is full-time content creation for a maybe. FirstRep has a built-in marketplace where clients search for trainers by location, specialty, and price. They come to you. Your phone buzzes with booking requests, not "thanks I'll think about it."
-
-**Hook 4: The WhatsApp Chaos**
-> You wake up to 47 client messages across WhatsApp, email, and Instagram DM. Half are "can we reschedule?" and half are "is this food okay?" Your check-ins are scattered across Google Forms and voice notes. You can't remember who you've responded to. By noon you've done zero coaching and you're exhausted. FirstRep puts messaging, check-ins, scheduling, and everything else in one app. You open one dashboard and know exactly who needs your attention — sorted by urgency.
-
-**Hook 5: The Spreadsheet Graveyard**
-> You have a Google Sheet for programming. Another for tracking payments. A Calendly link for bookings. Venmo for some clients, Zelle for others, and one client who still Cashapps you. Every month you spend 3 hours figuring out who's paid and who hasn't. FirstRep handles payments through Stripe automatically. Subscriptions renew. Session packs deduct. You never chase an invoice again.
-
-**Hook 6: The Retention Cliff**
-> Your client hit their goal weight. You're proud. They're proud. Then they cancel. "I got what I came for!" Three months of work — gone. This happens with 60% of your clients. FirstRep has coaching agreements, commitment tracking, progress timelines with "you are here" markers, and automated education drips that reframe the relationship as ongoing — not just goal-based. Clients who use check-ins and see their progress timeline renew at 2x the rate.
-
-**Hook 7: The Burnout Spiral**
-> You started training because you loved helping people. Now you're working 14-hour days, answering messages at midnight, skipping your own workouts, and dreading Monday. You have 25 clients but you feel like you have 25 bosses. FirstRep has Focus Mode (silence everything, auto-reply active), messaging boundaries, batch check-in review (20 clients in 15 minutes instead of 45), and a burnout dashboard that tells you when you're overextending before you crash.
-
-**Hook 8: The "What App Do You Use?" Paralysis**
-> You've tried Trainerize — expensive, clunky on mobile, features locked behind $100+ tiers. You looked at Everfit — no scheduling. TrueCoach — no marketplace. My PT Hub — no AI. Every app solves one piece and leaves you duct-taping the rest. FirstRep is every feature on every plan. Free for 3 clients. $19/month after that. No gating. No tiers. No surprises.
-
-**Hook 9: The Client Who Won't Do The Work**
-> You wrote the perfect program. You set the macros. You scheduled the check-in. And your client did 2 of 5 workouts, logged food once, and skipped the check-in entirely. Now they're frustrated that they're "not seeing results." FirstRep has coaching agreements that set expectations upfront, commitment trackers that make their adherence visible to THEM, and automated nudges so you're not the one nagging. The app does the accountability so you can do the coaching.
-
-**Hook 10: The Slow Season Panic**
-> January was great. Sixteen new clients. By March, eight of them quit. Now it's April and you have three inquiries for the whole month. Your income swings $2,000 between good months and bad months. FirstRep's marketplace brings clients year-round — not just New Year's resolution season. And the subscription model stabilizes your income: recurring revenue, revenue forecasting, and churn prediction so you can intervene before clients leave.
-
-**Hook 11: The 2am Program Writing**
-> Your client starts their new program tomorrow. You haven't written it yet. It's 11pm and you're staring at a spreadsheet trying to remember whether Sarah has a shoulder injury or a knee injury. You text your partner "30 more minutes" for the third time tonight. FirstRep's AI generates a full periodized program from a text prompt. "4-day upper/lower split, intermediate, avoid overhead pressing" → done. Edit what you want. Send it. Go to bed.
-
-**Hook 12: The Imposter Feeling**
-> You just got certified. You have two clients — your mom and your college roommate. Every other trainer on Instagram has 50K followers and six-pack abs. You feel like you have no right to call yourself a trainer. FirstRep's marketplace lists you next to everyone else. No follower count required. Clients find you based on specialty, location, price, and reviews. Your coaching speaks for itself — verified badges earned from real results, not selfies.
-
-### Tone Rules
-- First sentence is about THEM, never about us
-- Pain before solution. Always.
-- Specific > generic ("$600/month in cancellations" not "lost revenue")
-- Short sentences. Fragments are fine.
-- Never say "I'd love to show you" / "would love to connect" / "hope to chat"
-- Never apologize for reaching out
-- Trainer language: "roster," "clients," "programming," "check-ins," "retention"
-- CTA = "Worth a look" / "Check it out" / "Want to see it?" + link. Never "book a demo."
-- Every CTA ends with the free offer: "Free for 3 clients. Every feature." + link
+| Channel | One-Liner |
+|---------|-----------|
+| **Google Ads** | "Personal training software that actually finds you clients. Free for 3." |
+| **Meta Ads** | "Stop chasing clients on Instagram. Let them find you." |
+| **TikTok** | "I built programs for 15 clients in 20 minutes with AI. Here's how." |
+| **Cold Email** | "What if your coaching app brought you clients instead of the other way around?" |
+| **Reddit** | "The only coaching app with a built-in marketplace where clients find you." |
+| **YouTube** | "How I got 8 new clients in 30 days without posting a single reel." |
+| **Comparison** | "Everything Trainerize charges $60+/month for. Free for 3 clients." |
 
 ---
 
-## 2. Ideal Customer Profile
+## 5. Channel Strategy Overview
 
-### Primary Target: "The Scaling Independent"
-- **Age:** 28–45
-- **Experience:** 3–10 years training clients
-- **Current clients:** 5–20
-- **Setup:** Independent or small studio (not big gym chain employee)
-- **Pain points:** 10+ hours/week on admin, inconsistent client pipeline, income swings, burnout creeping in
-- **Ambition:** Wants 30–50+ clients without destroying their health
-- **Current tools:** WhatsApp + Google Sheets + Venmo/Zelle + Calendly + Canva + maybe one coaching app they're frustrated with
+### Channel Prioritization (Based on Competitive Gaps)
 
-### Anti-Targets
-- Big box gym employees (no tool autonomy)
-- Brand new trainers with 0 clients (can't convert to paid)
-- Gym owners with 50+ staff (enterprise sale)
+| Priority | Channel | Why | Expected CAC | Time to Impact |
+|----------|---------|-----|-------------|----------------|
+| **P0** | Google Ads (BoFU) | Zero competitors running. High-intent "personal training software" traffic. | $15-30 | Week 3 |
+| **P0** | Cold Email | Direct, measurable, scalable. Works immediately. | $5-15 | Week 3 |
+| **P1** | Reddit (Organic + Paid) | Where trainers are honest about problems. Proven channel. | $8-20 | Week 2 |
+| **P1** | Instagram (Content + DMs) | Where ICP lives. DMs convert. Content builds brand. | $10-25 | Week 1 |
+| **P1** | YouTube (Weekly) | Completely unclaimed. Long-form builds trust and SEO value. | $0 (organic) | Week 4 |
+| **P2** | TikTok (Organic) | Where fitness content is exploding. No competitor present. | $0 (organic) | Week 3 |
+| **P2** | Facebook Groups | Where trainers ask for software recommendations. | $0 (organic) | Week 1 |
+| **P2** | SEO Landing Pages | Capture high-intent search traffic long-term. | $0 (organic) | Week 6+ |
+| **P3** | Meta Ads (later) | Once we have social proof and case studies. | $20-40 | Week 8+ |
+| **P3** | Partnerships | Cert bodies, coaching programs. Takes time to establish. | $0 | Week 8+ |
+| **P3** | LinkedIn Ads | Highly segmentable B2B audience. Expensive but precise. | $30-60 | Week 10+ |
 
----
+### Channel Mix by Week
 
-## 3. Channel Overview
-
-| Channel | Method | Expected Trainers | Timeline |
-|---------|--------|------------------|----------|
-| Cold Email (Apollo) | 5-email sequence | 40 (40%) | Weeks 2–12 |
-| Instagram DMs | Warm outreach | 25 (25%) | Weeks 1–12 |
-| Reddit Ads | $100 budget | 10 (10%) | Weeks 3–12 |
-| Reddit Organic | Posts + comments | 5 (5%) | Weeks 1–12 |
-| Community Seeding | FB Groups | 5 (5%) | Weeks 1–12 |
-| Content & SEO | Blog (14 articles live) | 5 (5%) | Weeks 4–12 |
-| Referral Program | User referrals | 10 (10%) | Weeks 6–12 |
+| Weeks 1-4 | Weeks 5-8 | Weeks 9-12 | Weeks 13-16 |
+|-----------|-----------|------------|-------------|
+| Cold email (primary) | Google Ads launch | Referral program | Meta Ads launch |
+| Instagram DMs + content | Reddit ads | First case studies | Partnership outreach |
+| Reddit karma building | YouTube first videos | YouTube weekly cadence | Affiliate program |
+| Facebook group seeding | TikTok first posts | Scale winning channels | Scale everything |
+| SEO foundation | Cold email optimization | Kill losing channels | LinkedIn Ads test |
 
 ---
 
-## 4. Cold Email: Apollo → 5-Email Sequence
+## 6. Paid Acquisition: The Untapped Goldmine
 
-### 4.1 Lead Sourcing: Apollo.io
+### Why This Is Our Biggest Advantage
 
-**Filters:**
-- Job title: "Personal Trainer" OR "Fitness Coach" OR "Online Coach" OR "Strength Coach"
-- Industry: Health & Fitness
-- Employee count: 1–10
-- Location: United States → then UK/Australia/Canada
-- Has email: Yes
+Both research reports confirm: **paid acquisition is virtually untouched** in the personal trainer SaaS category. No competitor runs significant Google Ads, Meta Ads, or TikTok Ads. They all fight over organic channels (SEO, content, referrals).
 
-**Volume:** Free tier = 50 credits/month. Paid ($49/mo) = 900/month.
+This means:
+- **CPCs are cheap** — no competitor bidding on "personal training software" or "coaching app for trainers"
+- **We can test and iterate fast** — ads give immediate feedback vs. months of SEO
+- **We can target precisely** — certified trainers, specific locations, specific interests
+- **When competitors wake up, we'll have data** — first-mover advantage on ad creative, landing pages, conversion rates
 
-**Process:** Export → verify (Hunter.io / NeverBounce) → load into Instantly.ai or Gmail.
+### 6a. Google Ads (High-Intent Search)
 
-### 4.2 Infrastructure
+**Budget:** $150/month (start week 3, scale if ROAS > 3x)
 
-- Send from wrapped outreach domains (NOT firstrep.fit)
-- SPF, DKIM, DMARC on each
-- 2 mailboxes per domain
-- Warm 14 days before sending
-- 30–50 emails/day per mailbox
-- Send Tuesday–Thursday, 7–9 AM local time
+**Campaign 1: Bottom-of-Funnel Keywords**
 
-### 4.3 The 5-Email Sequence
+| Keyword | Est. CPC | Monthly Searches | Intent |
+|---------|----------|-----------------|--------|
+| personal training software | $2-5 | 2,400 | High |
+| online coaching platform | $2-4 | 1,600 | High |
+| personal trainer app | $1-3 | 3,600 | Medium-High |
+| fitness coaching software | $2-4 | 880 | High |
+| best PT software 2026 | $3-6 | 720 | Very High |
+| trainerize alternative | $1-3 | 480 | Very High |
+| everfit alternative | $1-3 | 320 | Very High |
+| truecoach alternative | $1-3 | 260 | Very High |
 
-Each email attacks a **different pain point** with a different emotional angle. A trainer who ignores Email 1 might stop on Email 3 because THAT one describes their exact Tuesday.
-
----
-
-#### EMAIL 1: "The Identity Hook" — Day 0
-**Pain:** You're doing 3 jobs and none of them are coaching.
-
-**Subject options:**
-- `the 3 jobs nobody told you about`
-- `you're a marketer, a programmer, and an accountant`
-- `this isn't what you signed up for`
-
+**Ad Copy A: Marketplace Angle**
 ```
-Hi {first_name},
-
-If you're a personal trainer, you're probably doing 3 jobs: chasing leads, writing programs, and managing everything else.
-
-FirstRep fixes the first two.
-
-Clients find you through a built-in marketplace — they search by location, specialty, and price, and book directly. AI builds full workout programs from 1,734 exercises in ~30 seconds. And scheduling, payments, check-ins, nutrition, messaging all live in one app.
-
-Free for 3 clients. Every feature. No card needed.
-
-Want to see it?
-https://firstrep.fit
-
-— Baraa
-Founder, FirstRep
+Headline: Personal Training Software That Finds You Clients
+Description: Built-in marketplace where clients search, compare, and book trainers directly. AI builds programs in 30 seconds. Free for 3 clients. No credit card.
+URL: firstrep.fit?utm_source=google&utm_medium=cpc&utm_campaign=pt_software
 ```
 
----
-
-#### EMAIL 2: "The Sunday Night Grind" — Day 3
-**Pain:** Programming eats your weekends alive.
-
-**Subject options:**
-- `Re: the 3 jobs nobody told you about`
-- `your Sunday nights back`
-- `15 programs by Monday morning`
-
+**Ad Copy B: All-in-One, No Upsells**
 ```
-Hi {first_name},
-
-Quick one — the part trainers react to most is the AI program builder.
-
-You describe what you need — "4-day upper/lower, intermediate, avoid overhead pressing" — and get a full program with exercises, sets, reps, rest periods, and progressions in about 30 seconds. From a library of 1,734 exercises with 3,418 video demos. Edit anything.
-
-That's 15 client programs done before lunch instead of a lost Sunday night.
-
-Worth trying just for that: https://firstrep.fit
-
-— Baraa
+Headline: Every Feature Included. Even on Free.
+Description: Other coaching apps charge $60-100/month and gate features. FirstRep includes AI programming, scheduling, payments, nutrition, messaging — free for 3 clients. No add-ons.
+URL: firstrep.fit?utm_source=google&utm_medium=cpc&utm_campaign=all_in_one
 ```
 
----
-
-#### EMAIL 3: "The Money Leak" — Day 7
-**Pain:** Cancellations, awkward payment chasing, income instability.
-
-**Subject options:**
-- `$600/month you're probably losing`
-- `the text you got at 4:40am`
-- `stop chasing payments`
-
+**Ad Copy C: Competitor Comparison**
 ```
-Hi {first_name},
-
-Two clients cancel last minute this week. That's $150 gone — and slots you can't fill. Do that twice a month and you're losing $600/month. Enough to cover your rent.
-
-FirstRep has cancellation policies that enforce themselves. Late cancel inside the window? Client gets charged automatically. The freed slot goes to your waitlist immediately. Payments happen through Stripe — subscriptions renew, session packs deduct, nobody Venmos you "later."
-
-Your income becomes predictable instead of a guessing game.
-
-https://firstrep.fit — free for 3 clients.
-
-— Baraa
+Headline: Tired of Trainerize's Add-On Pricing?
+Description: FirstRep includes everything Trainerize charges extra for — AI builder, nutrition, payments, scheduling. Plus a real marketplace. Free for 3 clients.
+URL: firstrep.fit/vs-trainerize?utm_source=google&utm_medium=cpc&utm_campaign=vs_trainerize
 ```
 
----
+**Landing Pages Needed:**
+- `/vs-trainerize` — comparison page
+- `/vs-everfit` — comparison page
+- `/vs-truecoach` — comparison page
+- `/personal-training-software` — BoFU keyword page
+- `/online-coaching-platform` — BoFU keyword page
 
-#### EMAIL 4: "The Burnout Email" — Day 10
-**Pain:** 14-hour days, no boundaries, constant emotional labor.
+### 6b. Reddit Ads ($100/month)
 
-**Subject options:**
-- `47 messages before 9am`
-- `you're burning out and you know it`
-- `the part nobody talks about`
+Reddit trainers hate polished marketing. Write like a person.
 
+**Targeting:** r/personaltraining, r/fitnessindustry, r/personaltrainers
+
+**Ad A: The Cancellation Ad**
 ```
-Hi {first_name},
+Title: Two late cancels a week = $600/month gone. I fixed this.
 
-Last one about features — this one's about you.
+I got tired of clients texting "can't make it" at 5am and losing the slot. Found an app with auto-enforced cancellation policies — late cancel inside 24 hours? Auto-charged. Freed slot goes to waitlist.
 
-You wake up to 40+ messages. Half are "can we reschedule?" and half are "is this food okay?" You answer all of them because that's what good coaches do. By noon you've done zero actual coaching and you're already exhausted.
+It's called FirstRep. Also has AI that builds programs in 30 seconds and a marketplace where clients actually find you.
 
-FirstRep has Focus Mode — silence everything, auto-reply goes out. Messaging boundaries so clients know your hours. Batch check-in review so you handle 20 clients in 15 minutes. And a private burnout dashboard that flags when you're overextending.
-
-You got into this to coach, not to be available 14 hours a day.
-
-https://firstrep.fit
-
-— Baraa
+Free for 3 clients: firstrep.fit
 ```
 
----
-
-#### EMAIL 5: "The Invitation" — Day 14
-**Pain:** None — this one paints the future.
-
-**Subject options:**
-- `what Monday looks like with FirstRep`
-- `one last thing`
-- `imagine this for a second`
-
+**Ad B: The Sunday Night Ad**
 ```
-Hi {first_name},
+Title: I used to spend every Sunday night writing programs. Now it takes me 20 minutes for all 15 clients.
 
-Imagine this: you open one app Monday morning. Your dashboard shows who needs a check-in, who's falling off, and who just hit a PR. Your schedule is full because clients booked themselves through your marketplace profile. Three programs you need to write? AI drafted them over coffee. Payments came in automatically over the weekend.
+Switched to an app with AI program builder — describe what you want, get a full program from 1,734 exercises in about 30 seconds. Edit whatever you want. It's not cookie-cutter — it's a starting point that saves hours.
 
-That's FirstRep. It's free for up to 3 clients, every feature included, no trial that expires.
-
-100 trainers are getting lifetime pricing at $9/month right now. It won't last.
-
-https://firstrep.fit
-
-— Baraa
-```
-
----
-
-### 4.4 Performance Targets
-
-| Metric | Target |
-|--------|--------|
-| Open rate | >50% |
-| Reply rate | >5% |
-| Click rate | >3% |
-| Signups from clicks | >15% |
-| Bounce rate | <3% |
-| Spam complaints | <0.5% |
-
----
-
-## 5. Instagram Strategy
-
-### 5a: Instagram Content Plan (30 Posts)
-
-Post 1x/day for 30 days. Alternate formats. Every post ends with a soft CTA in the caption: "We built FirstRep to fix this → link in bio."
-
----
-
-#### CAROUSELS (10 posts — these are the ones trainers save and share)
-
-**Carousel 1: "5 Jobs You're Doing That Aren't Coaching"**
-- Slide 1: "You became a trainer to coach people."
-- Slide 2: "Instead you're a full-time marketer." (chasing leads on IG)
-- Slide 3: "A programmer." (writing spreadsheets until midnight)
-- Slide 4: "A scheduler." (texting back and forth about availability)
-- Slide 5: "An accountant." (chasing Venmo payments at the end of the month)
-- Slide 6: "And a therapist." (clients venting for 20 minutes of a 60-minute session)
-- Slide 7: "What if one app handled 4 of those 5?" → FirstRep. Link in bio.
-
-**Carousel 2: "The Real Cost of a Last-Minute Cancellation"**
-- Slide 1: "Your client cancels 30 minutes before their session."
-- Slide 2: "That's $75 gone. The slot is empty."
-- Slide 3: "This happens twice a week. That's $600/month."
-- Slide 4: "$7,200/year. In income that just... disappears."
-- Slide 5: "What if cancellations had consequences?"
-- Slide 6: "Automatic late-cancel fees. Freed slots go to your waitlist. Payments that don't depend on Venmo." → FirstRep.
-
-**Carousel 3: "How Long It Takes You to Write a Program (vs How Long It Should)"**
-- Slide 1: "Time to write one client program:"
-- Slide 2: "Research exercises: 15 min. Build the split: 20 min. Sets/reps/rest: 15 min. Notes and progressions: 10 min."
-- Slide 3: "Total: ~60 minutes. Per client."
-- Slide 4: "Now multiply by 20 clients."
-- Slide 5: "That's 20 hours/month just on programming."
-- Slide 6: "Or... 30 seconds." (show AI prompt → full program output)
-- Slide 7: "1,734 exercises. 3,418 video demos. Fully customizable." → FirstRep.
-
-**Carousel 4: "What Your Client Sees vs What You See"**
-- Slide 1: "What your client sees: 'My trainer sends me workouts and checks in once a week.'"
-- Slide 2: "What you see: 47 unread messages. 12 check-ins to review. 3 programs to write. 2 cancellations to deal with. A payment that bounced. And it's only Tuesday."
-- Slide 3: "The gap between what clients think and what trainers actually do is enormous."
-- Slide 4: "What if the app handled the chaos so you could focus on the coaching?"
-- Slide 5: CTA → FirstRep.
-
-**Carousel 5: "6 Tools You're Using (That Should Be 1)"**
-- Slide 1: "Your current tech stack:"
-- Slide 2: "WhatsApp — messaging" / "Google Sheets — programming" / "Calendly — scheduling" / "Venmo — payments" / "Google Forms — check-ins" / "Instagram — finding clients"
-- Slide 3: "That's 6 tools. 6 logins. 6 places where things fall through the cracks."
-- Slide 4: "Or one app that does all of it." → screenshot or feature list
-- Slide 5: "Free for 3 clients. Every feature." → FirstRep.
-
-**Carousel 6: "Why 60% of Clients Leave After Hitting Their Goals"**
-- Slide 1: "Your client hit their goal weight. You're both proud."
-- Slide 2: "Then they cancel. 'I got what I came for!'"
-- Slide 3: "This happens with 6 out of 10 clients."
-- Slide 4: "The problem: the relationship was framed as 'reach a goal' instead of 'build a lifestyle.'"
-- Slide 5: "The fix: coaching agreements upfront. Progress timelines with 'you are here.' Commitment trackers. Education drips that reframe the relationship."
-- Slide 6: "Clients who see their progress visualized renew at 2x the rate." → FirstRep.
-
-**Carousel 7: "The Personal Trainer Burnout Checklist"**
-- Slide 1: "Check the ones that apply:"
-- Slide 2: "☐ You answer client messages after 10pm" / "☐ You haven't taken a full day off in 3+ weeks" / "☐ You dread checking your phone in the morning" / "☐ You skip your own workouts because you're too tired"
-- Slide 3: "☐ You've thought about quitting at least once this month" / "☐ You feel guilty when you don't respond immediately" / "☐ You can't remember the last time you had a stress-free Sunday"
-- Slide 4: "If you checked 3+, you're heading for burnout."
-- Slide 5: "Focus Mode. Messaging boundaries. Batch reviews. A burnout dashboard that warns you before you crash." → FirstRep.
-
-**Carousel 8: "How to Know If Your Coaching App Is Holding You Back"**
-- Slide 1: "Your coaching app might be the problem if:"
-- Slide 2: "You still use WhatsApp for client messaging"
-- Slide 3: "You can't enforce a cancellation policy"
-- Slide 4: "Clients can't find and book you without a separate link"
-- Slide 5: "You're paying $60–100+/month and half the features are locked"
-- Slide 6: "You're programming in spreadsheets because the builder is clunky"
-- Slide 7: "Every feature. One app. Free for 3 clients." → FirstRep.
-
-**Carousel 9: "What 'Scaling to 30 Clients' Actually Looks Like"**
-- Slide 1: "Everyone says 'scale your business.' Nobody talks about what that actually means."
-- Slide 2: "At 10 clients: manageable. You remember everyone's name, goals, injuries."
-- Slide 3: "At 20 clients: stretched. Check-ins pile up. You start copying programs."
-- Slide 4: "At 30 clients: chaos. Messages are constant. You can't keep track. You're exhausted by Thursday."
-- Slide 5: "The difference isn't willpower. It's systems."
-- Slide 6: "Priority dashboards. Batch check-in review. AI programming. Automation rules. Messaging boundaries."
-- Slide 7: "Scale to 30 without losing your mind." → FirstRep.
-
-**Carousel 10: "The Trainer's Income Problem (and How to Fix It)"**
-- Slide 1: "Average PT income: $46K–$74K/year."
-- Slide 2: "The problem isn't your rate. It's the instability."
-- Slide 3: "January: 18 clients. March: 11 clients. June: 8 clients."
-- Slide 4: "Your income swings $2,000+/month depending on the season."
-- Slide 5: "Fix 1: A marketplace that brings clients year-round, not just in January."
-- Slide 6: "Fix 2: Subscription model with revenue forecasting so you see what's coming."
-- Slide 7: "Fix 3: Cancellation policies and retention tools that keep clients longer." → FirstRep.
-
----
-
-#### REELS (10 — short, punchy, problem→solution, 15-30 seconds each)
-
-**Reel 1: "POV: You're a personal trainer and it's Sunday night"**
-Script: (Screen recording or text overlay) "POV: It's Sunday night. You have 15 client programs due by Monday. Each takes an hour. You haven't started. [cut] Or... you type 'upper body hypertrophy, 4 days, intermediate' and the AI builds a full program in 30 seconds. [show program output] Your Sunday nights are yours again."
-Audio: trending sound or voiceover.
-
-**Reel 2: "Things I stopped doing when I got the right coaching app"**
-Script: (List format, text on screen) "Chasing payments on Venmo ✕ / Writing programs in spreadsheets ✕ / Texting clients 'what time works?' ✕ / Checking 3 apps before 9am ✕ / Losing $600/month to cancellations ✕" — then: "One app. Every feature. Free."
-
-**Reel 3: "Tell me you're a personal trainer without telling me"**
-Script: (Relatable humor) "My alarm goes off at 4:45am. My first client cancels at 4:40am. I have 37 unread WhatsApp messages. My spreadsheet crashed. Someone Venmo'd me $40 instead of $75. And it's only Monday." — Caption: "There's a better way."
-
-**Reel 4: "The difference between a coaching tool and a coaching business"**
-Script: "Most coaching apps help you deliver workouts. That's it. They don't find you clients. They don't enforce cancellation policies. They don't track who's falling off before they cancel. They don't protect your time. A coaching tool delivers workouts. A coaching business does everything."
-
-**Reel 5: "How long it takes to build a workout program"**
-Script: (Screen recording — real-time) "Watch me build a full 4-day hypertrophy program in 30 seconds. [type prompt → show generated program] 1,734 exercises. 3,418 video demos. Fully customizable. Done."
-
-**Reel 6: "6 tools you're paying for that should be 1"**
-Script: (Rapid cuts showing each app icon) "WhatsApp — messaging. Google Sheets — programming. Calendly — scheduling. Venmo — payments. Google Forms — check-ins. Instagram — finding clients. [cut to one icon] Or just one app."
-
-**Reel 7: "What burnout looks like for personal trainers"**
-Script: "You love coaching. You hate the business side. You answer messages at midnight. You haven't taken a day off in a month. You skip your own workouts. You think about quitting every Sunday night. [pause] It doesn't have to be like this. There are tools that protect your time."
-
-**Reel 8: "The $600/month leak nobody talks about"**
-Script: "Two cancellations a week. $75 each. That's $150/week. $600/month. $7,200/year. Gone. Not because your coaching is bad — because you don't have a cancellation policy with teeth. What if late cancels got charged automatically and the slot went to your waitlist?"
-
-**Reel 9: "What your clients find when they Google 'personal trainer near me'"**
-Script: "Right now: Yelp listings. Thumbtack profiles. Random Instagram pages. No way to compare trainers by specialty, price, availability, or reviews. [cut] What if there was a marketplace built specifically for this? Where clients search, compare, and book — directly through your coaching app?"
-
-**Reel 10: "Day in the life of a trainer who doesn't hate admin"**
-Script: "7am: Open app. Dashboard shows 3 check-ins to review, 2 programs to update, and my schedule is already full because clients booked themselves. 7:30am: Batch review check-ins — done in 12 minutes. 8am: AI builds both programs. Edited and sent by 8:15. 8:30am: First in-person session. I'm not stressed. I'm not behind. I actually coached today."
-
----
-
-#### QUOTE/STAT POSTS (5 — designed to be reshared)
-
-**Post 1:**
-> "The average personal trainer spends 10+ hours per week on admin. That's 520 hours a year you're not coaching, training, or resting."
-
-**Post 2:**
-> "42% of personal trainers cite 'finding new clients' as their #1 challenge. Not programming. Not nutrition. Finding people to coach."
-
-**Post 3:**
-> "A trainer with 20 clients and no systems works 60+ hours a week. A trainer with 20 clients and the right systems works 30."
-
-**Post 4:**
-> "60% of clients leave after hitting their goal. The problem isn't your coaching — it's the framing. If the relationship is 'reach a goal,' it ends when the goal is reached."
-
-**Post 5:**
-> "You don't need more followers to get more clients. You need to be where people are actually looking for a trainer."
-
----
-
-#### STORY SERIES (5 — use polls, questions, engagement stickers)
-
-**Story Series 1: "What's your biggest time sink?" (Poll)**
-- Story 1: "What eats most of your time as a trainer?" → Poll: Programming / Client messaging / Scheduling / Finding clients
-- Story 2: Share results → "If you said programming — what if AI did it in 30 seconds?"
-- Story 3: Link to firstrep.fit
-
-**Story Series 2: "Cancellation horror stories" (Question box)**
-- Story 1: "What's your worst cancellation story?" → Question sticker
-- Story 2: Reshare best responses (with commentary like "This is why cancellation policies matter")
-- Story 3: "FirstRep enforces cancellation policies automatically. Link in bio."
-
-**Story Series 3: "Your tech stack" (Quiz)**
-- Story 1: "How many apps do you use to run your coaching business?" → Quiz: 2 / 4 / 6 / 8+
-- Story 2: "The average is 5-6. What if it was 1?"
-- Story 3: Link to firstrep.fit
-
-**Story Series 4: "Burnout check" (Slider)**
-- Story 1: "On a scale of 1-10, how burned out are you right now?" → Slider sticker
-- Story 2: "If you're above a 6, your systems are failing you, not your work ethic."
-- Story 3: "Focus mode, messaging boundaries, batch reviews — tools that protect your time." Link.
-
-**Story Series 5: "Would you rather" (Poll)**
-- Story 1: "Would you rather: spend 2 hours writing one program OR have AI draft it in 30 seconds and you edit?" → Poll
-- Story 2: "Would you rather: chase clients on IG OR have them find and book you through a marketplace?" → Poll
-- Story 3: "Yeah. We thought so too." → Link to firstrep.fit
-
----
-
-### 5b: Instagram DM Outreach
-
-#### Rules
-- NEVER say "I built" — it screams founder spam and trainers get 10 of these a week
-- Lead with insight about THEIR situation, not your product
-- Introduce FirstRep as a tool you're involved with, not "my baby"
-- Sound like a human who happens to know about something useful
-- Personalize the first line with something specific from their profile/content
-
-#### DM Scripts
-
----
-
-**DM 1: "After engaging with their content — the standard" (Use for 70% of DMs)**
-
-```
-Hey {name} — {specific compliment, e.g. "your client's deadlift transformation is insane, that pull was clean"}.
-
-Genuine question: how do you handle the business side — programming, scheduling, getting new clients? Asking because there's a coaching app called FirstRep that's built different from the usual ones. It has a marketplace where clients actually find and book you (not a dead directory), and the AI builds full programs in 30 seconds from 1,734 exercises.
+FirstRep also has a marketplace where clients find you, scheduling, payments, check-ins — everything.
 
 Free for 3 clients, every feature: firstrep.fit
 ```
 
+**Ad C: The Tool Consolidation Ad**
+```
+Title: I was running my coaching business across 6 apps. Now it's 1.
+
+WhatsApp for messaging. Google Sheets for programming. Calendly for booking. Venmo for payments. Google Forms for check-ins. Instagram for finding clients.
+
+Switched everything to FirstRep. One app. Marketplace where clients book you, AI programming, scheduling, payments, check-ins, nutrition, messaging. Every feature included on the free plan.
+
+firstrep.fit — free for 3 clients.
+```
+
+**Budget Allocation:** $33 per ad for 1 week → kill worst performer → redistribute to winner
+**Expected:** 12K-33K impressions, 60-330 clicks, 6-33 signups
+**UTM:** `firstrep.fit?utm_source=reddit&utm_medium=paid&utm_campaign=trainers_[a/b/c]`
+
+### 6c. Meta Ads (Start Week 8, After We Have Social Proof)
+
+**Budget:** $100/month initially
+
+**Why wait:** Meta Ads need social proof to convert. We need screenshots of real trainers using the app, at least 2-3 case studies, and ideally video testimonials before spending here.
+
+**Targeting:**
+- Interest: "Personal training" + "NASM" or "ACE" or "ISSA"
+- Behavior: Small business owners
+- Age: 24-38
+- Locations: US, UK, Canada, Australia
+- Exclude: People who already follow us
+
+**Creative Format:** Short video (15-30 seconds) showing:
+1. Open to marketplace screen → "Clients find you here"
+2. AI builder → "Tell AI what you need → full program in 30 seconds"
+3. Dashboard → "Everything in one app"
+4. Pricing → "Free for 3 clients. No card."
+
+**Ad Copy:**
+```
+You're spending 15 hours a week on Instagram trying to find clients.
+
+What if they found you instead?
+
+FirstRep has a built-in marketplace where real people search for trainers by location, specialty, and price — then book and pay you directly.
+
+AI builds programs in 30 seconds. Scheduling, payments, check-ins, nutrition — everything included.
+
+Free for 3 clients. No credit card.
+→ firstrep.fit
+```
+
+### 6d. TikTok Ads (Test Week 10+)
+
+**Budget:** $50/month test
+
+**Why TikTok:** Fitness content consumption is exploding on TikTok. No competitor runs systematic paid campaigns there. The audience is younger trainers (24-32) who are tech-native and open to new tools.
+
+**Creative:** UGC-style 15-second video. Screen recording + voiceover:
+- "I just built a 4-week program for my client in 30 seconds. Watch." → show AI builder
+- "My client just booked and paid me $149 through the app. No DMs. No Venmo." → show marketplace
+
 ---
 
-**DM 2: "They posted about needing clients"**
+## 7. YouTube: The Unclaimed Channel
 
-```
-Hey {name} — saw your post about {building your roster / finding clients / growing}.
+### Why This Is a Category-Defining Opportunity
 
-There's a coaching app called FirstRep with a built-in marketplace where clients search trainers by location, specialty, and price. Not a passive directory — an actual discovery engine where people book directly.
+Both research reports confirm: **no competitor has built a substantial YouTube presence.** None has cracked 10K subscribers. The channel is entirely unclaimed.
 
-It also handles programming (AI, ~30 seconds), scheduling, payments, check-ins — the whole stack. Free for 3 clients: firstrep.fit
-```
+Meanwhile, fitness professionals spend hours on YouTube learning exercise techniques, programming methods, and business strategies. YouTube is the second-largest search engine. Videos rank in Google search results. Long-form builds trust faster than any other medium.
+
+**The goal:** Become *the* YouTube channel for fitness business education. Even 20 well-made videos in 4 months creates a moat that takes competitors years to replicate.
+
+### Content Strategy: 2 Videos/Week
+
+**Format A: "Trainer Business" (Weekly)**
+Educational content that solves trainer problems. FirstRep is mentioned naturally, not as the focus.
+
+| # | Title | Hook | FirstRep Mention |
+|---|-------|------|-----------------|
+| 1 | "How I Cut My Admin Time from 15 Hours to 4 (Full Breakdown)" | "I tracked every minute for a month" | "I use an app called FirstRep for AI programming" |
+| 2 | "Why 60% of Clients Leave After Hitting Their Goal" | "I tracked retention for 2 years" | "Coaching agreements and progress timelines — built into FirstRep" |
+| 3 | "Stop Chasing Clients on Instagram (Do This Instead)" | "The marketplace approach" | "FirstRep has a built-in marketplace" |
+| 4 | "How to Price Your Coaching Packages (Real Math)" | "Most trainers undercharge by 40%" | "You can set this up in the package builder" |
+| 5 | "I Automated 80% of My Client Communication" | "Before: 4 hours/day on WhatsApp" | "Automation rules + templates in FirstRep" |
+| 6 | "The Coaching Agreement That Doubled My Retention" | "One document changed everything" | "Coaching agreements feature in the app" |
+| 7 | "How to Scale Past 20 Clients Without Burning Out" | "The wall at 20 is real" | "Batch check-in review and AI programming" |
+| 8 | "Trainerize vs TrueCoach vs Everfit vs FirstRep (Honest Review)" | Comparison video | Full comparison walkthrough |
+
+**Format B: "App Walkthrough" (Weekly)**
+Screen recordings showing how to solve specific problems with FirstRep.
+
+| # | Title | Length |
+|---|-------|--------|
+| 1 | "Build a Full Training Program in 30 Seconds (AI Demo)" | 5 min |
+| 2 | "How I Onboard a New Client in FirstRep (Start to Finish)" | 8 min |
+| 3 | "Set Up Your Marketplace Profile to Get Found by Clients" | 6 min |
+| 4 | "Automate Client Follow-Ups (So You Never Lose Someone to Silence)" | 5 min |
+| 5 | "Batch Review 20 Client Check-Ins in 15 Minutes" | 7 min |
+| 6 | "Set Up Scheduling with Auto-Enforced Cancellation Policies" | 5 min |
+| 7 | "Track Nutrition Across All Your Clients in One Dashboard" | 6 min |
+| 8 | "How the Marketplace Works (From Client's Perspective)" | 5 min |
+
+### Production
+
+- **Equipment needed:** Screen recording (OBS/Loom), decent microphone ($50), webcam or phone
+- **Editing:** Simple cuts, text overlays, no fancy graphics needed. Authenticity > production value.
+- **Thumbnails:** Bold text, face if possible, high contrast. Use Canva.
+- **SEO:** Title targets a keyword. Description includes keyword + link to firstrep.fit. Tags cover the topic.
+
+### Distribution
+
+- Every video gets clipped into 3-5 TikTok/Reels/Shorts
+- Blog post mirrors each video (SEO compound)
+- Email to subscriber list when published
+- Share in Reddit/Facebook communities when relevant
 
 ---
 
-**DM 3: "They posted about burnout / being overwhelmed"**
+## 8. SEO & Landing Pages
 
-```
-{name} — felt this one. The admin side of training is brutal when you're scaling.
+### The TrueCoach Playbook (That We Should Copy)
 
-Have you seen FirstRep? It's a coaching app built specifically around this problem. Focus mode for notifications, batch check-in review (20 clients in 15 min), messaging boundaries, AI that writes programs so you're not up at midnight doing it.
+TrueCoach runs dedicated keyword-specific landing pages like "personal training software," "personal training business app," and "fitness coach software" — each with trial CTAs and social proof. This is BoFU SEO that converts.
 
-Free for 3 clients: firstrep.fit — worth checking out the feature page at least.
-```
+### Landing Pages to Build (Priority Order)
+
+**1. Comparison Pages (Highest conversion rate)**
+- `/vs-trainerize` — "FirstRep vs Trainerize: Honest Comparison"
+- `/vs-truecoach` — "FirstRep vs TrueCoach: Which Is Better?"
+- `/vs-everfit` — "FirstRep vs Everfit: Full Comparison"
+- `/vs-mypthub` — "FirstRep vs My PT Hub"
+
+**2. BoFU Keyword Pages**
+- `/personal-training-software` — "The Best Personal Training Software in 2026"
+- `/online-coaching-platform` — "Online Coaching Platform for Trainers"
+- `/fitness-coaching-app` — "Fitness Coaching App with Built-In Marketplace"
+
+**3. Pain-Point Pages (For Google Ads)**
+- `/find-personal-training-clients` — "How to Find Personal Training Clients (Without Instagram)"
+- `/automate-coaching-business` — "Automate Your Coaching Business"
+- `/ai-workout-builder` — "AI Workout Builder for Personal Trainers"
+
+### Blog Content (Expand from 14 → 30 Articles)
+
+**New articles to write (priority by search volume):**
+
+| Article | Target Keyword | Funnel Stage |
+|---------|---------------|-------------|
+| How to Get Personal Training Clients in 2026 | personal training clients | ToFU |
+| Personal Trainer Marketing: 15 Strategies That Work | personal trainer marketing | ToFU |
+| How Much Should a Personal Trainer Charge? | personal trainer pricing | ToFU |
+| Best Personal Training Apps Compared (2026) | best personal training app | MoFU |
+| How to Start an Online Coaching Business | online coaching business | ToFU |
+| Personal Trainer Business Plan Template | personal trainer business plan | ToFU |
+| How to Automate Client Check-Ins | automate check-ins | MoFU |
+| AI for Personal Trainers: What Actually Works | AI personal training | MoFU |
+| How to Create Workout Programs Faster | create workout programs | MoFU |
+| Client Retention Strategies for Trainers | client retention personal training | MoFU |
+| Personal Trainer Software Comparison 2026 | personal trainer software comparison | BoFU |
+| Trainerize Pricing Breakdown (Is It Worth It?) | trainerize pricing | BoFU |
+| Why Trainers Are Leaving Trainerize | trainerize alternative | BoFU |
+| From Spreadsheets to Software: A Trainer's Migration Guide | personal training spreadsheet | MoFU |
+| The Cost of Running Your Business on WhatsApp + Sheets | coaching business tools | MoFU |
+| How the FirstRep Marketplace Works | trainer marketplace | BoFU |
+
+### Technical SEO Actions
+
+- [ ] Submit sitemap.xml to Google Search Console
+- [ ] Submit to Bing Webmaster Tools
+- [ ] Set up GA4 with conversion tracking (events: page_view, download_click, email_capture)
+- [ ] Build comparison pages with proper schema markup (SoftwareApplication)
+- [ ] Internal link from every blog post to relevant feature page
+- [ ] Monitor keyword rankings weekly via Google Search Console
 
 ---
 
-**DM 4: "They posted about cancellations / payment problems"**
+## 9. Cold Email: Apollo → 5-Email Sequence
 
+### Setup
+
+**Domain infrastructure (already configured):**
+- 3 separate domains for outreach (not firstrep.fit)
+- SPF, DKIM, DMARC on all domains
+- 2 weeks of warming before sending
+
+**Lead sourcing:**
+- Apollo.io filters: Title = "Personal Trainer" OR "Fitness Coach" OR "Strength Coach"
+- Location: US, UK, Canada, Australia
+- Company size: 1-10
+- Verified emails only
+- Export 200 leads/batch, send 30-50/day per mailbox
+
+### The 5-Email Sequence
+
+**Email 1 (Day 0): The Pain**
 ```
-{name} — the cancellation thing is real. Rough math: two late cancels a week at $75 each is $600/month walking out the door.
+Subject: quick question about your coaching setup
 
-FirstRep handles this — you set a cancellation policy (24h notice, auto-charge for late cancels), and the freed slot goes to your waitlist automatically. Payments all through Stripe, subscriptions renew on their own.
+Hi {first_name},
 
-Free to try with 3 clients: firstrep.fit
+Quick question — how many tools are you currently using to run your coaching business?
+
+If the answer is "too many," you're not alone. Most trainers I talk to are juggling WhatsApp, Sheets, Calendly, Venmo, and Instagram — spending more time on admin than coaching.
+
+I'm the founder of FirstRep — a coaching app where everything lives in one place: programming, scheduling, payments, check-ins, nutrition, messaging. And we have something no other coaching app has: a built-in marketplace where clients search and book trainers directly.
+
+Free for 3 clients with every feature. No trial, no card, no gating.
+
+Worth a look? firstrep.fit
+
+— Baraa
 ```
+
+**Email 2 (Day 3): The Differentiator**
+```
+Subject: this is the part that's different
+
+Hey {first_name},
+
+Following up — the feature I should have led with:
+
+FirstRep has a built-in marketplace. Not a directory. Not a profile page. A real search engine where people looking for a personal trainer in {their_city} can find you by specialty, price, reviews — and book directly.
+
+No other coaching app does this. Trainerize has Trainerize.me (which nobody uses). TrueCoach has profile pages (which aren't searchable). We have an actual discovery engine.
+
+If you're spending hours hustling for leads on Instagram, this might be worth 5 minutes of your time: firstrep.fit
+
+— Baraa
+```
+
+**Email 3 (Day 7): The Comparison**
+```
+Subject: {first_name}, quick comparison
+
+Hey {first_name},
+
+If you're using Trainerize, TrueCoach, or Everfit — here's what you're missing:
+
+- Trainerize charges extra for nutrition ($19/mo), payments ($19/mo), and custom apps ($99/mo). We include everything.
+- TrueCoach doesn't have scheduling, limited nutrition, no marketplace. We have all three.
+- Everfit charges $29/mo extra for automation, $39/mo for meal plans, $25/mo for on-demand. We include all of it.
+- None of them have a real client marketplace.
+
+FirstRep: every feature on day one. Free for 3 clients.
+
+firstrep.fit/compare — side-by-side comparison
+
+— Baraa
+```
+
+**Email 4 (Day 12): The Time Angle**
+```
+Subject: 15 hours a week on admin?
+
+{first_name},
+
+I tracked my admin time when I was training full-time:
+- Programming: 6 hours/week
+- Messaging: 4 hours
+- Check-in reviews: 2.5 hours
+- Scheduling: 1.5 hours
+- Payments: 1 hour
+
+15 hours. Almost a part-time job on top of coaching.
+
+AI programming got me from 6 hours to 1.5. Batch check-in review: 2.5 to 0.75. Self-serve scheduling: 1.5 to 0. Auto-billing: 1 to 0.
+
+New total: ~4 hours. 11 hours back every week.
+
+That's what FirstRep is built for. firstrep.fit — free for 3 clients.
+
+— Baraa
+```
+
+**Email 5 (Day 17): The Founding Offer**
+```
+Subject: last note + something for early adopters
+
+Hey {first_name},
+
+Last email from me. If the app isn't for you, no hard feelings.
+
+But if you've been thinking about trying it — we're running a Founding Trainer program. First 100 trainers who go Pro get:
+- $9/month locked in forever (normally $19)
+- 0% marketplace commission for 6 months (normally 10%)
+- Founding Trainer badge on your marketplace profile
+- Direct access to me for anything you need
+
+{spots_remaining} spots left. firstrep.fit/founding
+
+Either way — good luck with your clients.
+
+— Baraa
+```
+
+### Email Performance Benchmarks
+
+| Metric | Target | Kill If Below |
+|--------|--------|---------------|
+| Open rate | 40-55% | 25% |
+| Reply rate | 5-10% | 2% |
+| Click rate | 3-5% | 1% |
+| Signup rate | 1-3% of opened | 0.5% |
 
 ---
 
-**DM 5: "They asked for software recommendations (in stories or posts)"**
+## 10. Instagram Strategy
 
+### Account Setup
+- Handle: @firstrep.fit
+- Bio: "The coaching app that finds you clients. AI builds programs in 30 seconds. Free for 3 clients. Link below."
+- Link: firstrep.fit (tracked via UTM)
+
+### Content Plan: 30 Posts for Month 1
+
+**Format Mix:**
+- 12 Carousel posts (educational, high save rate)
+- 8 Reels (demos, before/after workflows)
+- 5 Static stats/quotes
+- 5 Story series
+
+#### Carousels (Slide-by-Slide)
+
+**Carousel 1: "Your Coaching Stack vs FirstRep"**
+1. Cover: "You're using 6 apps to run your business. Here's 1."
+2. WhatsApp → In-app messaging
+3. Google Sheets → AI program builder
+4. Calendly → Built-in scheduling
+5. Venmo → Stripe payments
+6. Instagram DMs → Built-in marketplace
+7. Google Forms → Weekly check-ins
+8. CTA: "Free for 3 clients. Link in bio."
+
+**Carousel 2: "What Trainers Actually Spend Time On"**
+1. Cover: "Where does your time ACTUALLY go?"
+2. Programming: 6 hrs/week → 1.5 hrs with AI
+3. Messaging: 4 hrs/week → 1.5 hrs with templates
+4. Check-in reviews: 2.5 hrs → 0.75 hrs batch mode
+5. Scheduling: 1.5 hrs → 0 hrs self-serve
+6. Payments: 1 hr → 0 hrs auto-billing
+7. Total: 15 hrs → 4 hrs. That's 11 hours back.
+8. CTA: "FirstRep. Link in bio."
+
+**Carousel 3: "Why Your Clients Leave (And How to Fix It)"**
+1. Cover: "60% of clients leave after hitting their goal"
+2. Problem: They see a finish line, not a journey
+3. Fix 1: Coaching agreement from day one
+4. Fix 2: Show progress beyond the original goal
+5. Fix 3: Reframe check-ins (feelings, not just numbers)
+6. Fix 4: Education drip (expectations over first 4 weeks)
+7. Result: 40% → 70%+ retention
+8. CTA: "Built into FirstRep. Link in bio."
+
+**Carousel 4: "How Other Coaching Apps Actually Price"**
+1. Cover: "The real cost of 'all-in-one' coaching apps"
+2. Trainerize: $60+ with add-ons
+3. Everfit: $96+ with add-ons
+4. TrueCoach: $107 for 50 clients, no scheduling
+5. My PT Hub: $59 unlimited, but no marketplace
+6. FirstRep: $82 for 50 clients. Every feature. No add-ons.
+7. Plus: Free for 3 clients with everything included
+8. CTA: "Start free. Link in bio."
+
+**Carousel 5: "The Marketplace That Changes Everything"**
+1. Cover: "What if clients found YOU?"
+2. Problem: 15 hrs/week on Instagram for 1-2 clients/month
+3. Solution: Built-in marketplace
+4. How it works: Client searches by location, specialty, price
+5. They compare trainers, read reviews
+6. They book and pay — directly through the app
+7. No other coaching app has this
+8. CTA: "List yourself for free. Link in bio."
+
+**Carousels 6-12:** Follow same format — topics: pricing packages, onboarding clients, automation rules, nutrition coaching, scheduling tips, the "founding trainer" offer, weekly check-in templates.
+
+#### Reels
+
+| # | Concept | Format | Length |
+|---|---------|--------|--------|
+| 1 | "Building a full program in 30 seconds" | Screen recording with voiceover | 30s |
+| 2 | "Sunday night: before vs after FirstRep" | Split screen, relatable | 15s |
+| 3 | "POV: A client just found and booked you from the marketplace" | Notification sound + screen | 20s |
+| 4 | "When the AI-generated program is actually... good" | Reaction style | 15s |
+| 5 | "I stopped doing admin. My clients didn't notice." | Text overlay + footage | 20s |
+| 6 | "How I review 20 check-ins in 15 minutes" | Screen recording demo | 45s |
+| 7 | "The 6 apps I replaced with 1" | Quick transitions | 20s |
+| 8 | "When your client books AND pays through the app" | Celebration reaction | 15s |
+
+### DM Outreach Strategy
+
+**Volume:** 15-20 personalized DMs per day
+
+**Targeting:** Certified trainers who:
+- Have 1K-20K followers (enough to be active, not big enough to ignore you)
+- Post about struggles (client acquisition, admin, time)
+- Ask for software recommendations in comments or stories
+- Recently got certified (bio says "NASM certified 2025/2026")
+
+**DM Templates:**
+
+**DM 1: "They just posted about wanting more clients"**
+```
+Hey {name} — saw your post about client acquisition. The Instagram hustle is real.
+
+Random thought: have you tried platforms with a built-in marketplace? Where clients search for trainers by location and specialty? I've been using one called FirstRep — it's like having a storefront that's always open. Clients find you, compare, book, and pay — all through the app.
+
+firstrep.fit — free for 3 clients, no card. Might be worth a look.
+```
+
+**DM 2: "They posted about spending hours on programming"**
+```
+{name} — that programming struggle is real. I used to spend 2+ hours per client too.
+
+Have you tried any AI program builders? There's one in FirstRep that generates full programs from 1,734 exercises in about 30 seconds. Not cookie-cutter — you describe what you need in plain English and customize from there.
+
+firstrep.fit — free for 3 clients. The AI builder alone is worth 5 minutes.
+```
+
+**DM 3: "They mentioned using Trainerize/TrueCoach/Everfit"**
+```
+Hey {name} — noticed you're using {competitor}. How's it going?
+
+Genuine question — are you happy with [the add-on pricing / the client app / the scheduling / the nutrition tools]?
+
+If you're ever looking to compare, I'd check out FirstRep. The main differences: built-in marketplace where clients find you, AI programming, and every feature included on the free plan — no add-ons, no tiers.
+
+Not saying switch — just worth having on your radar. firstrep.fit
+```
+
+**DM 4: "Freshly certified trainer"**
+```
+Congrats on the {cert} certification, {name}!
+
+If you're thinking about getting your first clients — check out FirstRep. It has a built-in marketplace where people in your area search for trainers by specialty. You list yourself for free and clients find you.
+
+Plus it has everything else — AI programming, scheduling, payments, check-ins. Every feature included, even on free.
+
+firstrep.fit — might save you months of hustling for those first 3 clients.
+```
+
+**DM 5: "They asked for software recommendations"**
 ```
 {name} — saw you're looking for a coaching app.
 
@@ -544,19 +743,14 @@ Check out FirstRep. It's the only one with a real marketplace where clients find
 firstrep.fit — free for 3 clients. Worth comparing to whatever else you're looking at.
 ```
 
----
-
-**DM 6: "Short follow-up if they viewed your profile but didn't respond to a previous DM"**
-
+**DM 6: "Follow-up if they viewed profile but didn't respond"**
 ```
 Hey {name} — saw you checked out the profile. If you're curious about the app, here's the quickest way to see if it's a fit: firstrep.fit
 
 Free for 3 clients, no card needed. The AI builder alone is worth 5 minutes of your time.
 ```
 
----
-
-#### Handling Replies
+### Handling Replies
 
 **"What is it exactly?"**
 > Coaching app for personal trainers. Three things that make it different: (1) built-in marketplace where clients search and book you by location, specialty, price — no other coaching app has this, (2) AI builds programs from 1,734 exercises in ~30 seconds, (3) scheduling, payments, check-ins, nutrition, messaging all in one app. Free for 3 clients. $19/month after that. No feature gating. firstrep.fit
@@ -575,69 +769,54 @@ Free for 3 clients, no card needed. The AI builder alone is worth 5 minutes of y
 
 ---
 
-## 6. Reddit Ads ($100 Budget)
+## 11. TikTok: Short-Form for Fitness Pros
 
-### Targeting
-**Subreddits:** r/personaltraining, r/fitnessindustry, r/personaltrainers
+### Why TikTok (Based on Research)
 
-### Ad Creative
+No competitor runs systematic TikTok campaigns — paid or organic. Yet TikTok is where fitness content consumption is exploding. Younger trainers (24-32) consume and create content here daily.
 
-Reddit users hate polished marketing. Write like a person, not a brand.
+### Account Setup
+- Handle: @firstrep.fit
+- Bio: "The coaching app that finds you clients. AI programs in 30 seconds."
+- Link: firstrep.fit
 
-**Ad A: The Cancellation Ad**
+### Content Format: 3-4 Posts/Week
 
-```
-Title: Two late cancels a week = $600/month gone. I fixed this.
+**Type 1: Screen Recording + Voiceover (Most Common)**
+Short demo of FirstRep solving a real problem. 15-30 seconds.
 
-Body: I got tired of clients texting "can't make it" at 5am and losing the slot. So I started using an app that lets me set a cancellation policy — late cancel inside 24 hours? Auto-charged. Freed slot goes to my waitlist immediately.
+**Type 2: "Trainer Struggles" Relatability**
+Relatable scenarios that trainers experience. Soft sell.
 
-It's called FirstRep. Also has AI that builds programs in 30 seconds and a marketplace where clients actually find you.
+**Type 3: "Did You Know?" Comparisons**
+Quick facts about competitor pricing or missing features.
 
-Free for 3 clients: firstrep.fit
-```
+### 12 TikTok Ideas
 
-**Ad B: The Sunday Night Ad**
-
-```
-Title: I used to spend every Sunday night writing programs. Now it takes me 20 minutes for all 15 clients.
-
-Body: I switched to an app with an AI program builder — describe what you want, get a full program from 1,734 exercises in about 30 seconds. Edit whatever you want. It's not cookie-cutter, it's a starting point that saves hours.
-
-FirstRep also has a marketplace where clients find you, scheduling, payments, check-ins — everything.
-
-Free for 3 clients, every feature: firstrep.fit
-```
-
-**Ad C: The Tool Consolidation Ad**
-
-```
-Title: I was running my coaching business across 6 apps. Now it's 1.
-
-Body: WhatsApp for messaging. Google Sheets for programming. Calendly for booking. Venmo for payments. Google Forms for check-ins. Instagram for finding clients.
-
-Switched everything to FirstRep. One app. Marketplace where clients book you, AI programming, scheduling, payments, check-ins, nutrition, messaging. Every feature included on the free plan.
-
-firstrep.fit — free for 3 clients.
-```
-
-### Budget
-- $33 per ad for 1 week → kill worst performer → redistribute to winner
-- Expected: 12K–33K impressions, 60–330 clicks, 6–33 signups
-- UTM: `firstrep.fit?utm_source=reddit&utm_medium=paid&utm_campaign=trainers_[a/b/c]`
+| # | Hook (First 2 Seconds) | Content | CTA |
+|---|------------------------|---------|-----|
+| 1 | "I just built a full program in 30 seconds" | AI builder screen recording | "Link in bio" |
+| 2 | "My client just found and booked me without me posting a single reel" | Show marketplace notification | "Free for 3 clients" |
+| 3 | "If you're using Trainerize, you're overpaying" | Side-by-side pricing breakdown | "Check the alternative" |
+| 4 | "What 15 hours of admin looks like vs what it should look like" | Before/after time breakdown | "Automate it" |
+| 5 | "Tell me you're a personal trainer without telling me" | Relatable admin struggles | Soft brand mention |
+| 6 | "The 6 apps every trainer uses vs the 1 they should" | Quick app icon transitions | "Link in bio" |
+| 7 | "When you find out other coaching apps charge extra for nutrition" | Reaction format | "Every feature included" |
+| 8 | "How I review 20 client check-ins in 15 minutes" | Batch review demo | "Link in bio" |
+| 9 | "What $19/month gets you on FirstRep vs $60 on Trainerize" | Feature comparison | "Start free" |
+| 10 | "POV: You set up a cancellation policy and it actually works" | Auto-charge notification | "No more awkward convos" |
+| 11 | "I used to spend every Sunday writing programs" | Sunday night relatable → AI solution | "30 seconds now" |
+| 12 | "The marketplace feature no one talks about" | Client-side marketplace walkthrough | "Clients find you" |
 
 ---
 
-## 7. Reddit Organic Campaign
+## 12. Reddit: Organic + Paid
 
-Reddit is where trainers go to be honest about their problems. This is the most underrated channel. The strategy: give genuine value for 2–3 weeks, then post about FirstRep.
+### 12.1 Karma-Building Phase (Weeks 1-3)
 
-### 7.1 Karma-Building Phase (Weeks 1–3)
+Post 3-5 helpful comments per day in r/personaltraining and r/personaltrainers. Be genuinely helpful. No mention of FirstRep.
 
-Post 3–5 helpful comments per day in r/personaltraining and r/personaltrainers. Be genuinely helpful. No mention of FirstRep.
-
-### 7.2 Ready-to-Post Reddit Posts (5)
-
----
+### 12.2 Reddit Posts (5)
 
 **Post 1: The Launch Post**
 **Subreddit:** r/personaltraining
@@ -667,186 +846,67 @@ Website: firstrep.fit
 Genuinely looking for feedback. What would make you try a new app? What's your biggest frustration with your current setup?
 ```
 
----
-
 **Post 2: Value Post — Client Retention**
-**Subreddit:** r/personaltraining
 **Title:** `Why 60% of clients leave after hitting their goal (and what I changed)`
-
-```
-I tracked my client retention for two years. The pattern was brutal: client signs up with a goal (usually fat loss), we crush it in 3-4 months, they cancel. "Got what I came for!"
-
-I was losing 6 out of every 10 clients this way. The coaching was working — too well. They'd hit the goal and leave.
-
-Here's what I changed:
-
-**1. Set expectations from day one.** I started using a coaching agreement — not a contract, more of a mutual commitment. "Here's what I'll deliver. Here's what I need from you. Here's a realistic timeline." When clients sign this, they mentally commit to a process, not just an outcome.
-
-**2. Made progress visible beyond the goal.** Instead of just tracking weight, I started showing clients a full progress timeline — "you are here" on a longer journey. Strength gains, body composition, habits built, consistency streaks. When they see how far they've come in OTHER areas, losing 5kg feels like the beginning, not the end.
-
-**3. Reframed check-ins.** Instead of "how's your weight?" it became "how are you feeling about your training? What's working? What's hard?" When the relationship is about their whole fitness life (not one number), they don't see a finish line.
-
-**4. Automated the boring parts.** I set up education messages for the first 4 weeks: "Week 1: results take time, trust the process." "Week 2: weight fluctuates 1-2kg daily, focus on weekly trends." This set expectations without me repeating myself to every client.
-
-My retention after making these changes: went from 40% to 70%+ staying past the goal date.
-
-The coaching agreement and progress timeline are the biggest levers. If your app doesn't have these, build them into your process somehow.
-
-(Full disclosure: I've been using FirstRep which has these built in — coaching agreements, progress timelines, education drips, commitment tracking. But the principles apply regardless of what tools you use.)
-
-What's your retention rate look like? Curious if others see the same drop-off.
-```
-
----
+*(Pure value. FirstRep mentioned once as disclosure at the bottom.)*
 
 **Post 3: Value Post — Automation**
-**Subreddit:** r/personaltraining
 **Title:** `How I cut my admin time from 15 hours/week to 4 (breakdown)`
+*(Detailed time tracking breakdown. FirstRep mentioned naturally as the tool used.)*
 
-```
-A year ago I tracked where my time actually went for a full month. I was horrified.
+**Post 4: Thread Response — "What software do you use?"**
+*(Natural recommendation when someone asks.)*
 
-**Before (weekly average):**
-- Programming: 6 hours
-- Messaging clients: 4 hours
-- Check-in reviews: 2.5 hours
-- Scheduling/rescheduling: 1.5 hours
-- Chasing payments: 1 hour
-- **Total admin: ~15 hours/week**
-
-That's almost a part-time job — on top of actually training clients.
-
-Here's what I automated and how much each saved:
-
-**Programming → AI builder.** I describe what I need, AI generates a full program in 30 seconds. I spend 5-10 minutes editing. Went from 6 hours to about 1.5. **Saved: ~4.5 hours/week.**
-
-**Messaging → boundaries + templates.** Set coaching hours so clients know when to expect responses. Built a library of 30+ template responses for common questions ("is soreness normal?", "can I swap this exercise?"). Went from 4 hours to about 1.5. **Saved: ~2.5 hours/week.**
-
-**Check-ins → batch review.** Instead of reviewing each client one-by-one, I use a batch mode. Scroll through, quick "on track" for the ones doing well, write detailed notes only for the ones who need it. Went from 2.5 hours to about 45 min. **Saved: ~1.75 hours/week.**
-
-**Scheduling → self-serve.** Clients book and reschedule themselves from available slots. I set my availability once. No more texting back and forth. Went from 1.5 hours to basically 0. **Saved: ~1.5 hours/week.**
-
-**Payments → Stripe automation.** Subscriptions renew automatically. Session packs deduct. Late cancel fees auto-applied. No more chasing. Went from 1 hour to 0. **Saved: ~1 hour/week.**
-
-**After: ~4 hours/week on admin.** That's 11 hours back. Every week.
-
-I use FirstRep for most of this, but the principles work with whatever tools you have. The biggest unlock is just knowing WHERE your time goes — track it for one week and you'll be shocked.
-
-What's your biggest admin time sink?
-```
-
----
-
-**Post 4: Thread Response Template — "What software do you use?"**
-**Use when:** someone posts asking for coaching app recommendations
-
-```
-I've tried a few. Trainerize was fine for programming but expensive once you scale past 5 clients ($60-100/month) and the mobile app is clunky. Everfit has a good workout builder but no scheduling and no real marketplace.
-
-I've been using FirstRep recently and it's the most complete one I've found. The big differences:
-- Built-in marketplace where clients actually find and book you (not just a directory)
-- AI builds programs in ~30 seconds from 1,734 exercises
-- Scheduling with cancellation policies that enforce themselves
-- Every feature on the free plan (3 clients, no gating)
-- $19/month after that, not $60-100
-
-firstrep.fit if you want to check it out. Free to try.
-```
-
----
-
-**Post 5: Discussion Post — Controversial Take**
-**Subreddit:** r/personaltraining
+**Post 5: Discussion — Controversial Take**
 **Title:** `Unpopular opinion: trainers shouldn't have to be marketers`
+*(Thesis: there should be a marketplace for finding trainers, like Zocdoc for doctors. FirstRep mentioned as an attempt at building this.)*
 
-```
-I see so many posts here about Instagram growth, content strategy, how to get clients from social media. And honestly it makes me sad.
-
-You spent years getting certified. You're great at coaching. You understand programming, nutrition, behavior change. That's your skill set.
-
-But the industry tells you that unless you also become a content creator, a video editor, a copywriter, and a social media manager — you won't survive. That's 4 additional jobs that have nothing to do with coaching.
-
-Doctors don't have to make reels to find patients. Lawyers don't DM potential clients on Instagram. There are SYSTEMS that bring them clients: directories, referral networks, marketplaces.
-
-Personal training doesn't have that. The closest thing is Thumbtack (which is garbage for PTs) and Trainerize.me (which is a dead directory nobody uses).
-
-I think what the industry actually needs is a real marketplace — where clients search for trainers by location, specialty, price, reviews, and book directly. Like what Airbnb did for rentals or what Zocdoc did for doctors.
-
-You list yourself. You coach well. Clients find you. Your results and reviews speak for you. No reels required.
-
-Am I crazy for thinking this? Or is the "you HAVE to do content marketing" advice just survivorship bias from the small % of trainers who happen to also be good at social media?
-
-(Disclosure: I've been using a platform called FirstRep that's building exactly this kind of marketplace. But the question stands regardless — should trainers HAVE to be marketers?)
-```
-
----
-
-### 7.3 Reddit Comment Templates (10)
+### 12.3 Reddit Comment Templates (10)
 
 **For "I need more clients" threads:**
-```
-The hustle for clients is real. I was in the same spot — spending 15+ hours a week on Instagram trying to generate leads. What changed for me was getting on a platform with a real marketplace (FirstRep — firstrep.fit) where clients actually search and book trainers. Not a directory — a discovery engine. Took the pressure off the constant content creation.
-```
+> The hustle for clients is real. I was in the same spot — spending 15+ hours a week on Instagram trying to generate leads. What changed for me was getting on a platform with a real marketplace (FirstRep — firstrep.fit) where clients actually search and book trainers. Not a directory — a discovery engine. Took the pressure off the constant content creation.
 
 **For "thinking about quitting" threads:**
-```
-Don't quit coaching. Quit the business model that's burning you out. The admin, the chasing payments, the programming until midnight — that stuff is fixable with the right systems. The part where you actually help people get stronger and healthier — that's what you're good at. Automate the rest.
-```
+> Don't quit coaching. Quit the business model that's burning you out. The admin, the chasing payments, the programming until midnight — that stuff is fixable with the right systems. The part where you actually help people — that's what you're good at. Automate the rest.
 
 **For "client won't follow the program" threads:**
-```
-I had this exact problem until I started using coaching agreements — a simple mutual commitment that lays out what I deliver and what they commit to. When the expectations are signed upfront, the conversation changes from "why aren't you doing your workouts?" to "we agreed on 4x/week and you're at 2 — what's getting in the way?" Game changer for accountability.
-```
+> I had this exact problem until I started using coaching agreements — a simple mutual commitment document. When expectations are signed upfront, the conversation changes. Game changer for accountability.
 
 **For "what app do you use?" threads:**
-```
-FirstRep. Only coaching app I've found with a real marketplace (clients find you by location/specialty/price), AI program builder (~30 seconds for a full program), and everything else in one app — scheduling, payments, check-ins, nutrition, messaging. Free for 3 clients. firstrep.fit
-```
+> FirstRep. Only coaching app I've found with a real marketplace (clients find you), AI program builder (~30 seconds for a full program), and everything in one app — scheduling, payments, check-ins, nutrition, messaging. Free for 3 clients. firstrep.fit
 
 **For "how do you handle cancellations?" threads:**
-```
-The cancellation policy is everything. I set mine to 24-hour notice with an auto-charge for late cancels. The freed slot goes to a waitlist so someone else can grab it. Since implementing this, my cancellation rate dropped from ~8/month to 2. The policy alone paid for itself in the first week. I use FirstRep which handles this automatically — late cancel triggers the fee, no awkward conversation needed.
-```
+> The cancellation policy is everything. I set mine to 24-hour notice with an auto-charge for late cancels. Since implementing this, my cancellation rate dropped from ~8/month to 2. I use FirstRep which handles this automatically — late cancel triggers the fee, no awkward conversation needed.
 
 **For "how do you handle payments?" threads:**
-```
-Get off Venmo/Zelle ASAP. Use something with automated billing. I use FirstRep which has Stripe built in — subscriptions renew automatically, session packs deduct, late cancel fees apply without me doing anything. Haven't chased a payment in months. The mental load of "who's paid?" disappearing is massively underrated.
-```
+> Get off Venmo/Zelle ASAP. Use something with automated billing. I use FirstRep which has Stripe built in — subscriptions renew automatically, session packs deduct, late cancel fees apply automatically. Haven't chased a payment in months.
 
 **For "how much time do you spend on admin?" threads:**
-```
-I tracked mine for a month — 15 hours/week on admin. Programming was 6 hours, messaging was 4, check-in reviews 2.5, scheduling 1.5, payments 1. After switching to an app with AI programming and batch check-in review, I got it down to about 4 hours. The AI builder alone saved me 4+ hours/week.
-```
+> I tracked mine for a month — 15 hours/week on admin. After switching to an app with AI programming and batch check-in review, I got it down to about 4 hours. The AI builder alone saved me 4+ hours/week.
 
 **For "how do you prevent burnout?" threads:**
-```
-Three things that changed the game: (1) Messaging boundaries — I respond during set hours, with an auto-reply outside those hours, (2) Batch check-in reviews instead of one-by-one, (3) AI for programming so I'm not doing it at midnight. The common thread: systems that protect your time so you can actually rest. You can't out-willpower burnout — you have to remove the cause.
-```
+> Three things: (1) messaging boundaries with auto-reply outside hours, (2) batch check-in reviews instead of one-by-one, (3) AI for programming. You can't out-willpower burnout — you have to remove the cause.
 
 **For "best way to scale past 20 clients?" threads:**
-```
-The wall at 20 clients is real. What breaks isn't your coaching ability — it's your systems. You need: batch operations for check-ins, AI for programming, self-serve scheduling so clients book themselves, and a dashboard that tells you who needs attention so you're not trying to remember everything in your head. Went from 20 to 35 clients without adding hours by fixing the systems.
-```
+> The wall at 20 clients is real. What breaks isn't your coaching ability — it's your systems. AI for programming, batch operations for check-ins, self-serve scheduling. Went from 20 to 35 clients without adding hours.
 
 **For "online coaching vs in-person" threads:**
-```
-Hybrid is where it's at. In-person for the session, app for everything else. Clients do their workouts from the app, check in weekly, message you for questions, book their next session themselves. You get the in-person connection without the 15 hours/week of admin. The tool matters though — need one that actually handles scheduling, payments, AND programming in one place.
-```
+> Hybrid is where it's at. In-person for the session, app for everything else. The tool matters — need one that handles scheduling, payments, AND programming in one place.
 
-### 7.4 Reddit Engagement Rules
+### 12.4 Reddit Rules
 
-1. **Weeks 1–3:** Pure value. No mention of FirstRep. Build karma and credibility.
-2. **Week 3+:** Start naturally mentioning FirstRep when relevant (never force it).
+1. **Weeks 1-3:** Pure value. No mention of FirstRep. Build karma.
+2. **Week 3+:** Mention FirstRep naturally when relevant.
 3. **Never** post the same link in multiple threads on the same day.
-4. **Never** use multiple accounts. Reddit detects this.
-5. If someone asks "is this your app?" — be honest. "Yeah, I'm the founder. Happy to answer any questions."
-6. Ratio: for every 1 post mentioning FirstRep, post 5 genuinely helpful comments that don't.
+4. **Never** use multiple accounts.
+5. If asked "is this your app?" — be honest.
+6. Ratio: for every 1 post mentioning FirstRep, make 5 genuinely helpful comments that don't.
 
 ---
 
-## 8. Community Seeding
+## 13. Community Seeding & Facebook Groups
 
-### 8.1 Facebook Groups
+### Facebook Groups to Join
 
 | Group | Members | Strategy |
 |-------|---------|----------|
@@ -855,82 +915,230 @@ Hybrid is where it's at. In-person for the session, app for everything else. Cli
 | Net Profit Explosion (NPE) | 10,000+ | Pricing/revenue discussions |
 | PTDC Community | 15,000+ | General PT business advice |
 
-### 8.2 Facebook Comment Templates
+### Comment Templates
 
-**When someone asks "what app do you use for coaching?":**
-```
-I've been using FirstRep — it's the only one I've found with a real marketplace where clients actually find you (not a passive directory), plus an AI program builder that generates full programs in about 30 seconds. Scheduling, payments, check-ins, nutrition, messaging — all in one place. Every feature is on the free plan (up to 3 clients). firstrep.fit if you want to check it out.
-```
+**When someone asks "what app do you use?":**
+> I've been using FirstRep — it's the only one with a real marketplace where clients find you (not a directory), plus an AI program builder that generates full programs in 30 seconds. Every feature on the free plan (3 clients). firstrep.fit
 
 **When someone posts about struggling to find clients:**
-```
-The Instagram hustle for clients is exhausting. Something that helped me: getting on a platform with a built-in marketplace where clients search by location, specialty, and price. It's like having a storefront that's always open instead of relying on DMs and referrals. The one I use is FirstRep (firstrep.fit) — free to try.
-```
+> Getting on a platform with a built-in marketplace helped me a lot. Clients search by location, specialty, and price. The one I use is FirstRep (firstrep.fit) — free to try.
 
 **When someone posts about admin overload:**
-```
-I tracked my admin time for a month and it was 15+ hours/week. Biggest time saves for me: (1) AI for programming — 30 seconds instead of an hour per client, (2) batch check-in review instead of one-by-one, (3) self-serve scheduling so clients book themselves. I use FirstRep for all of these but the principle applies regardless: automate the repetitive stuff so you can focus on coaching.
-```
+> Biggest time saves: (1) AI for programming — 30 seconds instead of an hour, (2) batch check-in review, (3) self-serve scheduling. I use FirstRep but the principle applies regardless: automate the repetitive stuff.
 
 **When someone posts about cancellations/payments:**
-```
-Two things that changed my income stability: (1) a cancellation policy that enforces itself — late cancel inside 24 hours = auto-charged, (2) automated billing through Stripe so I never chase a payment. The financial stress dropped dramatically once these two things were on autopilot. I use FirstRep which handles both.
-```
+> Two things that changed my income stability: auto-enforced cancellation policy and automated Stripe billing. I use FirstRep which handles both.
 
 **When someone asks about scaling past 15-20 clients:**
-```
-The wall at 20 clients isn't about coaching ability — it's about systems. What specifically breaks: programming time, check-in review time, and scheduling chaos. I got past it with AI for programming (~30 seconds per program), batch check-in review (20 clients in 15 minutes), and self-serve scheduling. Went from 20 to 35 without adding work hours.
-```
+> The wall at 20 isn't coaching ability — it's systems. AI for programming, batch check-ins, self-serve scheduling. Went from 20 to 35 without adding hours.
 
-### 8.3 Rules
+### Rules
 1. No promotion for 2 weeks. Build credibility first.
-2. 3–5 helpful answers per day.
-3. When someone asks about tools: mention FirstRep naturally.
+2. 3-5 helpful answers per day.
+3. Mention FirstRep naturally when tools come up.
 4. Share blog posts from firstrep.fit/blog when relevant.
 5. If asked directly: "yeah I work on it — happy to answer questions."
 
+### Build Our Own Community (Week 8+)
+
+**Why:** Both research reports identify this as a gap. No competitor has built a real community with switching costs. Facebook groups are low-investment afterthoughts.
+
+**Platform:** Discord (free, familiar to younger trainers, supports threads/channels)
+
+**Structure:**
+- #introductions — new members share their niche and goals
+- #client-acquisition — how trainers get clients (our marketplace is the obvious answer)
+- #programming — share approaches, ask questions (AI builder is the obvious tool)
+- #business-advice — pricing, retention, scaling
+- #app-feedback — direct product feedback from real users
+- #wins — celebrate milestones (creates social proof content)
+
+**Launch:** Invite first 20-30 active FirstRep users. Use as a retention mechanism and feedback loop. Creates switching costs — trainers stay not just for the tool but for the network.
+
 ---
 
-## 9. Content & SEO (Already Live)
+## 14. Partnership & Certification Distribution
 
-14 articles live at firstrep.fit/blog:
+### Why This Matters (From Research)
 
-**Competition:** Best Personal Training Software 2026, FirstRep vs Trainerize vs Everfit, Trainerize Alternative, Everfit Alternative
+Trainerize partners with NASM, ACE, and Precision Nutrition. TrueCoach is the exclusive official app of ISSA and has a NASM CEU library. These partnerships drive steady referral traffic from trainers completing certifications.
 
-**Pain points:** Automate Your Business, Pricing Guide, Client Retention, Scale Beyond 20 Clients, Fix Payment Collection, Burnout Signs, Create Programs Faster, Client Onboarding Checklist, Weekly Check-In Templates, Digitize Your Business
+We need to pursue this systematically — but it's a longer-term play (Weeks 8-16).
 
-**Actions:**
-- [ ] Submit sitemap.xml to Google Search Console
-- [ ] Submit to Bing Webmaster Tools
-- [ ] Set up GA4 with conversion tracking
-- [ ] Monitor keyword rankings weekly
+### Partnership Targets (Priority Order)
+
+| Partner | Why | Approach | Timeline |
+|---------|-----|----------|----------|
+| **NASM** | 200K+ certified trainers. Already partnered with Trainerize and TrueCoach. | Offer free Pro for NASM members for 3 months. Propose CEU integration. | Week 10 |
+| **ACE** | Major cert body. Trainerize partner. | Same offer. Position as "the marketplace for ACE-certified trainers." | Week 10 |
+| **ISSA** | Exclusive with TrueCoach — but exclusivity can be challenged with better terms. | Approach after building case studies. | Week 12 |
+| **NSCA** | Strength-focused trainers. Less courted by competitors. | "The platform for NSCA coaches." Niche positioning. | Week 8 |
+| **Precision Nutrition** | Nutrition coaches overlap with our ICP. | Highlight our built-in nutrition features. | Week 10 |
+| **Online coaching programs** (PTDC, NPE, Online Trainer Academy) | They graduate new trainers monthly who need tools. | Offer exclusive founding rates for their graduates. | Week 8 |
+| **Local gym chains** | Trainers who rent space or work at commercial gyms. | B2B partnership: "offer FirstRep to your trainers." | Week 12+ |
+
+### Partnership Pitch Template
+
+```
+Subject: Partnership idea for [Cert Body] members
+
+Hi [Name],
+
+I'm Baraa, founder of FirstRep — a coaching app for personal trainers with a built-in client marketplace.
+
+Quick context: [Cert Body] members who just passed their certification need two things — clients and a system to manage them. Most end up cobbling together 6 different tools and hustling on Instagram.
+
+We'd love to offer [Cert Body] members:
+- Free Pro access for 3 months ($19/month value)
+- Priority marketplace listing (so their clients can find them faster)
+- [Cert Body]-branded templates for common programming needs
+
+In return, we'd ask for:
+- A mention in your post-certification resource email
+- A co-branded landing page (firstrep.fit/[certbody])
+- Optional: link on your tools/resources page
+
+Happy to jump on a quick call if this is interesting.
+
+— Baraa
+Founder, FirstRep
+```
 
 ---
 
-## 10. Referral Program (Week 6+)
+## 15. The Conversion Funnel
+
+### The Full Funnel
+
+```
+Awareness → Email Capture → Nurture → Free Trial → Activation → Pro Conversion
+```
+
+**Stage 1: Awareness**
+- Channels: Google Ads, Reddit, Instagram, TikTok, YouTube, SEO, Facebook groups
+- Goal: Get them to the landing page
+- KPI: Unique visitors per week
+
+**Stage 2: Email Capture (NEW — Currently Missing)**
+- Not everyone will download immediately. Capture emails with lead magnets.
+- **Lead Magnet Options:**
+  - "The Trainer's Pricing Guide" (PDF — how to price coaching packages)
+  - "21 Automation Rules That Save 10+ Hours/Week" (checklist)
+  - "FirstRep vs Trainerize vs Everfit" (comparison PDF)
+- **Implementation:** Email capture form on landing page, blog posts, and comparison pages
+- **Tool:** ConvertKit (free for 1K subscribers) or Mailchimp (free for 500)
+- KPI: Email capture rate (target: 5-8% of visitors)
+
+**Stage 3: Nurture (5-Email Drip)**
+Once someone gives their email but hasn't downloaded:
+
+| Email | Day | Subject | Content |
+|-------|-----|---------|---------|
+| 1 | 0 | Welcome + lead magnet | Deliver the PDF + "download the app when ready" |
+| 2 | 2 | "The marketplace difference" | How the marketplace works, why it's unique |
+| 3 | 5 | "30 seconds to a full program" | AI builder demo (link to YouTube video) |
+| 4 | 8 | "What other trainers say" | Testimonial/case study (when available) |
+| 5 | 12 | "Founding Trainer spots filling up" | Urgency + founding offer |
+
+**Stage 4: Free Trial / Download**
+- Goal: Get them to download the app and create a profile
+- CTA: "Download Free" everywhere
+- KPI: App downloads per week
+
+**Stage 5: Activation (Critical)**
+A download is worthless if they don't do anything. Activation = completing these 3 actions within 7 days:
+
+1. Complete profile (photo, bio, certifications, specialties)
+2. Create their first package OR use AI to build their first program
+3. Invite 1 client OR go live on marketplace
+
+**Activation Support:**
+- Push notification: Day 1 "Complete your profile to go live on the marketplace"
+- Push notification: Day 2 "Try the AI builder — describe any workout and get a program in 30 seconds"
+- Push notification: Day 3 "Invite your first client or go live on the marketplace"
+- Email: Day 5 "Need help getting started? Here's a 5-minute setup guide"
+- Email: Day 7 "Your profile is incomplete. Trainers with complete profiles get 3x more marketplace inquiries."
+
+**Stage 6: Pro Conversion**
+- Trigger: When trainer hits 3-client limit (natural paywall)
+- Nudge: "You've hit your client limit. Upgrade to Pro for $19/month to add unlimited clients."
+- Founding offer: "$9/month locked in forever — [X] spots remaining"
+- KPI: Free → Pro conversion rate (target: 20-30%)
+
+---
+
+## 16. Referral & Affiliate Programs
+
+### Referral Program (Launch Week 6+)
 
 Launch once we have 20+ active trainers.
 
-- **Referring trainer:** 1 free month of Pro per referred trainer who signs up
-- **Referred trainer:** 5 clients free (instead of 3) for 3 months
-- **Stack unlimited:** 12 referrals = 1 free year
+**For the referrer (existing trainer):**
+- 1 free month of Pro per successful referral
+- Stacks: 12 referrals = 1 free year
+- Referral link with tracking: firstrep.fit/ref/{username}
+
+**For the referred (new trainer):**
+- 5 clients free (instead of 3) for first 3 months
+- Access to founding trainer pricing if spots remain
+
+### Affiliate Program (Launch Week 10+)
+
+**Why:** Every competitor has one. It's table stakes.
+
+**Structure:**
+- 20% recurring commission for 12 months on referred trainer's subscription
+- Affiliate dashboard with tracking link, conversion metrics
+- Monthly payout via PayPal or bank transfer
+- Open to: fitness influencers, coaching educators, review bloggers, YouTube creators
+
+**Target affiliates:**
+- Fitness YouTube channels (5K-50K subscribers)
+- Instagram fitness business coaches
+- PTDC and NPE community leaders
+- Personal training review bloggers
+- Podcast hosts covering fitness business
+
+**Affiliate pitch:**
+```
+Subject: 20% recurring commission on a coaching app trainers actually need
+
+Hi [Name],
+
+I'm Baraa, founder of FirstRep — the only coaching app with a built-in marketplace where clients find and book trainers.
+
+We're launching an affiliate program: 20% recurring commission for 12 months on every trainer who subscribes through your link. Pro is $19/month, so that's $3.80/month per referral, recurring.
+
+If you refer 50 trainers, that's $190/month passive income.
+
+Want me to set up your tracking link?
+
+— Baraa
+```
 
 ---
 
-## 11. Launch Offer
+## 17. Launch Offer: Founding 100
 
-### "Founding 100" Program
+### The Offer
 
-**The offer:**
-- Lifetime Pro pricing: **$9/month** (53% off — locked in forever)
-- **0% marketplace commission** for the first 6 months
-- **"Founding Trainer" badge** on marketplace profile (permanent)
-- **Direct access to the founder** for support
+- **Lifetime Pro pricing: $9/month** (53% off — locked in forever)
+- **0% marketplace commission** for the first 6 months (normally 10%)
+- **"Founding Trainer" badge** on marketplace profile (permanent, exclusive)
+- **Direct access to the founder** for support and feature requests
 - **Vote on the product roadmap**
 
-**When to use it:** Not in the cold email sequence. Use in DM follow-ups and email replies when someone shows interest. Feature on firstrep.fit/founding.
+### When to Use
 
-### Founding 100 Email (for converting free users)
+Not in the cold email opener. Use in:
+- DM follow-ups when someone shows interest
+- Email sequence (Email 5)
+- Reddit organic (when relevant)
+- Instagram DMs (after initial engagement)
+- Landing page `/founding`
+- Post-signup email drip for converting free → Pro
+
+### Founding 100 Conversion Email
 
 ```
 Subject: you're one of our first 100
@@ -941,93 +1149,222 @@ You signed up for FirstRep {X days} ago. Thanks for checking it out.
 
 I'm doing something I'll probably regret later: the first 100 trainers who go Pro get locked-in pricing at $9/month. Forever. Regular price is $19.
 
-You also get 0% marketplace commission for 6 months (normally 20% on marketplace clients), a Founding Trainer badge on your profile, and direct access to me for anything you need.
+You also get 0% marketplace commission for 6 months (normally 10%), a permanent Founding Trainer badge on your profile, and direct access to me for anything you need.
 
 {spots_remaining} spots left.
 
-If you're finding value in the app, this is the cheapest it'll ever be: https://firstrep.fit/founding
+If you're finding value in the app, this is the cheapest it'll ever be: firstrep.fit/founding
 
 — Baraa
 ```
 
+### Founding 100 Landing Page Content
+
+URL: firstrep.fit/founding
+
+Sections:
+1. Headline: "Founding Trainer Program — {spots_remaining} Spots Left"
+2. What you get (pricing, badge, commission, access)
+3. Why we're doing this (we need 100 trainers who use it daily and give honest feedback)
+4. Social proof (when available — testimonials from early users)
+5. FAQ (Can I cancel? Is the price really forever? What happens after 100?)
+6. CTA: "Claim Your Spot"
+
 ---
 
-## 12. Weekly Execution Calendar
+## 18. Weekly Execution Calendar
 
-### Week 1–2: Setup & Warm-Up
+### Phase 1: Foundation (Weeks 1-4)
+
+**Week 1-2: Setup & Warm-Up**
 - [ ] Set up outreach domain mailboxes, SPF/DKIM/DMARC, begin warming
 - [ ] Set up Apollo.io, export first 200 leads, verify emails
-- [ ] Create FirstRep Instagram account, post first 5 posts (Carousels 1–3, Reels 1–2)
+- [ ] Create FirstRep Instagram account, post first 5 posts
 - [ ] Begin Instagram engagement: follow + like + comment 15 trainers/day
 - [ ] Join top 5 Facebook groups, start answering questions (no promotion)
-- [ ] Start Reddit karma building: 3–5 helpful comments/day in r/personaltraining
-- [ ] Submit sitemap to Google Search Console
-- [ ] Set up GA4 on landing page
-- [ ] Create "Founding 100" landing page
-- [ ] Load 5-email sequence into sending tool
+- [ ] Start Reddit karma building: 3-5 helpful comments/day
+- [ ] Submit sitemap to Google Search Console and Bing Webmaster
+- [ ] Set up GA4 with event tracking on landing page
+- [ ] Create "Founding 100" landing page at firstrep.fit/founding
+- [ ] Set up email capture with lead magnet on landing page
+- [ ] Set up ConvertKit/Mailchimp with 5-email nurture drip
+- [ ] Load 5-email cold sequence into sending tool
+- [ ] Build `/vs-trainerize` comparison page
+- [ ] Build `/vs-everfit` comparison page
 
-### Week 3–4: Launch
-- [ ] Begin cold email campaign (30–50/day per mailbox)
-- [ ] Begin Instagram DMs (15–20/day)
+**Week 3-4: Launch**
+- [ ] Begin cold email campaign (30-50/day per mailbox)
+- [ ] Begin Instagram DMs (15-20/day)
 - [ ] Launch Reddit ads ($100 across 3 variants)
+- [ ] Launch Google Ads ($150/month, BoFU keywords)
 - [ ] Post Reddit launch post (#1) in r/personaltraining
-- [ ] Continue IG content: 1 post/day (Carousels 4–6, Reels 3–5, Stats 1–2)
+- [ ] Continue IG content: 1 post/day
 - [ ] Continue Facebook group engagement
-- [ ] **Target: 15 free signups, 5 Pro**
+- [ ] Record first YouTube video (screen recording style)
+- [ ] **Target: 20 free signups, 5 Pro**
 
-### Week 5–6: Optimize
-- [ ] A/B test email subject lines
-- [ ] Kill worst Reddit ad, redistribute budget
+### Phase 2: Validate (Weeks 5-8)
+
+**Week 5-6: Optimize**
+- [ ] A/B test email subject lines (kill underperformers)
+- [ ] Kill worst Reddit ad, redistribute budget to winner
+- [ ] Analyze Google Ads — pause bad keywords, scale good ones
 - [ ] Export next 500 Apollo leads
 - [ ] Post Reddit value posts (#2, #3)
-- [ ] Scale IG DMs if reply rate is healthy
-- [ ] Continue IG content: Carousels 7–8, Reels 6–8, Stats 3–4, Story Series 1–3
-- [ ] **Target: 40 cumulative free signups, 12 Pro**
+- [ ] Scale IG DMs if reply rate healthy
+- [ ] Publish 2 YouTube videos (business advice + app walkthrough)
+- [ ] Start TikTok account, post 3-4 videos
+- [ ] Build `/vs-truecoach` comparison page
+- [ ] Write 4 new blog articles (BoFU keywords)
+- [ ] **Target: 50 cumulative free, 15 Pro**
 
-### Week 7–8: Accelerate
+**Week 7-8: Activate**
 - [ ] Launch referral program
-- [ ] Publish first case study
+- [ ] Publish first case study (from most active founding trainer)
 - [ ] Post Reddit discussion post (#5)
 - [ ] Reach out to 5 fitness micro-influencers
-- [ ] Continue IG content: Carousels 9–10, Reels 9–10, Stats 5, Story Series 4–5
 - [ ] Send Founding 100 email to all free users
-- [ ] **Target: 70 cumulative free, 30 Pro**
+- [ ] Launch Discord community, invite active users
+- [ ] Continue YouTube (2/week), TikTok (3-4/week)
+- [ ] Begin Meta Ads test ($100/month) if we have social proof
+- [ ] Begin partnership outreach (NSCA, online coaching programs)
+- [ ] **Target: 90 cumulative free, 35 Pro**
 
-### Week 9–10: Compound
-- [ ] Referral program generating 5–10 signups/week
-- [ ] SEO driving organic traffic
+### Phase 3: Accelerate (Weeks 9-12)
+
+**Week 9-10: Scale Winners**
+- [ ] Referral program generating 5-10 signups/week
+- [ ] SEO starting to drive organic traffic
+- [ ] Double Google Ads budget if ROAS > 3x
 - [ ] Export next 1,000 Apollo leads
+- [ ] Publish second case study
 - [ ] Reddit comments and engagement ongoing
-- [ ] Start second round of IG content (repurpose top performers)
-- [ ] **Target: 130 cumulative free, 55 Pro**
+- [ ] Second round of IG content (repurpose top performers)
+- [ ] Continue YouTube and TikTok cadence
+- [ ] Reach out to NASM and ACE for partnership
+- [ ] **Target: 160 cumulative free, 60 Pro**
 
-### Week 11–12: Close
-- [ ] "Founding 100 Almost Full" messaging in DMs and follow-ups
+**Week 11-12: Push to 100**
+- [ ] "Founding 100 Almost Full" messaging in all channels
 - [ ] Personal message to top 20 most engaged free users
 - [ ] Email all remaining free users with Founding offer + urgency
-- [ ] **Target: 200+ free, 100 Pro**
+- [ ] Scale winning paid channels
+- [ ] Kill underperforming channels
+- [ ] Launch affiliate program
+- [ ] **Target: 250+ free, 100 Pro**
+
+### Phase 4: Compound (Weeks 13-16)
+
+**Week 13-14: Post-100 Transition**
+- [ ] Close Founding 100 program
+- [ ] Transition to standard Pro pricing ($19/month)
+- [ ] Publish "100 Trainers" milestone content (blog, social, email)
+- [ ] 3+ case studies live
+- [ ] YouTube channel at 10+ videos
+- [ ] Scale Meta Ads with video testimonials
+- [ ] Test LinkedIn Ads targeting certified trainers
+- [ ] Formalize partnership with at least 1 cert body
+
+**Week 15-16: Systematize**
+- [ ] Document what works, kill what doesn't
+- [ ] Build repeatable playbook for next 100
+- [ ] Hire first community manager or marketer (if budget allows)
+- [ ] Set 6-month targets based on learnings
+- [ ] **Target: 400+ free, 150+ Pro**
 
 ---
 
-## 13. Tools & Budget
+## 19. Tools & Budget
 
-| Tool | Purpose | Cost |
-|------|---------|------|
-| Apollo.io (Free) | Lead sourcing | $0 |
-| Apollo.io (Paid, if needed) | More leads | $49/month |
-| Outreach domains | Sending | Already done |
-| Google Workspace (mailboxes) | Outreach accounts | $7/mailbox/month |
-| Instantly.ai (optional) | Email automation | $37/month |
-| Reddit Ads | Paid acquisition | $100 one-time |
-| GA4 + Search Console | Analytics | $0 |
-| Canva (free tier) | IG carousels | $0 |
+### Monthly Budget Breakdown
 
-**Minimum budget:** $100 (Reddit) + time
-**Comfortable budget:** ~$200/month
+| Category | Tool | Cost/Month |
+|----------|------|-----------|
+| **Paid Ads** | Google Ads | $150 |
+| | Reddit Ads | $100 |
+| | Meta Ads (week 8+) | $100 |
+| **Email** | Apollo.io (free tier) | $0 |
+| | Apollo.io (paid, if needed) | $49 |
+| | ConvertKit (email nurture) | $0 (free to 1K) |
+| | Instantly.ai (optional) | $37 |
+| **Outreach** | Google Workspace (2 mailboxes) | $14 |
+| | Outreach domains | Already done |
+| **Content** | Canva (free tier) | $0 |
+| | Screen recording (OBS) | $0 |
+| | Microphone | $50 one-time |
+| **Analytics** | GA4 + Search Console | $0 |
+| | Google Ads reporting | $0 |
+| **Community** | Discord | $0 |
+| **Total** | | **$350-500/month** |
+
+### Phase Budget Allocation
+
+| Phase | Weeks | Primary Spend | Budget |
+|-------|-------|--------------|--------|
+| Foundation | 1-4 | Cold email infra + Reddit Ads | $200 |
+| Validate | 5-8 | Google Ads + Reddit Ads + Meta test | $450 |
+| Accelerate | 9-12 | Google Ads + Meta + Reddit | $500 |
+| Compound | 13-16 | Scale winners + LinkedIn test | $500 |
 
 ### CAN-SPAM Compliance
+
 Every outreach email includes: sender's physical address, honest subject line, functional unsubscribe, accurate "From" info.
 
 ---
 
-*Updated February 22, 2026. Review weekly based on performance data.*
+## 20. KPIs & Decision Points
+
+### Weekly Dashboard
+
+| Metric | Week 4 Target | Week 8 Target | Week 12 Target | Week 16 Target |
+|--------|---------------|---------------|----------------|----------------|
+| Free signups (cumulative) | 20 | 90 | 250 | 400 |
+| Pro subscribers (cumulative) | 5 | 35 | 100 | 150 |
+| Free → Pro conversion rate | 25% | 30% | 35% | 35% |
+| MRR | $45 | $315 | $900 | $1,350+ |
+| Email list size | 100 | 400 | 800 | 1,200 |
+| YouTube subscribers | - | 100 | 500 | 1,000 |
+| CAC (blended) | $20 | $15 | $12 | $10 |
+
+### Channel Kill Criteria
+
+Kill a channel if after 4 weeks it produces:
+- **Google Ads:** CAC > $40 or conversion rate < 1%
+- **Reddit Ads:** CAC > $30 or CTR < 0.3%
+- **Meta Ads:** CAC > $50 or CTR < 0.5%
+- **Cold Email:** Reply rate < 2% or signup rate < 0.5% of opens
+- **Instagram DMs:** Reply rate < 10% or conversion < 1%
+
+### Decision Points
+
+**Week 4:** If total signups < 10 → revisit messaging (not channels). The product pitch isn't landing.
+
+**Week 8:** Rank channels by CAC. Double down on top 2, reduce bottom 2. If Pro conversions < 15 → revisit activation flow (onboarding, not acquisition).
+
+**Week 12:** If not at 70+ Pro → extend timeline to 16 weeks and shift budget to best-performing channel. If at 100+ → close Founding 100, transition to standard pricing.
+
+**Week 16:** Review total unit economics. If blended CAC < $15 and LTV > $100, prepare to raise budget significantly.
+
+---
+
+## Appendix: Strategic Principles (From Competitive Research)
+
+1. **Don't compete on features — compete on distribution.** Feature parity is converging. Every competitor has workouts, messaging, scheduling. The winners are the ones who find trainers where competitors aren't looking.
+
+2. **The marketplace is our moat.** No competitor has a real client discovery engine. This is the one thing we can say that nobody else can. Lead with it everywhere.
+
+3. **Paid acquisition is the single biggest opportunity.** Every competitor relies on organic. We can buy market share while they fight over SEO and referrals.
+
+4. **YouTube is unclaimed territory.** No competitor has more than 10K subscribers. The first mover who publishes consistently wins the channel for years.
+
+5. **Social proof compounds.** Every case study, every testimonial, every app store review makes every other channel more effective. Prioritize capturing proof from day 1.
+
+6. **Community creates switching costs.** A Discord community of 200 active trainers is worth more than 2,000 email subscribers. They stay for the network, not just the tool.
+
+7. **Niche first, broaden later.** Own "the platform for online-hybrid coaches with 5-25 clients" before trying to own "the platform for all fitness professionals."
+
+8. **The client app quality is an underrated weapon.** If trainers' clients love using FirstRep, trainers never leave. Invest in the client experience as a retention and word-of-mouth strategy.
+
+---
+
+*Updated February 24, 2026. Informed by competitive intelligence analysis of Trainerize, TrueCoach, Everfit, My PT Hub, and Harbiz. Review weekly based on performance data.*

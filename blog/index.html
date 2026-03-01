@@ -84,6 +84,32 @@
     .hero__title { font-size: 48px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 16px; }
     .hero__desc { font-size: 18px; color: var(--text-3); max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
 
+    /* FILTERS */
+    .blog-filters { margin-bottom: 40px; }
+    .blog-search { position: relative; margin-bottom: 20px; }
+    .blog-search__input { width: 100%; padding: 14px 20px 14px 48px; font-family: inherit; font-size: 15px; font-weight: 400; color: var(--text); background: var(--bg-2); border: 2px solid transparent; border-radius: 14px; outline: none; transition: all 0.2s; }
+    .blog-search__input::placeholder { color: var(--text-muted); }
+    .blog-search__input:focus { background: var(--bg); border-color: var(--brand); box-shadow: 0 0 0 4px rgba(94,89,254,0.1); }
+    .blog-search__icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+    .blog-search__clear { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 4px; display: none; transition: color 0.2s; }
+    .blog-search__clear:hover { color: var(--text); }
+    .blog-search__clear.visible { display: block; }
+    .blog-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+    .blog-chip { display: inline-flex; align-items: center; padding: 8px 16px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--text-3); background: var(--bg-2); border: 2px solid transparent; border-radius: 100px; cursor: pointer; transition: all 0.2s; white-space: nowrap; user-select: none; }
+    .blog-chip:hover { color: var(--text); background: #EAEBEF; }
+    .blog-chip--active { color: var(--brand); background: var(--brand-light); border-color: var(--brand); }
+    .blog-chip--active:hover { background: var(--brand-light); }
+    .blog-chip__count { margin-left: 6px; font-size: 11px; font-weight: 700; color: var(--text-muted); background: rgba(0,0,0,0.06); padding: 1px 7px; border-radius: 100px; }
+    .blog-chip--active .blog-chip__count { color: var(--brand); background: rgba(94,89,254,0.15); }
+    .blog-no-results { text-align: center; padding: 80px 20px; display: none; }
+    .blog-no-results.visible { display: block; }
+    .blog-no-results__icon { margin: 0 auto 16px; color: var(--text-muted); }
+    .blog-no-results__title { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .blog-no-results__desc { font-size: 15px; color: var(--text-3); }
+    .blog-card--hidden { display: none !important; }
+    .blog-results-count { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-weight: 500; display: none; }
+    .blog-results-count.visible { display: block; }
+
     /* BLOG GRID */
     .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-bottom: 100px; }
     .blog-card { background: var(--bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
@@ -264,9 +290,40 @@
     </div>
   </section>
 
+  <!-- FILTERS -->
+  <section class="container">
+    <div class="blog-filters">
+      <div class="blog-search">
+        <i data-lucide="search" class="blog-search__icon" style="width:18px;height:18px"></i>
+        <input type="text" class="blog-search__input" id="blogSearch" placeholder="Search articles..." autocomplete="off">
+        <button class="blog-search__clear" id="blogSearchClear" aria-label="Clear search"><i data-lucide="x" style="width:18px;height:18px"></i></button>
+      </div>
+      <div class="blog-chips" id="blogChips"></div>
+    </div>
+    <div class="blog-results-count" id="blogResultsCount"></div>
+    <div class="blog-no-results" id="blogNoResults">
+      <i data-lucide="search-x" class="blog-no-results__icon" style="width:48px;height:48px"></i>
+      <div class="blog-no-results__title">No articles found</div>
+      <div class="blog-no-results__desc">Try a different search term or clear your filters.</div>
+    </div>
+  </section>
+
   <!-- BLOG GRID -->
   <section class="container">
-    <div class="blog-grid">
+    <div class="blog-grid" id="blogGrid">
+
+      <a href="ai-marketing-agent-personal-trainers.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80" alt="AI marketing dashboard for personal trainers">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Marketing &amp; Growth</span>
+          <h2 class="blog-card__title">AI Marketing Agent for Personal Trainers: How to Get Clients on Autopilot in 2026</h2>
+          <p class="blog-card__excerpt">Your AI marketing department creates social content, writes SEO articles, captures leads, and nurtures prospects into paying clients. All on autopilot.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 10 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Mar 1, 2026</span>
+          </div>
+        </div>
+      </a>
 
       <a href="how-to-get-more-personal-training-clients.html" class="blog-card">
         <img class="blog-card__img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&q=80" alt="Personal trainer coaching a client">
@@ -515,6 +572,124 @@
         </div>
       </a>
 
+      <a href="best-app-for-online-personal-training.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&h=400&fit=crop&q=80" alt="Personal trainer coaching client with app">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Guide</span>
+          <h2 class="blog-card__title">Best App for Online Personal Training in 2026</h2>
+          <p class="blog-card__excerpt">We compare the top 5 apps for online coaching — video delivery, client communication, progress tracking, and marketplace discovery.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 10 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="personal-training-software-pricing-comparison.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&q=80" alt="Calculator and pricing comparison">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Pricing</span>
+          <h2 class="blog-card__title">Personal Training Software Pricing Comparison 2026: Complete Guide</h2>
+          <p class="blog-card__excerpt">Detailed pricing breakdown of 6 platforms at 5, 15, 30, 50, and 100 clients. See the real cost including hidden fees.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 9 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ai-personal-training-tools-guide.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&q=80" alt="AI technology for fitness">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Technology</span>
+          <h2 class="blog-card__title">AI Tools for Personal Trainers: Complete 2026 Guide</h2>
+          <p class="blog-card__excerpt">Survey of AI tools available to trainers: workout builders, nutrition planning, content generation, and why integrated beats standalone.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 8 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="start-online-coaching-business-zero-clients.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop&q=80" alt="Starting an online business from scratch">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Getting Started</span>
+          <h2 class="blog-card__title">How to Start an Online Coaching Business with Zero Clients in 2026</h2>
+          <p class="blog-card__excerpt">Step-by-step launch plan from platform selection to your first paying client. No existing audience required.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 8 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="personal-training-software-with-marketplace.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80" alt="Marketplace and client discovery">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Marketplace</span>
+          <h2 class="blog-card__title">Personal Training Software with Built-in Marketplace: Why It Matters</h2>
+          <p class="blog-card__excerpt">Why marketplace-integrated software is the future. Compare BYOC vs marketplace model and see the real client acquisition cost data.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 9 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Comparison Pages -->
+      <a href="../vs/trainerize.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&q=80" alt="Modern gym with equipment">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">VS</span>
+          <h2 class="blog-card__title">FirstRep vs Trainerize: The 2026 Feature & Pricing Comparison</h2>
+          <p class="blog-card__excerpt">Side-by-side comparison of pricing, features, marketplace, coaching depth, and burnout prevention tools.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 12 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="../vs/everfit.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop&q=80" alt="Trainer coaching client">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">VS</span>
+          <h2 class="blog-card__title">FirstRep vs Everfit: The 2026 Feature & Pricing Comparison</h2>
+          <p class="blog-card__excerpt">Everfit has solid workout tools but no scheduling and no marketplace. See the full 2026 comparison.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 11 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="../vs/truecoach.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&h=400&fit=crop&q=80" alt="Modern gym interior">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">VS</span>
+          <h2 class="blog-card__title">FirstRep vs TrueCoach: The 2026 Feature & Pricing Comparison</h2>
+          <p class="blog-card__excerpt">TrueCoach charges $250/mo for unlimited clients. See how FirstRep compares across pricing and every feature category.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 10 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="../vs/mypthub.html" class="blog-card">
+        <img class="blog-card__img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop&q=80" alt="Weight training">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">VS</span>
+          <h2 class="blog-card__title">FirstRep vs My PT Hub: The 2026 Feature & Pricing Comparison</h2>
+          <p class="blog-card__excerpt">My PT Hub has 130K+ users but no marketplace, no AI tools, and limited coaching depth. The full 2026 breakdown.</p>
+          <div class="blog-card__meta">
+            <span><i data-lucide="clock" style="width:14px;height:14px"></i> 10 min</span>
+            <span><i data-lucide="calendar" style="width:14px;height:14px"></i> Feb 27, 2026</span>
+          </div>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -576,6 +751,8 @@
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     lucide.createIcons();
+
+    // --- Nav ---
     var hamburger = document.getElementById('hamburger');
     var mobileMenu = document.getElementById('mobileMenu');
     if (hamburger) {
@@ -589,7 +766,6 @@
     var overlay = document.getElementById('megaOverlay');
     if(ft && mm) {
       ft.addEventListener('click', function() {
-        var open = mm.classList.contains('visible');
         mm.classList.toggle('visible');
         overlay.classList.toggle('visible');
         ft.classList.toggle('open');
@@ -606,9 +782,135 @@
       mft.addEventListener('click', function(e){
         e.preventDefault();
         mfeat.classList.toggle('open');
-        mft.textContent = mfeat.classList.contains('open') ? 'Features −' : 'Features +';
+        mft.textContent = mfeat.classList.contains('open') ? 'Features \u2212' : 'Features +';
       });
     }
+
+    // --- Blog filtering ---
+    var grid = document.getElementById('blogGrid');
+    var searchInput = document.getElementById('blogSearch');
+    var searchClear = document.getElementById('blogSearchClear');
+    var chipsContainer = document.getElementById('blogChips');
+    var noResults = document.getElementById('blogNoResults');
+    var resultsCount = document.getElementById('blogResultsCount');
+    if (!grid || !searchInput || !chipsContainer) return;
+
+    var cards = Array.from(grid.querySelectorAll('.blog-card'));
+    var activeTag = 'All';
+
+    // Merge similar tags into groups
+    var tagMap = {
+      'VS': 'Comparison',
+      'Getting Started': 'Guide',
+      'For Clients': 'Guide',
+      'Marketplace': 'Guide',
+      'Digital': 'Technology',
+      'Programming': 'Technology',
+      'Onboarding': 'Coaching',
+      'Retention': 'Coaching',
+      'Wellness': 'Coaching',
+      'Payments': 'Business',
+      'Pricing': 'Business',
+      'Productivity': 'Business'
+    };
+
+    // Read tags from DOM and build tag counts
+    var cardData = cards.map(function(card) {
+      var tagEl = card.querySelector('.blog-card__tag');
+      var titleEl = card.querySelector('.blog-card__title');
+      var excerptEl = card.querySelector('.blog-card__excerpt');
+      var rawTag = tagEl ? tagEl.textContent.trim() : '';
+      var normalizedTag = tagMap[rawTag] || rawTag;
+      return {
+        el: card,
+        tag: normalizedTag,
+        rawTag: rawTag,
+        title: (titleEl ? titleEl.textContent : '').toLowerCase(),
+        excerpt: (excerptEl ? excerptEl.textContent : '').toLowerCase()
+      };
+    });
+
+    // Count tags
+    var tagCounts = {};
+    cardData.forEach(function(d) {
+      tagCounts[d.tag] = (tagCounts[d.tag] || 0) + 1;
+    });
+
+    // Sort tags: most articles first
+    var sortedTags = Object.keys(tagCounts).sort(function(a, b) {
+      return tagCounts[b] - tagCounts[a];
+    });
+
+    // Build chips
+    var allChip = document.createElement('button');
+    allChip.className = 'blog-chip blog-chip--active';
+    allChip.setAttribute('data-tag', 'All');
+    allChip.innerHTML = 'All <span class="blog-chip__count">' + cards.length + '</span>';
+    chipsContainer.appendChild(allChip);
+
+    sortedTags.forEach(function(tag) {
+      var chip = document.createElement('button');
+      chip.className = 'blog-chip';
+      chip.setAttribute('data-tag', tag);
+      chip.innerHTML = tag + ' <span class="blog-chip__count">' + tagCounts[tag] + '</span>';
+      chipsContainer.appendChild(chip);
+    });
+
+    function filterCards() {
+      var query = searchInput.value.toLowerCase().trim();
+      var visibleCount = 0;
+
+      cardData.forEach(function(d) {
+        var matchesTag = activeTag === 'All' || d.tag === activeTag;
+        var matchesSearch = !query || d.title.indexOf(query) !== -1 || d.excerpt.indexOf(query) !== -1;
+        var visible = matchesTag && matchesSearch;
+        d.el.classList.toggle('blog-card--hidden', !visible);
+        if (visible) visibleCount++;
+      });
+
+      // Show/hide no results
+      noResults.classList.toggle('visible', visibleCount === 0);
+      grid.style.display = visibleCount === 0 ? 'none' : '';
+
+      // Show results count when filtering
+      if (query || activeTag !== 'All') {
+        resultsCount.textContent = visibleCount + ' article' + (visibleCount !== 1 ? 's' : '') + ' found';
+        resultsCount.classList.add('visible');
+      } else {
+        resultsCount.classList.remove('visible');
+      }
+
+      // Show/hide clear button
+      searchClear.classList.toggle('visible', query.length > 0);
+    }
+
+    // Search input
+    var searchTimer;
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(filterCards, 150);
+    });
+
+    // Clear search
+    searchClear.addEventListener('click', function() {
+      searchInput.value = '';
+      filterCards();
+      searchInput.focus();
+    });
+
+    // Chip clicks
+    chipsContainer.addEventListener('click', function(e) {
+      var chip = e.target.closest('.blog-chip');
+      if (!chip) return;
+      activeTag = chip.getAttribute('data-tag');
+      chipsContainer.querySelectorAll('.blog-chip').forEach(function(c) {
+        c.classList.toggle('blog-chip--active', c.getAttribute('data-tag') === activeTag);
+      });
+      filterCards();
+    });
+
+    // Re-init lucide icons for filter section
+    lucide.createIcons();
   });
   </script>
 </body>

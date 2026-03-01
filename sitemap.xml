@@ -3,31 +3,31 @@
   <!-- Main Pages -->
   <url>
     <loc>https://firstrep.fit/</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/contact.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/privacy.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/terms.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -35,69 +35,101 @@
   <!-- Feature Pages -->
   <url>
     <loc>https://firstrep.fit/features/programming.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/coaching.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/marketplace.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/communication.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/scheduling.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/habits.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/progress.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/payments.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/nutrition.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/features/business.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/features/growth.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Comparison Pages -->
+  <url>
+    <loc>https://firstrep.fit/vs/trainerize.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/vs/everfit.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/vs/truecoach.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/vs/mypthub.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- Blog -->
   <url>
     <loc>https://firstrep.fit/blog/index.html</loc>
-    <lastmod>2026-02-23</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -133,19 +165,19 @@
   </url>
   <url>
     <loc>https://firstrep.fit/blog/best-personal-training-software.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/blog/firstrep-vs-trainerize-vs-everfit.html</loc>
-    <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://firstrep.fit/blog/trainerize-alternative.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -157,7 +189,7 @@
   </url>
   <url>
     <loc>https://firstrep.fit/blog/automate-personal-training-business.html</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -175,7 +207,7 @@
   </url>
   <url>
     <loc>https://firstrep.fit/blog/scale-personal-training-beyond-20-clients.html</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -187,7 +219,7 @@
   </url>
   <url>
     <loc>https://firstrep.fit/blog/personal-trainer-burnout-signs-and-fixes.html</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -211,8 +243,44 @@
   </url>
   <url>
     <loc>https://firstrep.fit/blog/digitize-personal-training-business.html</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/ai-marketing-agent-personal-trainers.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/best-app-for-online-personal-training.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/personal-training-software-pricing-comparison.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/ai-personal-training-tools-guide.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/start-online-coaching-business-zero-clients.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://firstrep.fit/blog/personal-training-software-with-marketplace.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

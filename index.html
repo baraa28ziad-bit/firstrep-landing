@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FirstRep — Find Clients & Coach Smarter with AI</title>
-  <meta name="description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
+  <meta name="description" content="The only personal training platform with an AI marketing agent, built-in marketplace, and AI program builder. Get clients on autopilot. Coach smarter. Free for 3 clients.">
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
@@ -12,9 +12,9 @@
     <meta name="theme-color" content="#5E59FE">
     <meta name="msapplication-TileColor" content="#0F1117">
     <link rel="canonical" href="https://firstrep.fit/">
-    <meta name="keywords" content="personal training software, fitness coaching platform, personal trainer app, online coaching tool, fitness business management, AI workout builder, trainer marketplace">
+    <meta name="keywords" content="personal training software, fitness coaching platform, personal trainer app, online coaching tool, fitness business management, AI workout builder, trainer marketplace, personal trainer marketing, AI marketing agent, fitness lead generation">
     <meta property="og:title" content="FirstRep — Find Clients & Coach Smarter with AI">
-    <meta property="og:description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
+    <meta property="og:description" content="The only personal training platform with an AI marketing agent, built-in marketplace, and AI program builder. Get clients on autopilot. Coach smarter. Free for 3 clients.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://firstrep.fit/">
     <meta property="og:image" content="https://firstrep.fit/images/icons/og-image.png">
@@ -22,7 +22,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FirstRep — Find Clients & Coach Smarter with AI">
-    <meta name="twitter:description" content="The only personal training platform that finds you clients AND helps you coach them. AI builds programs in 30 seconds. Built-in marketplace brings clients to you. Free for 3 clients.">
+    <meta name="twitter:description" content="The only personal training platform with an AI marketing agent, built-in marketplace, and AI program builder. Get clients on autopilot. Coach smarter. Free for 3 clients.">
     <meta name="twitter:image" content="https://firstrep.fit/images/icons/og-image.png">
     <script type="application/ld+json">
     {
@@ -350,6 +350,170 @@
     /* AI section large card */
     .ai-section__uic { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 380px; }
 
+    /* ===== HEALTH INTEGRATION SECTION ===== */
+    .health { padding: 110px 0 100px; background: var(--dark); position: relative; overflow: hidden; }
+    .health__glow { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(94,89,254,0.08) 0%, rgba(52,120,246,0.04) 40%, transparent 70%); top: -200px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+    .health__glow2 { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(94,89,254,0.06) 0%, transparent 70%); bottom: -100px; right: -100px; pointer-events: none; }
+    .health__header { text-align: center; max-width: 700px; margin: 0 auto 64px; position: relative; z-index: 2; }
+    .health__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .health__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse-ai 2s ease-in-out infinite; }
+    .health__title { font-size: clamp(32px, 3.8vw, 48px); font-weight: 700; color: #fff; line-height: 1.12; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .health__title em { font-style: normal; background: linear-gradient(135deg, var(--brand), #3478F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .health__sub { font-size: 17px; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 600px; margin: 0 auto; letter-spacing: -0.01em; }
+
+    /* Health visual — storytelling layout */
+    .health__visual { max-width: 580px; margin: 0 auto 80px; position: relative; z-index: 2; }
+    .health__logos { display: flex; align-items: flex-start; justify-content: center; gap: 36px; margin-bottom: 24px; }
+    .health__logo-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .health__logo { width: 60px; height: 60px; border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.1); overflow: hidden; }
+    .health__logo img { width: 100%; height: 100%; object-fit: cover; }
+    .health__logo-name { font-size: 11px; color: rgba(255,255,255,0.35); font-weight: 500; }
+    .health__flow { display: flex; flex-direction: column; align-items: center; margin-bottom: 24px; }
+    .health__flow-lines { display: flex; justify-content: center; gap: 110px; margin-bottom: 8px; }
+    .health__flow-line { width: 1px; height: 28px; background: linear-gradient(to bottom, rgba(94,89,254,0.1), rgba(94,89,254,0.35)); }
+    .health__flow-label { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 14px; background: rgba(94,89,254,0.06); border: 1px solid rgba(94,89,254,0.1); border-radius: 100px; }
+    .health__flow-label svg { width: 12px; height: 12px; opacity: 0.5; }
+    .health__dash { background: #fff; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,0.25), 0 8px 20px rgba(0,0,0,0.15); overflow: hidden; }
+    .health__dash-hdr { background: #F8F9FB; padding: 12px 18px; border-bottom: 1px solid #EEF0F4; display: flex; align-items: center; gap: 10px; }
+    .health__dash-avatar { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, var(--brand), #3478F6); flex-shrink: 0; }
+    .health__dash-hdr-text { flex: 1; min-width: 0; }
+    .health__dash-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .health__dash-sync { font-size: 9px; color: var(--text-muted); }
+    .health__dash-live { background: #16A34A; color: #fff; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.03em; display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .health__dash-live::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+    .health__dash-body { padding: 16px 18px 18px; }
+    .health__dash-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+    .health__dash-metric { background: #F8F9FB; border-radius: 10px; padding: 10px 6px; text-align: center; }
+    .health__dash-metric-val { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; }
+    .health__dash-metric-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+    .health__dash-metric-trend { font-size: 9px; font-weight: 600; margin-top: 3px; }
+    .health__dash-metric-trend--up { color: #16A34A; }
+    .health__dash-metric-trend--neutral { color: var(--text-muted); }
+    .health__dash-divider { height: 1px; background: #EEF0F4; margin-bottom: 14px; }
+    .health__dash-adh-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .health__dash-adh-title { font-size: 11px; font-weight: 600; color: var(--text); }
+    .health__dash-adh-pct { font-size: 18px; font-weight: 800; color: #16A34A; letter-spacing: -0.02em; }
+    .health__dash-bars { display: flex; gap: 5px; align-items: flex-end; height: 36px; }
+    .health__dash-bar { flex: 1; border-radius: 3px 3px 0 0; }
+    .health__dash-bar--high { background: #16A34A; }
+    .health__dash-bar--med { background: #F59E0B; }
+    .health__dash-bar--low { background: #EF4444; }
+    .health__dash-days { display: flex; gap: 5px; margin-top: 4px; }
+    .health__dash-day { flex: 1; text-align: center; font-size: 8px; color: var(--text-muted); }
+
+    /* Feature cards */
+    .health__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; z-index: 2; }
+    .health__card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 28px 24px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .health__card:hover { background: rgba(255,255,255,0.07); border-color: rgba(94,89,254,0.25); transform: translateY(-3px); }
+    .health__card-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .health__card-icon svg { width: 22px; height: 22px; }
+    .health__card-icon--nutrition { background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.1)); color: #10B981; }
+    .health__card-icon--activity { background: linear-gradient(135deg, rgba(52,120,246,0.2), rgba(52,120,246,0.1)); color: #3478F6; }
+    .health__card-icon--sleep { background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(139,92,246,0.1)); color: #8B5CF6; }
+    .health__card-icon--heart { background: linear-gradient(135deg, rgba(239,68,68,0.2), rgba(239,68,68,0.1)); color: #EF4444; }
+    .health__card-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .health__card-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.65; }
+    .health__card-stat { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 5px 12px; background: rgba(94,89,254,0.1); border-radius: 100px; font-size: 12px; font-weight: 600; color: var(--brand); }
+
+    /* ===== GROWTH MARKETING AGENT ===== */
+    .growth { padding: 100px 0; background: #fff; position: relative; overflow: hidden; }
+    .growth__glow { position: absolute; top: -200px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(94,89,254,0.06) 0%, transparent 70%); pointer-events: none; }
+    .growth__glow2 { position: absolute; bottom: -200px; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(94,89,254,0.05) 0%, transparent 70%); pointer-events: none; }
+    .growth__header { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+    .growth__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(94,89,254,0.08); color: var(--brand); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .growth__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); animation: pulse-ai 2s ease-in-out infinite; }
+    .growth__title { font-size: clamp(32px, 3.5vw, 44px); font-weight: 700; color: var(--text); line-height: 1.15; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .growth__title em { font-style: normal; color: var(--brand); }
+    .growth__sub { font-size: 17px; color: var(--text-3); line-height: 1.7; max-width: 620px; margin: 0 auto; letter-spacing: -0.01em; }
+
+    /* Growth 2-column hero visual */
+    .growth__showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 48px; }
+    .growth__showcase-title { font-size: 28px; font-weight: 700; color: var(--text); line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 20px; }
+    .growth__showcase-title span { color: var(--brand); }
+    .growth__showcase-desc { font-size: 16px; color: var(--text-3); line-height: 1.7; margin-bottom: 28px; }
+    .growth__showcase-features { display: flex; flex-direction: column; gap: 14px; }
+    .growth__showcase-feat { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text-2); line-height: 1.5; }
+    .growth__showcase-feat-icon { width: 24px; height: 24px; border-radius: 8px; background: rgba(94,89,254,0.1); color: var(--brand); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .growth__showcase-feat-icon svg { width: 14px; height: 14px; }
+    .growth__showcase-visual { position: relative; min-height: 480px; display: flex; align-items: center; justify-content: center; }
+
+    /* Growth comparison bar (agency vs FirstRep) */
+    .growth__compare { background: var(--dark); border-radius: var(--radius-lg); padding: 40px 48px; display: flex; align-items: center; gap: 48px; }
+    .growth__compare-left { flex: 1; }
+    .growth__compare-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .growth__compare-title { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -0.03em; margin-bottom: 8px; }
+    .growth__compare-title em { font-style: normal; color: var(--brand); }
+    .growth__compare-desc { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+    .growth__compare-right { display: flex; gap: 32px; flex-shrink: 0; }
+    .growth__compare-vs { text-align: center; }
+    .growth__compare-price { font-size: 36px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+    .growth__compare-price--old { color: rgba(255,255,255,0.3); text-decoration: line-through; text-decoration-color: #EF4444; }
+    .growth__compare-price--new { color: var(--brand); }
+    .growth__compare-sublabel { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 6px; font-weight: 500; }
+    .growth__compare-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); align-self: center; }
+    .growth__cta { text-align: center; margin-top: 48px; }
+    .growth__cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: #fff; font-weight: 600; font-size: 16px; padding: 15px 36px; border-radius: 12px; border: none; cursor: pointer; transition: all 0.2s; }
+    .growth__cta-btn:hover { background: #000; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+
+    /* Growth UI Card mockups */
+    .uic-growth { width: 340px; position: relative; z-index: 2; }
+    .uic-growth__agent { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .uic-growth__agent-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(52,120,246,0.1); color: #3478F6; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .uic-growth__agent-text { flex: 1; }
+    .uic-growth__agent-title { font-size: 14px; font-weight: 700; color: #0F172A; }
+    .uic-growth__agent-status { font-size: 11px; color: var(--brand); font-weight: 500; }
+    .uic-growth__toggle { width: 42px; height: 24px; border-radius: 12px; background: var(--brand); position: relative; }
+    .uic-growth__toggle::after { content: ''; position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #fff; top: 3px; right: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+    .uic-growth__desc { font-size: 11px; color: #94A3B8; line-height: 1.5; margin-bottom: 10px; }
+    .uic-growth__timers { display: flex; gap: 16px; margin-bottom: 12px; }
+    .uic-growth__timer { font-size: 10px; color: #64748B; display: flex; align-items: center; gap: 4px; }
+    .uic-growth__timer svg { width: 12px; height: 12px; }
+    .uic-growth__btns { display: flex; gap: 8px; margin-bottom: 14px; }
+    .uic-growth__btn { flex: 1; padding: 9px 0; border-radius: 10px; text-align: center; font-size: 12px; font-weight: 600; color: #fff; }
+    .uic-growth__btn--blue { background: #3478F6; }
+    .uic-growth__btn--green { background: var(--brand-hover); }
+    .uic-growth__url { display: flex; align-items: center; gap: 6px; padding: 8px 10px; background: #F5F7FA; border-radius: 8px; margin-bottom: 14px; }
+    .uic-growth__url-icon { width: 16px; height: 16px; color: #3478F6; }
+    .uic-growth__url-text { font-size: 11px; color: #3478F6; font-weight: 500; flex: 1; }
+    .uic-growth__queue-title { font-size: 12px; font-weight: 700; color: #0F172A; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+    .uic-growth__queue-link { font-size: 11px; color: #3478F6; font-weight: 500; }
+    .uic-growth__queue-item { display: flex; align-items: center; gap: 10px; padding: 10px; background: #F8F9FB; border-radius: 10px; margin-bottom: 6px; }
+    .uic-growth__queue-icon { width: 32px; height: 32px; border-radius: 8px; background: rgba(52,120,246,0.08); color: #3478F6; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .uic-growth__queue-icon svg { width: 14px; height: 14px; }
+    .uic-growth__queue-text { flex: 1; }
+    .uic-growth__queue-name { font-size: 12px; font-weight: 600; color: #0F172A; }
+    .uic-growth__queue-meta { font-size: 10px; color: #94A3B8; }
+
+    /* Social post card mockup */
+    .uic-social { width: 280px; position: absolute; right: -20px; bottom: 10px; transform: rotate(3deg); }
+    .uic-social__type { display: inline-flex; align-items: center; gap: 5px; background: rgba(52,120,246,0.08); color: #3478F6; font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 100px; margin-bottom: 8px; }
+    .uic-social__title { font-size: 14px; font-weight: 700; color: #0F172A; margin-bottom: 8px; }
+    .uic-social__img { width: 100%; height: 120px; border-radius: 10px; background: linear-gradient(135deg, #FDE68A 0%, #D97706 50%, #92400E 100%); margin-bottom: 8px; position: relative; overflow: hidden; }
+    .uic-social__img::after { content: '🥑 🍞 🥗'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28px; letter-spacing: 8px; }
+    .uic-social__caption { font-size: 10px; color: #475569; line-height: 1.5; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .uic-social__tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+    .uic-social__tag { background: #F1F5F9; color: #64748B; font-size: 9px; font-weight: 600; padding: 3px 8px; border-radius: 100px; }
+    .uic-social__actions { display: flex; gap: 6px; }
+    .uic-social__action { flex: 1; padding: 7px 0; border-radius: 8px; text-align: center; font-size: 10px; font-weight: 600; }
+    .uic-social__action--skip { background: #F1F5F9; color: #64748B; }
+    .uic-social__action--snooze { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; }
+    .uic-social__action--post { background: var(--brand); color: #fff; }
+
+    @media (max-width: 768px) {
+      .growth { padding: 72px 0; }
+      .growth__showcase { grid-template-columns: 1fr; gap: 40px; }
+      .growth__showcase-visual { min-height: 400px; }
+      .growth__compare { flex-direction: column; text-align: center; padding: 32px 24px; gap: 28px; }
+      .growth__compare-right { flex-direction: row; gap: 20px; }
+      .uic-growth { width: 300px; }
+      .uic-social { width: 240px; right: -10px; }
+    }
+    @media (max-width: 480px) {
+      .growth__showcase-visual { min-height: 340px; }
+      .uic-growth { width: 260px; }
+      .uic-social { display: none; }
+    }
+
     /* ===== STATS ===== */
     .stats { padding: 80px 0; background: var(--bg-2); }
     .stats__header { text-align: center; margin-bottom: 48px; }
@@ -432,6 +596,14 @@
       .ai-section { padding: 72px 0; }
       .ai-section__grid { grid-template-columns: 1fr 1fr; }
       .ai-section__visual { min-height: 360px; }
+      .health { padding: 80px 0 72px; }
+      .health__visual { max-width: 480px; }
+      .health__logos { gap: 28px; }
+      .health__logo { width: 52px; height: 52px; border-radius: 14px; }
+      .health__flow-lines { gap: 80px; }
+      .health__dash-metrics { gap: 6px; }
+      .health__dash-metric-val { font-size: 14px; }
+      .health__grid { grid-template-columns: repeat(2, 1fr); }
       .services { padding: 72px 0; }
       .services__grid { grid-template-columns: 1fr; max-width: 520px; }
       .fmod__card { grid-template-columns: 1fr; padding: 40px 36px; gap: 36px; }
@@ -459,6 +631,16 @@
       .ai-section__grid { grid-template-columns: 1fr; }
       .ai-section__visual { min-height: 300px; }
       .ai-section__visual-phone { max-height: 360px; }
+      .health { padding: 64px 0 56px; }
+      .health__visual { max-width: 100%; }
+      .health__logos { gap: 20px; }
+      .health__logo { width: 48px; height: 48px; border-radius: 12px; }
+      .health__logo-name { font-size: 10px; }
+      .health__flow-lines { gap: 50px; }
+      .health__dash-hdr { padding: 10px 14px; }
+      .health__dash-body { padding: 12px 14px 14px; }
+      .health__dash-metrics { grid-template-columns: repeat(2, 1fr); }
+      .health__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
       .container { padding: 0 20px; }
       .hero__sub { font-size: 16px; }
       .hero__inner { padding: 48px 0; }
@@ -496,6 +678,13 @@
     }
     @media (max-width: 480px) {
       .container { padding: 0 16px; }
+      .health { padding: 56px 0 48px; }
+      .health__header { margin-bottom: 40px; }
+      .health__logos { gap: 16px; }
+      .health__logo { width: 44px; height: 44px; border-radius: 11px; }
+      .health__logo-name { display: none; }
+      .health__flow-lines { gap: 36px; }
+      .health__flow-line { height: 20px; }
       .hero__sub { font-size: 15px; }
       .hero__inner { padding: 36px 0; }
       .hero__badge { font-size: 11px; padding: 6px 14px; }
@@ -631,6 +820,7 @@
             <a href="features/habits.html" class="mega-menu__link">Habit Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
             <a href="features/coaching.html" class="mega-menu__link">Coaching Dashboard <span class="mega-menu__link-arrow">&rarr;</span></a>
             <a href="features/progress.html" class="mega-menu__link">Progress Tracking <span class="mega-menu__link-arrow">&rarr;</span></a>
+            <a href="#health-data" class="mega-menu__link">Health Data Sync <span class="mega-menu__link-arrow">&rarr;</span></a>
           </div>
         </div>
         <div class="mega-menu__col">
@@ -657,6 +847,7 @@
           <div class="mega-menu__col-title">Scale</div>
           <img class="mega-menu__col-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=220&fit=crop&q=80" alt="Group fitness class">
           <div class="mega-menu__links">
+            <a href="features/growth.html" class="mega-menu__link">AI Marketing Agent <span class="mega-menu__link-arrow">&rarr;</span></a>
             <a href="features/marketplace.html" class="mega-menu__link">Trainer Marketplace <span class="mega-menu__link-arrow">&rarr;</span></a>
             <a href="features/payments.html" class="mega-menu__link">Integrated Payments <span class="mega-menu__link-arrow">&rarr;</span></a>
             <a href="features/business.html" class="mega-menu__link">Automation Rules <span class="mega-menu__link-arrow">&rarr;</span></a>
@@ -676,6 +867,7 @@
         <a href="features/coaching.html">Coaching Dashboard</a>
         <a href="features/communication.html">Messaging</a>
         <a href="features/scheduling.html">Scheduling</a>
+        <a href="features/growth.html">AI Marketing Agent</a>
         <a href="features/marketplace.html">Marketplace</a>
         <a href="features/payments.html">Payments</a>
         <a href="features.html">All Features</a>
@@ -706,7 +898,7 @@
               <span class="hero__word">Grow.</span>
             </span>
           </h1>
-          <p class="hero__sub">The only platform that finds you clients through a built-in marketplace AND gives you AI tools to coach them. Stop chasing leads. Stop writing programs manually. Start coaching.</p>
+          <p class="hero__sub">The only platform that finds you clients through a built-in marketplace, AI marketing agent, and gives you AI tools to coach them. Stop chasing leads. Start coaching.</p>
           <div class="hero__badges">
             <div class="app-badges">
               <a href="#" class="app-badge app-badge--apple">
@@ -755,7 +947,7 @@
       <span class="trust__item">CrossFit Level 2</span>
       <span class="trust__item">ACSM</span>
     </div>
-    <p class="trust__stats">1,734 exercises &middot; AI program builder &middot; Built-in client marketplace &middot; 0% commission on your clients</p>
+    <p class="trust__stats">1,734 exercises &middot; AI program builder &middot; AI marketing agent &middot; Built-in client marketplace &middot; 0% commission on your clients</p>
   </section>
 
   <!-- ===== SECTION 2: FEATURE TABS ===== -->
@@ -1124,6 +1316,13 @@
           </div>
           <div class="acc-item">
             <div class="acc-item__header">
+              <i data-lucide="trending-up" class="acc-item__header-icon"></i><span>AI Marketing Agent</span>
+              <span class="acc-item__icon">+</span>
+            </div>
+            <div class="acc-item__body">Your own AI marketing department. Auto-generates social content, writes SEO articles, captures leads with magnets, and nurtures them to clients. <a href="features/growth.html" style="color: var(--brand); text-decoration: underline;">Learn more &rarr;</a></div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-item__header">
               <i data-lucide="mail" class="acc-item__header-icon"></i><span>Client Invitations</span>
               <span class="acc-item__icon">+</span>
             </div>
@@ -1259,6 +1458,292 @@
     </div>
   </section>
 
+  <!-- ===== HEALTH DATA INTEGRATION ===== -->
+  <section class="health" id="health-data">
+    <div class="health__glow"></div>
+    <div class="health__glow2"></div>
+    <div class="container">
+      <div class="health__header" data-animate>
+        <div class="health__badge"><span class="health__badge-dot"></span> Health Integrations</div>
+        <h2 class="health__title">Every Health App. <em>One Dashboard.</em></h2>
+        <p class="health__sub">Your clients already track food in MyFitnessPal, steps on Apple Watch, and sleep on Fitbit. FirstRep pulls it all together so you see real nutrition adherence, activity, and recovery &mdash; without asking for screenshots.</p>
+      </div>
+
+      <!-- Health Visual: Apps → Flow → Trainer Dashboard -->
+      <div class="health__visual" data-animate>
+        <!-- Client health app logos -->
+        <div class="health__logos">
+          <div class="health__logo-item">
+            <div class="health__logo"><img src="images/health-apple.svg" alt="Apple Health" loading="lazy"></div>
+            <div class="health__logo-name">Apple Health</div>
+          </div>
+          <div class="health__logo-item">
+            <div class="health__logo"><img src="images/health-googlefit.png" alt="Google Fit" loading="lazy"></div>
+            <div class="health__logo-name">Google Fit</div>
+          </div>
+          <div class="health__logo-item">
+            <div class="health__logo"><img src="images/health-mfp.jpg" alt="MyFitnessPal" loading="lazy"></div>
+            <div class="health__logo-name">MyFitnessPal</div>
+          </div>
+          <div class="health__logo-item">
+            <div class="health__logo"><img src="images/health-strava.svg" alt="Strava" loading="lazy"></div>
+            <div class="health__logo-name">Strava</div>
+          </div>
+        </div>
+
+        <!-- Flow indicator -->
+        <div class="health__flow">
+          <div class="health__flow-lines">
+            <div class="health__flow-line"></div>
+            <div class="health__flow-line"></div>
+            <div class="health__flow-line"></div>
+          </div>
+          <div class="health__flow-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            Auto-syncs to your dashboard
+          </div>
+        </div>
+
+        <!-- Trainer dashboard mockup -->
+        <div class="health__dash">
+          <div class="health__dash-hdr">
+            <div class="health__dash-avatar"></div>
+            <div class="health__dash-hdr-text">
+              <div class="health__dash-name">Sarah Johnson &mdash; Health Overview</div>
+              <div class="health__dash-sync">Last synced 2 min ago</div>
+            </div>
+            <div class="health__dash-live">Live</div>
+          </div>
+          <div class="health__dash-body">
+            <div class="health__dash-metrics">
+              <div class="health__dash-metric">
+                <div class="health__dash-metric-val">8,420</div>
+                <div class="health__dash-metric-label">Steps</div>
+                <div class="health__dash-metric-trend health__dash-metric-trend--up">&#9650; +12%</div>
+              </div>
+              <div class="health__dash-metric">
+                <div class="health__dash-metric-val">7.2h</div>
+                <div class="health__dash-metric-label">Sleep</div>
+                <div class="health__dash-metric-trend health__dash-metric-trend--up">&#9650; +0.5h</div>
+              </div>
+              <div class="health__dash-metric">
+                <div class="health__dash-metric-val">2,150</div>
+                <div class="health__dash-metric-label">Calories</div>
+                <div class="health__dash-metric-trend health__dash-metric-trend--up">On target</div>
+              </div>
+              <div class="health__dash-metric">
+                <div class="health__dash-metric-val">62</div>
+                <div class="health__dash-metric-label">Resting BPM</div>
+                <div class="health__dash-metric-trend health__dash-metric-trend--neutral">&mdash; Stable</div>
+              </div>
+            </div>
+            <div class="health__dash-divider"></div>
+            <div class="health__dash-adh-hdr">
+              <div class="health__dash-adh-title">Nutrition Adherence</div>
+              <div class="health__dash-adh-pct">87%</div>
+            </div>
+            <div class="health__dash-bars">
+              <div class="health__dash-bar health__dash-bar--high" style="height:85%"></div>
+              <div class="health__dash-bar health__dash-bar--high" style="height:92%"></div>
+              <div class="health__dash-bar health__dash-bar--med" style="height:68%"></div>
+              <div class="health__dash-bar health__dash-bar--high" style="height:95%"></div>
+              <div class="health__dash-bar health__dash-bar--high" style="height:88%"></div>
+              <div class="health__dash-bar health__dash-bar--low" style="height:42%"></div>
+              <div class="health__dash-bar health__dash-bar--high" style="height:90%"></div>
+            </div>
+            <div class="health__dash-days">
+              <div class="health__dash-day">Mon</div>
+              <div class="health__dash-day">Tue</div>
+              <div class="health__dash-day">Wed</div>
+              <div class="health__dash-day">Thu</div>
+              <div class="health__dash-day">Fri</div>
+              <div class="health__dash-day">Sat</div>
+              <div class="health__dash-day">Sun</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="health__grid" data-animate>
+        <div class="health__card">
+          <div class="health__card-icon health__card-icon--nutrition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3"/><path d="M18 22V15"/></svg>
+          </div>
+          <h3 class="health__card-title">Nutrition Adherence</h3>
+          <p class="health__card-desc">See exactly how clients follow their macro plan. Daily adherence scores compare actual intake vs your targets &mdash; no more asking for food diary screenshots.</p>
+          <div class="health__card-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+            87% weekly adherence
+          </div>
+        </div>
+        <div class="health__card">
+          <div class="health__card-icon health__card-icon--activity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="health__card-title">Real-Time Activity</h3>
+          <p class="health__card-desc">Steps, active calories, and workout data sync automatically from Apple Health and Health Connect. You see trends and 7-day comparisons at a glance.</p>
+          <div class="health__card-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            8,420 avg daily steps
+          </div>
+        </div>
+        <div class="health__card">
+          <div class="health__card-icon health__card-icon--sleep">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </div>
+          <h3 class="health__card-title">Sleep &amp; Recovery</h3>
+          <p class="health__card-desc">Know when a client is under-recovered before they walk into the gym. Sleep duration and quality data helps you adjust intensity intelligently.</p>
+          <div class="health__card-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7.2h avg sleep
+          </div>
+        </div>
+        <div class="health__card">
+          <div class="health__card-icon health__card-icon--heart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3 class="health__card-title">Heart Rate Insights</h3>
+          <p class="health__card-desc">Average and resting heart rate trends reveal cardiovascular progress. Spot overtraining early and celebrate fitness improvements your clients can&rsquo;t see.</p>
+          <div class="health__card-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            62 bpm resting
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI GROWTH MARKETING AGENT ===== -->
+  <section class="growth" id="growth">
+    <div class="growth__glow"></div>
+    <div class="growth__glow2"></div>
+    <div class="container">
+      <div class="growth__header" data-animate>
+        <div class="growth__badge"><span class="growth__badge-dot"></span> AI Growth Engine</div>
+        <h2 class="growth__title">Your AI Marketing Department. <em>Built In.</em></h2>
+        <p class="growth__sub">The #1 problem for personal trainers isn't coaching &mdash; it's finding clients. FirstRep's AI Growth Agent creates your website, writes your content, captures leads, and nurtures prospects into paying clients. All on autopilot.</p>
+      </div>
+
+      <!-- Two-column showcase: text + visual mockup -->
+      <div class="growth__showcase" data-animate>
+        <div class="growth__showcase-text">
+          <h3 class="growth__showcase-title">Stop Chasing. <span>Start Attracting.</span></h3>
+          <p class="growth__showcase-desc">While other coaches spend 20+ hours a week on marketing, your AI agent works 24/7 &mdash; creating content, publishing posts, capturing leads, and following up automatically.</p>
+          <div class="growth__showcase-features">
+            <div class="growth__showcase-feat">
+              <span class="growth__showcase-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>AI writes social posts daily</strong> &mdash; carousels, reels, stories, and captions tailored to your specialty</span>
+            </div>
+            <div class="growth__showcase-feat">
+              <span class="growth__showcase-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>SEO blog articles rank in Google</strong> &mdash; AI writes 800-1,500 word articles about your niche</span>
+            </div>
+            <div class="growth__showcase-feat">
+              <span class="growth__showcase-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Lead magnets capture emails</strong> &mdash; free programs, assessments, and guides build your list automatically</span>
+            </div>
+            <div class="growth__showcase-feat">
+              <span class="growth__showcase-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>5-step nurture sequences close deals</strong> &mdash; automated emails turn prospects into paying clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="growth__showcase-visual">
+          <!-- Growth Dashboard UI Card (replica of app screenshot) -->
+          <div class="uic uic-growth" style="left: 0; top: 0;">
+            <div class="uic__hdr">
+              <span class="uic__hdr-icon" style="background: rgba(52,120,246,0.1); color: #3478F6;">&#9878;</span>
+              <span class="uic__hdr-title">Growth</span>
+            </div>
+            <div class="uic__body">
+              <div class="uic-growth__agent">
+                <div class="uic-growth__agent-icon">&#9878;</div>
+                <div class="uic-growth__agent-text">
+                  <div class="uic-growth__agent-title">PT AI Marketing Agent</div>
+                  <div class="uic-growth__agent-status">Active &mdash; next post in 18h 5m</div>
+                </div>
+                <div class="uic-growth__toggle"></div>
+              </div>
+              <div class="uic-growth__desc">Your AI assistant creates 1 social post daily and 1 blog article weekly. You review, edit, and publish.</div>
+              <div class="uic-growth__timers">
+                <span class="uic-growth__timer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Next post: 18h 5m</span>
+                <span class="uic-growth__timer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Next article: 18h 5m</span>
+              </div>
+              <div class="uic-growth__btns">
+                <div class="uic-growth__btn uic-growth__btn--blue">&#10022; AI New Post</div>
+                <div class="uic-growth__btn uic-growth__btn--green">&#9998; AI New Article</div>
+              </div>
+              <div class="uic-growth__url">
+                <svg class="uic-growth__url-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                <span class="uic-growth__url-text">firstrep.fit/trainer/miguel.torres</span>
+              </div>
+              <div class="uic-growth__queue-title">Content Queue <span class="uic-growth__queue-link">View All &rarr;</span></div>
+              <div class="uic-growth__queue-item">
+                <div class="uic-growth__queue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+                <div class="uic-growth__queue-text">
+                  <div class="uic-growth__queue-name">Carbs are not bad!</div>
+                  <div class="uic-growth__queue-meta">Post &middot; draft &middot; 0m ago</div>
+                </div>
+              </div>
+              <div class="uic-growth__queue-item">
+                <div class="uic-growth__queue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+                <div class="uic-growth__queue-text">
+                  <div class="uic-growth__queue-name">5 Protein Myths Busted</div>
+                  <div class="uic-growth__queue-meta">Post &middot; approved &middot; 2h ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Post Card (floating, tilted) -->
+          <div class="uic uic-social">
+            <div class="uic__body" style="padding: 12px 14px;">
+              <div class="uic-social__type">&#128247; Image Post</div>
+              <div class="uic-social__title">Carbs are not bad!</div>
+              <div class="uic-social__img"></div>
+              <div class="uic-social__caption">Carbs are not the enemy! It's time to bust the myths around carbohydrates. Carbs fuel our body, keep our brain alert, and are essential for our workouts. #CarbsAreFuel #FitLife</div>
+              <div class="uic-social__tags">
+                <span class="uic-social__tag">#CarbsAreFuel</span>
+                <span class="uic-social__tag">#NutritionFacts</span>
+                <span class="uic-social__tag">#FitLife</span>
+              </div>
+              <div class="uic-social__actions">
+                <div class="uic-social__action uic-social__action--skip">Skip</div>
+                <div class="uic-social__action uic-social__action--snooze">Snooze</div>
+                <div class="uic-social__action uic-social__action--post">&#10003; Post</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cost comparison bar -->
+      <div class="growth__compare" data-animate>
+        <div class="growth__compare-left">
+          <div class="growth__compare-label">Why pay for a marketing agency?</div>
+          <div class="growth__compare-title">Everything a <em>$3,000/mo agency</em> does. Included free.</div>
+          <p class="growth__compare-desc">Social content, SEO articles, lead capture, email nurture, and analytics &mdash; other trainers pay thousands per month for this. With FirstRep Pro, it's built in.</p>
+        </div>
+        <div class="growth__compare-right">
+          <div class="growth__compare-vs">
+            <div class="growth__compare-price growth__compare-price--old">$3,000</div>
+            <div class="growth__compare-sublabel">Marketing agency</div>
+          </div>
+          <div class="growth__compare-divider"></div>
+          <div class="growth__compare-vs">
+            <div class="growth__compare-price growth__compare-price--new">$19</div>
+            <div class="growth__compare-sublabel">FirstRep Pro /mo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="growth__cta" data-animate>
+        <a href="features/growth.html" class="growth__cta-btn">See the AI Growth Agent in Action &rarr;</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== STATS ===== -->
   <section class="stats">
     <div class="container">
@@ -1362,9 +1847,9 @@
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Everything in Free, plus:</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Unlimited clients</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 8 clients included, then $1.50/each</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI Marketing Agent (30+ posts/mo)</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Priority marketplace ranking</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Revenue forecasting</div>
-            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Advanced analytics</div>
+            <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Lead pipeline &amp; nurture sequences</div>
             <div class="price-card__feature"><span class="price-card__check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 50 clients = just $82/mo</div>
           </div>
           <a href="#" class="btn btn--primary btn--lg" style="width: 100%; justify-content: center;">Download Free Trial</a>
@@ -1384,7 +1869,7 @@
     <div class="container" style="position: relative; z-index: 1;">
       <div data-animate>
         <h2 class="cta__title">Your First Rep Starts Now.</h2>
-        <p class="cta__sub">Clients find you. AI builds programs. You coach. Everything else runs on autopilot. Download free and start today.</p>
+        <p class="cta__sub">AI finds you clients. AI builds programs. AI markets your business. You coach. Everything else runs on autopilot. Download free and start today.</p>
         <div class="cta__actions">
           <div class="app-badges">
             <a href="#" class="app-badge app-badge--apple">
@@ -1444,6 +1929,7 @@
         </div>
         <div class="footer__col">
           <h4 class="footer__col-title">More Features</h4>
+          <a href="features/growth.html">AI Marketing Agent</a>
           <a href="features/communication.html">Communication</a>
           <a href="features/scheduling.html">Scheduling</a>
           <a href="features/progress.html">Progress</a>
